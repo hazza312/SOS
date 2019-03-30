@@ -1,0 +1,5 @@
+obj
+dist
+*.iso
+*.o
+*.ali
