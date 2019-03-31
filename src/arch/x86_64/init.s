@@ -2,20 +2,19 @@
 # initial entry point for x86_64 architecture.
 # GRUB has already setup protected mode for us.
 
-.code32
-.global .multiboot_header
+
 .section .multiboot_header
-.align 4
-	.long		0xE85250D6 		# magic number
-	.long		0 				# 32 bit protected mode
-	.long 		0x10
-	.long 		-(0xe85250d6+0x10)		# checksum
+	.long		$0xE85250D6 		# magic number
+	.long		$0 				# 32 bit protected mode
+	.long 	$0x10
+	.long 	$-(0xe85250d6 + 0x10)		# checksum
 
-	.long 0    # type
-    .long 0    # flags
-    .long 8    # size
+	.short $0  # type
+   .short $0  # flags
+   .long $8  # size
 
 
+.code32
 # see P183, AMD64 APMV2SP
 # -- CR3 layout --
 # 	      63:52 	# reserved
@@ -28,11 +27,10 @@
 # --
 
 
-.section bss
+.section .bss
 .align 4096
 
 # identity map the first 2M in a 2M page
-
 .lcomm pml4t	4096 #
 .lcomm pdpt 	4096 # page-directory pointer table
 .lcomm pdt		4096 # page directory
@@ -43,6 +41,7 @@ gdt_info:
 .quad 0 #base
 
 .section text
+.section .entry
 .global _entry
 .extern _ada_kernel
 

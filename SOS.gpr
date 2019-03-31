@@ -1,55 +1,48 @@
 project Sos is
 
    type Architecture_Type is ("x86_64", "arm64", "riscv32");
-   Architecture : Architecture_Type := external ("arch", "x86_64");
    type Machine_Type is ("pc", "rpi");
-   Machine : Machine_Type := external ("machine", "pc");
    type Mode_Type is ("debug", "release");
-   Mode: Mode_Type := external ("mode", "debug");
 
+   Architecture : Architecture_Type := external ("arch", "x86_64");   
+   Machine : Machine_Type := external ("machine", "pc");   
+   Mode: Mode_Type := external ("mode", "release");
 
    for Languages use ("Ada", "Asm");
    for Source_Dirs use ("src", "src/arch", "src/arch/" & Architecture);
 
    for Object_Dir use "obj";
    for Exec_Dir use "dist";
-   for Main use ("init.s");
+   for Main use ("kernel.adb");
 
 
    package Compiler is
       for Local_Configuration_Pragmas use "pragmas.adc";
 
-      Ada_Switches := ("-g", "-gnat12", "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp");
+      Ada_Switches := (
+         --"-g", -- generate debug info
+         "-gnatp", -- suppress all checks
+         "-gnat12", "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp");
 
        case Mode is
          when "debug"   => Ada_Switches := Ada_Switches & "-g";
          when "release" => Ada_Switches := Ada_Switches & "-O2";
        end case;
 
-       case Architecture is
-       when "x86_64" =>
-         for Switches("entry_32.adb") use Compiler'Default_Switches("ada") & "-m32";
-       end case;
-
-       for Default_Switches ("ada") use Ada_Switches;
+      for Default_Switches ("Ada") use Ada_Switches;
    end Compiler;
 
    package Builder is
-      for Default_Switches ("ada") use ("-g", "-gnat12", "-nostdlib", "--RTS=zfp");
+      for Default_Switches ("Ada") use ("-gnat12", "-nostdlib", "--RTS=zfp");
    end Builder;
 
-   package Binder is
-      for Default_Switches ("ada") use ("-nostdlib");
-   end Binder;
-
    package Linker is
-      for Driver use "ld";
-      for Switches("asm") use (
-         "-nostartfiles","-nostdlib",
-         "-T/home/harry/eclipse-workspace/SOS/src/arch/x86_64/link.ld",
-         "-M"
-      );
-
+      for Default_Switches("Ada") use (
+         "-Wl,--gc-sections,-z max-page-size=8192", 
+         "-n",
+         "-nostartfiles", 
+         "-nodefaultlibs",
+         "-T../src/arch/" & Architecture & "/link.ld");
    end Linker;
 
 end Sos;

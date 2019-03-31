@@ -1,22 +1,23 @@
-TARGET ?= x86_64
-ARCH ?= pc
+ARCH ?= x86_64
+TARGET ?= pc
 
 # (cross-compiler) location
-ifeq ($(TARGET), x86_64)
-	GNAT_BIN = ~/opt/2018/GNAT
+ifeq ($(ARCH), x86_64)
+	GNAT_BIN := ~/opt/GNAT/2018/bin
 endif
 
 # gnat tools
-BIND = $(GNAT_BIN)/gnatbind
-COMPILE = $(GNAT_BIN)/gnat
-LINK = ld
+GPRBUILD := $(GNAT_BIN)/gprbuild
+BIND := $(GNAT_BIN)/gnatbind
+COMPILE := $(GNAT_BIN)/gnat
+PROJECT := SOS.gpr
 
 # emulation tools
-QEMU=qemu-system-i386
-QEMU_FLAGS=
+QEMU:=qemu-system-i386
+QEMU_FLAGS:=
 
-DEBUG_GUI=ddd
-DEBUG_GUI_FLAGS=--eval-command="target remote localhost:1234" --symbols=dist/kernel
+DEBUG_GUI:=ddd
+DEBUG_GUI_FLAGS:=
 
 
 # begin rules
@@ -25,16 +26,17 @@ autobuild:
 
 # Clean the root project of all build products.
 clean:
-	rm -rf obj/* dist/*
+	gnatclean -P "$(PROJECT)"
+	rm -rf dist/kernel dist/*.iso
 
 # Check project sources for errors.
 # Does not build executables.
 analyze:
-	$(GPRBUILD) -d  -gnatc -c -k  -P "$(PROJECT)"
+	$(GPRBUILD) -d  -gnatc -c -k  -P "$(PROJECT)" --compiler-subst=ada,$(GNAT_BIN)/gcc
 
 # Build executables for all mains defined by the project.
 build:
-	$(GPRBUILD) -d -v -P "$(PROJECT)"
+	$(GPRBUILD) -d -P "$(PROJECT)" -Xarch=$(ARCH)
 
 # Clean, then build executables for all mains defined by the project.
 rebuild: clean build
@@ -47,12 +49,12 @@ compile_file:
 analyze_file:
 	$(GPRBUILD) -d -q -c -gnatc -u -P "$(PROJECT)" "$(FILE)"
 	
-iso:	dist/kernel
+iso:	build
 	cp dist/kernel dist/iso/boot/kernel
 	grub-mkrescue -o dist/os.iso dist/iso
 	
-debug-gui:	iso
+debug:	iso
 	$(QEMU) -cdrom dist/os.iso -s &
-	$(DEBUG_GUI) $(DEBUG_GUI_FLAGS) 2> /dev/null
+	$(DEBUG_GUI) --eval-command="target remote localhost:1234" --symbols=dist/kernel 2> /dev/null
 	
 	
