@@ -1,25 +1,31 @@
-# You may edit this makefile as long as you keep these original 
-# target names defined.  You can change the recipes and/or add new targets.
+TARGET ?= x86_64
+ARCH ?= pc
 
-# Not intended for manual invocation.
-# Invoked if automatic builds are enabled.
-# Analyzes only on those sources that have changed.
-# Does not build executables.
+# (cross-compiler) location
+ifeq ($(TARGET), x86_64)
+	GNAT_BIN = ~/opt/2018/GNAT
+endif
 
-GPRBUILD=gprbuild
-PROJECT=SOS.gpr
+# gnat tools
+BIND = $(GNAT_BIN)/gnatbind
+COMPILE = $(GNAT_BIN)/gnat
+LINK = ld
+
+# emulation tools
+QEMU=qemu-system-i386
+QEMU_FLAGS=
+
+DEBUG_GUI=ddd
+DEBUG_GUI_FLAGS=--eval-command="target remote localhost:1234" --symbols=dist/kernel
 
 
+# begin rules
 autobuild:
 	$(GPRBUILD) -gnatc -c -k  -d -P "$(PROJECT)"
 
 # Clean the root project of all build products.
 clean:
-	gnatclean -P $(PROJECT)
-
-# Clean root project and all imported projects too.
-clean_tree:
-	gnatclean -P $(PROJECT) -r
+	rm -rf obj/* dist/*
 
 # Check project sources for errors.
 # Does not build executables.
@@ -28,7 +34,7 @@ analyze:
 
 # Build executables for all mains defined by the project.
 build:
-	$(GPRBUILD) -d -P "$(PROJECT)"
+	$(GPRBUILD) -d -v -P "$(PROJECT)"
 
 # Clean, then build executables for all mains defined by the project.
 rebuild: clean build
@@ -44,5 +50,9 @@ analyze_file:
 iso:	dist/kernel
 	cp dist/kernel dist/iso/boot/kernel
 	grub-mkrescue -o dist/os.iso dist/iso
+	
+debug-gui:	iso
+	$(QEMU) -cdrom dist/os.iso -s &
+	$(DEBUG_GUI) $(DEBUG_GUI_FLAGS) 2> /dev/null
 	
 	

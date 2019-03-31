@@ -1,31 +1,70 @@
-# 32-bit mode code
+# init.s
+# initial entry point for x86_64 architecture.
+# GRUB has already setup protected mode for us.
 
+.code32
+.global .multiboot_header
+.section .multiboot_header
+.align 4
+	.long		0xE85250D6 		# magic number
+	.long		0 				# 32 bit protected mode
+	.long 		0x10
+	.long 		-(0xe85250d6+0x10)		# checksum
+
+	.long 0    # type
+    .long 0    # flags
+    .long 8    # size
+
+
+# see P183, AMD64 APMV2SP
+# -- CR3 layout --
+# 	      63:52 	# reserved
+#		  51:12 	# PML4 Table Base Address
+#		  11:05 	# reserved
+.equ CR3PCD, 04     # page cache-disable
+.equ CR3PWT, 03     # page write-through
+#		  02:00		# reserved
+
+# --
+
+
+.section bss
+.align 4096
+
+# identity map the first 2M in a 2M page
+
+.lcomm pml4t	4096 #
+.lcomm pdpt 	4096 # page-directory pointer table
+.lcomm pdt		4096 # page directory
+.lcomm pt1 		4096
+
+gdt_info:
+.word 0 #limit
+.quad 0 #base
+
+.section text
 .global _entry
-.global Make_Page_Table
+.extern _ada_kernel
 
+# -- setup up page tables --
 _entry:
+	movl	$pml4t, %eax
+	movl	%eax, %cr3
+
+	movl	$pml4t, %edi 	# dest
+	movl	$pdpt, %esi 	# src
+	addl	3, %esi
+
+ploop:
+	movl	%esi, (%edi)
+	addl	4096, %edi
+	addl	4096, %esi
+	cmp		$pt1, %esi
+	jl		ploop
+
+
+	lgdt	(gdt_info)
+
+
 	nop
-	call Make_Page_Table
-
-	movl 0x2000, %edi    # Set the destination index to 0x1000.
-    movl %edi, %cr3       # Set control register 3 to the destination index.
-    xorl %eax, %eax       # Nullify the A-register.
-    movl 4096, %ecx      # Set the C-register to 4096.
-    rep stosl          # Clear the memory.
-    movl %cr3, %edi       # Set the destination index to control register 3.
-
-    movl $0x3003, (%edi)      # Set the uint32_t at the destination index to 0x2003.
-    addl $0x1000, %edi              # Add 0x1000 to the destination index.
-    movl $0x4003, (%edi)      # Set the uint32_t at the destination index to 0x3003.
-    addl $0x1000, (%edi)              # Add 0x1000 to the destination index.
-    movl $0x5003, (%edi)      # Set the uint32_t at the destination index to 0x4003.
-    addl $0x1000, (%edi)              # Add 0x1000 to the destination index.
-
-    movl 0x00001003, %ebx          # Set the B-register to 0x00000003.
-    movl 512, %ecx                 # Set the C-register to 512.
-
-.SetEntry:
-    movl %ebx, (%edi)         # Set the uint32_t at the destination index to the B-register.
-    addl 0x1000, %ebx # 0x1000 to the B-register.
-    addl 8, %edi                   # Add eight to the destination index.
-    loop .SetEntry               # Set the next entry.
+	call _ada_kernel

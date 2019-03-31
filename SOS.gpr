@@ -13,16 +13,13 @@ project Sos is
 
    for Object_Dir use "obj";
    for Exec_Dir use "dist";
-   for Main use ("kernel.adb");
+   for Main use ("init.s");
 
 
    package Compiler is
       for Local_Configuration_Pragmas use "pragmas.adc";
 
-      Ada_Switches := (
-         "-g", "-gnat12",
-         "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp"
-      );
+      Ada_Switches := ("-g", "-gnat12", "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp");
 
        case Mode is
          when "debug"   => Ada_Switches := Ada_Switches & "-g";
@@ -30,9 +27,8 @@ project Sos is
        end case;
 
        case Architecture is
-       when "x86_64" | "arm64" | "riscv32" =>
-         for Switches("init.s") use Compiler'Default_Switches("asm") & ("-m32");
-    --     for Switches("arch_32.adb") use Compiler'Default_Switches("ada") & "-m32";
+       when "x86_64" =>
+         for Switches("entry_32.adb") use Compiler'Default_Switches("ada") & "-m32";
        end case;
 
        for Default_Switches ("ada") use Ada_Switches;
@@ -43,14 +39,17 @@ project Sos is
    end Builder;
 
    package Binder is
-        for Default_Switches ("ada") use ("-nostdlib");
+      for Default_Switches ("ada") use ("-nostdlib");
    end Binder;
 
    package Linker is
-      for Default_Switches ("ada") use (
-         "-T" & SOS'Project_Dir & "src/arch/" & Architecture & "/link.ld",
-         "-Wl,--gc-sections"
+      for Driver use "ld";
+      for Switches("asm") use (
+         "-nostartfiles","-nostdlib",
+         "-T/home/harry/eclipse-workspace/SOS/src/arch/x86_64/link.ld",
+         "-M"
       );
+
    end Linker;
 
 end Sos;
