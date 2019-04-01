@@ -1,0 +1,16 @@
+[GENERATED OBJECT FILE]
+b__kernel.o
+[PROJECT FILES]
+/home/harry/Desktop/SOS/SOS.gpr
+20190401125257
+[BOUND OBJECT FILES]
+/home/harry/Desktop/SOS/obj/console.o
+/home/harry/Desktop/SOS/obj/kernel.o
+[GENERATED SOURCE FILES]
+b__kernel.ads
+b__kernel.adb
+b__kernel.ali
+[RESULTING OPTIONS]
+-L/home/harry/Desktop/SOS/obj/
+-L/home/harry/Desktop/SOS/obj/
+-L/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/adalib/

@@ -1,5 +1,3 @@
-obj
-dist
-*.iso
-*.o
-*.ali
+obj/.*
+dist/os.iso
+dist/kernel

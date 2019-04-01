@@ -1,0 +1,2 @@
+/home/harry/Desktop/SOS/src/arch/x86_64/init.s: Assembler messages:
+/home/harry/Desktop/SOS/src/arch/x86_64/init.s:13: Warning: value 0xffffffff17adaf1a truncated to 0x17adaf1a

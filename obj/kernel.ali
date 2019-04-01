@@ -1,0 +1,40 @@
+V "GNAT Lib v2018"
+M P W=b
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -g
+A -gnat12
+A -gnatp
+A -gnat12
+A -g
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_RECURSION
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+
+U kernel%b		kernel.adb		256281ed NE OO SU
+W console%s		console.adb		console.ali
+
+D console.ads		20190401091319 3c3c6b88 console%s
+D kernel.adb		20190401094608 195eea65 kernel%b
+D system.ads		20180525181036 d54140d3 system%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190401091319 00000000
+X 1 console.ads
+1K9*console 43e12 2|1w6
+X 2 kernel.adb
+3U11*Kernel 3b11 9l5 9t11
+

@@ -1,0 +1,43 @@
+V "GNAT Lib v2018"
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnatA
+A -gnatWb
+A -gnatiw
+A -gnatws
+A -g
+A -g
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RR NO_EXCEPTION_PROPAGATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U ada_main%b		b__kernel.adb		7e58615b NE OO PK IL
+Z system%s		system.ads		system.ali
+
+U ada_main%s		b__kernel.ads		fd31e6de EE NE OO PK IL
+W system%s		system.ads		system.ali
+
+D b__kernel.ads		20190401174128 2870a60d ada_main%s
+D b__kernel.adb		20190401174128 5628c756 ada_main%b
+D system.ads		20180525181036 d54140d3 system%s
+X 1 b__kernel.ads
+5K9*ada_main 28l5 28e13 2|7b14 39l5 39t13
+8a4*GNAT_Version{string} 10r22
+12a4*Ada_Main_Program_Name{string} 13r22 2|23r52
+15U14*adainit 16i<c,adainit>22 2|12b14 17l8 17t15 27s7
+18U14*main 19i<c,main>22 2|22b14 29t7
+X 2 b__kernel.adb
+9i4 E4{short_integer} 9m44 9r44 16m7 16r13
+19U14 Ada_Main_Program 20b<ada,_ada_kernel>24 28s7
+23m7 Ensure_Reference{3|90M9} 24r24
+X 3 system.ads
+60K9*System 1|4w6 2|23r34 3|172e11
+90M9*Address 2|23r41
+

@@ -33,16 +33,18 @@ project Sos is
    end Compiler;
 
    package Builder is
-      for Default_Switches ("Ada") use ("-gnat12", "-nostdlib", "--RTS=zfp");
+      for Default_Switches ("Ada") use ("-g", "-gnat12", "-nostdlib", "--RTS=zfp");
    end Builder;
 
    package Linker is
       for Default_Switches("Ada") use (
-         "-Wl,--gc-sections,-z max-page-size=8192", 
-         "-n",
+         --"-Wl,-z max-page-size=8192", 
+         "-static",
+         "-n", "-g",
          "-nostartfiles", 
          "-nodefaultlibs",
-         "-T../src/arch/" & Architecture & "/link.ld");
+         "-T../src/arch/" & Architecture & "/link.ld",
+         "-ffreestanding");
    end Linker;
 
 end Sos;

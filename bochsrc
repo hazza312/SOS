@@ -1,0 +1,17 @@
+cpu: model=corei5_arrandale_m520
+# We give our system 32 Mb of RAM.
+megs: 512
+
+# This is the additional package we installed. We add it into our configuration.
+display_library: sdl
+
+
+ata0-slave:  type=cdrom, path=dist/os.iso, status=inserted  
+
+boot: cdrom
+
+# Logfile
+log: bochsout.txt
+
+# We don't need mouse emulation
+mouse: enabled=0

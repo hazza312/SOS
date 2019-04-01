@@ -1,5 +1,6 @@
 ARCH ?= x86_64
 TARGET ?= pc
+MODE ?= debug
 
 # (cross-compiler) location
 ifeq ($(ARCH), x86_64)
@@ -13,7 +14,7 @@ COMPILE := $(GNAT_BIN)/gnat
 PROJECT := SOS.gpr
 
 # emulation tools
-QEMU:=qemu-system-i386
+QEMU:=qemu-system-x86_64
 QEMU_FLAGS:=
 
 DEBUG_GUI:=ddd
@@ -36,7 +37,7 @@ analyze:
 
 # Build executables for all mains defined by the project.
 build:
-	$(GPRBUILD) -d -P "$(PROJECT)" -Xarch=$(ARCH)
+	$(GPRBUILD) -d -P "$(PROJECT)" -Xarch=$(ARCH) -Xmode=$(MODE)
 
 # Clean, then build executables for all mains defined by the project.
 rebuild: clean build
@@ -55,6 +56,9 @@ iso:	build
 	
 debug:	iso
 	$(QEMU) -cdrom dist/os.iso -s &
-	$(DEBUG_GUI) --eval-command="target remote localhost:1234" --symbols=dist/kernel 2> /dev/null
+	$(DEBUG_GUI) --eval-command="target remote localhost:1234" --symbols=dist/kernel 2> /dev/null 
+
+run:	iso 
+	$(QEMU) -cdrom dist/os.iso -s
 	
 	

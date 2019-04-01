@@ -1,69 +1,106 @@
-# init.s
-# initial entry point for x86_64 architecture.
-# GRUB has already setup protected mode for us.
+		# init.s
+		# initial entry point for x86_64 architecture.
+		# in GAS. Ew.
+		# GRUB has already setup protected mode for us.
+
+		/* Multiboot header */
+		.section .multiboot_header
+		.align 	64					# spec requires 64-bit alignment
+									# and whole header in first 64k 
+		.long  	0xE85250D6 			# magic number for multiboot2
+		.long  	0 					# i386, 32 bit protected mode
+		.long  	0x10				# header length
+		.long  	-(0xe85250d6+0x10)	# checksum
+
+		# final end tag: no more header
+		.short 	0  					# tag type
+   		.short 	0  					# flags
+   		.long 	8  					# size
 
 
-.section .multiboot_header
-	.long		$0xE85250D6 		# magic number
-	.long		$0 				# 32 bit protected mode
-	.long 	$0x10
-	.long 	$-(0xe85250d6 + 0x10)		# checksum
+		/* .bss section: memory mapped pages */
+		.section .bss
+		.align 	0x1000 				# align on a 4K boundary
+pml4t: 	.space  0x1000 				# Page Map Level 4 Table
+pdpt: 	.space  0x1000 				# page-directory pointer table
+pdt:	.space 	0x1000
 
-	.short $0  # type
-   .short $0  # flags
-   .long $8  # size
+		
+		/* .data section: GDT entries */
+	 	/* see AMD64 P88 */
+		.section .data
+		.align 0x1000
+GDT:
+0:		# Null descriptor, values don't really matter(?)
+		#.space 	32
+		.long 0xFFFF                    # Limit (low).
+		.long 0                         # Base (low).
+		.byte 0                         # Base (middle)
+		.byte 0                         # Access.
+		.byte 1                         # Granularity.
+		.byte 0                         # Base (high).					
+		
+1:		# Code entry
+		.long 	0					# segment limit[15:0]
+		.long 	0					# base address[15:0]
+		.byte 	0					# base address[23:16]
+		.byte 	0b10011010			# long mode & (??)
+		.byte	0b10101111			# segment limit[19:16] & flags
+		.byte 	0 					# base address[31:24]
 
+2:		# Data entry
+		.long 	0					# segment limit[15:0]
+		.long 	0					# base address[15:0]
+		.byte 	0					# base address[23:16]
+		.byte 	0b10010010			# long mode & (??)
+		.byte	0					# segment limit[19:16] & flags
+		.byte 	0 					# base address[31:24]
+.end:
 
-.code32
-# see P183, AMD64 APMV2SP
-# -- CR3 layout --
-# 	      63:52 	# reserved
-#		  51:12 	# PML4 Table Base Address
-#		  11:05 	# reserved
-.equ CR3PCD, 04     # page cache-disable
-.equ CR3PWT, 03     # page write-through
-#		  02:00		# reserved
-
-# --
-
-
-.section .bss
-.align 4096
-
-# identity map the first 2M in a 2M page
-.lcomm pml4t	4096 #
-.lcomm pdpt 	4096 # page-directory pointer table
-.lcomm pdt		4096 # page directory
-.lcomm pt1 		4096
 
 gdt_info:
-.word 0 #limit
-.quad 0 #base
-
-.section text
-.section .entry
-.global _entry
-.extern _ada_kernel
-
-# -- setup up page tables --
-_entry:
-	movl	$pml4t, %eax
-	movl	%eax, %cr3
-
-	movl	$pml4t, %edi 	# dest
-	movl	$pdpt, %esi 	# src
-	addl	3, %esi
-
-ploop:
-	movl	%esi, (%edi)
-	addl	4096, %edi
-	addl	4096, %esi
-	cmp		$pt1, %esi
-	jl		ploop
+		.short 	8*3					# GDT Table limit
+		.long 	GDT	 				# Base Address of GDT Table
+									# TODO: local sublabelsm like in NASM?
 
 
-	lgdt	(gdt_info)
+		/* 	Kernel Entry Point */
+		.section .entry
+		.globl 	_entry
+		.extern _ada_kernel			# continue Ada kernel when we are ready
+		.code32						# 32-bit code for now, please
+
+_entry:	
+.pt_magic:							# see P135 in AMD64SP
+		movl 	$pdpt, (pml4t)		# set PDPT entry in PML4T
+		orl		$3, (pml4t)			# Set R/W + P bits
+		movl 	$pdt, (pdpt)		# set PDT entry in PDPT
+		orl 	$3, (pdpt)			# Set R/W + P bits (also .PS is already 0ed)
+		orl 	$(1<<7), (pdt)		# set PDE.PS bit 7 = 2M page translation
+
+									# see P439 on enabling long mode.
+
+		movl	%cr4, %eax 
+		orl 	$(1<<31), %eax		# enable the PAE bit
+		movl 	%eax, %cr4 
+
+		movl	$pml4t, %eax		# load base of PML4 in CR3
+		movl	%eax, %cr3	
 
 
-	nop
-	call _ada_kernel
+		movl 	$0xC0000080, %ecx	# we need to set the EFER.LME
+		rdmsr						# (Extended Feature Enable Register)
+		orl 	$(1<<8), %eax 		# toggle the Long Mode Enable Bit
+		wrmsr						# write back
+
+
+		movl 	%cr0, %eax 			
+		orl 	$(1<<31), %eax		# enable PG bit	
+		movl 	%eax, %cr0
+
+		cli
+		lgdt	(gdt_info)			# load the GDT
+
+		jmp		$0x08, $_ada_kernel	# hope and pray for no PF!
+
+never:	jmp 	never			
