@@ -52,7 +52,7 @@ analyze_file:
 	
 iso:	build
 	cp dist/kernel dist/iso/boot/kernel
-	grub-mkrescue -o dist/os.iso dist/iso
+	grub-mkrescue -o dist/os.iso dist/iso 2> /dev/null
 	
 debug:	iso
 	$(QEMU) -cdrom dist/os.iso -s &
@@ -60,5 +60,9 @@ debug:	iso
 
 run:	iso 
 	$(QEMU) -cdrom dist/os.iso -s
+
+bochs:	iso 
+	sh strip.sh dist/kernel  
+	bochs -rc bochsinit.txt
 	
 	

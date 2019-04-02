@@ -44,7 +44,9 @@ project Sos is
          "-nostartfiles", 
          "-nodefaultlibs",
          "-T../src/arch/" & Architecture & "/link.ld",
-         "-ffreestanding");
+         "-ffreestanding"--,
+         --"-Wl,-Map=kmap"
+         );
    end Linker;
 
 end Sos;

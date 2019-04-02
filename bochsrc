@@ -1,4 +1,6 @@
 cpu: model=corei5_arrandale_m520
+debug_symbols: file=dist/kernel.sym
+display_library: x, options="gui_debug"
 # We give our system 32 Mb of RAM.
 megs: 512
 
