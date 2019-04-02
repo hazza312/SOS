@@ -1,6 +1,10 @@
 with System; use System;
+with System.Storage_Elements; use System.Storage_Elements;
+with Ada.Unchecked_Conversion; 
 
 package body console is
+
+   function A_To_Int is new Ada.Unchecked_Conversion(System.Address, Integer);
 
    VMem : array(0..Height-1, 0..Width-1) of cell;
    for VMem'Address use System'To_Address(16#B8000#);
@@ -71,6 +75,12 @@ package body console is
       end loop;
 
    end Put;
+
+   procedure Put(a : System.Address; fg : Colour :=  White; bg : BG_Colour := Black) is 
+   begin 
+      Put("0x");
+      Put(A_To_Int(a), Base=>16);
+   end;
 
    procedure Banner(s : String; fg: Colour := White; bg: BG_Colour := Black) is
       L_Pad : Positive := (width - s'Length) / 2;

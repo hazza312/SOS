@@ -1,14 +1,23 @@
-with Console;
+with Console; use Console;
 with VM;
 with IDT;
+with System;
 
 procedure Kernel is
+   Boot_Info: System.Address;
+   pragma Import(C, Boot_Info, "bootinfo");
+   
+
 begin
-   Console.Banner("Hello World!", bg=>Console.Cyan, fg=>Console.White);
-   Console.Put_Line("-> Entered 64-bit kernel");
-   Console.Put("-> Setting up IDTs");
-   Console.Put("-> Setting up GDTs");
-   Console.Put_Line(".. done");
+   Banner("Hello World!", bg=>Cyan, fg=>White);
+   Put_Line("-> Entered 64-bit kernel");
+   Put_Line("-> Setting up IDTs");
+   Put("-> Setting up GDTs");
+   Put_Line(".. done");
+
+   Put("MultiBoot2 Info at");
+      Put(Boot_Info);
+      Put(LF);
 
 
    -- infinite loop

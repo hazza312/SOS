@@ -1,3 +1,5 @@
+with System;
+
 package console is
 
    Width : constant Integer := 80;
@@ -29,6 +31,7 @@ package console is
 
    procedure Put(c : Character; fg: Colour := White; bg : BG_Colour := Black);
    procedure Put(s: String; fg: Colour :=  White; bg : BG_Colour := Black);
+   procedure Put(a : System.Address; fg : Colour :=  White; bg : BG_Colour := Black);
    procedure Put_Line(s: String; fg: Colour :=  White; bg : BG_Colour := Black);
    procedure Put(num : Integer; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black);
    procedure Banner(s : String; fg: Colour := White; bg: BG_Colour := Black);
