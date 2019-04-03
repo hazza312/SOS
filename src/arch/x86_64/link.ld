@@ -12,11 +12,11 @@ SECTIONS {
       init.o(.entry)
       *(.text)
    }
-   .bss 0x101000 : { 
+   .bss 0x102000 : { 
       init.o(.bss)
       *(.bss)
    }
-   .data 0x106000 : {
+   .data 0x10A000 : {
       init.o(.data)
       *(.data)
    }
