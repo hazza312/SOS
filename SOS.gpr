@@ -49,4 +49,8 @@ project Sos is
          );
    end Linker;
 
+   package Documentation is
+      for Documentation_Dir use "doc";
+   end Documentation;
+
 end Sos;

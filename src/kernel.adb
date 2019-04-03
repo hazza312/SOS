@@ -32,7 +32,7 @@ begin
 
    declare 
       package Page_Mapper is new MMap(
-         Allocation_Unit => Holes(0).Length,
+         Allocation_Unit => Holes(0).Length
                   
       );
    begin

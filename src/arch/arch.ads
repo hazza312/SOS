@@ -1,6 +1,12 @@
 with Interfaces; use Interfaces;
 with System;
 
+-- @summary
+-- Common interface for subprograms across different architectures.
+
+-- @description
+-- These subprograms are architecture-specific and should be implemented in the
+-- code base for the relevant architecture. 
 package Arch is
 
     PAGE_SIZE : constant := 4_096;

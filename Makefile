@@ -64,5 +64,8 @@ run:	iso
 bochs:	iso 
 	sh strip.sh dist/kernel  
 	bochs -rc bochsinit.txt
+
+doc:	build
+	gnatdoc -P "$(PROJECT)"
 	
 	
