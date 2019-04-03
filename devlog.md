@@ -4,20 +4,18 @@ Here is a log of the changes & development..
 
 ## Week 1
 ### Wednesday 3/4
-My birthday! Not much will have been done.
-
-Ok I say that but..
-
 Code has been refactored somewhat to separate 
 - architecture specific code
 - kernel code common across different architectures
 - lengthy code for printing debug tables etc goes in its own (for now, architecture-specific) package. 
 
-architecture-specific from the general. Each architecture will provide a means of filling the `Holes_List` (perhaps on some platforms, this information might be static and not much processing). This is populated such that the list is ordered with the biggest holes listed first. The kernel panics if there is no memory.
+Each architecture will provide a means of filling the `Holes_List` (perhaps on some platforms, this information might be static and not require much processing). This is populated such that the list is ordered with the biggest holes listed first. The kernel panics if there is no memory.
 
 On the x86_64 platform, we make use of the multiboot2 `boot_info` saved earlier and use it to work out where we have free "holes" in memory. 
 
-My current plan is to separate the allocation of physical memory, and the paging of this memory. Since memory allocators are probably going to reappear elsewhere, I am making (my first) generic Ada package.
+My current plan is to separate the allocation of physical memory, and the paging of this memory. Since memory allocators are probably going to reappear elsewhere, I am making a generic Ada package for this.
+
+I have just discovered GNATdoc, can make some pretty [nice documentation from Ada specification files](doc/index.html) -- so I have started setting that up.
 
 ### Tuesday 2/4
 Managed to (finally) get myself into Long Mode. Discovered how useful Bochs is for kernel debugging in addition to the QEMU+GDB combo.
