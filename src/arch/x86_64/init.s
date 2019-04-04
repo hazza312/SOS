@@ -107,6 +107,7 @@ _entry:
 
 .leap_of_faith:
 		lgdt	gdtinfo
+		# sti
 		call	$0x10, $_ada_kernel				# pray for no page faults
 
 		.code64
