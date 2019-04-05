@@ -1,6 +1,7 @@
 with System.Storage_Elements;    use System.Storage_Elements;
 with Interfaces;                 use Interfaces;
 with System; use System;
+with System.Machine_Code; use System.Machine_Code;
 
 with Console;                    use Console;
 with Arch; 
@@ -53,6 +54,10 @@ begin
       Page_Mapper.Free(Allocs(0), PAGE_SIZE);      
       Page_Mapper.Print;
    end;
+
+    Put_Line("-> (re)enabling interrupts");
+    -- Asm("movq ($0xffffffffffff), %r15");
+    --Asm("sti");
 
    Panic("Nothing left to do");
 end Kernel;

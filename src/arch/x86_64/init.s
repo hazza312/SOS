@@ -3,19 +3,24 @@
 		# GRUB has already setup 32-bit protected mode for us.
 
 /****** Multiboot header ******************************************************/
+		.equ	MBH_MAGIC,		0xE85250D6
+		.equ	MBH_ARCH,		0					# i386, 32-bit protected 
+		.equ	MBH_LENGTH, 	end$ - MBH
+		.equ 	MBH_CHKSUM, 	-(MBH_MAGIC+MBH_ARCH+MBH_LENGTH) & 0xffffffff
+
 		.section .multiboot_header
 		.align 	64								# spec requires 64-bit alignment
 												# and whole header in first 64k 
-		.long  	0xE85250D6 						# magic number for multiboot2
-		.long  	0 								# i386, 32 bit protected mode
-		.long  	0x10							# header length
-		.long  	-(0xe85250d6+0x10) & 0xffffffff	# checksum
+MBH:	.long  	MBH_MAGIC
+		.long  	MBH_ARCH
+		.long  	MBH_LENGTH
+		.long  	MBH_CHKSUM
 
 		# final end tag: no more header
 		.short 	0  								# tag type
    		.short 	0  								# flags
    		.long 	8  								# size
-
+end$:
 
 /****** .bss section: initial page tables *************************************/
 		.section .bss
@@ -28,30 +33,27 @@ stack_end:
 
 		
 /****** .data section: GDT entries ********************************************/
-		.section .data							# see AMD64 P88
-		.globl 	 bootinfo
-		.align 0x1000							# align on a page boundary 
-GDT:
-0:		.space 8								# Null descriptor*2
-1:		.space 8								# (match our CS/DS with GRUB's)
-		
-2:		# Code Entry (0x10)
-		.short 	0								# segment limit[15:0]
-		.short 	0								# base address[15:0]
-		.byte 	0								# base address[23:16]
-		.byte 	0b10011010						# long mode & (??)
-		.byte	0b10101111						# segment limit[19:16] & flags
-		.byte 	0 								# base address[31:24]
+		.macro GDT_Entry base limit code A W E DPL P AVL L DBD G
+			.short 	\limit & 0xffff
+			.short	\base & 0xffff
+			.byte 	(\base >> 16) & 0xff
+			.byte 	(\A<<0)|(\W<<1)|(\E<<2)|(\code<<3)|(1<<4)|(\DPL<<5)|(\P<<7) 
+			.byte 	((\limit>>16) & 0xf)|(\L<<5)|(\AVL<<4)|(\DBD<<6)|(\G<<7)
+			.byte 	(\base >> 24) & 0xff
+		.endm
 
-3:		# Data entry (0x18)
-		.short 	0								# segment limit[15:0]
-		.short 	0								# base address[15:0]
-		.byte 	0								# base address[23:16]
-		.byte 	0b10010010						# long mode & (??)
-		.byte	0								# segment limit[19:16] & flags
-		.byte 	0 								# base address[31:24]
-.end:
-gdtinfo:.short 	.end -GDT -1					# GDT Table limit
+		.section .data							# see AMD64 P88
+		.globl 	bootinfo
+		.align 	0x1000							# align on a page boundary 
+
+GDT:	/**********	base	limit	code	A 	RW 	EC 	DPL	P	AVL	L	DB	G */	
+.0x00$:	GDT_Entry	0		0		0		0	0	0	0	0	0	0	0	0
+.0x08$:	GDT_Entry	0		0		0		0	0	0	0	0	0	0	0	0
+.0x10$: GDT_Entry 	0 		0xf0000	1		0 	1 	0 	0 	1 	0 	1	0 	1
+.0x18$: GDT_Entry 	0 		0		0		0 	1 	0 	0 	1 	0 	0	0 	1
+.end$:
+
+gdtinfo:.short 	.end$ -GDT -1					# GDT Table limit
 		.quad 	GDT	 							# Base Address of GDT Table
 
 bootinfo:
@@ -59,6 +61,10 @@ bootinfo:
 
 
 /****** Kernel Entry Point ****************************************************/
+		.equ 	PTE_PS,		(1<<7)
+		.equ	PTE_W,		(1<<1)
+		.equ	PTE_P,		(1<<0)
+
 		.section .entry
 		.global	_entry
 		.extern _ada_kernel						# continue Ada kernel when we are ready
@@ -79,36 +85,39 @@ _entry:
 		out	 	%al, %dx
 												
 .init_page_tables:								# see P135 in AMD64SP			
-		movl 	$pdpt, (pml4t)					# set PDPT entry in PML4T
-		orl		$3, (pml4t)						# Set R/W + P bits
-		movl 	$pdt, (pdpt)					# set PDT entry in PDPT
-		orl 	$3, (pdpt)						# Set R/W + P bits (also .PS is already 0ed)
-		orl 	$((1<<7) |3), (pdt)				# set PDE.PS bit 7 = 2M page translation, RW+P
+		movl 	$pdpt, 					(pml4t)	# pdpt is 0th entry of pml4t
+		orl		$(PTE_W|PTE_P), 		(pml4t) # table is present, W
+		movl 	$pdt, 					(pdpt)  # pdt is 0th entry of pdt
+		orl 	$(PTE_W|PTE_P), 		(pdpt)  # table is present, W
+		orl 	$(PTE_W|PTE_P|PTE_PS), 	(pdt)	# (physical base is 0). 2M page.
 												# see P439 on enabling long mode.
-.load_cr3:
+.load_cr3$:
 		movl	$pml4t, %eax
 		movl	%eax, %cr3	
 
-.enable_pae:		
+.enable_pae$:		
 		movl	%cr4, %eax
 		orl 	$(1<<5), %eax
 		movl 	%eax, %cr4 
 
-.enable_lm:
+.enable_lm$:
 		movl 	$0xC0000080, %ecx
 		rdmsr						
 		orl 	$(1<<8), %eax 		
 		wrmsr					
 
-.enable_paging:
+.enable_paging$:
 		movl 	%cr0, %eax
 		orl 	$(1<<31), %eax		
 		movl 	%eax, %cr0
 
-.leap_of_faith:
+.leap_of_faith$:
 		lgdt	gdtinfo
-		# sti
-		call	$0x10, $_ada_kernel				# pray for no page faults
+		jmp		$0x10, $next				# pray for no page faults
 
-		.code64
+		.code64		
+next:	lidt	ldtinfo
+		sti
+		call 	_ada_kernel
+		
 never:	jmp 	never			

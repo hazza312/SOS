@@ -22,7 +22,8 @@ project Sos is
       Ada_Switches := (
          --"-g", -- generate debug info
          "-gnatp", -- suppress all checks
-         "-gnat12", "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp");
+         "-gnat12", "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp",
+         "-mno-red-zone");
 
        case Mode is
          when "debug"   => Ada_Switches := Ada_Switches & "-g";
@@ -33,14 +34,14 @@ project Sos is
    end Compiler;
 
    package Builder is
-      for Default_Switches ("Ada") use ("-g", "-gnat12", "-nostdlib", "--RTS=zfp");
+      for Default_Switches ("Ada") use ("-gnat12", "-nostdlib", "--RTS=zfp");
    end Builder;
 
    package Linker is
       for Default_Switches("Ada") use (
          --"-Wl,-z max-page-size=8192", 
          "-static",
-         "-n", "-g",
+         "-n",
          "-nostartfiles", 
          "-nodefaultlibs",
          "-T../src/arch/" & Architecture & "/link.ld",
