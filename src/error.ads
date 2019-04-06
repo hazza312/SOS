@@ -2,13 +2,22 @@ with System;
 with Interfaces; use Interfaces;
 
 package Error is 
-    procedure lastchance(Msg : System.Address; Line: Integer)
+
+    type CPU_Exception is (
+        DE,     DB,     NMI,    BP,     OFE,    BR,     UD,     NM,
+        DF,     Reserved0,TS,   NP,     SS,     GP,     PF,     Reserved1,
+        MF,     AC,     MC,     XF,     VC,
+        SX
+    );
+
+
+    procedure lastchance(Msg : String; Line: Integer)
     with 
         Export => True, 
         Convention => C, 
         External_Name => "__gnat_last_chance_handler";
 
-    procedure CPU_Exception(V: Unsigned_64)
+    procedure Exception_Handler
     with 
         Export => True, 
         Convention => C, 

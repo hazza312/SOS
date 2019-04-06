@@ -9,7 +9,7 @@
         # appropriate action.        
 
         .equ    STUB_WIDTH, 0x10
-        .equ    STUB_BASE,  0x101ee0
+        .equ    STUB_BASE,  0x100020
 
         .globl  STUB_BASE
         .globl  ldtinfo
@@ -17,7 +17,7 @@
 
 /****** IDT Table *************************************************************/
         .macro IDT selector offset ist type dpl p
-            .align 64
+            .align 16
             .short  \offset & 0xffff
             .short  \selector
             .byte   \ist & 0b111
@@ -28,7 +28,7 @@
         .endm
 
         .macro Make_Table i_no last 
-            IDT 0x10, (STUB_BASE + (\i_no * STUB_WIDTH)), 0, 0xF, 0, 1
+            IDT 0x10, (STUB_BASE + (\i_no * STUB_WIDTH)), 0, 0xF, 0, 1            
             .if \i_no - \last 
                 Make_Table \i_no+1, \last
             .endif
@@ -37,9 +37,7 @@
         .section .data
         .align  64
 
-LDT:    Make_Table 0    99
-        Make_Table 100 199
-        Make_Table 200 255
+LDT:    Make_Table 0    63
 .end$:  # interrupt table generated here
 
 ldtinfo:.short 	.end$ -LDT -1					# LDT Table limit
@@ -49,20 +47,21 @@ ldtinfo:.short 	.end$ -LDT -1					# LDT Table limit
 /****** Stubs *****************************************************************/
         .macro Make_Stubs i_no last 
             .align STUB_WIDTH
-
-            movl \i_no, %edi
-            jmp except
+            movq    \i_no, %rdi 
+            jmp     except
+            # hand assemble these instructions to ensure they are "packed"
+            # .byte   0xb0                 # mov imm8, al
+            # .byte   \i_no                # exception number
+            # jmp     except
 
             .if \i_no - \last 
                 Make_Stubs \i_no+1, \last
             .endif
         .endm 
 
-        .section .text
+        .section .stubs
         .align 16
-stubs:  Make_Stubs 0    99
-        Make_Stubs 100  199
-        Make_Stubs 200  255
+stubs:  Make_Stubs 0    63
         # Stubs generated here..
 
 except: cli
