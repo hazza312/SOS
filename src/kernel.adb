@@ -8,15 +8,9 @@ with Arch;
 with MMap;
 with Error; use Error;
 
-procedure Kernel is
-   
-   type  Address is new Unsigned_64;
-   type  Physical_Address is new Address;
-   type  Virtual_Address is new Address;
-   
-   PAGE_SIZE : constant := 4_096;
-   Holes:      Arch.Holes_List;
+package body Kernel is
 
+procedure Kernel is
 begin
    Banner   ("SOS#toast", bg=>Cyan, fg=>White  );
    Put_Line ("-> entered 64-bit long mode" );
@@ -56,8 +50,7 @@ begin
    end;
 
     Put_Line("-> (re)enabling interrupts");
-    -- Asm("movq ($0xffffffffffff), %r15");
-    --Asm("sti");
+    Arch.Initialise_Interrupts;
 
-   Panic("Nothing left to do");
+end Kernel;
 end Kernel;

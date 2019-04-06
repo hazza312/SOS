@@ -16,8 +16,13 @@ package Arch is
         Length: Integer;
     end record;
     type Holes_List is array(0..7) of Free_Hole;
+    type IO_Port is new Unsigned_16;
 
+    procedure Scout_Memory(Holes: in out Holes_List);  
+    procedure Initialise_Interrupts;  
 
-    procedure Scout_Memory(Holes: in out Holes_List);    
+    function IO_Inb(Port: IO_Port) return Unsigned_8 with Inline;
+    procedure IO_Outb(Port: IO_Port; Data: Unsigned_8) with Inline;
+
 
 end Arch;

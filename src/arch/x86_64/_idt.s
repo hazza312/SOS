@@ -8,12 +8,10 @@
         # number, before jumping to the real Ada routine, who can take 
         # appropriate action.        
 
-        .equ    STUB_WIDTH, 0x10
-        .equ    STUB_BASE,  0x100020
+        .equ    STUB_WIDTH, 0x04
+        .equ    STUB_BASE,  0x100018
 
-        .globl  STUB_BASE
-        .globl  ldtinfo
-
+        .globl  idtinfo
 
 /****** IDT Table *************************************************************/
         .macro IDT selector offset ist type dpl p
@@ -23,12 +21,13 @@
             .byte   \ist & 0b111
             .byte   (\type & 0xf) | (\dpl<<5) | (\p<<7)
             .short  \offset>>16
-            .quad   \offset>>32
-            .quad   0
+            .long   \offset>>32
+            .long   0
         .endm
 
         .macro Make_Table i_no last 
-            IDT 0x10, (STUB_BASE + (\i_no * STUB_WIDTH)), 0, 0xF, 0, 1            
+            .equ addr, STUB_BASE + ((\i_no) * STUB_WIDTH)
+            IDT 0x10, addr, 0, 0xF, 0, 1            
             .if \i_no - \last 
                 Make_Table \i_no+1, \last
             .endif
@@ -37,22 +36,33 @@
         .section .data
         .align  64
 
-LDT:    Make_Table 0    63
-.end$:  # interrupt table generated here
+IDT:    Make_Table 0, 63
+        # IDT expands here
+.end$:  
 
-ldtinfo:.short 	.end$ -LDT -1					# LDT Table limit
-		.quad 	LDT	 							# Base Address of LDT Table
+idtinfo:.short 	.end$ -IDT -1	# LDT Table limit
+		.quad 	IDT	# Base Address of LDT Table
 
 
 /****** Stubs *****************************************************************/
         .macro Make_Stubs i_no last 
             .align STUB_WIDTH
-            movq    \i_no, %rdi 
-            jmp     except
-            # hand assemble these instructions to ensure they are "packed"
-            # .byte   0xb0                 # mov imm8, al
-            # .byte   \i_no                # exception number
-            # jmp     except
+
+            # hand assemble, so each entry is only 4 bytes
+             .byte   0xb0      # mov imm8, al
+             .byte   \i_no     # exception number
+             .byte   0xeb      # jmp rel8 
+             .if (((\last) - (\i_no)) * STUB_WIDTH) > 0x7f
+                .byte   0x7e   # bunnyhop
+             .else 
+                .byte   ((\last) - (\i_no)) * STUB_WIDTH
+             .endif
+
+             # we can directly jump with a relative offset of up to +127 to
+             # <except> when the table is small enough. I might want to use this
+             # for debugging higher (external) interrupts later, so will need a
+             # bigger table. So bunnyhop to <except> if we are too far away,
+             # , else jump there directly.  
 
             .if \i_no - \last 
                 Make_Stubs \i_no+1, \last
@@ -60,9 +70,14 @@ ldtinfo:.short 	.end$ -LDT -1					# LDT Table limit
         .endm 
 
         .section .stubs
-        .align 16
-stubs:  Make_Stubs 0    63
-        # Stubs generated here..
+        .align STUB_WIDTH
+stubs:  Make_Stubs 0 63
+        # Stubs expands here..
 
-except: cli
-        jmp _ada_cpu_exception
+except: jmp _ada_cpu_exception
+
+
+/****** Other misc. setup *****************************************************/
+        .section .text
+
+        

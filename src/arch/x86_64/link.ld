@@ -12,6 +12,16 @@ SECTIONS {
       *(.text)      
    }
 
+      /DISCARD/ : {
+       *(.eh_frame)
+       *(.debug_info)
+       *(.debug_abbrev)
+       *(.debug_aranges)
+       *(.debug_line)
+       *(.debug_str)
+
+   }
+
    .bss  : { 
       *(.bss)
    }
@@ -19,4 +29,6 @@ SECTIONS {
    .data : {
       *(.data)
    }
+
+
 }

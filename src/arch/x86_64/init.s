@@ -116,8 +116,7 @@ _entry:
 		jmp		$0x10, $next				# pray for no page faults
 
 		.code64		
-next:	lidt	ldtinfo
-		sti
-		call 	_ada_kernel
+next:	lidt	idtinfo
+		call 	_ada_kernel_entry
 		
 never:	jmp 	never			

@@ -3,8 +3,35 @@ with System;
 with System.Storage_Elements; use System.Storage_Elements;
 with Multiboot; use Multiboot;
 with X86_Debug;
+with Pic_8259A;
+with System.Machine_Code; use System.Machine_Code;
 
 package body Arch is 
+
+    function IO_Inb(Port: IO_Port) return Unsigned_8
+    is
+        Ret: Unsigned_8;
+    begin 
+        Asm("inb %1, %0",
+            Inputs => IO_Port'Asm_Input("d", Port),
+            Outputs => Unsigned_8'Asm_Output("=a", Ret) );
+        return Ret;
+    end IO_Inb;
+        
+    procedure IO_Outb(Port: IO_Port; Data: Unsigned_8) is
+    begin 
+        Asm("outb %0, %1",
+            Inputs => (Unsigned_8'Asm_Input("a", Data),
+            IO_Port'Asm_Input("d", Port)),
+            Volatile => True);
+    end IO_Outb;
+
+    procedure Initialise_Interrupts is
+    begin 
+        Pic_8259A.Initialise;
+        Asm("sti", Volatile=>True);
+    end Initialise_Interrupts;  
+
 
     procedure Insert_Entry(Holes: in out Holes_List; E: Multiboot.Memory_Entry) is 
         I : Natural := 0;
@@ -27,7 +54,6 @@ package body Arch is
     procedure Parse_Memory_Entries(Holes: in out Holes_List; Base: System.Address; N: Natural) is   
         Entries : Multiboot.Memory_Entries(0..N-1) with Address => Base + 16;
         I : Natural := 0;
-        Tmp: Free_Hole;
     begin 
         X86_Debug.Print_Multiboot_Map(Entries);
         for Memory_Entry of Entries loop

@@ -10,9 +10,19 @@ GNATdoc.DocumentationIndex = [
     "file": "docs/console___spec.html"
   },
   {
-    "label": "IDT",
+    "label": "Error",
     "qualifier": "",
-    "file": "docs/idt___spec.html"
+    "file": "docs/error___spec.html"
+  },
+  {
+    "label": "Interrupts",
+    "qualifier": "",
+    "file": "docs/interrupts___spec.html"
+  },
+  {
+    "label": "Kernel",
+    "qualifier": "",
+    "file": "docs/kernel___spec.html"
   },
   {
     "label": "MMap",
@@ -25,9 +35,9 @@ GNATdoc.DocumentationIndex = [
     "file": "docs/multiboot___spec.html"
   },
   {
-    "label": "Vm",
+    "label": "PIC_8259A",
     "qualifier": "",
-    "file": "docs/vm___spec.html"
+    "file": "docs/pic_8259a___spec.html"
   },
   {
     "label": "X86_Debug",

@@ -2,18 +2,18 @@ GNATdoc.EntitiesCategory = {
   "label": "Subprograms",
   "entities": [
     {
+      "label": "Allocate",
+      "docHref": "docs/mmap___spec.html#L16C14",
+      "declared": "MMap",
+      "declared_qualifier": "",
+      "srcHref": "srcs/mmap.ads.html#L16"
+    },
+    {
       "label": "At_X",
       "docHref": "docs/console___spec.html#L32C14",
       "declared": "Console",
       "declared_qualifier": "",
       "srcHref": "srcs/console.ads.html#L32"
-    },
-    {
-      "label": "b",
-      "docHref": "docs/vm___spec.html#L5C15",
-      "declared": "Vm",
-      "declared_qualifier": "",
-      "srcHref": "srcs/vm.ads.html#L5"
     },
     {
       "label": "Banner",
@@ -30,11 +30,67 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/console.ads.html#L43"
     },
     {
-      "label": "Hey",
-      "docHref": "docs/mmap___spec.html#L9C15",
+      "label": "Exception_Handler",
+      "docHref": "docs/error___spec.html#L13C15",
+      "declared": "Error",
+      "declared_qualifier": "",
+      "srcHref": "srcs/error.ads.html#L13"
+    },
+    {
+      "label": "Free",
+      "docHref": "docs/mmap___spec.html#L17C15",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L9"
+      "srcHref": "srcs/mmap.ads.html#L17"
+    },
+    {
+      "label": "Initialise",
+      "docHref": "docs/pic_8259a___spec.html#L67C15",
+      "declared": "PIC_8259A",
+      "declared_qualifier": "",
+      "srcHref": "srcs/pic_8259a.ads.html#L67"
+    },
+    {
+      "label": "Initialise_Interrupts",
+      "docHref": "docs/arch___spec.html#L22C15",
+      "declared": "Arch",
+      "declared_qualifier": "",
+      "srcHref": "srcs/arch.ads.html#L22"
+    },
+    {
+      "label": "IO_Inb",
+      "docHref": "docs/arch___spec.html#L24C14",
+      "declared": "Arch",
+      "declared_qualifier": "",
+      "srcHref": "srcs/arch.ads.html#L24"
+    },
+    {
+      "label": "IO_Outb",
+      "docHref": "docs/arch___spec.html#L25C15",
+      "declared": "Arch",
+      "declared_qualifier": "",
+      "srcHref": "srcs/arch.ads.html#L25"
+    },
+    {
+      "label": "Kernel",
+      "docHref": "docs/kernel___spec.html#L13C14",
+      "declared": "Kernel",
+      "declared_qualifier": "",
+      "srcHref": "srcs/kernel.ads.html#L13"
+    },
+    {
+      "label": "Panic",
+      "docHref": "docs/error___spec.html#L19C15",
+      "declared": "Error",
+      "declared_qualifier": "",
+      "srcHref": "srcs/error.ads.html#L19"
+    },
+    {
+      "label": "Print",
+      "docHref": "docs/mmap___spec.html#L18C15",
+      "declared": "MMap",
+      "declared_qualifier": "",
+      "srcHref": "srcs/mmap.ads.html#L18"
     },
     {
       "label": "Print_Multiboot_Map",
@@ -100,11 +156,18 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/arch.ads.html#L21"
     },
     {
-      "label": "Set_Entry",
-      "docHref": "docs/idt___spec.html#L5C15",
-      "declared": "IDT",
+      "label": "Send",
+      "docHref": "docs/pic_8259a___spec.html#L66C15",
+      "declared": "PIC_8259A",
       "declared_qualifier": "",
-      "srcHref": "srcs/idt.ads.html#L5"
+      "srcHref": "srcs/pic_8259a.ads.html#L66"
+    },
+    {
+      "label": "Send_EOI",
+      "docHref": "docs/pic_8259a___spec.html#L68C15",
+      "declared": "PIC_8259A",
+      "declared_qualifier": "",
+      "srcHref": "srcs/pic_8259a.ads.html#L68"
     }
   ]
 };

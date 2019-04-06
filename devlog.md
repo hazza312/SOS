@@ -3,6 +3,29 @@
 Here is a log of the changes & development..
 
 ## Week 1
+
+### Sunday 7/4
+http://www.cpcwiki.eu/imgs/e/e3/8253.pdf
+
+### Satuday 6/4
+Interrupts continued. Wonderful macros.
+GNU GAS sizes.
+New memory map.
+PIC 8259 routines.
+Trimming debug carp from executable.
+Debugging.
+
+
+
+#### References
+[Muen Separation Kernel: IO routines](https://github.com/jcdubois/muen/blob/master/common/src/sk-io.adb)
+
+### Friday 5/4
+Interrupts
+
+### Thursday 4/4
+Memory map
+
 ### Wednesday 3/4
 Code has been refactored somewhat to separate 
 - architecture specific code

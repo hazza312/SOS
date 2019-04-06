@@ -34,7 +34,7 @@ package Console is
    procedure Put(s: String; fg: Colour :=  White; bg : BG_Colour := Black);
    procedure Put_Size(Size: Natural);
    procedure Put_Line(s: String; fg: Colour :=  White; bg : BG_Colour := Black);
-   procedure Put_Unsigned(num : Positive; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black);
+   procedure Put_Unsigned(num : Natural; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black);
    procedure Put_Int(num : Integer; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black);
    procedure Put_Hex(n: Positive; fg : Colour :=  White; bg : BG_Colour := Black);
 

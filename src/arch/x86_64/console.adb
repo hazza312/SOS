@@ -5,8 +5,6 @@ with Interfaces; use Interfaces;
 
 package body console is
 
-   function A_To_Int is new Ada.Unchecked_Conversion(System.Address, Positive);
-
    VMem : array(0..Height-1, 0..Width-1) of cell;
    for VMem'Address use System'To_Address(16#B8000#);
 
@@ -74,10 +72,10 @@ package body console is
    end Put_Int;
 
 
-   procedure Put_Unsigned(num : Positive; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black) is
-      Chars : String(0..15) := "0123456789ABCDEF";
+   procedure Put_Unsigned(num : Natural; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black) is
+      Chars : array(0..15) of Character := "0123456789ABCDEF";
       Digit : array(0 .. 63) of Character;
-      n : Integer := num;
+      n : Natural := num;
       i : Natural := 0;
    begin
       loop

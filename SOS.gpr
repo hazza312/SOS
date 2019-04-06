@@ -9,12 +9,12 @@ project Sos is
    Mode: Mode_Type := external ("mode", "release");
 
    for Languages use ("Ada", "Asm");
-   for Source_Dirs use ("src", "src/arch", "src/arch/" & Architecture);
+   for Source_Dirs use ("src", "src/arch", "src/arch/" & Architecture, 
+      "src/arch/" & Architecture & "/dev");
 
    for Object_Dir use "obj";
    for Exec_Dir use "dist";
-   for Main use ("kernel.adb");
-
+   for Main use ("kernel_entry.adb");
 
    package Compiler is
       for Local_Configuration_Pragmas use "pragmas.adc";
@@ -30,11 +30,14 @@ project Sos is
          when "release" => Ada_Switches := Ada_Switches & "-O2";
        end case;
 
+      for Switches("error.adb") use Ada_Switches & ("-fomit-frame-pointer");
+
       for Default_Switches ("Ada") use Ada_Switches;
    end Compiler;
 
    package Builder is
       for Default_Switches ("Ada") use ("-gnat12", "-nostdlib", "--RTS=zfp");
+      for Executable ("kernel_entry.adb") use "kernel";
    end Builder;
 
    package Linker is
@@ -45,8 +48,8 @@ project Sos is
          "-nostartfiles", 
          "-nodefaultlibs",
          "-T../src/arch/" & Architecture & "/link.ld",
-         "-ffreestanding"--,
-         --"-Wl,-Map=kmap"
+         "-ffreestanding",
+         "-Wl,-Map=kmap"
          );
    end Linker;
 

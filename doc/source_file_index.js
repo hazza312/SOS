@@ -8,8 +8,16 @@ GNATdoc.SourceFileIndex = [
     "srcHref": "srcs/console.ads.html"
   },
   {
-    "label": "idt.ads",
-    "srcHref": "srcs/idt.ads.html"
+    "label": "error.ads",
+    "srcHref": "srcs/error.ads.html"
+  },
+  {
+    "label": "interrupts.ads",
+    "srcHref": "srcs/interrupts.ads.html"
+  },
+  {
+    "label": "kernel.ads",
+    "srcHref": "srcs/kernel.ads.html"
   },
   {
     "label": "mmap.ads",
@@ -20,8 +28,8 @@ GNATdoc.SourceFileIndex = [
     "srcHref": "srcs/multiboot.ads.html"
   },
   {
-    "label": "vm.ads",
-    "srcHref": "srcs/vm.ads.html"
+    "label": "pic_8259a.ads",
+    "srcHref": "srcs/pic_8259a.ads.html"
   },
   {
     "label": "x86_debug.ads",
