@@ -2,7 +2,7 @@ with Interfaces; use Interfaces;
 with Arch; use Arch;
 with Ada.Unchecked_Conversion; 
 
-package PIC_8259A is
+package X86.Dev.PIC_8259A is
 
     type IRQ is range 32..47 ;
     type Device is (Master, Slave);
@@ -68,4 +68,4 @@ package PIC_8259A is
     procedure Send_EOI(Num: IRQ);   
 
 
-end PIC_8259A;
+end X86.Dev.PIC_8259A;

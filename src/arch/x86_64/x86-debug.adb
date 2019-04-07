@@ -1,7 +1,7 @@
 with Multiboot; use Multiboot;
 with Console; use Console;
 
-package body X86_Debug is 
+package body X86.Debug is 
     
 
     procedure Print_Multiboot_Map(Entries: Multiboot.Memory_Entries) is   
@@ -25,4 +25,4 @@ package body X86_Debug is
     end Print_Multiboot_Map;
 
 
-end X86_Debug;
+end X86.Debug;

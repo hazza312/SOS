@@ -2,11 +2,18 @@ with Console; use Console;
 with System;
 with System.Storage_Elements; use System.Storage_Elements;
 with Multiboot; use Multiboot;
-with X86_Debug;
-with Pic_8259A;
+with X86.Debug;
+with X86.Dev.Pic_8259A;
 with System.Machine_Code; use System.Machine_Code;
+with X86.Dev.VGA_Console;
+with Consoleb; 
 
-package body Arch is 
+package body Arch is
+
+    package Printer is new Consoleb.Printer(
+         At_X   => X86.Dev.VGA_Console.At_X,
+         Put    => X86.Dev.VGA_Console.Put,
+         Clear  => X86.Dev.VGA_Console.Clear);
 
     function IO_Inb(Port: IO_Port) return Unsigned_8
     is
@@ -28,7 +35,7 @@ package body Arch is
 
     procedure Initialise_Interrupts is
     begin 
-        Pic_8259A.Initialise;
+        X86.Dev.Pic_8259A.Initialise;
         Asm("sti", Volatile=>True);
     end Initialise_Interrupts;  
 
@@ -55,7 +62,7 @@ package body Arch is
         Entries : Multiboot.Memory_Entries(0..N-1) with Address => Base + 16;
         I : Natural := 0;
     begin 
-        X86_Debug.Print_Multiboot_Map(Entries);
+        X86.Debug.Print_Multiboot_Map(Entries);
         for Memory_Entry of Entries loop
             if Memory_Entry.Availability = Multiboot.Free_Ram then
                 Insert_Entry(Holes, Memory_Entry); 

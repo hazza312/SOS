@@ -1,5 +1,6 @@
 with Interfaces; use Interfaces;
 with System;
+with Consoleb;
 
 -- @summary
 -- Common interface for subprograms across different architectures.

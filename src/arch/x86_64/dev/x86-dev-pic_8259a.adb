@@ -1,7 +1,7 @@
 with Arch; use Arch;
 with Ada.Unchecked_Conversion; 
 
-package body PIC_8259A is
+package body X86.Dev.PIC_8259A is
 
     function Convert is new Ada.Unchecked_Conversion(Control_Word, Unsigned_16);
 
@@ -33,4 +33,4 @@ package body PIC_8259A is
     end Send_EOI; 
 
 
-end PIC_8259A;
+end X86.Dev.PIC_8259A;

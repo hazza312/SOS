@@ -7,6 +7,7 @@ with Console;                    use Console;
 with Arch; 
 with MMap;
 with Error; use Error;
+with Consoleb;
 
 package body Kernel is
 
