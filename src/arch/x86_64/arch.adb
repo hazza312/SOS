@@ -40,16 +40,17 @@ package body Arch is
         Tmp : Unsigned_64 := 0;
         Count: Integer := 0;
         Next : Unsigned_64 := 0;
-        Native_A : Unsigned_64 with Import, External_Name => "pit_8253_handler";
+        Native_A : Unsigned_64 with Import, External_Name => "x86_dev_pit_8253_handler";
         Native_B : Unsigned_64 with Import, External_Name => "x86_dev_keyboard_handler";
+        Native_C : Unsigned_64 with Import, External_Name => "x86_dev_rtc_handler";
     begin 
         X86.Dev.Pic_8259A.Initialise;
         Asm("sti", Volatile=>True);
 
 -- PIT 8253A
         Put("-> registering PIT 8253A @IRQ ");  Put_Hex(Interrupt'Enum_Rep(PIT));   Put(LF);
-        X86.Interrupts.Slow_Handler(PIT, X86.Dev.Pit_8253.Handler'Address);
-        --X86.Interrupts.Register_Handler(PIT, Native_A'Address);
+        --X86.Interrupts.Slow_Handler(PIT, X86.Dev.Pit_8253.Handler'Address);
+        X86.Interrupts.Register_Handler(PIT, Native_A'Address);
         
         Put("-> testing PIT 8253A ");
         X86.Dev.Pit_8253.Reset;
@@ -61,8 +62,8 @@ package body Arch is
 
 -- Keyboard
         Put("-> registering Keyboard @IRQ "); Put_Hex(Interrupt'Enum_Rep(Keyboard));   Put(LF);       
-        X86.Interrupts.Slow_Handler(Keyboard, X86.Dev.Keyboard.Handler'Address);
-        -- X86.Interrupts.Register_Handler(Keyboard, Native_B'Address);
+        --X86.Interrupts.Slow_Handler(Keyboard, X86.Dev.Keyboard.Handler'Address);
+        X86.Interrupts.Register_Handler(Keyboard, Native_B'Address);
 
         X86.Dev.Keyboard.Reset;
         Put("-> testing keyboard (press any key) ");
@@ -72,7 +73,8 @@ package body Arch is
 
 -- RTC
         Put("-> registering RTC @IRQ "); Put_Hex(Interrupt'Enum_Rep(RTC));   Put(LF); 
-        X86.Interrupts.Slow_Handler(RTC, X86.Dev.RTC.Handler'Address);
+        --X86.Interrupts.Slow_Handler(RTC, X86.Dev.RTC.Handler'Address);
+        X86.Interrupts.Register_Handler(RTC, Native_C'Address);
         X86.Dev.RTC.Initialise;
         
 -- done
@@ -84,6 +86,7 @@ package body Arch is
             At_X(14); Put_Int(Integer(X86.Dev.Pit_8253.Get_Ticks), bg=>Light_Red);
             At_X(40); Put_Int(Integer(X86.Dev.Keyboard.Get_Ticks), bg=>Light_Red);
             At_X(60); Put_Int(Integer(X86.Dev.RTC.Get_Ticks)/2, bg=>Light_Red);
+            At_X(70); Put(X86.Dev.Keyboard.Buffer);
         end loop;
         
     end Initialise_Interrupts;  

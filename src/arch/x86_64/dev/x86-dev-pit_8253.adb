@@ -5,7 +5,7 @@ with Interfaces; Use Interfaces;
 package body X86.Dev.PIT_8253 is
 
     Tick_Count : Unsigned_64 := 0 
-        with Export, External_Name => "pit_8253_tick_count", Volatile;
+        with Export, External_Name => "x86_dev_pit_8253_ticks", Volatile;
 
     procedure Handler is 
     begin 

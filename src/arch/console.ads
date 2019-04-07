@@ -26,7 +26,7 @@ package Console is
    for cell use record
       c at 0 range 0..7;
       fg at 1 range 0..3;
-      bg at 1 range 4..7;
+      bg at 1 range 4..6;
    end record;
 
    procedure At_X(x : Natural);

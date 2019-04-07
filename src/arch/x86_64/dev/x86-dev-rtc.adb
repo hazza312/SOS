@@ -6,7 +6,7 @@ package body X86.Dev.RTC is
 
     -- TODO: types?
     Counts : array(Time_Unit) of Integer;
-    Ticks : Unsigned_64 := 0;
+    Ticks : Unsigned_64 := 0 with Export, External_Name => "x86_dev_rtc_ticks";
 
     procedure Handler is 
         X : Unsigned_8;
