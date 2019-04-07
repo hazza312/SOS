@@ -1,7 +1,7 @@
 with Console; use Console;
 with Interfaces; use Interfaces;
 with System.Machine_Code; use System.Machine_Code;
-with Interrupts; use Interrupts;
+with X86.Interrupts; use X86.Interrupts;
 
 package body Error is 
 
@@ -74,15 +74,15 @@ begin
 
 end Exception_Handler;
 
--- procedure lastchance(Msg : String; Line: Integer) is
--- begin
---     Put(Console.LF);
---     Banner("KERNEL PANIC", bg=>Console.Red);
---     Put_Line("Some unknown error occured in");
---     Put("==> ");    Put(Msg);    Put(", line: ");    Put_Int(Line);
+procedure lastchance(Msg : String; Line: Integer) is
+begin
+    Put(Console.LF);
+    Banner("KERNEL PANIC", bg=>Console.Red);
+    Put_Line("Some unknown error occured in");
+    Put("==> ");    Put(Msg);    Put(", line: ");    Put_Int(Line);
 
---     Asm("cli");
---     Asm("hlt");
--- end lastchance;
+    Asm("cli");
+    Asm("hlt");
+end lastchance;
 
 end Error;

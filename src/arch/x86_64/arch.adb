@@ -4,9 +4,13 @@ with System.Storage_Elements; use System.Storage_Elements;
 with Multiboot; use Multiboot;
 with X86.Debug;
 with X86.Dev.Pic_8259A;
+with X86.Dev.Pit_8253;
 with System.Machine_Code; use System.Machine_Code;
 with X86.Dev.VGA_Console;
 with Consoleb; 
+with X86.Interrupts; use X86.Interrupts;
+with X86.Dev.Keyboard;
+with Kernel; use Kernel;
 
 package body Arch is
 
@@ -36,7 +40,33 @@ package body Arch is
     procedure Initialise_Interrupts is
     begin 
         X86.Dev.Pic_8259A.Initialise;
+        Put("-> registering PIT 8253A @IRQ "); 
+            Put_Hex(Interrupt'Enum_Rep(PIT));
+            Put(LF);
+        X86.Interrupts.Register_Handler(PIT, X86.Dev.Pit_8253.Handler'Address);
+
+        Put("-> registering Keyboard @IRQ "); Put_Hex(Interrupt'Enum_Rep(Keyboard));
+        Put(LF);
+        X86.Interrupts.Register_Handler(Keyboard, X86.Dev.Keyboard.Handler'Address);
+
         Asm("sti", Volatile=>True);
+
+        Put("-> testing PIT 8253A ");
+        for I in 0..50 loop 
+            while I = Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
+            Put('.');
+        end loop;
+        Put_Line(" done");
+
+        Put("-> testing keyboard ");
+        for I in 0..51 loop 
+            while I >= Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
+            Put('.');
+        end loop;
+        Put_Line(" done");
+
+
+        
     end Initialise_Interrupts;  
 
 

@@ -43,6 +43,13 @@ IDT:    Make_Table 0, 63
 idtinfo:.short 	.end$ -IDT -1	# LDT Table limit
 		.quad 	IDT	# Base Address of LDT Table
 
+/****** Registered Handlers ***************************************************/
+        .section .bss 
+        .globl handler_table
+        .align 8
+handler_table:
+        .space 63 * 8
+
 
 /****** Stubs *****************************************************************/
         .macro Make_Stubs i_no last 
@@ -74,10 +81,22 @@ idtinfo:.short 	.end$ -IDT -1	# LDT Table limit
 stubs:  Make_Stubs 0 63
         # Stubs expands here..
 
-except: jmp _ada_cpu_exception
+
+handler:
+        andq    $0xff, %rax
+        push    %rax
+        movq    handler_table(,%rax,8), %rdi
+        test    %rdi, %rdi 
+        jz      _ada_cpu_exception
+        call    *%rdi
 
 
-/****** Other misc. setup *****************************************************/
-        .section .text
-
-        
+        pop     %rax 
+        cmp     $0x28, %rax 
+        jge     .master$
+         movb    $0x20, %al
+         outb    %al, $0x20
+.master$:
+         movb    $0x20, %al
+         outb    %al, $0x20
+        iretq
