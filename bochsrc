@@ -1,4 +1,4 @@
-cpu: model=corei5_arrandale_m520
+cpu: model=corei7_sandy_bridge_2600k
 debug_symbols: file=dist/kernel.sym
 display_library: x, options="gui_debug"
 # We give our system 32 Mb of RAM.

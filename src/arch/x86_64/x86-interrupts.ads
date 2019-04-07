@@ -26,18 +26,8 @@ package X86.Interrupts is
     subtype CPU_Exception is Interrupt range DE .. SX;
     subtype External_Interrupt is Interrupt range PIT .. HD2;
 
+    procedure Slow_Handler(IRQ: Interrupt; Handler: System.Address);
     procedure Register_Handler(IRQ: Interrupt; Handler: System.Address);
-
-    -- .macro IDT selector offset ist type dpl p
-    --         .align 16
-    --         .short  \offset & 0xffff
-    --         .short  \selector
-    --         .byte   \ist & 0b111
-    --         .byte   (\type & 0xf) | (\dpl<<5) | (\p<<7)
-    --         .short  \offset>>16
-    --         .long   \offset>>32
-    --         .long   0
-    --     .endm
 
 private
 
@@ -46,9 +36,9 @@ private
         Offset_0_15:    Unsigned_16;
         Selector:       Unsigned_16             := X86.CODE_SELECTOR;
         IST:            Unsigned_8 range 0..7   := 0;
-        Descriptor_Type:Unsigned_8 range 0..15  := 16#f#;
+        Descriptor_Type:Unsigned_8 range 0..15  := 16#E#;
         DPL:            Unsigned_8 range 0..3   := 0;
-        P:              Boolean;
+        P:              Boolean                 := True;
         Offset_16_31:   Unsigned_16;
         Offset_32_63:   Unsigned_32;
         Pad:            Unsigned_32             := 0;
@@ -65,13 +55,12 @@ private
         Offset_32_63    at 8 range 0..31;
         Pad             at 12 range 0..31;
     end record;
-    for IDT_Entry'Size use 128;
-
-    -- type IDT_Table is array(Interrupt range <>) of IDT_Entry;
-    Table : array(Integer range 0..63) of IDT_Entry with Address => System'To_Address(X86.IDT_BASE), Import;
-    for Table'Size use 64*128;
+    for IDT_Entry'Size use 16*8;
 
 
+    Table : array(Integer range 0..63) of IDT_Entry 
+        with Import, Convention => Assembler, External_Name => "IDT";
+    for Table'Size use 64*16*8;
 
 
 end X86.Interrupts;

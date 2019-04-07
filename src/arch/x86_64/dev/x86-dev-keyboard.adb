@@ -4,19 +4,23 @@ with Arch; use Arch;
 package body X86.Dev.Keyboard is 
 
     Last : Character;
-    Ticks : Unsigned_64 with Volatile;
+    Ticks : Unsigned_64 with Export, External_Name => "x86_dev_keyboard_ticks";
 
     procedure Handler is
-        V : Unsigned_8;
     begin 
         Ticks := Ticks + 1;
-        V := IO_Inb(16#60#);
+        Last := Character'Val(IO_Inb(16#60#));
     end Handler;
 
     function Get_Key return Character is 
     begin
-        return Character'Val(Ticks mod 128);
+        return Last;
     end Get_Key;
+
+    procedure Reset is 
+    begin
+        Ticks := 0;
+    end Reset;
 
     function Get_Ticks return Unsigned_64 is (Ticks);
 

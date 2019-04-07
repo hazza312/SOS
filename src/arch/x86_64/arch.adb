@@ -3,13 +3,10 @@ with System;
 with System.Storage_Elements; use System.Storage_Elements;
 with Multiboot; use Multiboot;
 with X86.Debug;
-with X86.Dev.Pic_8259A;
-with X86.Dev.Pit_8253;
+with X86.Dev.Pic_8259A, X86.Dev.Pit_8253, X86.Dev.Keyboard, X86.Dev.VGA_Console, X86.Dev.RTC;
 with System.Machine_Code; use System.Machine_Code;
-with X86.Dev.VGA_Console;
 with Consoleb; 
 with X86.Interrupts; use X86.Interrupts;
-with X86.Dev.Keyboard;
 with Kernel; use Kernel;
 
 package body Arch is
@@ -37,35 +34,57 @@ package body Arch is
             Volatile => True);
     end IO_Outb;
 
+
+
     procedure Initialise_Interrupts is
+        Tmp : Unsigned_64 := 0;
+        Count: Integer := 0;
+        Next : Unsigned_64 := 0;
+        Native_A : Unsigned_64 with Import, External_Name => "pit_8253_handler";
+        Native_B : Unsigned_64 with Import, External_Name => "x86_dev_keyboard_handler";
     begin 
         X86.Dev.Pic_8259A.Initialise;
-        Put("-> registering PIT 8253A @IRQ "); 
-            Put_Hex(Interrupt'Enum_Rep(PIT));
-            Put(LF);
-        X86.Interrupts.Register_Handler(PIT, X86.Dev.Pit_8253.Handler'Address);
-
-        Put("-> registering Keyboard @IRQ "); Put_Hex(Interrupt'Enum_Rep(Keyboard));
-        Put(LF);
-        X86.Interrupts.Register_Handler(Keyboard, X86.Dev.Keyboard.Handler'Address);
-
         Asm("sti", Volatile=>True);
 
+-- PIT 8253A
+        Put("-> registering PIT 8253A @IRQ ");  Put_Hex(Interrupt'Enum_Rep(PIT));   Put(LF);
+        X86.Interrupts.Slow_Handler(PIT, X86.Dev.Pit_8253.Handler'Address);
+        --X86.Interrupts.Register_Handler(PIT, Native_A'Address);
+        
         Put("-> testing PIT 8253A ");
-        for I in 0..50 loop 
-            while I = Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
-            Put('.');
-        end loop;
-        Put_Line(" done");
-
-        Put("-> testing keyboard ");
+        X86.Dev.Pit_8253.Reset;
         for I in 0..51 loop 
             while I >= Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
             Put('.');
         end loop;
         Put_Line(" done");
 
+-- Keyboard
+        Put("-> registering Keyboard @IRQ "); Put_Hex(Interrupt'Enum_Rep(Keyboard));   Put(LF);       
+        X86.Interrupts.Slow_Handler(Keyboard, X86.Dev.Keyboard.Handler'Address);
+        -- X86.Interrupts.Register_Handler(Keyboard, Native_B'Address);
 
+        X86.Dev.Keyboard.Reset;
+        Put("-> testing keyboard (press any key) ");
+        While Integer(X86.Dev.Keyboard.Get_Ticks) = 0 loop null; end loop;
+        for J in 0..36 loop Put('.'); end loop;
+        Put_Line(" done");
+
+-- RTC
+        Put("-> registering RTC @IRQ "); Put_Hex(Interrupt'Enum_Rep(RTC));   Put(LF); 
+        X86.Interrupts.Slow_Handler(RTC, X86.Dev.RTC.Handler'Address);
+        X86.Dev.RTC.Initialise;
+        
+-- done
+        At_X(0);    Put("-> PIT ticks:");
+        At_X(24);   Put("Keyboard ticks:");
+        At_X(47);   Put("RTC Seconds:");
+
+        loop 
+            At_X(14); Put_Int(Integer(X86.Dev.Pit_8253.Get_Ticks), bg=>Light_Red);
+            At_X(40); Put_Int(Integer(X86.Dev.Keyboard.Get_Ticks), bg=>Light_Red);
+            At_X(60); Put_Int(Integer(X86.Dev.RTC.Get_Ticks)/2, bg=>Light_Red);
+        end loop;
         
     end Initialise_Interrupts;  
 

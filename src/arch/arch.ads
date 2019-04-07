@@ -22,8 +22,8 @@ package Arch is
     procedure Scout_Memory(Holes: in out Holes_List);  
     procedure Initialise_Interrupts;  
 
-    function IO_Inb(Port: IO_Port) return Unsigned_8 with Inline;
-    procedure IO_Outb(Port: IO_Port; Data: Unsigned_8) with Inline;
+    function IO_Inb(Port: IO_Port) return Unsigned_8 with Inline_Always;
+    procedure IO_Outb(Port: IO_Port; Data: Unsigned_8) with Inline_Always;
 
 
 end Arch;

@@ -11,7 +11,7 @@ SECTIONS {
       init.o(.entry)
       *(.text)      
    }
-
+/*
       /DISCARD/ : {
        *(.eh_frame)
        *(.debug_info)
@@ -19,9 +19,8 @@ SECTIONS {
        *(.debug_aranges)
        *(.debug_line)
        *(.debug_str)
-
-   }
-
+          }
+*/
    .bss  : { 
       *(.bss)
    }

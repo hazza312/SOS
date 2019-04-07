@@ -1,162 +1,175 @@
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+0000000000112000 d .0x00$
+0000000000112008 d .0x08$
+0000000000112010 d .0x10$
+0000000000112018 d .0x18$
+00000000001011ae T _ada_cpu_exception
+00000000001002cc T adainit
+00000000001002c0 T _ada_kernel_entry
+0000000000112032 D ada_main_E
+0000000000100210 a addr
+0000000000112084 D arch_E
+00000000001036ae T arch__free_holeIP
+0000000000103bca T arch__initialise_interrupts
+0000000000104022 t arch__insert_entry
+000000000010410c t arch__parse_memory_entries
+0000000000103918 T arch__printer__bannerX
+00000000001036ee T arch__printer__put__2X
+00000000001037d0 T arch__printer__put_hexX
+0000000000103832 T arch__printer__put_intX
+0000000000103778 T arch__printer__put_lineX
+0000000000103a08 T arch__printer__put_sizeX
+0000000000103884 T arch__printer__put_unsignedX
+0000000000104228 T arch__scout_memory
+00000000001036d2 T arch__Tholes_listBIP
+000000000011202a D bootinfo
+0000000000105ba0 r chars.4215
+0000000000104f90 r chars.4233
+00000000001003fc T console__at_x
+0000000000100736 T console__banner
+0000000000112040 D consoleb_E
+0000000000104fa4 R consoleb__height
+0000000000104fa8 R consoleb__lf
+0000000000104fa0 R consoleb__width
+00000000001003ce T console__cellIP
+0000000000100412 T console__clear
+0000000000112034 D console_E
+0000000000104f7c R console__height
+0000000000104f80 R console__lf
+0000000000100422 T console__put
+000000000010050c T console__put__2
+00000000001005ee T console__put_hex
+0000000000100650 T console__put_int
+0000000000100596 T console__put_line
+0000000000100826 T console__put_size
+00000000001006a2 T console__put_unsigned
+00000000001009e8 T console__shift_lines
+00000000001003e0 T console__TvmemBIP
+0000000000104f88 r console__vmem
+0000000000104f78 R console__width
+0000000000112038 d console__x
+000000000011203c d console__y
+000000000010023e t .disable_blinky_cursor
+000000000010022f t .done$
+0000000000100289 t .enable_lm$
+0000000000100280 t .enable_pae$
+0000000000100297 t .enable_paging$
+0000000000112020 d .end$
+00000000001124c0 d .end$
+0000000000100018 t end$
+0000000000100233 T _entry
+000000000011206c D error_E
+0000000000101122 T error__panic
+0000000000112000 d GDT
+0000000000112020 d gdtinfo
+00000000001124d0 d _GLOBAL_OFFSET_TABLE_
+0000000000104f30 R __gnat_ada_main_program_name
+0000000000101d64 T __gnat_last_chance_handler
+0000000000104f00 R __gnat_version
+0000000000100215 t handler
+00000000001110b0 B handler_table
+00000000001120c0 D IDT
+00000000001124c0 D idtinfo
+000000000010024c t .init_page_tables
+0000000000112082 D kernel_E
+0000000000111020 B kernel__holes
+00000000001029e6 T kernel__kernel
+0000000000102da6 t kernel__kernel__B_1__page_mapper__allocate.4178
+0000000000102fa8 t kernel__kernel__B_1__page_mapper__free.4182
+0000000000102996 t kernel__kernel__B_1__page_mapper__get_free_node.4253
+000000000010339a t kernel__kernel__B_1__page_mapper__print.4184
+00000000001002a2 t .leap_of_faith$
+0000000000100278 t .load_cr3$
+00000000001003b0 T main
+0000000000100000 t MBH
+0000000000000000 a MBH_ARCH
+0000000017adaf12 a MBH_CHKSUM
+0000000000000018 a MBH_LENGTH
+00000000e85250d6 a MBH_MAGIC
+0000000000112042 D mmap_E
+0000000000100b6a T multiboot__base_tagIP
+0000000000112044 D multiboot_E
+0000000000100b4e T multiboot__memory_entriesIP
+0000000000100b40 T multiboot__memory_entryIP
+0000000000104fb0 R multiboot__memory_typeA
+0000000000100aec T multiboot__memory_typeRP
+00000000001002bd t never
+00000000001002b0 t next
+0000000000107000 b pdpt
+0000000000108000 b pdt
+0000000000112058 D pit_8253_tick_count
+0000000000106000 b pml4t
+0000000000000001 a PTE_P
+0000000000000080 a PTE_PS
+0000000000000002 a PTE_W
+0000000000109000 b stack
+0000000000111000 b stack_end
+0000000000100018 a STUB_BASE
+0000000000100018 t stubs
+0000000000000008 a STUB_WIDTH
+0000000000112048 D x86__debug_E
+0000000000100b7c T x86__debug__print_multiboot_map
+000000000011204a D x86__dev_E
+0000000000112086 D x86__dev__keyboard_E
+0000000000104334 T x86__dev__keyboard__get_key
+0000000000104354 T x86__dev__keyboard__get_ticks
+00000000001042fe T x86__dev__keyboard__handler
+00000000001110a0 B x86__dev__keyboard__last
+0000000000105bb0 R x86__dev__keyboard__port_typeA
+00000000001042c6 T x86__dev__keyboard__port_typeRP
+0000000000104342 T x86__dev__keyboard__reset
+00000000001110a8 B x86_dev_keyboard_ticks
+0000000000102452 T x86__dev__pic_8259a__control_wordD2
+0000000000102474 T x86__dev__pic_8259a__control_wordD3
+0000000000102496 T x86__dev__pic_8259a__control_wordD4
+00000000001024b8 T x86__dev__pic_8259a__control_wordD5
+00000000001024da T x86__dev__pic_8259a__control_wordD6
+000000000010254a T x86__dev__pic_8259a__control_wordEQ
+00000000001024fc t x86__dev__pic_8259a__control_wordEQ__E35s.4334
+0000000000102770 t x86__dev__pic_8259a__control_wordEQ__E45s.4343
+00000000001027be T x86__dev__pic_8259a__control_wordIP
+0000000000112080 D x86__dev__pic_8259a_E
+0000000000102856 T x86__dev__pic_8259a__initialise
+0000000000105910 R x86__dev__pic_8259a__irq_base
+0000000000105918 R x86__dev__pic_8259a__port
+000000000010280c T x86__dev__pic_8259a__send
+0000000000102986 T x86__dev__pic_8259a__send_eoi
+0000000000102436 T x86__dev__pic_8259a__Tbit_fieldBIP
+0000000000112050 D x86__dev__pit_8253_E
+0000000000100ec0 T x86__dev__pit_8253__get_ticks
+0000000000100ea8 T x86__dev__pit_8253__handler
+0000000000100ece T x86__dev__pit_8253__reset
+0000000000111000 B x86__dev__rtc__counts
+0000000000112074 D x86__dev__rtc__data_port
+0000000000112070 D x86__dev__rtc_E
+0000000000102428 T x86__dev__rtc__get_ticks
+00000000001022c8 T x86__dev__rtc__handler
+0000000000102326 T x86__dev__rtc__initialise
+000000000010231e T x86__dev__rtc__read_time
+0000000000112072 D x86__dev__rtc__selector_port
+0000000000105908 R x86__dev__rtc__status_registerA
+000000000010227e T x86__dev__rtc__status_registerRP
+00000000001022ac T x86__dev__rtc__TcountsBIP
+0000000000112078 D x86__dev__rtc__ticks
+0000000000105900 R x86__dev__rtc__time_unitA
+0000000000102218 T x86__dev__rtc__time_unitRP
+0000000000100f0e T x86__dev__vga_console__at_x
+0000000000100ee0 T x86__dev__vga_console__cellIP
+0000000000101112 T x86__dev__vga_console__clear
+0000000000112060 D x86__dev__vga_console_E
+0000000000105024 R x86__dev__vga_console__height
+0000000000100f24 T x86__dev__vga_console__put
+000000000010100e T x86__dev__vga_console__shift_lines
+0000000000100ef2 T x86__dev__vga_console__TvmemBIP
+0000000000105028 r x86__dev__vga_console__vmem
+0000000000105020 R x86__dev__vga_console__width
+0000000000112064 d x86__dev__vga_console__x
+0000000000112068 d x86__dev__vga_console__y
+0000000000112046 D x86_E
+000000000011206e D x86__interrupts_E
+000000000010203a T x86__interrupts__idt_entryIP
+0000000000105740 R x86__interrupts__interruptA
+0000000000101ef4 T x86__interrupts__interruptRP
+0000000000102170 T x86__interrupts__register_handler
+000000000010213c T x86__interrupts__slow_handler
+0000000000102120 T x86__interrupts__Thandler_tableBIP
+0000000000102090 T x86__interrupts__TtableBIP

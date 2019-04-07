@@ -28,7 +28,7 @@ end$:
 pml4t: 	.space  0x1000 							# Page Map Level 4 Table
 pdpt: 	.space  0x1000 							# Page-Directory Pointer table
 pdt:	.space 	0x1000							# Page-Directory Table
-stack:	.space	0x1000
+stack:	.space	0x8000
 stack_end:
 
 		

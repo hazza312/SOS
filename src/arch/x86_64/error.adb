@@ -24,7 +24,7 @@ begin
         Banner("CPU EXCEPTION", bg=>Console.Red);
         Put("Some uncaught exception occured: ");
     else 
-        Banner("Uncaught Interrupt", bg=>Console.Red);
+        Banner("Unhandled Interrupt", bg=>Console.Red);
         Put("Some unhandled (external) interrupt occured: ");
     end if;
     
@@ -68,7 +68,6 @@ begin
         when HD2                => Put_Line("Hard Disk Controller 2");
         when others             => Put_Line("unknown");
     end case;
-
     Asm("cli", Volatile=>True);
     Asm("hlt", Volatile=>True);
 

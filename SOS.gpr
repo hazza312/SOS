@@ -20,6 +20,7 @@ project Sos is
       for Local_Configuration_Pragmas use "pragmas.adc";
 
       Ada_Switches := (
+     
          --"-g", -- generate debug info
          "-gnatp", -- suppress all checks
          "-gnat12", "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp",
@@ -27,7 +28,7 @@ project Sos is
 
        case Mode is
          when "debug"   => Ada_Switches := Ada_Switches & "-g";
-         when "release" => Ada_Switches := Ada_Switches & "-O2";
+         when "release" => Ada_Switches := Ada_Switches ;
        end case;
 
       for Switches("error.adb") use Ada_Switches & ("-fomit-frame-pointer");

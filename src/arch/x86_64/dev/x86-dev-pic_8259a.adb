@@ -12,7 +12,8 @@ package body X86.Dev.PIC_8259A is
 
     procedure Initialise is
         Restart: Control_Word := (ICW1, ICW4_Present => True, others => <>);
-        X86_Mode: Control_Word := (ICW4, Mode_80xx => True,  others => <>);
+        X86_Mode: Control_Word := 
+            (ICW4, Mode_80xx => True, Auto_EOI=>True, others => <>);
     begin
         Send(Master, Command, Restart);
         Send(Slave, Command, Restart);

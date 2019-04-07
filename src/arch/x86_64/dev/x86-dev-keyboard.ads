@@ -5,6 +5,7 @@ package X86.Dev.Keyboard is
     procedure Handler;
     function Get_Key return Character;
     function Get_Ticks return Unsigned_64;
+    procedure Reset;
 
 private
     type Port_Type is (Command, Data);

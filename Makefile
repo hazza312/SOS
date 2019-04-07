@@ -62,7 +62,7 @@ run:	iso
 	$(QEMU) -cdrom dist/os.iso -s
 
 bochs:	iso 
-	nm dist/kernel | awk '{ print $1" "$3 }' > dist/kernel.sym
+	sh -c "nm dist/kernel | awk '{ print $1 $3 }' > dist/kernel.sym"
 	bochs -rc bochsinit.txt
 
 doc:	build
