@@ -6,15 +6,18 @@ package body X86.Debug is
 
     procedure Print_Multiboot_Map(Entries: Multiboot.Memory_Entries) is   
     begin 
-        At_X(0);    Put("Base Address", fg=>Grey);
-        At_X(20);   Put("Length (hex)", fg=>Grey);
-        At_X(40);   Put("Length", fg=>Grey);
-        At_X(60);   Put("Type", fg=>Grey);             Put(LF);
+        Set_Colour(FG => Grey);
+        At_X(0);    Put("Base Address");
+        At_X(20);   Put("Length (hex)");
+        At_X(40);   Put("Length");
+        At_X(60);   Put("Type");
+                    Put(LF);
 
+        Set_Colour;
         for Current of Entries loop 
-            At_X(0);    Put_Hex(Positive(Current.Base_Address));
-            At_X(20);   Put_Hex(Positive(Current.Length));
-            At_X(40);   Put_Size(Positive(Current.Length));
+            At_X(0);    Put_Hex(Current.Base_Address);
+            At_X(20);   Put_Hex(Current.Length);
+            At_X(40);   Put_Size(Current.Length);
             At_X(60);   case Current.Availability is          
                         when Free_Ram       => Put("RAM");
                         when others         => Put("unavailable"); 

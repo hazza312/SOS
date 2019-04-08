@@ -1,5 +1,5 @@
 with Interfaces; use Interfaces;
-with Kernel;
+with Common;
 with System;
 
 package X86.Interrupts is 

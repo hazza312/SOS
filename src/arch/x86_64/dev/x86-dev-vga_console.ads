@@ -1,7 +1,9 @@
 with System;
 with Interfaces; use Interfaces;
-with Consoleb; use Consoleb;
+with Console; use Console;
 package X86.Dev.VGA_Console is
+
+
 
    Width : constant Integer := 80;
    Height : constant Integer := 25;

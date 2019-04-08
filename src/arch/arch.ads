@@ -1,6 +1,7 @@
 with Interfaces; use Interfaces;
 with System;
 with Consoleb;
+with Common; use Common;
 
 -- @summary
 -- Common interface for subprograms across different architectures.
@@ -11,19 +12,26 @@ with Consoleb;
 package Arch is
 
     PAGE_SIZE : constant := 4_096;
-
-    type Free_Hole is record 
-        Base: System.Address;
-        Length: Integer;
-    end record;
-    type Holes_List is array(0..7) of Free_Hole;
     type IO_Port is new Unsigned_16;
 
-    procedure Scout_Memory(Holes: in out Holes_List);  
+    procedure Scout_Memory(Base: in out Address; Size: in out Unsigned_64; Debug: Boolean);  
     procedure Initialise_Interrupts;  
 
     function IO_Inb(Port: IO_Port) return Unsigned_8 with Inline_Always;
     procedure IO_Outb(Port: IO_Port; Data: Unsigned_8) with Inline_Always;
+
+   -- package Console is
+        -- procedure X(C : Natural);
+        -- procedure Put(C : Character);
+        -- procedure Put(S: String);
+        -- procedure Put(N : Unsigned_64);
+        -- procedure Put_Int(N : Integer);
+        -- procedure Put_Hex(N: Positive);
+        -- procedure Put_Size(s: Unsigned_64);
+        -- procedure Put_Line(S: String);    
+        -- procedure Banner(S : String); 
+   -- end Console;
+
 
 
 end Arch;

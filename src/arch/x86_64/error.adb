@@ -28,7 +28,7 @@ begin
         Put("Some unhandled (external) interrupt occured: ");
     end if;
     
-    Put_Hex(Interrupt'Enum_Rep(V));
+    Put_Hex(Unsigned_64(Interrupt'Enum_Rep(V)));
     Put(" -> ");
 
     case V is
@@ -73,15 +73,15 @@ begin
 
 end Exception_Handler;
 
-procedure lastchance(Msg : String; Line: Integer) is
-begin
-    Put(Console.LF);
-    Banner("KERNEL PANIC", bg=>Console.Red);
-    Put_Line("Some unknown error occured in");
-    Put("==> ");    Put(Msg);    Put(", line: ");    Put_Int(Line);
+-- procedure lastchance(Msg : String; Line: Integer) is
+-- begin
+--     Put(Console.LF);
+--     Banner("KERNEL PANIC", bg=>Console.Red);
+--     Put_Line("Some unknown error occured in");
+--     Put("==> ");    Put(Msg);    Put(", line: ");    Put(Line);
 
-    Asm("cli");
-    Asm("hlt");
-end lastchance;
+--     Asm("cli", Volatile=>True);
+--     Asm("hlt", Volatile=>True);
+-- end lastchance;
 
 end Error;

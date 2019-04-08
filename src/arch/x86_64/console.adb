@@ -1,7 +1,5 @@
-with System; use System;
-with System.Storage_Elements; use System.Storage_Elements;
-with Ada.Unchecked_Conversion; 
 with Interfaces; use Interfaces;
+with Common; use Common;
 
 package body console is
 
@@ -11,20 +9,30 @@ package body console is
    X: Natural := 0;
    Y: Natural := 0;
 
+   Current_FG : Colour := White;
+   Current_BG : BG_Colour := Black;
+
    procedure At_X(X : Natural) is 
    begin 
       Console.X := X;
    end At_X;
+
+   procedure Set_Colour(FG: Colour := White; BG: BG_Colour := Black) is 
+   begin
+      Current_BG := BG;
+      Current_FG := FG;
+   end Set_Colour;
+        
 
    procedure Clear is
    begin
       Shift_Lines(Height);
    end Clear;
 
-   procedure Put(c: Character; fg: Colour := White; bg: BG_Colour := Black) is
+   procedure Put(C: Character) is
    begin
       if c /= LF then
-         VMem(Y,X) := (fg => fg, bg => bg, c => c);
+         VMem(Y,X) := (fg => Current_FG, bg =>Current_BG, c => c);
          X := (if X = Width-1 then 0 else X+1);
       else
          X := 0;
@@ -38,83 +46,88 @@ package body console is
             Shift_Lines;
          end if;
       end if;
-
    end Put;
 
 
-   procedure Put(s: String; fg: Colour :=  White; bg : BG_Colour := Black) is
+   procedure Put(S: String) is
    begin
       for c of s loop
-         Put(c, fg => fg, bg => bg);
+         exit when c = Character'Val(0); 
+         Put(c);
       end loop;
    end Put;
 
 
-   procedure Put_Line(s: String; fg: Colour :=  White; bg : BG_Colour := Black) is
+   procedure Put_Line(S: String) is
    begin
-      Put(s, fg => fg, bg => bg);
+      Put(S);
       Put(LF);
    end Put_Line;
 
-   procedure Put_Hex(n: Positive; fg : Colour :=  White; bg : BG_Colour := Black) is
+
+   procedure Put_Hex(N: Address) is begin Put_Hex(Unsigned_64(N)); end Put_Hex;
+
+   procedure Put_Hex(N: Unsigned_64) is
    begin 
       Put("0x");
-      Put_Unsigned(n, Base=>16, fg=>fg, bg=>bg);
+      Put(N, Base=>16);
    end Put_Hex;
 
-   procedure Put_Int(num : Integer; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black) is 
-   begin 
-      if num < 0 then
-         Put('-', fg=>fg, bg=>bg);
+
+   procedure Put(N : Integer) is 
+   begin
+      if N < 0 then
+         Put('-');
       end if;
-      Put_Unsigned(abs num, Base=>Base, fg=>fg, bg=>bg);
+      Put(Unsigned_64(abs N));
+   end;
 
-   end Put_Int;
 
-
-   procedure Put_Unsigned(num : Natural; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black) is
-      Chars : array(0..15) of Character := "0123456789ABCDEF";
-      Digit : array(0 .. 63) of Character;
-      n : Natural := num;
+   procedure Put(N : Unsigned_64; Base : Unsigned_64 := 10) is
+      Chars : array(Unsigned_64 range 0..15) of Character := "0123456789ABCDEF";
+      Digit : array(0..63) of Character;
+      X : Unsigned_64 := N;
       i : Natural := 0;
    begin
       loop
-         Digit(i) := Chars(n mod Base);
-         n := n / Base;
-         exit when n = 0;
+         Digit(i) := Chars(X mod Base);
+         X := X / Base;
+         exit when X = 0;
          i := i + 1;
       end loop;
 
-      for x in reverse 0..i loop
-         Put(Digit(x), fg=>fg, bg=>bg);
+      for J in reverse 0..i loop
+         Put(Digit(J));
       end loop;
-   end Put_Unsigned;
+   end Put;
 
 
 
-   procedure Banner(s : String; fg: Colour := White; bg: BG_Colour := Black) is
+   procedure Banner(S : String; FG : Colour := White; BG: BG_Colour :=Black) is
       L_Pad : Positive := (width - s'Length) / 2;
       R_Pad : Positive := width - L_Pad - s'Length;
+      Old_FG : Colour := Current_FG;
+      Old_BG : BG_Colour := Current_BG;
    begin
-      for i in 1..L_Pad loop
-         Put(' ', fg=>fg, bg=>bg);
-      end loop;
+      Current_BG := BG;
+      Current_FG := FG;
 
-      Put(s, fg=>fg, bg=>bg);
+      for i in 1..L_Pad loop  Put(' ');   end loop;
+      Put(s);
+      for i in 1..R_Pad loop  Put(' ');    end loop;
 
-      for i in 1..R_Pad loop
-         Put(' ', fg=>fg, bg=>bg);
-      end loop;
+      Current_BG := Old_BG;
+      Current_FG := Old_FG;
    end;
 
    
-   procedure Put_Size(Size: Natural) is
+   procedure Put_Size(N: Unsigned_64) is
    begin 
-      case Size is 
-      when 0      ..1024**1 -1   => Put_Int(Size);           Put("B");
-      when 1024**1..1024**2 -1   => Put_Int(Size / 1024**1); Put("kB");
-      when 1024**2..1024**3 -1   => Put_Int(Size / 1024**2); Put("MB");
-      when others                => Put_Int(Size / 1024**3); Put("GB");
+      case N is 
+      when 0      ..1024**1 -1   => Put(N);           Put("B");
+      when 1024**1..1024**2 -1   => Put(N / 1024**1); Put("kB");
+      when 1024**2..1024**3 -1   => Put(N / 1024**2); Put("MB");
+      when others                => Put(N / 1024**3); Put("GB");
       end case;
    end;
 

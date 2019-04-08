@@ -1,5 +1,6 @@
 with System;
 with Interfaces; use Interfaces;
+with Common; use Common;
 
 package Console is
 
@@ -29,18 +30,19 @@ package Console is
       bg at 1 range 4..6;
    end record;
 
-   procedure At_X(x : Natural);
-   procedure Put(c : Character; fg: Colour := White; bg : BG_Colour := Black);
-   procedure Put(s: String; fg: Colour :=  White; bg : BG_Colour := Black);
-   procedure Put_Size(Size: Natural);
-   procedure Put_Line(s: String; fg: Colour :=  White; bg : BG_Colour := Black);
-   procedure Put_Unsigned(num : Natural; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black);
-   procedure Put_Int(num : Integer; Base : Natural := 10; fg : Colour :=  White; bg : BG_Colour := Black);
-   procedure Put_Hex(n: Positive; fg : Colour :=  White; bg : BG_Colour := Black);
-
-   procedure Banner(s : String; fg: Colour := White; bg: BG_Colour := Black);
-
-   procedure Clear;
+    -- new procedures
+    procedure At_X(X : Natural);
+    procedure Put(C : Character);
+    procedure Put(S: String);
+    procedure Put(N : Unsigned_64; Base : Unsigned_64 := 10);
+    procedure Put(N : Integer);
+    procedure Put_Hex(N: Unsigned_64);
+    procedure Put_Hex(N: Address);
+    procedure Put_Size(N: Unsigned_64);
+    procedure Put_Line(S: String);    
+    procedure Banner(S : String; FG: Colour := White; BG: BG_Colour :=Black);
+    procedure Set_Colour(FG: Colour := White; BG: BG_Colour := Black);
+    procedure Clear;
 
 private
    procedure  Shift_Lines(num : Positive := 1);

@@ -1,4 +1,5 @@
 with Interfaces; use Interfaces;
+with Common; use Common;
 
 package Multiboot is
 
@@ -10,7 +11,7 @@ package Multiboot is
     for Memory_Type'Size use 32;
 
     type Memory_Entry is record 
-      Base_Address: Unsigned_64;
+      Base_Address: Address;
       Length:       Unsigned_64;
       Availability: Memory_Type;
       Reserved:     Unsigned_32;

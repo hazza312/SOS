@@ -117,6 +117,6 @@ _entry:
 
 		.code64		
 next:	lidt	idtinfo
-		call 	_ada_kernel_entry
+		call 	_ada_kernel
 		
 never:	jmp 	never			

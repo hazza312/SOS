@@ -1,5 +1,5 @@
 with Interfaces; use Interfaces;
-with Kernel; use Kernel;
+with Common; use Common;
 with System;
 with System.Storage_Elements; use System.Storage_Elements;
 with Console; use Console;
