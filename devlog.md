@@ -1,5 +1,7 @@
 # Development Log
 
+![](http://harryking.nl/SOS/img/img1.png)
+
 Here is a log of the changes & development..
 
 ## Week 2
