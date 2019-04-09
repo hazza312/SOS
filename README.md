@@ -16,4 +16,4 @@ Journal of Enlightenment can be found
 [here](devlog.md).
 
 ## Documentation
-Generated documentation with a peek at some of the internals can be found [here](doc/index.html).
+Generated documentation with a peek at some of the internals can be found [here](http://harryking.nl/SOS/docs/index.html).
