@@ -95,7 +95,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Interrupts"
+          "text": "X86.Interrupts"
         },
         {
           "kind": "span",
@@ -120,7 +120,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Interrupts"
+          "text": "X86.Interrupts"
         },
         {
           "kind": "span",

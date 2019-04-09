@@ -18,37 +18,37 @@
 00000000000i[     ]   SB16 support: yes
 00000000000i[     ]   USB support: yes
 00000000000i[     ]   VGA extension support: vbe cirrus
-00000000000i[MEM0 ] allocated memory at 0x7f8a1c428010. after alignment, vector=0x7f8a1c429000
+00000000000i[MEM0 ] allocated memory at 0x7fcb9fd08010. after alignment, vector=0x7fcb9fd09000
 00000000000i[MEM0 ] 512,00MB
 00000000000i[MEM0 ] mem block size = 0x00100000, blocks=512
 00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
-00000000000i[     ] lt_dlhandle is 0x46c0b00
+00000000000i[     ] lt_dlhandle is 0x3b882e0
 00000000000i[PLGIN] loaded plugin libbx_hdimage.so
-00000000000i[     ] lt_dlhandle is 0x46c1370
+00000000000i[     ] lt_dlhandle is 0x3b88b50
 00000000000i[PLGIN] loaded plugin libbx_pci.so
-00000000000i[     ] lt_dlhandle is 0x46c1ef0
+00000000000i[     ] lt_dlhandle is 0x3b896d0
 00000000000i[PLGIN] loaded plugin libbx_pci2isa.so
-00000000000i[     ] lt_dlhandle is 0x46c28f0
+00000000000i[     ] lt_dlhandle is 0x3b8a0d0
 00000000000i[PLGIN] loaded plugin libbx_acpi.so
-00000000000i[     ] lt_dlhandle is 0x46c32f0
+00000000000i[     ] lt_dlhandle is 0x3b8aad0
 00000000000i[PLGIN] loaded plugin libbx_cmos.so
-00000000000i[     ] lt_dlhandle is 0x46c3c20
+00000000000i[     ] lt_dlhandle is 0x3b8b400
 00000000000i[PLGIN] loaded plugin libbx_dma.so
-00000000000i[     ] lt_dlhandle is 0x46c46b0
+00000000000i[     ] lt_dlhandle is 0x3b8be90
 00000000000i[PLGIN] loaded plugin libbx_pic.so
-00000000000i[     ] lt_dlhandle is 0x46c4f40
+00000000000i[     ] lt_dlhandle is 0x3b8c720
 00000000000i[PLGIN] loaded plugin libbx_pit.so
-00000000000i[     ] lt_dlhandle is 0x46c5970
+00000000000i[     ] lt_dlhandle is 0x3b8d150
 00000000000i[PLGIN] loaded plugin libbx_floppy.so
-00000000000i[     ] lt_dlhandle is 0x46c6550
+00000000000i[     ] lt_dlhandle is 0x3b8dd30
 00000000000i[PLGIN] loaded plugin libbx_vga.so
-00000000000i[     ] lt_dlhandle is 0x46c6dc0
+00000000000i[     ] lt_dlhandle is 0x3b8e5a0
 00000000000i[PLGIN] loaded plugin libbx_ioapic.so
-00000000000i[     ] lt_dlhandle is 0x46c7600
+00000000000i[     ] lt_dlhandle is 0x3b8ede0
 00000000000i[PLGIN] loaded plugin libbx_keyboard.so
-00000000000i[     ] lt_dlhandle is 0x46c8070
+00000000000i[     ] lt_dlhandle is 0x3b8f850
 00000000000i[PLGIN] loaded plugin libbx_harddrv.so
-00000000000i[     ] lt_dlhandle is 0x46da180
+00000000000i[     ] lt_dlhandle is 0x3ba1960
 00000000000i[PLGIN] loaded plugin libbx_pci_ide.so
 00000000000i[PLGIN] init_dev of 'pci' plugin device by virtual method
 00000000000i[PCI  ] 440FX Host bridge present at device 0, function 0
@@ -56,7 +56,7 @@
 00000000000i[PCI  ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
 00000000000i[PLGIN] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS ] Using local time for initial clock
-00000000000i[CMOS ] Setting initial clock to: Mon Apr  8 17:05:38 2019 (time0=1554735938)
+00000000000i[CMOS ] Setting initial clock to: Tue Apr  9 01:46:09 2019 (time0=1554767169)
 00000000000i[PLGIN] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA  ] channel 4 used by cascade
 00000000000i[PLGIN] init_dev of 'pic' plugin device by virtual method
@@ -81,7 +81,7 @@
 00000000000i[CD1  ] load cdrom with path=dist/os.iso
 00000000000i[CD1  ] Opening image file as a cd.
 00000000000i[HD   ] Media present in CD-ROM drive
-00000000000i[HD   ] Capacity is 5545 sectors (10,83 MB)
+00000000000i[HD   ] Capacity is 5549 sectors (10,84 MB)
 00000000000i[HD   ] Using boot sequence cdrom, none, none
 00000000000i[HD   ] Floppy boot signature check is enabled
 00000000000i[PLGIN] init_dev of 'pci_ide' plugin device by virtual method
@@ -186,5 +186,5 @@
 00000000000i[CPU0 ] | EIP=0000fff0 (0000fff0)
 00000000000i[CPU0 ] | CR0=0x60000010 CR2=0x00000000
 00000000000i[CPU0 ] | CR3=0x00000000 CR4=0x00000000
-00000000000i[CMOS ] Last time is 1554735938 (Mon Apr  8 17:05:38 2019)
+00000000000i[CMOS ] Last time is 1554767169 (Tue Apr  9 01:46:09 2019)
 00000000000i[CTRL ] quit_sim called with exit code 0

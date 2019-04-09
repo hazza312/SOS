@@ -11,7 +11,7 @@ GNATdoc.Documentation = {
         {
           "label": "Boot_Info",
           "qualifier": "",
-          "line": 5,
+          "line": 6,
           "column": 5,
           "src": "srcs/multiboot.ads.html",
           "summary": [
@@ -22,7 +22,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 5,
+                  "number": 6,
                   "children": [
                     {
                       "kind": "span",
@@ -63,7 +63,7 @@ GNATdoc.Documentation = {
         {
           "label": "Memory_Entries",
           "qualifier": "",
-          "line": 20,
+          "line": 21,
           "column": 10,
           "src": "srcs/multiboot.ads.html",
           "summary": [
@@ -74,7 +74,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 20,
+                  "number": 21,
                   "children": [
                     {
                       "kind": "span",
@@ -95,7 +95,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Memory_Entries",
-                      "href": "docs/multiboot___spec.html#L20C10"
+                      "href": "docs/multiboot___spec.html#L21C10"
                     },
                     {
                       "kind": "span",
@@ -171,7 +171,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Memory_Entry",
-                      "href": "docs/multiboot___spec.html#L12C10"
+                      "href": "docs/multiboot___spec.html#L13C10"
                     },
                     {
                       "kind": "span",
@@ -187,7 +187,7 @@ GNATdoc.Documentation = {
         {
           "label": "Memory_Type",
           "qualifier": "",
-          "line": 8,
+          "line": 9,
           "column": 10,
           "src": "srcs/multiboot.ads.html",
           "summary": [
@@ -198,7 +198,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 8,
+                  "number": 9,
                   "children": [
                     {
                       "kind": "span",
@@ -219,7 +219,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Memory_Type",
-                      "href": "docs/multiboot___spec.html#L8C10"
+                      "href": "docs/multiboot___spec.html#L9C10"
                     },
                     {
                       "kind": "span",
@@ -245,7 +245,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Free_Ram",
-                      "href": "docs/multiboot___spec.html#L8C26"
+                      "href": "docs/multiboot___spec.html#L9C26"
                     },
                     {
                       "kind": "span",
@@ -261,7 +261,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "ACPI",
-                      "href": "docs/multiboot___spec.html#L8C36"
+                      "href": "docs/multiboot___spec.html#L9C36"
                     },
                     {
                       "kind": "span",
@@ -277,7 +277,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Hibernation",
-                      "href": "docs/multiboot___spec.html#L8C42"
+                      "href": "docs/multiboot___spec.html#L9C42"
                     },
                     {
                       "kind": "span",
@@ -293,7 +293,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Defective_Ram",
-                      "href": "docs/multiboot___spec.html#L8C55"
+                      "href": "docs/multiboot___spec.html#L9C55"
                     },
                     {
                       "kind": "span",
@@ -304,7 +304,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": ";",
-                      "href": "docs/multiboot___spec.html#L8C10"
+                      "href": "docs/multiboot___spec.html#L9C10"
                     }
                   ]
                 }
@@ -314,28 +314,28 @@ GNATdoc.Documentation = {
           "literals": [
             {
               "label": "Free_Ram",
-              "line": 8,
+              "line": 9,
               "column": 26,
               "description": [
               ]
             },
             {
               "label": "ACPI",
-              "line": 8,
+              "line": 9,
               "column": 36,
               "description": [
               ]
             },
             {
               "label": "Hibernation",
-              "line": 8,
+              "line": 9,
               "column": 42,
               "description": [
               ]
             },
             {
               "label": "Defective_Ram",
-              "line": 8,
+              "line": 9,
               "column": 55,
               "description": [
               ]
@@ -350,7 +350,7 @@ GNATdoc.Documentation = {
         {
           "label": "Base_Tag",
           "qualifier": "",
-          "line": 23,
+          "line": 24,
           "column": 9,
           "src": "srcs/multiboot.ads.html",
           "summary": [
@@ -361,7 +361,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 23,
+                  "number": 24,
                   "children": [
                     {
                       "kind": "span",
@@ -382,7 +382,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Base_Tag",
-                      "href": "docs/multiboot___spec.html#L23C9"
+                      "href": "docs/multiboot___spec.html#L24C9"
                     },
                     {
                       "kind": "span",
@@ -408,43 +408,6 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 24,
-                  "children": [
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": "      "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Tag_Type",
-                      "href": "docs/multiboot___spec.html#L24C7"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ":"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": "     "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Unsigned_32"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ";"
-                    }
-                  ]
-                },
-                {
-                  "kind": "line",
                   "number": 25,
                   "children": [
                     {
@@ -455,7 +418,7 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Tag_Size",
+                      "text": "Tag_Type",
                       "href": "docs/multiboot___spec.html#L25C7"
                     },
                     {
@@ -487,6 +450,43 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "text",
+                      "text": "      "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Tag_Size",
+                      "href": "docs/multiboot___spec.html#L26C7"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": "     "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Unsigned_32"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    }
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "number": 27,
+                  "children": [
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
                       "text": "   "
                     },
                     {
@@ -508,7 +508,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": ";",
-                      "href": "docs/multiboot___spec.html#L23C9"
+                      "href": "docs/multiboot___spec.html#L24C9"
                     }
                   ]
                 }
@@ -518,7 +518,7 @@ GNATdoc.Documentation = {
           "fields": [
             {
               "label": "Tag_Type",
-              "line": 24,
+              "line": 25,
               "column": 7,
               "type": {
                 "label": "Unsigned_32"
@@ -528,7 +528,7 @@ GNATdoc.Documentation = {
             },
             {
               "label": "Tag_Size",
-              "line": 25,
+              "line": 26,
               "column": 7,
               "type": {
                 "label": "Unsigned_32"
@@ -541,7 +541,7 @@ GNATdoc.Documentation = {
         {
           "label": "Memory_Entry",
           "qualifier": "",
-          "line": 12,
+          "line": 13,
           "column": 10,
           "src": "srcs/multiboot.ads.html",
           "summary": [
@@ -552,7 +552,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 12,
+                  "number": 13,
                   "children": [
                     {
                       "kind": "span",
@@ -573,7 +573,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Memory_Entry",
-                      "href": "docs/multiboot___spec.html#L12C10"
+                      "href": "docs/multiboot___spec.html#L13C10"
                     },
                     {
                       "kind": "span",
@@ -604,7 +604,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 13,
+                  "number": 14,
                   "children": [
                     {
                       "kind": "span",
@@ -615,7 +615,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Base_Address",
-                      "href": "docs/multiboot___spec.html#L13C7"
+                      "href": "docs/multiboot___spec.html#L14C7"
                     },
                     {
                       "kind": "span",
@@ -630,7 +630,8 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Unsigned_64"
+                      "text": "Address",
+                      "href": "docs/common___spec.html#L5C10"
                     },
                     {
                       "kind": "span",
@@ -641,7 +642,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 14,
+                  "number": 15,
                   "children": [
                     {
                       "kind": "span",
@@ -652,7 +653,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Length",
-                      "href": "docs/multiboot___spec.html#L14C7"
+                      "href": "docs/multiboot___spec.html#L15C7"
                     },
                     {
                       "kind": "span",
@@ -678,7 +679,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 15,
+                  "number": 16,
                   "children": [
                     {
                       "kind": "span",
@@ -689,7 +690,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Availability",
-                      "href": "docs/multiboot___spec.html#L15C7"
+                      "href": "docs/multiboot___spec.html#L16C7"
                     },
                     {
                       "kind": "span",
@@ -705,7 +706,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Memory_Type",
-                      "href": "docs/multiboot___spec.html#L8C10"
+                      "href": "docs/multiboot___spec.html#L9C10"
                     },
                     {
                       "kind": "span",
@@ -716,7 +717,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 16,
+                  "number": 17,
                   "children": [
                     {
                       "kind": "span",
@@ -727,7 +728,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Reserved",
-                      "href": "docs/multiboot___spec.html#L16C7"
+                      "href": "docs/multiboot___spec.html#L17C7"
                     },
                     {
                       "kind": "span",
@@ -753,7 +754,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 17,
+                  "number": 18,
                   "children": [
                     {
                       "kind": "span",
@@ -779,7 +780,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": ";",
-                      "href": "docs/multiboot___spec.html#L12C10"
+                      "href": "docs/multiboot___spec.html#L13C10"
                     }
                   ]
                 }
@@ -789,17 +790,18 @@ GNATdoc.Documentation = {
           "fields": [
             {
               "label": "Base_Address",
-              "line": 13,
+              "line": 14,
               "column": 7,
               "type": {
-                "label": "Unsigned_64"
+                "label": "Common.Address",
+                "docHref": "docs/common___spec.html#L5C10"
               },
               "description": [
               ]
             },
             {
               "label": "Length",
-              "line": 14,
+              "line": 15,
               "column": 7,
               "type": {
                 "label": "Unsigned_64"
@@ -809,18 +811,18 @@ GNATdoc.Documentation = {
             },
             {
               "label": "Availability",
-              "line": 15,
+              "line": 16,
               "column": 7,
               "type": {
                 "label": "Multiboot.Memory_Type",
-                "docHref": "docs/multiboot___spec.html#L8C10"
+                "docHref": "docs/multiboot___spec.html#L9C10"
               },
               "description": [
               ]
             },
             {
               "label": "Reserved",
-              "line": 16,
+              "line": 17,
               "column": 7,
               "type": {
                 "label": "Unsigned_32"

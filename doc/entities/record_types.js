@@ -3,45 +3,45 @@ GNATdoc.EntitiesCategory = {
   "entities": [
     {
       "label": "Base_Tag",
-      "docHref": "docs/multiboot___spec.html#L23C9",
+      "docHref": "docs/multiboot___spec.html#L24C9",
       "declared": "Multiboot",
       "declared_qualifier": "",
-      "srcHref": "srcs/multiboot.ads.html#L23"
+      "srcHref": "srcs/multiboot.ads.html#L24"
     },
     {
       "label": "cell",
-      "docHref": "docs/console___spec.html#L20C9",
+      "docHref": "docs/console___spec.html#L21C9",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L20"
+      "srcHref": "srcs/console.ads.html#L21"
+    },
+    {
+      "label": "cell",
+      "docHref": "docs/x86__dev__vga_console___spec.html#L11C9",
+      "declared": "X86.Dev.VGA_Console",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-dev-vga_console.ads.html#L11"
     },
     {
       "label": "Control_Word",
-      "docHref": "docs/pic_8259a___spec.html#L25C10",
-      "declared": "PIC_8259A",
+      "docHref": "docs/x86__dev__pic_8259a___spec.html#L25C10",
+      "declared": "X86.Dev.PIC_8259A",
       "declared_qualifier": "",
-      "srcHref": "srcs/pic_8259a.ads.html#L25"
-    },
-    {
-      "label": "Free_Hole",
-      "docHref": "docs/arch___spec.html#L14C10",
-      "declared": "Arch",
-      "declared_qualifier": "",
-      "srcHref": "srcs/arch.ads.html#L14"
+      "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L25"
     },
     {
       "label": "Memory_Entry",
-      "docHref": "docs/multiboot___spec.html#L12C10",
+      "docHref": "docs/multiboot___spec.html#L13C10",
       "declared": "Multiboot",
       "declared_qualifier": "",
-      "srcHref": "srcs/multiboot.ads.html#L12"
+      "srcHref": "srcs/multiboot.ads.html#L13"
     },
     {
       "label": "Node",
-      "docHref": "docs/mmap___spec.html#L13C10",
+      "docHref": "docs/mmap___spec.html#L14C10",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L13"
+      "srcHref": "srcs/mmap.ads.html#L14"
     }
   ]
 };

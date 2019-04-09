@@ -58,8 +58,6 @@ package body X86.Dev.Keyboard is
         Write_Head := @ + 1;
         if Converted = LF then 
             Has_Line_Flag := True;
-        elsif Converted = Backspace and Read_Tail /= Write_Head then
-            Write_Head := @ - 1;
         end if;
 
     end Handler;

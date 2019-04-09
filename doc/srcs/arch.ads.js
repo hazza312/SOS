@@ -82,11 +82,88 @@ GNATdoc.SourceFile = {
       "kind": "line",
       "number": 3,
       "children": [
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "with"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Consoleb"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
       ]
     },
     {
       "kind": "line",
       "number": 4,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "with"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Common"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "use"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Common"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 5,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 6,
       "children": [
         {
           "kind": "span",
@@ -97,7 +174,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 5,
+      "number": 7,
       "children": [
         {
           "kind": "span",
@@ -108,13 +185,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 6,
+      "number": 8,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 7,
+      "number": 9,
       "children": [
         {
           "kind": "span",
@@ -125,7 +202,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 8,
+      "number": 10,
       "children": [
         {
           "kind": "span",
@@ -136,7 +213,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 9,
+      "number": 11,
       "children": [
         {
           "kind": "span",
@@ -147,7 +224,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 10,
+      "number": 12,
       "children": [
         {
           "kind": "span",
@@ -163,7 +240,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Arch",
-          "href": "docs/arch___spec.html#L10C9"
+          "href": "docs/arch___spec.html#L12C9"
         },
         {
           "kind": "span",
@@ -179,13 +256,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 11,
+      "number": 13,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 12,
+      "number": 14,
       "children": [
         {
           "kind": "span",
@@ -196,7 +273,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "PAGE_SIZE",
-          "href": "docs/arch___spec.html#L12C5"
+          "href": "docs/arch___spec.html#L14C5"
         },
         {
           "kind": "span",
@@ -247,269 +324,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 13,
-      "children": [
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 14,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "type"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Free_Hole",
-          "href": "docs/arch___spec.html#L14C10"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "is"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "record"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        }
-      ]
-    },
-    {
-      "kind": "line",
       "number": 15,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "        "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Base",
-          "href": "docs/arch___spec.html#L15C9"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ":"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "System.Address"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
-        }
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 16,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "        "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Length",
-          "href": "docs/arch___spec.html#L16C9"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ":"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Integer"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
-        }
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 17,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "end"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "record"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";",
-          "href": "docs/arch___spec.html#L14C10"
-        }
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 18,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "type"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Holes_List",
-          "href": "docs/arch___spec.html#L18C10"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "is"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "array"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "("
-        },
-        {
-          "kind": "span",
-          "cssClass": "number",
-          "text": "0"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ".."
-        },
-        {
-          "kind": "span",
-          "cssClass": "number",
-          "text": "7"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ")"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "of"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Free_Hole",
-          "href": "docs/arch___spec.html#L14C10"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
-        }
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 19,
       "children": [
         {
           "kind": "span",
@@ -530,7 +345,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "IO_Port",
-          "href": "docs/arch___spec.html#L19C10"
+          "href": "docs/arch___spec.html#L15C10"
         },
         {
           "kind": "span",
@@ -571,13 +386,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 20,
+      "number": 16,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 21,
+      "number": 17,
       "children": [
         {
           "kind": "span",
@@ -598,7 +413,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Scout_Memory",
-          "href": "docs/arch___spec.html#L21C15"
+          "href": "docs/arch___spec.html#L17C15"
         },
         {
           "kind": "span",
@@ -608,8 +423,8 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Holes",
-          "href": "docs/arch___spec.html#L21C28"
+          "text": "Base",
+          "href": "docs/arch___spec.html#L17C28"
         },
         {
           "kind": "span",
@@ -644,8 +459,90 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Holes_List",
-          "href": "docs/arch___spec.html#L18C10"
+          "text": "Address",
+          "href": "docs/common___spec.html#L5C10"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Size",
+          "href": "docs/arch___spec.html#L17C50"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "in"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "out"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Unsigned_64"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Debug",
+          "href": "docs/arch___spec.html#L17C76"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Boolean"
         },
         {
           "kind": "span",
@@ -666,7 +563,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 22,
+      "number": 18,
       "children": [
         {
           "kind": "span",
@@ -687,7 +584,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Initialise_Interrupts",
-          "href": "docs/arch___spec.html#L22C15"
+          "href": "docs/arch___spec.html#L18C15"
         },
         {
           "kind": "span",
@@ -703,13 +600,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 23,
+      "number": 19,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 24,
+      "number": 20,
       "children": [
         {
           "kind": "span",
@@ -730,7 +627,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "IO_Inb",
-          "href": "docs/arch___spec.html#L24C14"
+          "href": "docs/arch___spec.html#L20C14"
         },
         {
           "kind": "span",
@@ -741,7 +638,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Port",
-          "href": "docs/arch___spec.html#L24C21"
+          "href": "docs/arch___spec.html#L20C21"
         },
         {
           "kind": "span",
@@ -757,7 +654,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "IO_Port",
-          "href": "docs/arch___spec.html#L19C10"
+          "href": "docs/arch___spec.html#L15C10"
         },
         {
           "kind": "span",
@@ -797,7 +694,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": " Inline"
+          "text": " Inline_Always"
         },
         {
           "kind": "span",
@@ -808,7 +705,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 25,
+      "number": 21,
       "children": [
         {
           "kind": "span",
@@ -829,7 +726,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "IO_Outb",
-          "href": "docs/arch___spec.html#L25C15"
+          "href": "docs/arch___spec.html#L21C15"
         },
         {
           "kind": "span",
@@ -840,7 +737,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Port",
-          "href": "docs/arch___spec.html#L25C23"
+          "href": "docs/arch___spec.html#L21C23"
         },
         {
           "kind": "span",
@@ -856,7 +753,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "IO_Port",
-          "href": "docs/arch___spec.html#L19C10"
+          "href": "docs/arch___spec.html#L15C10"
         },
         {
           "kind": "span",
@@ -872,7 +769,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Data",
-          "href": "docs/arch___spec.html#L25C38"
+          "href": "docs/arch___spec.html#L21C38"
         },
         {
           "kind": "span",
@@ -907,7 +804,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": " Inline"
+          "text": " Inline_Always"
         },
         {
           "kind": "span",
@@ -918,19 +815,207 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
+      "number": 22,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 23,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "   "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- package Console is"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 24,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure X(C : Natural);"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 25,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put(C : Character);"
+        }
+      ]
+    },
+    {
+      "kind": "line",
       "number": 26,
       "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put(S: String);"
+        }
       ]
     },
     {
       "kind": "line",
       "number": 27,
       "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put(N : Unsigned_64);"
+        }
       ]
     },
     {
       "kind": "line",
       "number": 28,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put_Int(N : Integer);"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 29,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put_Hex(N: Positive);"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 30,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put_Size(s: Unsigned_64);"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 31,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put_Line(S: String);    "
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 32,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Banner(S : String); "
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 33,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "   "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- end Console;"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 34,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 35,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 36,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 37,
       "children": [
         {
           "kind": "span",

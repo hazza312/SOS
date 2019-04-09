@@ -2,29 +2,93 @@
 
 Here is a log of the changes & development..
 
+## Week 2
+### Monday 8/4
+(to be completed... keyboard scancodes, console, basic input etc)
+
 ## Week 1
 
 ### Sunday 7/4
-http://www.cpcwiki.eu/imgs/e/e3/8253.pdf
+Still having some weird bugs where an interrupt would be handled, and then the continuing program's execution would mess up / start printing to the screen in weird places. Realised (after a long time) that not necessary registers were being pushed, so the handler was still trashing the contents in some cases. I had a look at the linux x86_64 interrupt.s (LINK) source to look at which registers need to be saved / restored. I guess it is just the scratch registers (see the System-V ABI), since any handling routine will preserve the others.
+
+Starting to look at external interrupts now and programming the PIC. By default, it annoyingly overlaps the IRQs from with system exceptions, this is something that is commonly changed such that external interrupts are mapped to `32` upwards. Reprogramming to use the different vectors isn't too hard, and since the device is so old, the datasheets are avilable and there are guides on how to do this. For this and other devices, I've made separate packages with the register descriptions in Ada, so it will be easy to reprogram them later.
+
+I chose to use the "Auto_EOI", so that it isn't necessary to ack the PIC after every interrupt. Not really sure at the moment what the implications of this will be.
+
+But this seems to be working now, nice. Time to write some handlers for the keyboard, PIT timer and RTC.
+
+I quite like the default "error message" handlers for all interrupts. So I've made it possible to keep these when registering/deregistering a new interrupt for a device. I've made the possibility for two types of handler:
+- 'fast handlers': these directly change the value in the IDT, bypassing the stub. The routine (usually assembly) will be responsible for preserving whatever registers it needs to. (in all honesty, the speed isn't essential, just interesting to experiment with another way of solving the interrupt problem).
+
+Currently, my PIT Timer handler is simple enough to be handled in this way (it doesn't even need any registers):
+
+
+    # X86.Dev.PIT_8253
+        .global    x86_dev_pit_8253_ticks
+        .global    x86_dev_pit_8253_handler
+    x86_dev_pit_8253_handler:
+        incq        x86_dev_pit_8253_ticks
+        iretq
+
+- the normal handler now adds (another) layer of indirection. The kernel places the address of a handler in a table. When the common stub handler looks at the interrupt number, it looks into the table at this index. If it is null, then we call our error message routine, as before. Otherwise, we call this function.
+
+So this makes registering/deregistering a handler as simple as putting the address into this table, instead of messing around with IDT entries. Nice. I've kept option for adding the two types of interrupt handler in the `X86.Interrupts` package. 
+
+I saw somewhere that Linux used to have fast/normal handlers -- I use the terminology here, but I haven't looked in detail at those handlers to see what makes them 'fast'. I adopt the terminology here anyway.
+
+#### References
+- http://www.cpcwiki.eu/imgs/e/e3/8253.pdf
+- [PIC8259 datasheet](https://pdos.csail.mit.edu/6.828/2009/readings/hardware/8259A.pdf)
+- [Wikipedia: Calling conventions](https://en.wikipedia.org/wiki/X86_calling_conventions)
+- [Wikipedia: PIC8259 Interrupt Controller](https://en.wikipedia.org/wiki/Intel_8259)
+- [Wikipedia: PIT8253 Timer](https://en.wikipedia.org/wiki/Intel_8253)
+- [OSDev: PIC8259](https://wiki.osdev.org/8259_PIC)
 
 ### Satuday 6/4
-Interrupts continued. Wonderful macros.
-GNU GAS sizes.
-New memory map.
-PIC 8259 routines.
-Trimming debug carp from executable.
-Debugging.
+So. Interrupts. I came up with an ingenious plan, and discovered the joy of macros. What would be handy is if we could have one ISR that could act as a default routine, if no handler is loaded. The only problem is, if all gates lead to the same ISR, we won't know why/which interupt/exception just occured, since no registers are loaded/code is pushed to inform of the interrupt. So, we can instead make each IDT entry point to a stub. This stub loads a register with the specific interrupt number, before jumping to the common handler, which can differentiate between the interrupts based ont he contents of this register.
 
+Initially, I tried to make the "stub table" as compact as possible: using only 4 bytes I could do:
+
+    movb ID, %al    # 2 bytes
+    jmp except      # 2 bytes if relative offset in [-128, 127]
+
+Of course, there are two problems here. First, %al is trashed. Second, this doesn't work for a table larger than 31 entries, as we can't do this relative jump with a 1 byte offset. I was getting creative and making the further away entries "bunnyhop" towards except, but gave up on this in the end after I realised I needed to push %rax anyway. With all this together, each stub fits within 8 bytes.
+
+With many thanks to the GNU GAS macros, though I wasted a lot of time getting the size neumonics wrong.. This meant my IDT entries were taking up too much space / weren't working correctly.
+
+Though it is cool now that we have all the CPU Exceptions as well as Interrupts caught by our system. This might be pretty handy for debugging.
 
 
 #### References
 [Muen Separation Kernel: IO routines](https://github.com/jcdubois/muen/blob/master/common/src/sk-io.adb)
 
+[GNU GAS Directives](https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_7.html)
+
 ### Friday 5/4
-Interrupts
+Making a start on interrupts. Immediately turning them on with `sti` causes crashes, as there is no lidt loaded and nothing to handle them. I think the interrupt that comes through almost immediately is the PIT timer.
+
+ Getting my head around these structures gives me a bit of a headache... My plan initially was to do this all from Ada: set up a means of programatically overwrite/read an IDT entry with the address of some assembly / Ada routine. 
+ 
+ Though after thinking about it, this doesn't make so much sense -- we can't just put the address of one of these routines here. These compiled routines will totally trash any registers. And they would end like a normal subroutine, ending with a `ret` when we need to `iret`. This has me thinking of an extra layer of indirection/ some other 'stub' structure that would set things up and push/pop what is required before and after calling the routine. In any case, for now I just want to be able to handle any interrupt with a meaningless handler without it crashing...
+
+ #### References
+P93 AMD64SP 
+
+[Interrupts Tutorial](https://wiki.osdev.org/Interrupts_tutorial) (though the copy pasting of stuff there is a little messy).
 
 ### Thursday 4/4
-Memory map
+Although not really needed yet, a small memory map was written to keep track of free kernel memory. Currently, this is implemented as an experimentation with generic Ada packages (with the hope that it can be reused for managing different sized memory blocks). This might need to be refactored.
+
+Currently implements a first-fit algorithm (inspired by the algorithm in the Unix6 book). Though perhaps the structure to maintain this would take up too much memory (i.e. the "free nodes" in the linked list?). Freed memory is automatically joined back with contiguous regions before and after that memory spot. 
+
+In the worst case, every other alloc unit (e.g. page) would be allocated. So, this would require (REGION_SIZE / ALLOC_UNIT) /2 nodes. And every node requires the fields for 
+
+    64 bit base address
+    64 bit size
+    xx bit pointer
+        xx bits for (2**x) * 2 allocations (see above)
+
+Ok realistically, this could be optimised. If this is for kernel only use, we could assume the minimum allocation size of a page=4096 bytes. If the base address becomes the page number, a 32-bit integer would likely be large enough to cover all physical memory. We could limit the size of a single allocation to 2^16 pages. And perhaps 2^16 concurrent allocations would be enough? Something to play with later.
 
 ### Wednesday 3/4
 Code has been refactored somewhat to separate 

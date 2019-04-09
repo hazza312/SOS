@@ -3,136 +3,143 @@ GNATdoc.EntitiesCategory = {
   "entities": [
     {
       "label": "Address",
-      "docHref": "docs/kernel___spec.html#L6C10",
-      "declared": "Kernel",
+      "docHref": "docs/common___spec.html#L5C10",
+      "declared": "Common",
       "declared_qualifier": "",
-      "srcHref": "srcs/kernel.ads.html#L6"
+      "srcHref": "srcs/common.ads.html#L5"
     },
     {
       "label": "BG_Colour",
-      "docHref": "docs/console___spec.html#L18C12",
+      "docHref": "docs/console___spec.html#L19C12",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L18"
+      "srcHref": "srcs/console.ads.html#L19"
     },
     {
       "label": "Bit_Field",
-      "docHref": "docs/pic_8259a___spec.html#L20C10",
-      "declared": "PIC_8259A",
+      "docHref": "docs/x86__dev__pic_8259a___spec.html#L20C10",
+      "declared": "X86.Dev.PIC_8259A",
       "declared_qualifier": "",
-      "srcHref": "srcs/pic_8259a.ads.html#L20"
+      "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L20"
     },
     {
       "label": "Colour",
-      "docHref": "docs/console___spec.html#L11C9",
+      "docHref": "docs/console___spec.html#L12C9",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L11"
+      "srcHref": "srcs/console.ads.html#L12"
     },
     {
       "label": "CPU_Exception",
-      "docHref": "docs/interrupts___spec.html#L22C13",
-      "declared": "Interrupts",
+      "docHref": "docs/x86__interrupts___spec.html#L26C13",
+      "declared": "X86.Interrupts",
       "declared_qualifier": "",
-      "srcHref": "srcs/interrupts.ads.html#L22"
+      "srcHref": "srcs/x86-interrupts.ads.html#L26"
     },
     {
       "label": "CW_Type",
-      "docHref": "docs/pic_8259a___spec.html#L19C10",
-      "declared": "PIC_8259A",
+      "docHref": "docs/x86__dev__pic_8259a___spec.html#L19C10",
+      "declared": "X86.Dev.PIC_8259A",
       "declared_qualifier": "",
-      "srcHref": "srcs/pic_8259a.ads.html#L19"
+      "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L19"
     },
     {
       "label": "Destination",
-      "docHref": "docs/pic_8259a___spec.html#L9C10",
-      "declared": "PIC_8259A",
+      "docHref": "docs/x86__dev__pic_8259a___spec.html#L9C10",
+      "declared": "X86.Dev.PIC_8259A",
       "declared_qualifier": "",
-      "srcHref": "srcs/pic_8259a.ads.html#L9"
+      "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L9"
     },
     {
       "label": "Device",
-      "docHref": "docs/pic_8259a___spec.html#L8C10",
-      "declared": "PIC_8259A",
+      "docHref": "docs/x86__dev__pic_8259a___spec.html#L8C10",
+      "declared": "X86.Dev.PIC_8259A",
       "declared_qualifier": "",
-      "srcHref": "srcs/pic_8259a.ads.html#L8"
+      "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L8"
     },
     {
       "label": "External_Interrupt",
-      "docHref": "docs/interrupts___spec.html#L23C13",
-      "declared": "Interrupts",
+      "docHref": "docs/x86__interrupts___spec.html#L27C13",
+      "declared": "X86.Interrupts",
       "declared_qualifier": "",
-      "srcHref": "srcs/interrupts.ads.html#L23"
-    },
-    {
-      "label": "Holes_List",
-      "docHref": "docs/arch___spec.html#L18C10",
-      "declared": "Arch",
-      "declared_qualifier": "",
-      "srcHref": "srcs/arch.ads.html#L18"
+      "srcHref": "srcs/x86-interrupts.ads.html#L27"
     },
     {
       "label": "Interrupt",
-      "docHref": "docs/interrupts___spec.html#L2C10",
-      "declared": "Interrupts",
+      "docHref": "docs/x86__interrupts___spec.html#L6C10",
+      "declared": "X86.Interrupts",
       "declared_qualifier": "",
-      "srcHref": "srcs/interrupts.ads.html#L2"
+      "srcHref": "srcs/x86-interrupts.ads.html#L6"
     },
     {
       "label": "IO_Port",
-      "docHref": "docs/arch___spec.html#L19C10",
+      "docHref": "docs/arch___spec.html#L15C10",
       "declared": "Arch",
       "declared_qualifier": "",
-      "srcHref": "srcs/arch.ads.html#L19"
+      "srcHref": "srcs/arch.ads.html#L15"
     },
     {
       "label": "IRQ",
-      "docHref": "docs/pic_8259a___spec.html#L7C10",
-      "declared": "PIC_8259A",
+      "docHref": "docs/x86__dev__pic_8259a___spec.html#L7C10",
+      "declared": "X86.Dev.PIC_8259A",
       "declared_qualifier": "",
-      "srcHref": "srcs/pic_8259a.ads.html#L7"
+      "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L7"
     },
     {
       "label": "Memory_Entries",
-      "docHref": "docs/multiboot___spec.html#L20C10",
+      "docHref": "docs/multiboot___spec.html#L21C10",
       "declared": "Multiboot",
       "declared_qualifier": "",
-      "srcHref": "srcs/multiboot.ads.html#L20"
+      "srcHref": "srcs/multiboot.ads.html#L21"
     },
     {
       "label": "Memory_Type",
-      "docHref": "docs/multiboot___spec.html#L8C10",
+      "docHref": "docs/multiboot___spec.html#L9C10",
       "declared": "Multiboot",
       "declared_qualifier": "",
-      "srcHref": "srcs/multiboot.ads.html#L8"
+      "srcHref": "srcs/multiboot.ads.html#L9"
     },
     {
       "label": "Node_Index",
-      "docHref": "docs/mmap___spec.html#L23C13",
+      "docHref": "docs/mmap___spec.html#L24C13",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L23"
+      "srcHref": "srcs/mmap.ads.html#L24"
     },
     {
       "label": "Node_List",
-      "docHref": "docs/mmap___spec.html#L14C10",
+      "docHref": "docs/mmap___spec.html#L15C10",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L14"
+      "srcHref": "srcs/mmap.ads.html#L15"
     },
     {
       "label": "Physical_Address",
-      "docHref": "docs/kernel___spec.html#L7C10",
-      "declared": "Kernel",
+      "docHref": "docs/common___spec.html#L6C10",
+      "declared": "Common",
       "declared_qualifier": "",
-      "srcHref": "srcs/kernel.ads.html#L7"
+      "srcHref": "srcs/common.ads.html#L6"
+    },
+    {
+      "label": "Status_Register",
+      "docHref": "docs/x86__dev__rtc___spec.html#L20C10",
+      "declared": "X86.Dev.RTC",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-dev-rtc.ads.html#L20"
+    },
+    {
+      "label": "Time_Unit",
+      "docHref": "docs/x86__dev__rtc___spec.html#L9C10",
+      "declared": "X86.Dev.RTC",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-dev-rtc.ads.html#L9"
     },
     {
       "label": "Virtual_Address",
-      "docHref": "docs/kernel___spec.html#L8C10",
-      "declared": "Kernel",
+      "docHref": "docs/common___spec.html#L7C10",
+      "declared": "Common",
       "declared_qualifier": "",
-      "srcHref": "srcs/kernel.ads.html#L8"
+      "srcHref": "srcs/common.ads.html#L7"
     }
   ]
 };

@@ -82,11 +82,62 @@ GNATdoc.SourceFile = {
       "kind": "line",
       "number": 3,
       "children": [
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "with"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Common"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "use"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Common"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
       ]
     },
     {
       "kind": "line",
       "number": 4,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 5,
       "children": [
         {
           "kind": "span",
@@ -97,7 +148,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 5,
+      "number": 6,
       "children": [
         {
           "kind": "span",
@@ -108,49 +159,12 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 6,
+      "number": 7,
       "children": [
         {
           "kind": "span",
           "cssClass": "keyword",
           "text": "generic"
-        }
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 7,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Min_Allocation",
-          "href": "docs/mmap___spec.html#L7C5"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ":"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Positive"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
         }
       ]
     },
@@ -166,7 +180,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Base_Address",
+          "text": "Min_Allocation",
           "href": "docs/mmap___spec.html#L8C5"
         },
         {
@@ -177,12 +191,12 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": "      "
+          "text": "    "
         },
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "System.Address"
+          "text": "Unsigned_64"
         },
         {
           "kind": "span",
@@ -203,7 +217,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Max_Length",
+          "text": "Base_Address",
           "href": "docs/mmap___spec.html#L9C5"
         },
         {
@@ -214,12 +228,13 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": "        "
+          "text": "      "
         },
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Natural"
+          "text": "Address",
+          "href": "docs/common___spec.html#L5C10"
         },
         {
           "kind": "span",
@@ -240,8 +255,45 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Num_Elements",
+          "text": "Max_Length",
           "href": "docs/mmap___spec.html#L10C5"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Unsigned_64"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 11,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "    "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Num_Elements",
+          "href": "docs/mmap___spec.html#L11C5"
         },
         {
           "kind": "span",
@@ -256,7 +308,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Positive"
+          "text": "Unsigned_64"
         },
         {
           "kind": "span",
@@ -267,13 +319,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 11,
+      "number": 12,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 12,
+      "number": 13,
       "children": [
         {
           "kind": "span",
@@ -289,7 +341,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "MMap",
-          "href": "docs/mmap___spec.html#L12C9"
+          "href": "docs/mmap___spec.html#L13C9"
         },
         {
           "kind": "span",
@@ -305,58 +357,6 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "text",
           "text": " "
-        }
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 13,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "type"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Node",
-          "href": "docs/mmap___spec.html#L13C10"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "is"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "private"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
         }
       ]
     },
@@ -382,7 +382,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Node_List",
+          "text": "Node",
           "href": "docs/mmap___spec.html#L14C10"
         },
         {
@@ -416,11 +416,63 @@ GNATdoc.SourceFile = {
       "kind": "line",
       "number": 15,
       "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "    "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "type"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Node_List",
+          "href": "docs/mmap___spec.html#L15C10"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "is"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "private"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
       ]
     },
     {
       "kind": "line",
       "number": 16,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 17,
       "children": [
         {
           "kind": "span",
@@ -441,7 +493,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Allocate",
-          "href": "docs/mmap___spec.html#L16C14"
+          "href": "docs/mmap___spec.html#L17C14"
         },
         {
           "kind": "span",
@@ -452,7 +504,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Size",
-          "href": "docs/mmap___spec.html#L16C23"
+          "href": "docs/mmap___spec.html#L17C23"
         },
         {
           "kind": "span",
@@ -467,7 +519,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Positive"
+          "text": "Unsigned_64"
         },
         {
           "kind": "span",
@@ -492,101 +544,8 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "System.Address"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
-        }
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 17,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "keyword",
-          "text": "procedure"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Free",
-          "href": "docs/mmap___spec.html#L17C15"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "("
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Base",
-          "href": "docs/mmap___spec.html#L17C20"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ":"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "System.Address"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Length",
-          "href": "docs/mmap___spec.html#L17C42"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ":"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Positive"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ")"
+          "text": "Address",
+          "href": "docs/common___spec.html#L5C10"
         },
         {
           "kind": "span",
@@ -617,8 +576,71 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Print",
+          "text": "Free",
           "href": "docs/mmap___spec.html#L18C15"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "("
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Base",
+          "href": "docs/mmap___spec.html#L18C20"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Address",
+          "href": "docs/common___spec.html#L5C10"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Length",
+          "href": "docs/mmap___spec.html#L18C35"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Unsigned_64"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ")"
         },
         {
           "kind": "span",
@@ -631,11 +653,43 @@ GNATdoc.SourceFile = {
       "kind": "line",
       "number": 19,
       "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "    "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "procedure"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Print",
+          "href": "docs/mmap___spec.html#L19C15"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
       ]
     },
     {
       "kind": "line",
       "number": 20,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 21,
       "children": [
         {
           "kind": "span",
@@ -646,7 +700,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 21,
+      "number": 22,
       "children": [
         {
           "kind": "span",
@@ -657,13 +711,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 22,
+      "number": 23,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 23,
+      "number": 24,
       "children": [
         {
           "kind": "span",
@@ -684,7 +738,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Node_Index",
-          "href": "docs/mmap___spec.html#L23C13"
+          "href": "docs/mmap___spec.html#L24C13"
         },
         {
           "kind": "span",
@@ -704,7 +758,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Integer"
+          "text": "Unsigned_64"
         },
         {
           "kind": "span",
@@ -745,13 +799,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 24,
+      "number": 25,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 25,
+      "number": 26,
       "children": [
         {
           "kind": "span",
@@ -772,7 +826,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Node",
-          "href": "docs/mmap___spec.html#L25C10"
+          "href": "docs/mmap___spec.html#L26C10"
         },
         {
           "kind": "span",
@@ -803,49 +857,6 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 26,
-      "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "        "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Next",
-          "href": "docs/mmap___spec.html#L26C9"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "    "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ":"
-        },
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": " "
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": "Node_Index",
-          "href": "docs/mmap___spec.html#L23C13"
-        },
-        {
-          "kind": "span",
-          "cssClass": "identifier",
-          "text": ";"
-        }
-      ]
-    },
-    {
-      "kind": "line",
       "number": 27,
       "children": [
         {
@@ -856,7 +867,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Base",
+          "text": "Next",
           "href": "docs/mmap___spec.html#L27C9"
         },
         {
@@ -877,7 +888,8 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "System.Address"
+          "text": "Node_Index",
+          "href": "docs/mmap___spec.html#L24C13"
         },
         {
           "kind": "span",
@@ -898,8 +910,51 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Length",
+          "text": "Base",
           "href": "docs/mmap___spec.html#L28C9"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "    "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Address",
+          "href": "docs/common___spec.html#L5C10"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 29,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Length",
+          "href": "docs/mmap___spec.html#L29C9"
         },
         {
           "kind": "span",
@@ -919,7 +974,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "Natural"
+          "text": "Unsigned_64"
         },
         {
           "kind": "span",
@@ -935,7 +990,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 29,
+      "number": 30,
       "children": [
         {
           "kind": "span",
@@ -961,19 +1016,19 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": ";",
-          "href": "docs/mmap___spec.html#L25C10"
+          "href": "docs/mmap___spec.html#L26C10"
         }
       ]
     },
     {
       "kind": "line",
-      "number": 30,
+      "number": 31,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 31,
+      "number": 32,
       "children": [
         {
           "kind": "span",
@@ -994,7 +1049,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Node_List",
-          "href": "docs/mmap___spec.html#L31C10"
+          "href": "docs/mmap___spec.html#L32C10"
         },
         {
           "kind": "span",
@@ -1025,7 +1080,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Node_Index",
-          "href": "docs/mmap___spec.html#L23C13"
+          "href": "docs/mmap___spec.html#L24C13"
         },
         {
           "kind": "span",
@@ -1051,7 +1106,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Node",
-          "href": "docs/mmap___spec.html#L25C10"
+          "href": "docs/mmap___spec.html#L26C10"
         },
         {
           "kind": "span",
@@ -1062,13 +1117,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 32,
+      "number": 33,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 33,
+      "number": 34,
       "children": [
         {
           "kind": "span",

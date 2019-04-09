@@ -47,7 +47,7 @@ package body Arch is
         
         Put("-> testing PIT 8253A ");
         X86.Dev.Pit_8253.Reset;
-        for I in 0..2 loop 
+        for I in 0..51 loop 
             while I >= Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
             Put('.');
         end loop;
@@ -59,18 +59,19 @@ package body Arch is
             Put(LF);       
         X86.Interrupts.Slow_Handler(Keyboard, X86.Dev.Keyboard.Handler'Address);
 
-
-        Put("-> testing keyboard (press any key) ");
-        While Integer(X86.Dev.Keyboard.Get_Ticks) = 0 loop null; end loop;
-        for J in 0..36 loop Put('.'); end loop;
-        Put_Line(" done");
-
 -- RTC
         Put("-> registering RTC @IRQ "); 
             Put_Hex(Unsigned_64(Interrupt'Enum_Rep(RTC)));   
             Put(LF); 
         X86.Interrupts.Register_Handler(RTC, Native_C'Address);
         X86.Dev.RTC.Initialise;
+
+        Put("-> testing PIT 8253A ..");
+        for I in 0..4 loop 
+            while I >= Integer(X86.Dev.RTC.Get_Ticks) loop null; end loop;
+            Put("..........");
+        end loop;
+        Put_Line(" done");
         
 -- done
         -- At_X(0);    Put("-> PIT ticks:");

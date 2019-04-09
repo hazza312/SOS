@@ -41,20 +41,14 @@ procedure Kernel is
 begin
    Banner   ("SOS#toast", FG=>White, BG=>Cyan);
    Put_Line ("-> entered 64-bit long mode" );
---    Put(LF);
---    Banner   ("System Map", bg=>White, fg=>Black );
 
-   -- fill holes with free holes, ordered largest to smallest
+   -- find base and size of largest memory hole.
    Arch.Scout_Memory(Biggest_Base, Biggest_Size, False);  
    if Biggest_Size = 0 then Panic("No Free Memory?"); end if;
 
-   Put("-> Using largest hole ("); 
-      Put_Size(Biggest_Size); 
-      Put(") RAM @"); 
-      Put_Hex(Biggest_Base);
-      Put(LF);
+   Put("-> Using largest hole ("); Put_Size(Biggest_Size); Put(") RAM @"); 
+      Put_Hex(Biggest_Base); Put(LF);
    Put_Line("-> Initialising kernel page mapper");
---    Put(LF);
     
    declare 
       package Page_Mapper is new MMap(
@@ -64,16 +58,17 @@ begin
          Num_Elements    => 15
       );
 
-      Allocs : array(0..3) of Address;
+      Allocs : array(0..5) of Address;
 
    begin
-    --   Banner   ("Kernel Map", bg=>White, fg=>Black);
+      -- just test out a couple of allocations and frees
       Allocs(0) := Page_Mapper.Allocate(PAGE_SIZE);
       Allocs(1) := Page_Mapper.Allocate(PAGE_SIZE);
       Allocs(2) := Page_Mapper.Allocate(PAGE_SIZE);
-      Page_Mapper.Free(Allocs(0), PAGE_SIZE);      
-    --   Page_Mapper.Print;
-
+      Allocs(3) := Page_Mapper.Allocate(PAGE_SIZE);
+      Allocs(4) := Page_Mapper.Allocate(PAGE_SIZE);
+      Page_Mapper.Free(Allocs(3), PAGE_SIZE);   
+      Page_Mapper.Free(Allocs(1), PAGE_SIZE);   
 
       Put_Line("-> (re)enabling interrupts");
       Arch.Initialise_Interrupts;
@@ -98,43 +93,48 @@ begin
 
             elsif Equals(Command, "help", Length) then 
                 Put_Line("commands:");
-                Put_Line("[mem multiboot] show multiboot memory info");
-                Put_Line("[mem kmap]      show kernel free list");
-                Put_Line("[uptime]        display system uptime");
-                Put_Line("[interrupts]    show interrupt mapping");
-                Put_Line("[ticks]         show interrupt ticks");
-                Put_Line("[crash]         deliberately crash the kernel");
+                Put_Line("  multiboot     : show multiboot memory info");
+                Put_Line("  kmap          : show kernel free list");
+                Put_Line("  uptime        : display system uptime");
+                Put_Line("  interrupts    : show interrupt mapping");
+                Put_Line("  ticks         : show interrupt ticks");
+                Put_Line("  crash         : deliberately crash the kernel");
 
-            elsif Equals(Command, "mem kmap", Length) then 
+            elsif Equals(Command, "kmap", Length) then 
                 Banner("Kernel Map", bg=>White, fg=>Black);
                 Page_Mapper.Print; 
 
-            elsif Equals(Command, "mem multiboot", Length) then 
+            elsif Equals(Command, "multiboot", Length) then 
                 Banner("Multiboot Map", bg=>White, fg=>Black);
                 Arch.Scout_Memory(Biggest_Base, Biggest_Size, True);   
 
             elsif Equals(Command, "ticks", Length) then 
-                Banner("Interrupt Ticks", bg=>White, fg=>Black);
-                Put("PIT 8253 "); At_X(20); Put(X86.Dev.PIT_8253.Get_Ticks); Put(LF);
-                Put("Keyboard "); At_X(20); Put(X86.Dev.Keyboard.Get_Ticks); Put(LF);
-                Put("RTC      "); At_X(20); Put(X86.Dev.RTC.Get_Ticks); Put(LF);
+                At_X(0);    Put("-> PIT ticks:");
+                At_X(29);   Put("Keyboard ticks:");
+                At_X(55);   Put("RTC Ticks:");
+
+                while not X86.Dev.Keyboard.Has_Input loop 
+                    Set_Colour(bg => Light_Magenta, fg=>White);
+                    At_X(14); Put(X86.Dev.Pit_8253.Get_Ticks);
+                    At_X(45); Put(X86.Dev.Keyboard.Get_Ticks);
+                    At_X(66); Put(X86.Dev.RTC.Get_Ticks);
+                end loop;
+                Put(LF);
 
             elsif Equals(Command, "uptime", Length) then 
-                Put("Uptime = ");
-                Set_Colour(BG=>Light_Magenta);
-                Put(X86.Dev.RTC.Get_Ticks/2); Put_Line(" seconds");
+                Put("-> Uptime ");
+                Set_Colour(BG=>Light_Green);
+                while not X86.Dev.Keyboard.Has_Input loop 
+                    At_X(12);    
+                    Put(X86.Dev.RTC.Get_Ticks/2); Put(" seconds");
+                end loop;
+                Put(LF);
 
             elsif Equals(Command, "crash", Length) then
                 Put("Enter a key: ");
                 Int_No := Unsigned_8(Character'Pos(Input.Get_Char));
-                Loc := Loc + Unsigned_64((Int_No and 63) * 8);
+                Loc := Loc + Unsigned_64((Int_No and 31) * 8);
                 Asm("call %0", Inputs => Unsigned_64'Asm_Input("d", Loc));
-
-                Banner("Interrupt Ticks", bg=>White, fg=>Black);
-                Put("PIT 8253 "); At_X(20); Put(X86.Dev.PIT_8253.Get_Ticks); Put(LF);
-                Put("Keyboard "); At_X(20); Put(X86.Dev.Keyboard.Get_Ticks); Put(LF);
-                Put("RTC      "); At_X(20); Put(X86.Dev.RTC.Get_Ticks); Put(LF);
-                Put(LF);
 
             elsif Length = 0 then 
                 null;

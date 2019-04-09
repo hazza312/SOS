@@ -20,7 +20,7 @@ GNATdoc.Documentation = {
         {
           "label": "Node_Index",
           "qualifier": "",
-          "line": 23,
+          "line": 24,
           "column": 13,
           "src": "srcs/mmap.ads.html",
           "summary": [
@@ -31,7 +31,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 23,
+                  "number": 24,
                   "children": [
                     {
                       "kind": "span",
@@ -52,7 +52,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Node_Index",
-                      "href": "docs/mmap___spec.html#L23C13"
+                      "href": "docs/mmap___spec.html#L24C13"
                     },
                     {
                       "kind": "span",
@@ -72,7 +72,7 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Integer"
+                      "text": "Unsigned_64"
                     },
                     {
                       "kind": "span",
@@ -118,7 +118,7 @@ GNATdoc.Documentation = {
         {
           "label": "Node_List",
           "qualifier": "",
-          "line": 14,
+          "line": 15,
           "column": 10,
           "src": "srcs/mmap.ads.html",
           "summary": [
@@ -129,7 +129,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 14,
+                  "number": 15,
                   "children": [
                     {
                       "kind": "span",
@@ -150,7 +150,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Node_List",
-                      "href": "docs/mmap___spec.html#L14C10"
+                      "href": "docs/mmap___spec.html#L15C10"
                     },
                     {
                       "kind": "span",
@@ -191,7 +191,7 @@ GNATdoc.Documentation = {
         {
           "label": "Node",
           "qualifier": "",
-          "line": 13,
+          "line": 14,
           "column": 10,
           "src": "srcs/mmap.ads.html",
           "summary": [
@@ -202,7 +202,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 13,
+                  "number": 14,
                   "children": [
                     {
                       "kind": "span",
@@ -223,7 +223,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Node",
-                      "href": "docs/mmap___spec.html#L13C10"
+                      "href": "docs/mmap___spec.html#L14C10"
                     },
                     {
                       "kind": "span",
@@ -264,7 +264,7 @@ GNATdoc.Documentation = {
         {
           "label": "Allocate",
           "qualifier": "",
-          "line": 16,
+          "line": 17,
           "column": 14,
           "src": "srcs/mmap.ads.html",
           "summary": [
@@ -275,7 +275,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 16,
+                  "number": 17,
                   "children": [
                     {
                       "kind": "span",
@@ -296,7 +296,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Allocate",
-                      "href": "docs/mmap___spec.html#L16C14"
+                      "href": "docs/mmap___spec.html#L17C14"
                     },
                     {
                       "kind": "span",
@@ -307,7 +307,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Size",
-                      "href": "docs/mmap___spec.html#L16C23"
+                      "href": "docs/mmap___spec.html#L17C23"
                     },
                     {
                       "kind": "span",
@@ -322,7 +322,7 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Positive"
+                      "text": "Unsigned_64"
                     },
                     {
                       "kind": "span",
@@ -347,7 +347,8 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "System.Address"
+                      "text": "Address",
+                      "href": "docs/common___spec.html#L5C10"
                     },
                     {
                       "kind": "span",
@@ -362,10 +363,10 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "Size",
-              "line": 16,
+              "line": 17,
               "column": 23,
               "type": {
-                "label": "Positive"
+                "label": "Unsigned_64"
               },
               "description": [
               ]
@@ -374,138 +375,6 @@ GNATdoc.Documentation = {
         },
         {
           "label": "Free",
-          "qualifier": "",
-          "line": 17,
-          "column": 15,
-          "src": "srcs/mmap.ads.html",
-          "summary": [
-          ],
-          "description": [
-            {
-              "kind": "code",
-              "children": [
-                {
-                  "kind": "line",
-                  "number": 17,
-                  "children": [
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": "    "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "keyword",
-                      "text": "procedure"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Free",
-                      "href": "docs/mmap___spec.html#L17C15"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "("
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Base",
-                      "href": "docs/mmap___spec.html#L17C20"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ":"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "System.Address"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ";"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Length",
-                      "href": "docs/mmap___spec.html#L17C42"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ":"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Positive"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ")"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ";"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "label": "Base",
-              "line": 17,
-              "column": 20,
-              "type": {
-                "label": "Address"
-              },
-              "description": [
-              ]
-            },
-            {
-              "label": "Length",
-              "line": 17,
-              "column": 42,
-              "type": {
-                "label": "Positive"
-              },
-              "description": [
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Print",
           "qualifier": "",
           "line": 18,
           "column": 15,
@@ -538,8 +407,142 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Print",
+                      "text": "Free",
                       "href": "docs/mmap___spec.html#L18C15"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "("
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Base",
+                      "href": "docs/mmap___spec.html#L18C20"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Address",
+                      "href": "docs/common___spec.html#L5C10"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Length",
+                      "href": "docs/mmap___spec.html#L18C35"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Unsigned_64"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ")"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "label": "Base",
+              "line": 18,
+              "column": 20,
+              "type": {
+                "label": "Common.Address",
+                "docHref": "docs/common___spec.html#L5C10"
+              },
+              "description": [
+              ]
+            },
+            {
+              "label": "Length",
+              "line": 18,
+              "column": 35,
+              "type": {
+                "label": "Unsigned_64"
+              },
+              "description": [
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Print",
+          "qualifier": "",
+          "line": 19,
+          "column": 15,
+          "src": "srcs/mmap.ads.html",
+          "summary": [
+          ],
+          "description": [
+            {
+              "kind": "code",
+              "children": [
+                {
+                  "kind": "line",
+                  "number": 19,
+                  "children": [
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": "    "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "keyword",
+                      "text": "procedure"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Print",
+                      "href": "docs/mmap___spec.html#L19C15"
                     },
                     {
                       "kind": "span",

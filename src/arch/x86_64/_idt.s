@@ -4,7 +4,7 @@
         # sadly, when an exception occurs, we don't necessarily know which 
         # exception was called if we use the same handler for each exception.
         # And having multiple default handlers for every exception is a bit OTT.
-        # So, we can use a small stub that loads %rdi with the interrupt 
+        # So, we can use a small stub that loads %al with the interrupt 
         # number, before jumping to the real Ada routine, who can take 
         # appropriate action.        
 
@@ -41,8 +41,8 @@ IDT:    Make_Table 0, 63
 
 .end$:  
 
-idtinfo:.short 	.end$ -IDT -1	# LDT Table limit
-		.quad 	IDT	# Base Address of LDT Table
+idtinfo:.short  .end$ -IDT -1   # LDT Table limit
+        .quad   IDT             # Base Address of LDT Table
 
 /****** Registered Handlers ***************************************************/
         .section .bss 

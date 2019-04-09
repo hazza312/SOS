@@ -5,9 +5,19 @@ GNATdoc.DocumentationIndex = [
     "file": "docs/arch___spec.html"
   },
   {
+    "label": "Common",
+    "qualifier": "",
+    "file": "docs/common___spec.html"
+  },
+  {
     "label": "Console",
     "qualifier": "",
     "file": "docs/console___spec.html"
+  },
+  {
+    "label": "Consoleb",
+    "qualifier": "",
+    "file": "docs/consoleb___spec.html"
   },
   {
     "label": "Error",
@@ -15,14 +25,9 @@ GNATdoc.DocumentationIndex = [
     "file": "docs/error___spec.html"
   },
   {
-    "label": "Interrupts",
+    "label": "Input",
     "qualifier": "",
-    "file": "docs/interrupts___spec.html"
-  },
-  {
-    "label": "Kernel",
-    "qualifier": "",
-    "file": "docs/kernel___spec.html"
+    "file": "docs/input___spec.html"
   },
   {
     "label": "MMap",
@@ -35,13 +40,48 @@ GNATdoc.DocumentationIndex = [
     "file": "docs/multiboot___spec.html"
   },
   {
-    "label": "PIC_8259A",
+    "label": "X86",
     "qualifier": "",
-    "file": "docs/pic_8259a___spec.html"
+    "file": "docs/x86___spec.html"
   },
   {
-    "label": "X86_Debug",
+    "label": "X86.Debug",
     "qualifier": "",
-    "file": "docs/x86_debug___spec.html"
+    "file": "docs/x86__debug___spec.html"
+  },
+  {
+    "label": "X86.Dev",
+    "qualifier": "",
+    "file": "docs/x86__dev___spec.html"
+  },
+  {
+    "label": "X86.Dev.Keyboard",
+    "qualifier": "",
+    "file": "docs/x86__dev__keyboard___spec.html"
+  },
+  {
+    "label": "X86.Dev.PIC_8259A",
+    "qualifier": "",
+    "file": "docs/x86__dev__pic_8259a___spec.html"
+  },
+  {
+    "label": "X86.Dev.PIT_8253",
+    "qualifier": "",
+    "file": "docs/x86__dev__pit_8253___spec.html"
+  },
+  {
+    "label": "X86.Dev.RTC",
+    "qualifier": "",
+    "file": "docs/x86__dev__rtc___spec.html"
+  },
+  {
+    "label": "X86.Dev.VGA_Console",
+    "qualifier": "",
+    "file": "docs/x86__dev__vga_console___spec.html"
+  },
+  {
+    "label": "X86.Interrupts",
+    "qualifier": "",
+    "file": "docs/x86__interrupts___spec.html"
   }
 ];
