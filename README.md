@@ -9,7 +9,7 @@ A "Simple Operating System" kernel, written primarily in Ada 2012 . Some goals o
 
 This repository is the source tree for my final BSc Computer Science project at the Vrije Universiteit, Amsterdam.
 
-It's nickname is `toast`, because `toast` is tasty. 
+It's nickname is `toast`.
 
 ## Development Log
 Journal of Enlightenment can be found 

@@ -2,3 +2,4 @@ obj/*.*
 dist/os.iso
 dist/kernel
 bochsout.txt
+dump
