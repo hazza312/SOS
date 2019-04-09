@@ -14,10 +14,10 @@ package X86.Vm is
 
     -- TODO: extend the setting of flags
     -- TODO: separate Virtual_Address subtype?
-    -- function Map_Page(
-    --     PML4: Address;
-    --     Base: Address;
-    --     Size: Page_Size) return Virtual_Address;
+    function Map_Page(
+        PML4: Address;
+        Base: Address;
+        Size: Page_Size) return Virtual_Address;
 
 private
 
@@ -26,18 +26,19 @@ private
     type Table_Ref is new Unsigned_64;
 
     type Page_Table_Entry is record
-        No_Execute: Boolean;
-        Reference: Address_4K_Truncate;
-        Available: Integer range 0..7;
-        Global: Boolean;
-        Page_Size: Boolean;
-        Dirty: Boolean;
-        Accessed: Boolean;
-        Cache_Disable: Boolean;
-        Writethrough: Boolean;
-        User_Access: Boolean;
-        Writeable: Boolean;
-        Present: Boolean;
+        No_Execute:     Boolean;
+        Used_Entries:   Integer range 0..512;
+        Reference:      Address_4K_Truncate;
+        Available:      Integer range 0..7;
+        Global:         Boolean;
+        Page_Size:      Boolean;
+        Dirty:          Boolean;
+        Accessed:       Boolean;
+        Cache_Disable:  Boolean;
+        Writethrough:   Boolean;
+        User_Access:    Boolean;
+        Writeable:      Boolean;
+        Present:        Boolean;
     end record
         -- the following combinations of bits are invalid.
         with Dynamic_Predicate => 
@@ -55,12 +56,16 @@ private
         Global          at 1 range 0..0;
         Available       at 1 range 1..3;
         Reference       at 1 range 4..44;
+        Used_Entries    at 6 range 5..14;
         No_Execute      at 7 range 7..7;
     end record;
     for Page_Table_Entry'Size use 64;
 
     type Entry_Index is mod 512; 
     type Page_Table is array(Entry_Index) of Page_Table_Entry;
+    for Page_Table'Size use 512*64;
+    function Insert_Page(Table_Base, Base_Address: Address; Remaining: Natural) return Boolean;
+    function Insert_Directory(PMLX: in out Page_Table) return Boolean;
 
     
 end X86.Vm;

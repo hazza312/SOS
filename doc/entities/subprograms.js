@@ -212,6 +212,13 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/arch.ads.html#L22"
     },
     {
+      "label": "Map_Page",
+      "docHref": "docs/x86__vm___spec.html#L17C14",
+      "declared": "X86.Vm",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm.ads.html#L17"
+    },
+    {
       "label": "Panic",
       "docHref": "docs/error___spec.html#L19C15",
       "declared": "Error",
