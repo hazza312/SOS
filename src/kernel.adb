@@ -15,6 +15,7 @@ with X86.Debug;
 with X86.Dev.PIT_8253;
 with X86.Dev.Keyboard;
 with X86.Dev.RTC;
+with X86.VM;
 
 procedure Kernel is
 
@@ -95,13 +96,18 @@ begin
                 Put_Line("commands:");
                 Put_Line("  multiboot     : show multiboot memory info");
                 Put_Line("  kmap          : show kernel free list");
+                Put_Line("  mmap          : show virtual memory mappings");
                 Put_Line("  uptime        : display system uptime");
                 Put_Line("  interrupts    : show interrupt mapping");
                 Put_Line("  ticks         : show interrupt ticks");
                 Put_Line("  crash         : deliberately crash the kernel");
 
+            elsif Equals(Command, "mmap", Length) then 
+                Banner("Virtual Memory Map", bg=>White, fg=>Black);
+                X86.Vm.Dump_Pages; 
+
             elsif Equals(Command, "kmap", Length) then 
-                Banner("Kernel Map", bg=>White, fg=>Black);
+                Banner("Kernel Free Map", bg=>White, fg=>Black);
                 Page_Mapper.Print; 
 
             elsif Equals(Command, "multiboot", Length) then 

@@ -83,5 +83,10 @@ GNATdoc.DocumentationIndex = [
     "label": "X86.Interrupts",
     "qualifier": "",
     "file": "docs/x86__interrupts___spec.html"
+  },
+  {
+    "label": "X86.Vm",
+    "qualifier": "",
+    "file": "docs/x86__vm___spec.html"
   }
 ];

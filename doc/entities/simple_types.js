@@ -73,10 +73,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "IO_Port",
-      "docHref": "docs/arch___spec.html#L15C10",
+      "docHref": "docs/arch___spec.html#L16C10",
       "declared": "Arch",
       "declared_qualifier": "",
-      "srcHref": "srcs/arch.ads.html#L15"
+      "srcHref": "srcs/arch.ads.html#L16"
     },
     {
       "label": "IRQ",
@@ -84,6 +84,13 @@ GNATdoc.EntitiesCategory = {
       "declared": "X86.Dev.PIC_8259A",
       "declared_qualifier": "",
       "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L7"
+    },
+    {
+      "label": "Level",
+      "docHref": "docs/x86__vm___spec.html#L8C10",
+      "declared": "X86.Vm",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm.ads.html#L8"
     },
     {
       "label": "Memory_Entries",
@@ -112,6 +119,13 @@ GNATdoc.EntitiesCategory = {
       "declared": "MMap",
       "declared_qualifier": "",
       "srcHref": "srcs/mmap.ads.html#L15"
+    },
+    {
+      "label": "Page_Size",
+      "docHref": "docs/x86__vm___spec.html#L10C10",
+      "declared": "X86.Vm",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm.ads.html#L10"
     },
     {
       "label": "Physical_Address",

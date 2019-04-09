@@ -58,6 +58,13 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/input.ads.html#L6"
     },
     {
+      "label": "Dump_Pages",
+      "docHref": "docs/x86__vm___spec.html#L13C15",
+      "declared": "X86.Vm",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm.ads.html#L13"
+    },
+    {
       "label": "Enable_Cursor",
       "docHref": "docs/input___spec.html#L5C14",
       "declared": "Input",
@@ -185,24 +192,24 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Initialise_Interrupts",
-      "docHref": "docs/arch___spec.html#L18C15",
+      "docHref": "docs/arch___spec.html#L19C15",
       "declared": "Arch",
       "declared_qualifier": "",
-      "srcHref": "srcs/arch.ads.html#L18"
+      "srcHref": "srcs/arch.ads.html#L19"
     },
     {
       "label": "IO_Inb",
-      "docHref": "docs/arch___spec.html#L20C14",
-      "declared": "Arch",
-      "declared_qualifier": "",
-      "srcHref": "srcs/arch.ads.html#L20"
-    },
-    {
-      "label": "IO_Outb",
-      "docHref": "docs/arch___spec.html#L21C15",
+      "docHref": "docs/arch___spec.html#L21C14",
       "declared": "Arch",
       "declared_qualifier": "",
       "srcHref": "srcs/arch.ads.html#L21"
+    },
+    {
+      "label": "IO_Outb",
+      "docHref": "docs/arch___spec.html#L22C15",
+      "declared": "Arch",
+      "declared_qualifier": "",
+      "srcHref": "srcs/arch.ads.html#L22"
     },
     {
       "label": "Panic",
@@ -360,10 +367,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Scout_Memory",
-      "docHref": "docs/arch___spec.html#L17C15",
+      "docHref": "docs/arch___spec.html#L18C15",
       "declared": "Arch",
       "declared_qualifier": "",
-      "srcHref": "srcs/arch.ads.html#L17"
+      "srcHref": "srcs/arch.ads.html#L18"
     },
     {
       "label": "Send",

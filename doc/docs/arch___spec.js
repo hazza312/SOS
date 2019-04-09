@@ -24,7 +24,7 @@ GNATdoc.Documentation = {
         {
           "label": "IO_Port",
           "qualifier": "",
-          "line": 15,
+          "line": 16,
           "column": 10,
           "src": "srcs/arch.ads.html",
           "summary": [
@@ -35,7 +35,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 15,
+                  "number": 16,
                   "children": [
                     {
                       "kind": "span",
@@ -56,7 +56,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "IO_Port",
-                      "href": "docs/arch___spec.html#L15C10"
+                      "href": "docs/arch___spec.html#L16C10"
                     },
                     {
                       "kind": "span",
@@ -107,7 +107,7 @@ GNATdoc.Documentation = {
         {
           "label": "Initialise_Interrupts",
           "qualifier": "",
-          "line": 18,
+          "line": 19,
           "column": 15,
           "src": "srcs/arch.ads.html",
           "summary": [
@@ -118,7 +118,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 18,
+                  "number": 19,
                   "children": [
                     {
                       "kind": "span",
@@ -139,7 +139,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Initialise_Interrupts",
-                      "href": "docs/arch___spec.html#L18C15"
+                      "href": "docs/arch___spec.html#L19C15"
                     },
                     {
                       "kind": "span",
@@ -155,7 +155,7 @@ GNATdoc.Documentation = {
         {
           "label": "IO_Inb",
           "qualifier": "",
-          "line": 20,
+          "line": 21,
           "column": 14,
           "src": "srcs/arch.ads.html",
           "summary": [
@@ -166,7 +166,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 20,
+                  "number": 21,
                   "children": [
                     {
                       "kind": "span",
@@ -187,7 +187,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "IO_Inb",
-                      "href": "docs/arch___spec.html#L20C14"
+                      "href": "docs/arch___spec.html#L21C14"
                     },
                     {
                       "kind": "span",
@@ -198,7 +198,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Port",
-                      "href": "docs/arch___spec.html#L20C21"
+                      "href": "docs/arch___spec.html#L21C21"
                     },
                     {
                       "kind": "span",
@@ -214,7 +214,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "IO_Port",
-                      "href": "docs/arch___spec.html#L15C10"
+                      "href": "docs/arch___spec.html#L16C10"
                     },
                     {
                       "kind": "span",
@@ -269,11 +269,11 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "Port",
-              "line": 20,
+              "line": 21,
               "column": 21,
               "type": {
                 "label": "Arch.IO_Port",
-                "docHref": "docs/arch___spec.html#L15C10"
+                "docHref": "docs/arch___spec.html#L16C10"
               },
               "description": [
               ]
@@ -283,7 +283,7 @@ GNATdoc.Documentation = {
         {
           "label": "IO_Outb",
           "qualifier": "",
-          "line": 21,
+          "line": 22,
           "column": 15,
           "src": "srcs/arch.ads.html",
           "summary": [
@@ -294,7 +294,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 21,
+                  "number": 22,
                   "children": [
                     {
                       "kind": "span",
@@ -315,7 +315,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "IO_Outb",
-                      "href": "docs/arch___spec.html#L21C15"
+                      "href": "docs/arch___spec.html#L22C15"
                     },
                     {
                       "kind": "span",
@@ -326,7 +326,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Port",
-                      "href": "docs/arch___spec.html#L21C23"
+                      "href": "docs/arch___spec.html#L22C23"
                     },
                     {
                       "kind": "span",
@@ -342,7 +342,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "IO_Port",
-                      "href": "docs/arch___spec.html#L15C10"
+                      "href": "docs/arch___spec.html#L16C10"
                     },
                     {
                       "kind": "span",
@@ -358,7 +358,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Data",
-                      "href": "docs/arch___spec.html#L21C38"
+                      "href": "docs/arch___spec.html#L22C38"
                     },
                     {
                       "kind": "span",
@@ -408,18 +408,18 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "Port",
-              "line": 21,
+              "line": 22,
               "column": 23,
               "type": {
                 "label": "Arch.IO_Port",
-                "docHref": "docs/arch___spec.html#L15C10"
+                "docHref": "docs/arch___spec.html#L16C10"
               },
               "description": [
               ]
             },
             {
               "label": "Data",
-              "line": 21,
+              "line": 22,
               "column": 38,
               "type": {
                 "label": "Unsigned_8"
@@ -432,7 +432,7 @@ GNATdoc.Documentation = {
         {
           "label": "Scout_Memory",
           "qualifier": "",
-          "line": 17,
+          "line": 18,
           "column": 15,
           "src": "srcs/arch.ads.html",
           "summary": [
@@ -443,7 +443,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 17,
+                  "number": 18,
                   "children": [
                     {
                       "kind": "span",
@@ -464,7 +464,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Scout_Memory",
-                      "href": "docs/arch___spec.html#L17C15"
+                      "href": "docs/arch___spec.html#L18C15"
                     },
                     {
                       "kind": "span",
@@ -475,7 +475,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Base",
-                      "href": "docs/arch___spec.html#L17C28"
+                      "href": "docs/arch___spec.html#L18C28"
                     },
                     {
                       "kind": "span",
@@ -527,7 +527,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Size",
-                      "href": "docs/arch___spec.html#L17C50"
+                      "href": "docs/arch___spec.html#L18C50"
                     },
                     {
                       "kind": "span",
@@ -578,7 +578,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Debug",
-                      "href": "docs/arch___spec.html#L17C76"
+                      "href": "docs/arch___spec.html#L18C76"
                     },
                     {
                       "kind": "span",
@@ -613,7 +613,7 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "Base",
-              "line": 17,
+              "line": 18,
               "column": 28,
               "type": {
                 "label": "Common.Address",
@@ -624,7 +624,7 @@ GNATdoc.Documentation = {
             },
             {
               "label": "Size",
-              "line": 17,
+              "line": 18,
               "column": 50,
               "type": {
                 "label": "Unsigned_64"
@@ -634,7 +634,7 @@ GNATdoc.Documentation = {
             },
             {
               "label": "Debug",
-              "line": 17,
+              "line": 18,
               "column": 76,
               "type": {
                 "label": "Boolean"
