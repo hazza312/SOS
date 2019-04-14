@@ -28,6 +28,7 @@ end$:
 pml4t:  .space  0x1000                             # Page Map Level 4 Table
 pdpt:   .space  0x1000                             # Page-Directory Pointer table
 pdt:    .space  0x1000                            # Page-Directory Table
+pt:     .space  0x1000                             # Page table
 stack:  .space  0x8000
 stack_end:
 
@@ -88,13 +89,20 @@ _entry:
         movw     $0x3D5, %dx
         out      %al, %dx
                                                 
-.init_page_tables:                             # see P135 in AMD64SP            
-        movl    $pdpt,                 (pml4t) # pdpt is 0th entry of pml4t
-        orl     $(PTE_W|PTE_P),        (pml4t) # table is present, W
+.init_page_tables:
+                                             # see P135 in AMD64SP
+        movl    $pml4t, %eax            
+        movl    $pdpt,                  (pml4t) # pdpt is 0th entry of pml4t
+        orl     $(PTE_W|PTE_P),         (pml4t) # table is present, W
+
         movl    $pdt,                  (pdpt)  # pdt is 0th entry of pdt
         orl     $(PTE_W|PTE_P),        (pdpt)  # table is present, W
         orl     $(PTE_W|PTE_P|PTE_PS), (pdt)   # (physical base is 0). 2M page.
                                                # see P439 on enabling long mode.
+
+        movl    $pdt, %eax
+        movl    $(0x2000000 |PTE_W|PTE_P|PTE_PS) , 1*8(%eax)
+
 .load_cr3$:
         movl    $pml4t, %eax
         movl    %eax, %cr3    

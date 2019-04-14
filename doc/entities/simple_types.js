@@ -86,13 +86,6 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L7"
     },
     {
-      "label": "Level",
-      "docHref": "docs/x86__vm___spec.html#L8C10",
-      "declared": "X86.Vm",
-      "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L8"
-    },
-    {
       "label": "Memory_Entries",
       "docHref": "docs/multiboot___spec.html#L21C10",
       "declared": "Multiboot",
@@ -107,25 +100,18 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/multiboot.ads.html#L9"
     },
     {
-      "label": "Node_Index",
-      "docHref": "docs/mmap___spec.html#L24C13",
-      "declared": "MMap",
-      "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L24"
-    },
-    {
       "label": "Node_List",
-      "docHref": "docs/mmap___spec.html#L15C10",
+      "docHref": "docs/mmap___spec.html#L13C9",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L15"
+      "srcHref": "srcs/mmap.ads.html#L13"
     },
     {
       "label": "Page_Size",
-      "docHref": "docs/x86__vm___spec.html#L10C10",
+      "docHref": "docs/x86__vm___spec.html#L8C9",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L10"
+      "srcHref": "srcs/x86-vm.ads.html#L8"
     },
     {
       "label": "Physical_Address",

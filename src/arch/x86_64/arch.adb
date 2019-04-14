@@ -30,7 +30,6 @@ package body Arch is
     end IO_Outb;
 
 
-
     procedure Initialise_Interrupts is
         Native_A : Unsigned_64 with Import, External_Name => "x86_dev_pit_8253_handler";
         Native_B : Unsigned_64 with Import, External_Name => "x86_dev_keyboard_handler";

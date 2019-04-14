@@ -272,7 +272,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "identifier",
-          "text": "MAX_PHYSICAL_ADDRESS_BITS",
+          "text": "MAX_ADDRESS_BITS",
           "href": "docs/arch___spec.html#L14C5"
         },
         {
@@ -313,7 +313,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "number",
-          "text": "52"
+          "text": "48"
         },
         {
           "kind": "span",

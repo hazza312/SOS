@@ -65,6 +65,13 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/x86-dev-keyboard.ads.html#L10"
     },
     {
+      "label": "MAX_ALLOCATIONS",
+      "docHref": "docs/mmap___spec.html#L10C4",
+      "declared": "MMap",
+      "declared_qualifier": "",
+      "srcHref": "srcs/mmap.ads.html#L10"
+    },
+    {
       "label": "NULL_ADDRESS",
       "docHref": "docs/common___spec.html#L9C4",
       "declared": "Common",

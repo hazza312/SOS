@@ -3,10 +3,10 @@ GNATdoc.EntitiesCategory = {
   "entities": [
     {
       "label": "Allocate",
-      "docHref": "docs/mmap___spec.html#L17C14",
+      "docHref": "docs/mmap___spec.html#L15C13",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L17"
+      "srcHref": "srcs/mmap.ads.html#L15"
     },
     {
       "label": "At_X",
@@ -59,10 +59,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Dump_Pages",
-      "docHref": "docs/x86__vm___spec.html#L13C15",
+      "docHref": "docs/x86__vm___spec.html#L12C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L13"
+      "srcHref": "srcs/x86-vm.ads.html#L12"
     },
     {
       "label": "Enable_Cursor",
@@ -87,10 +87,17 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Free",
-      "docHref": "docs/mmap___spec.html#L18C15",
+      "docHref": "docs/mmap___spec.html#L16C14",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L18"
+      "srcHref": "srcs/mmap.ads.html#L16"
+    },
+    {
+      "label": "Get_Base",
+      "docHref": "docs/mmap___spec.html#L24C13",
+      "declared": "MMap",
+      "declared_qualifier": "",
+      "srcHref": "srcs/mmap.ads.html#L24"
     },
     {
       "label": "Get_Char",
@@ -105,6 +112,13 @@ GNATdoc.EntitiesCategory = {
       "declared": "X86.Dev.Keyboard",
       "declared_qualifier": "",
       "srcHref": "srcs/x86-dev-keyboard.ads.html#L20"
+    },
+    {
+      "label": "Get_Length",
+      "docHref": "docs/mmap___spec.html#L25C13",
+      "declared": "MMap",
+      "declared_qualifier": "",
+      "srcHref": "srcs/mmap.ads.html#L25"
     },
     {
       "label": "Get_Line",
@@ -191,6 +205,13 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/x86-dev-rtc.ads.html#L26"
     },
     {
+      "label": "Initialise",
+      "docHref": "docs/mmap___spec.html#L17C14",
+      "declared": "MMap",
+      "declared_qualifier": "",
+      "srcHref": "srcs/mmap.ads.html#L17"
+    },
+    {
       "label": "Initialise_Interrupts",
       "docHref": "docs/arch___spec.html#L19C15",
       "declared": "Arch",
@@ -213,10 +234,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Map_Page",
-      "docHref": "docs/x86__vm___spec.html#L17C14",
+      "docHref": "docs/x86__vm___spec.html#L16C13",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L17"
+      "srcHref": "srcs/x86-vm.ads.html#L16"
     },
     {
       "label": "Panic",
@@ -227,10 +248,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Print",
-      "docHref": "docs/mmap___spec.html#L19C15",
+      "docHref": "docs/mmap___spec.html#L22C14",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L19"
+      "srcHref": "srcs/mmap.ads.html#L22"
     },
     {
       "label": "Print_Multiboot_Map",

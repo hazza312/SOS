@@ -16,6 +16,7 @@ end Panic;
 
 procedure Exception_Handler is
     V : Interrupt;
+    A : Unsigned_64;
 begin 
     Asm("movb %%al, %0", Outputs => Interrupt'Asm_Output("=g", V), Volatile=>True);
     Put(LF);
@@ -46,6 +47,8 @@ begin
         when SS      => Put_Line("Stack Exception (#SS)");
         when GP      => Put_Line("General Protection Fault (#GP)");
         when PF      => Put_Line("Page Fault (#PF)");
+                        Asm("pop %0", Outputs => Unsigned_64'Asm_Output("=g", A), Volatile => True);
+                        Put_Hex(A); Put(LF);
         when MF      => Put_Line("X87 FP Exception (#MF)");
         when AC      => Put_Line("Alignment Check Exception (#AC)");
         when MC      => Put_Line("Machine Check Exception (#MC)");

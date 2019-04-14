@@ -38,10 +38,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Node",
-      "docHref": "docs/mmap___spec.html#L14C10",
+      "docHref": "docs/mmap___spec.html#L12C9",
       "declared": "MMap",
       "declared_qualifier": "",
-      "srcHref": "srcs/mmap.ads.html#L14"
+      "srcHref": "srcs/mmap.ads.html#L12"
     }
   ]
 };

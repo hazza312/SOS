@@ -4,18 +4,34 @@ with Common; use Common;
 
 package body MMap is 
 
+Address_Base : Address := Null_Address;
+Allocation_Unit : Unsigned_64 := 0;
+Max_Length : Unsigned_64 := 0;
+
 Head: Node_Index := 0;
-Tail: Node_Index := Num_Elements;
+Tail: Node_Index := MAX_ALLOCATIONS;
 
 Free_Nodes: Node_List := (
-    0            =>   (1,     Null_Address,    0           ),
-    1            =>   (Tail,  Base_Address,    Max_Length  ),
     others       =>   (0,     Null_Address,    0           )
 );
 
+procedure Initialise(Base: Address; Length: Unsigned_64; Unit: Unsigned_64) is 
+begin 
+   Allocation_Unit := Unit;
+   Address_Base := Base;
+   Max_Length := Length;
+
+   Free_Nodes(0) := (1,     Null_Address,   0       );
+   Free_Nodes(1) := (Tail,  Base,           Length  );
+end Initialise;
+
+function Get_Base return Address is (Address_Base);
+function Get_Length return Unsigned_64 is (Max_Length);
+
+
 function Get_Free_Node return Node_Index is 
 begin 
-    for I in 1..Num_Elements-1 loop 
+    for I in 1..MAX_ALLOCATIONS-1 loop 
         if Free_Nodes(I).Length = 0 then 
             return I;
         end if;

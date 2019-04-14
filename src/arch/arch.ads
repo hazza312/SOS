@@ -11,7 +11,7 @@ with Common; use Common;
 -- code base for the relevant architecture. 
 package Arch is
 
-    MAX_PHYSICAL_ADDRESS_BITS : constant := 52;
+    MAX_ADDRESS_BITS : constant := 48;
     PAGE_SIZE : constant := 4_096;
     type IO_Port is new Unsigned_16;
 
