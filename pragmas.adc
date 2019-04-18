@@ -12,4 +12,4 @@ pragma Restrictions (No_Dispatch);
 pragma Restrictions (No_Implicit_Dynamic_Code);
 pragma Restrictions (No_Secondary_Stack);
 pragma Suppress(All_Checks);
-pragma Ada_2020; -- yolo
+pragma Ada_2020;

@@ -1,0 +1,123 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U x86.dev.keyboard%b	x86-dev-keyboard.adb	ed96ff48 OO PK
+W arch%s		arch.adb		arch.ali
+W common%s		common.ads		common.ali
+W console%s		console.adb		console.ali
+W interfaces%s		interfac.ads		interfac.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+
+U x86.dev.keyboard%s	x86-dev-keyboard.ads	acf674d8 OO PK
+W arch%s		arch.adb		arch.ali
+W common%s		common.ads		common.ali
+W interfaces%s		interfac.ads		interfac.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+
+D arch.ads		20190415094400 6050e898 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D system.ads		20180525181036 d54140d3 system%s
+D x86.ads		20190418080136 2a12145a x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D x86-dev-keyboard.adb	20190410071011 3d6efbd7 x86.dev.keyboard%b
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+X 1 arch.ads
+12K9*Arch 39e9 9|3w6 3r16 10|2w6 2r16
+16M10*IO_Port<5|66M9> 9|27r29 28r26
+21V14*IO_Inb{5|63M9} 10|28s25
+X 2 common.ads
+3K9*Common 12e11 9|2w6 2r18 10|4w6 4r18
+X 3 console.ads
+5K9*Console 50e12 10|3w6 3r19
+X 5 interfac.ads
+38K9*Interfaces 184e15 9|1w6 1r22 10|1w6 1r22
+63M9*Unsigned_8
+66M9*Unsigned_16
+77M9*Unsigned_64 9|21r31 10|17r12 97r31
+X 7 x86.ads
+3K9*X86 19e8 9|5r9 31r5 10|7r14 100r5
+X 8 x86-dev.ads
+1K13*Dev 7|3k9 8|4e12 9|5r13 31r9 10|7r18 100r9
+X 9 x86-dev-keyboard.ads
+5K17*Keyboard 8|1k13 9|31l13 31e21 10|7b22 100l13 100t21
+7e5*Null_Character{character} 10|42r48 45r24 90r18
+8e5*Backspace{character} 10|32r48
+9e5*Tab{character} 10|33r48
+10e5*LF{character} 10|35r48 59r24 74r36
+12a5*Num_Row{string} 10|31r48
+13a5*First_Row{string} 10|34r48
+14a5*Second_Row{string} 10|36r48
+15a5*Third_Row{string} 10|38r48
+18U15*Handler 10|23b15 63l9 63t16
+20V14*Get_Character{character} 10|83b14 93l9 93t22
+21V14*Get_Ticks{5|77M9} 10|97b14
+22V14*Has_Line{boolean} 10|96b14
+23V14*Has_Input{boolean} 10|81b14
+24U15*Flush 10|65b15 69l9 69t14
+27m5 Command_Port{1|16M10}
+28m5 Data_Port{1|16M10} 10|28r32
+X 10 x86-dev-keyboard.adb
+9M10 Buffer_Index 10r30 14r17 15r16 72r22
+10A10 Key_Buffer(character)<9M10> 12r13 71r43
+12a5 Buffer{10A10} 57m9 74r15 75r40 87r18
+14m5 Write_Head{9M10} 57r16 58m9 67r22 74r61 81r56 86r25
+15m5 Read_Tail{9M10} 67m9 74r22 74r48 75r47 76m13 81r43 86r12 87r25 88m13
+17m5 Ticks{5|77M9} 27m9 27r18 97r47
+18b5 Caps_Lock{boolean} 39m35 39r48 49r26
+19i5 Shifts{integer} 37m35 37r45 41m35 41r45 49r12
+21b5 Has_Line_Flag{boolean} 60m13 68m9 96r42
+24i9 Code{integer} 28m9 30r22 31r56 34r58 36r59 38r58
+25e9 Converted{character} 31m35 32m35 33m35 34m35 35m35 36m35 38m35 40m35
+. 42m35 45r12 50r18 51m30 51r71 52m30 52r71 57r31 59r12
+71U15 Get_Line 79l9 79t17
+71a24 Out_Buffer{10A10} 75m13
+72m9 Write_Index{9M10} 75r24 77m13
+84e9 C{character} 87m13 90m13 92r16
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS x86__dev__keyboard__handler 0
+GG EK_GLOBALS x86__dev__keyboard__handler local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 6 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__ticks x86__dev__keyboard__caps_lock x86__dev__keyboard__shifts x86__dev__keyboard__has_line_flag proper_output 6 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__ticks x86__dev__keyboard__caps_lock x86__dev__keyboard__shifts x86__dev__keyboard__has_line_flag refined_proof_in 0 refined_input 6 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__ticks x86__dev__keyboard__caps_lock x86__dev__keyboard__shifts x86__dev__keyboard__has_line_flag refined_output 6 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__ticks x86__dev__keyboard__caps_lock x86__dev__keyboard__shifts x86__dev__keyboard__has_line_flag calls_proof 0 calls 0 calls_conditional 1 arch__io_inb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 6 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__ticks x86__dev__keyboard__caps_lock x86__dev__keyboard__shifts x86__dev__keyboard__has_line_flag LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__keyboard__get_character 0
+GG EK_GLOBALS x86__dev__keyboard__get_character local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 3 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__read_tail proper_output 1 x86__dev__keyboard__read_tail refined_proof_in 0 refined_input 3 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__read_tail refined_output 1 x86__dev__keyboard__read_tail calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 3 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__read_tail LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__keyboard__get_ticks 0
+GG EK_GLOBALS x86__dev__keyboard__get_ticks local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__dev__keyboard__ticks proper_output 0 refined_proof_in 0 refined_input 1 x86__dev__keyboard__ticks refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__dev__keyboard__ticks LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__keyboard__has_line 0
+GG EK_GLOBALS x86__dev__keyboard__has_line local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__dev__keyboard__has_line_flag proper_output 0 refined_proof_in 0 refined_input 1 x86__dev__keyboard__has_line_flag refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__dev__keyboard__has_line_flag LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__keyboard__has_input 0
+GG EK_GLOBALS x86__dev__keyboard__has_input local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 x86__dev__keyboard__write_head x86__dev__keyboard__read_tail proper_output 0 refined_proof_in 0 refined_input 2 x86__dev__keyboard__write_head x86__dev__keyboard__read_tail refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 x86__dev__keyboard__write_head x86__dev__keyboard__read_tail LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__keyboard__flush 0
+GG EK_GLOBALS x86__dev__keyboard__flush local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 3 x86__dev__keyboard__write_head x86__dev__keyboard__read_tail x86__dev__keyboard__has_line_flag proper_output 2 x86__dev__keyboard__read_tail x86__dev__keyboard__has_line_flag refined_proof_in 0 refined_input 3 x86__dev__keyboard__write_head x86__dev__keyboard__read_tail x86__dev__keyboard__has_line_flag refined_output 2 x86__dev__keyboard__read_tail x86__dev__keyboard__has_line_flag calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 3 x86__dev__keyboard__write_head x86__dev__keyboard__read_tail x86__dev__keyboard__has_line_flag LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__keyboard__get_line 0
+GG EK_GLOBALS x86__dev__keyboard__get_line local TRUE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 3 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__read_tail proper_output 1 x86__dev__keyboard__read_tail refined_proof_in 0 refined_input 3 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__read_tail refined_output 1 x86__dev__keyboard__read_tail calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 3 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__read_tail LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__keyboard 0
+GG EK_GLOBALS x86__dev__keyboard local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 7 x86__dev__keyboard__buffer x86__dev__keyboard__write_head x86__dev__keyboard__read_tail x86__dev__keyboard__ticks x86__dev__keyboard__caps_lock x86__dev__keyboard__shifts x86__dev__keyboard__has_line_flag FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

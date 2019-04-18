@@ -3,6 +3,8 @@ with System.Machine_Code; use System.Machine_Code;
 with Interfaces; use Interfaces;
 with Input;
 with X86.VM;
+with X86;
+with X86.VM2;
 with MMap;
 with Arch;
 with Common; use common;
@@ -57,7 +59,7 @@ begin
 
       elsif Equals(Command, "mmap", Command_Length) then 
          Banner("Virtual Memory Map", bg=>White, fg=>Black);
-         X86.Vm.Dump_Pages; 
+         X86.Vm2.Dump_Pages(X86.PD_POOL_BASE); 
 
       elsif Equals(Command, "kmap", Command_Length) then 
          Banner("Kernel Free Map", bg=>White, fg=>Black);

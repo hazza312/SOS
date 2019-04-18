@@ -58,11 +58,25 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/x86-dev-pic_8259a.ads.html#L8"
     },
     {
+      "label": "Directory_Ref",
+      "docHref": "docs/x86__vm2___spec.html#L29C9",
+      "declared": "X86.Vm2",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm2.ads.html#L29"
+    },
+    {
       "label": "External_Interrupt",
       "docHref": "docs/x86__interrupts___spec.html#L27C13",
       "declared": "X86.Interrupts",
       "declared_qualifier": "",
       "srcHref": "srcs/x86-interrupts.ads.html#L27"
+    },
+    {
+      "label": "Flags_Type",
+      "docHref": "docs/x86__vm2___spec.html#L27C9",
+      "declared": "X86.Vm2",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm2.ads.html#L27"
     },
     {
       "label": "Interrupt",
@@ -114,6 +128,13 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/x86-vm.ads.html#L8"
     },
     {
+      "label": "Page_Size",
+      "docHref": "docs/x86__vm2___spec.html#L25C9",
+      "declared": "X86.Vm2",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm2.ads.html#L25"
+    },
+    {
       "label": "Physical_Address",
       "docHref": "docs/common___spec.html#L6C10",
       "declared": "Common",
@@ -126,6 +147,20 @@ GNATdoc.EntitiesCategory = {
       "declared": "X86.Dev.RTC",
       "declared_qualifier": "",
       "srcHref": "srcs/x86-dev-rtc.ads.html#L20"
+    },
+    {
+      "label": "System_Call",
+      "docHref": "docs/syscall___spec.html#L3C10",
+      "declared": "Syscall",
+      "declared_qualifier": "",
+      "srcHref": "srcs/syscall.ads.html#L3"
+    },
+    {
+      "label": "Table_Level",
+      "docHref": "docs/x86__vm2___spec.html#L26C9",
+      "declared": "X86.Vm2",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm2.ads.html#L26"
     },
     {
       "label": "Time_Unit",

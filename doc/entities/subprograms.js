@@ -51,6 +51,20 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/x86-dev-vga_console.ads.html#L25"
     },
     {
+      "label": "CR3_Address",
+      "docHref": "docs/arch___spec.html#L23C14",
+      "declared": "Arch",
+      "declared_qualifier": "",
+      "srcHref": "srcs/arch.ads.html#L23"
+    },
+    {
+      "label": "Create_Mapping",
+      "docHref": "docs/x86__vm2___spec.html#L39C14",
+      "declared": "X86.Vm2",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm2.ads.html#L39"
+    },
+    {
       "label": "Disable_Cursor",
       "docHref": "docs/input___spec.html#L6C14",
       "declared": "Input",
@@ -63,6 +77,13 @@ GNATdoc.EntitiesCategory = {
       "declared": "X86.Vm",
       "declared_qualifier": "",
       "srcHref": "srcs/x86-vm.ads.html#L12"
+    },
+    {
+      "label": "Dump_Pages",
+      "docHref": "docs/x86__vm2___spec.html#L34C14",
+      "declared": "X86.Vm2",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm2.ads.html#L34"
     },
     {
       "label": "Enable_Cursor",
@@ -156,6 +177,13 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/input.ads.html#L7"
     },
     {
+      "label": "Handle",
+      "docHref": "docs/syscall___spec.html#L5C15",
+      "declared": "Syscall",
+      "declared_qualifier": "",
+      "srcHref": "srcs/syscall.ads.html#L5"
+    },
+    {
       "label": "Handler",
       "docHref": "docs/x86__dev__keyboard___spec.html#L18C15",
       "declared": "X86.Dev.Keyboard",
@@ -231,6 +259,13 @@ GNATdoc.EntitiesCategory = {
       "declared": "Arch",
       "declared_qualifier": "",
       "srcHref": "srcs/arch.ads.html#L22"
+    },
+    {
+      "label": "lastchance",
+      "docHref": "docs/error___spec.html#L7C15",
+      "declared": "Error",
+      "declared_qualifier": "",
+      "srcHref": "srcs/error.ads.html#L7"
     },
     {
       "label": "Map_Page",

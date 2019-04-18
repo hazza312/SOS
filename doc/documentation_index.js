@@ -40,6 +40,11 @@ GNATdoc.DocumentationIndex = [
     "file": "docs/multiboot___spec.html"
   },
   {
+    "label": "Syscall",
+    "qualifier": "",
+    "file": "docs/syscall___spec.html"
+  },
+  {
     "label": "X86",
     "qualifier": "",
     "file": "docs/x86___spec.html"
@@ -88,5 +93,10 @@ GNATdoc.DocumentationIndex = [
     "label": "X86.Vm",
     "qualifier": "",
     "file": "docs/x86__vm___spec.html"
+  },
+  {
+    "label": "X86.Vm2",
+    "qualifier": "",
+    "file": "docs/x86__vm2___spec.html"
   }
 ];

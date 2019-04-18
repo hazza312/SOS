@@ -1,0 +1,167 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U console%b		console.adb		9d53378e OO PK IL
+W common%s		common.ads		common.ali
+W interfaces%s		interfac.ads		interfac.ali
+Z system%s		system.ads		system.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+U console%s		console.ads		3bbe07b2 OO PK
+W common%s		common.ads		common.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D console.adb		20190408175552 73ac70ef console%b
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D system.ads		20180525181036 d54140d3 system%s
+D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+X 1 common.ads
+3K9*Common 12e11 2|3w6 3r18 3|2w6 2r18
+5M10*Address<4|77M9> 2|40r26 3|68r25
+X 2 console.ads
+5K9*Console 50l5 50e12 3|4b14 17r7 150l5 150t12
+7i4*Width{integer} 3|6r33 36r23 107r28 108r27 138r22 144r22
+8i4*Height{integer} 3|6r20 29r19 42r17 45r18 137r19 143r16 143r28
+10e4*LF{character} 3|34r15 64r11
+12E9*Colour 17e5 19r25 23r12 43r38 44r30 3|12r17 20r29 106r38 109r16
+13n7*Black{12E9} 19r38 43r71 44r64 3|13r30 20r63 106r71 145r42
+13n14*Blue{12E9}
+13n20*Green{12E9}
+13n27*Cyan{12E9}
+14n7*Red{12E9}
+14n12*Magenta{12E9}
+14n21*Brown{12E9}
+14n28*Grey{12E9} 19r45
+15n7*Dark_Grey{12E9}
+15n18*Light_Blue{12E9}
+15n30*Light_Green{12E9}
+15n43*Light_Cyan{12E9}
+16n7*Light_Red{12E9}
+16n18*Light_Magenta{12E9}
+16n33*Yellow{12E9}
+16n41*White{12E9} 43r48 44r40 3|12r27 20r39 106r48 145r31
+19E12*BG_Colour{12E9} 24r12 43r59 44r51 3|13r17 20r50 106r59 110r16
+21R9*cell 25e14 27r8 3|6r45
+22e7*c{character} 28r7 3|35m59 145m49
+23e7*fg{12E9} 29r7 3|35m24 145m27
+24e7*bg{19E12} 30r7 3|35m42 145m38
+34U15*At_X 34>20 3|15b14 18l8 18t12
+34i20 X{natural} 3|15b19 17r20
+35U15*Put 35>19 3|32b14 49l8 49t11 56s10 64s7 80s10 100s10 115s31 117s31
+35e19 C{character} 3|32b18 34r10 35r64
+36U15*Put 36>19 3|52b14 58l8 58t11 63s7 72s7 116s7 127s55 128s55 129s55 130s55
+36a19 S{string} 3|52b18 54r16 55r20
+37U15*Put 37>19 37>36 3|73s7 82s7 86b14 102l8 102t11 127s37 128s37 129s37
+. 130s37
+37m19 N{4|77M9} 3|86b18 89r26
+37m36 Base{4|77M9} 3|86b35 93r34 94r19
+38U15*Put 38>19 3|77b14 83t7
+38i19 N{integer} 3|77b18 79r10 82r27
+39U15*Put_Hex 39>23 3|68s43 70b14 74l8 74t15
+39m23 N{4|77M9} 3|70b22 73r11
+40U15*Put_Hex 40>23 3|68b14 68l72 68t79
+40m23 N{1|5M10} 3|68b22 68r63
+41U15*Put_Size 41>24 3|124b14 132t7
+41m24 N{4|77M9} 3|124b23 126r12 127r41 128r41 129r41 130r41
+42U15*Put_Line 42>24 3|61b14 65l8 65t16
+42a24 S{string} 3|61b23 63r11
+43U15*Banner 43>22 43>34 43>55 3|106b14 121t7
+43a22 S{string} 3|106b21 107r36 108r43 116r11
+43e34 FG{12E9} 3|106b33 113r21
+43e55 BG{19E12} 3|106b55 112r21
+44U15*Set_Colour 44>26 44>47 3|20b14 24l8 24t18
+44e26 FG{12E9} 3|20b25 23r21
+44e47 BG{19E12} 3|20b46 22r21
+45U15*Clear 3|27b14 30l8 30t13
+48U15 Shift_Lines 48>27 3|29s7 46s13 135b14 148t7
+48i27 num{positive} 3|135b26 137r28 139r34 143r23
+X 3 console.adb
+6a4 VMem(2|21R9) 7m8 7r8 35m10 139m13 139r27 145m13
+9i4 X{natural} 17m15 35r17 36m10 36r19 36r43 38m10 41r10
+10i4 Y{natural} 35r15 42r13 43m13 43r18 45m13
+12e4 Current_FG{2|12E9} 23m7 35r30 109r26 113m7 120m7
+13e4 Current_BG{2|19E12} 22m7 35r47 110r29 112m7 119m7
+54e11 c=54:16{character}
+87a7 Chars(character) 93r22
+88a7 Digit(character) 93m10 100r14
+89m7 X{4|77M9} 93r28 94m10 94r15 95r20
+90i7 i{natural} 93r16 96m10 96r15 99r27
+99i11 J{integer} 100r20
+107i7 L_Pad{positive} 108r35 115r19
+108i7 R_Pad{positive} 117r19
+109e7 Old_FG{2|12E9} 120r21
+110e7 Old_BG{2|19E12} 119r21
+115i11 i{integer}
+117i11 i{integer}
+137i11 j{integer} 139r18 139r32
+138i14 i{integer} 139r21 139r39
+143i11 j{integer} 145r18
+144i14 i{integer} 145r20
+X 4 interfac.ads
+38K9*Interfaces 2|2w6 2r22 3|1w6 1r22 4|184e15
+77M9*Unsigned_64 2|37r23 37r43 39r26 41r27 3|68r51 70r25 82r11 86r22 86r42
+. 87r21 89r11 124r26
+X 5 system.ads
+60K9*System 2|1w6 3|7r25 5|172e11
+90M9*Address 3|7r25
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS console__at_x 0
+GG EK_GLOBALS console__at_x local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 console__x proper_output 1 console__x refined_proof_in 0 refined_input 1 console__x refined_output 1 console__x calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 console__x LOCKS 0
+GG EK_DIRECT_CALLS console__put 0
+GG EK_GLOBALS console__put local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 5 console__vmem console__x console__y console__current_fg console__current_bg LOCKS 0
+GG EK_DIRECT_CALLS console__put__2 0
+GG EK_GLOBALS console__put__2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__put__3 0
+GG EK_GLOBALS console__put__3 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__put__4 0
+GG EK_GLOBALS console__put__4 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__put_hex 0
+GG EK_GLOBALS console__put_hex local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__put_hex__2 0
+GG EK_GLOBALS console__put_hex__2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__put_size 0
+GG EK_GLOBALS console__put_size local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__put_line 0
+GG EK_GLOBALS console__put_line local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__banner 0
+GG EK_GLOBALS console__banner local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 5 console__vmem console__x console__y console__current_fg console__current_bg refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 5 console__vmem console__x console__y console__current_fg console__current_bg calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 console__current_fg console__current_bg LOCKS 0
+GG EK_DIRECT_CALLS console__set_colour 0
+GG EK_GLOBALS console__set_colour local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 console__current_fg console__current_bg proper_output 2 console__current_fg console__current_bg refined_proof_in 0 refined_input 2 console__current_fg console__current_bg refined_output 2 console__current_fg console__current_bg calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 console__current_fg console__current_bg LOCKS 0
+GG EK_DIRECT_CALLS console__clear 0
+GG EK_GLOBALS console__clear local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 console__vmem proper_output 1 console__vmem refined_proof_in 0 refined_input 1 console__vmem refined_output 1 console__vmem calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__shift_lines 0
+GG EK_GLOBALS console__shift_lines local TRUE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 console__vmem proper_output 1 console__vmem refined_proof_in 0 refined_input 1 console__vmem refined_output 1 console__vmem calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 console__vmem LOCKS 0
+GG EK_DIRECT_CALLS console 0
+GG EK_GLOBALS console local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 5 console__vmem console__x console__y console__current_fg console__current_bg FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

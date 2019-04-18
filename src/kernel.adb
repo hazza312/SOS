@@ -1,33 +1,22 @@
-with System.Storage_Elements;    use System.Storage_Elements;
-with Interfaces;                 use Interfaces;
-with System; 
-with System.Machine_Code; use System.Machine_Code;
+with Interfaces, System.Machine_Code;
+use Interfaces, System.Machine_Code;
 
-with Console;                    use Console;
-with Arch; 
-with MMap;
-with Error; use Error;
+with Console, Common;
+use Console, Common;
+with Arch, MMap; 
+with Error;
 
-with Common; use Common;
-with Input;
-
-with X86.Debug;
-with X86.Dev.PIT_8253;
-with X86.Dev.Keyboard;
-with X86.Dev.RTC;
 with X86.VM;
+with X86.VM2; use X86.VM2;
 
-with KernelInteract;
+with KernelInteract, Syscall;
 
 procedure Kernel is
-
    -- base and size of biggest memory hole
    Biggest_Base: Address := NULL_ADDRESS;
    Biggest_Size: Unsigned_64 := 0;
 
    -- test the memory allocator
-   Allocs : array(0..5) of Address;
-   X : Virtual_Address;
    Y: Boolean;
 
 begin
@@ -36,42 +25,42 @@ begin
 
    -- find base and size of largest memory hole.
    Arch.Scout_Memory(Biggest_Base, Biggest_Size, False);  
-   if Biggest_Size = 0 then Panic("No Free Memory?"); end if;
+   if Biggest_Size = 0 then Error.Panic("No Free Memory?"); end if;
 
    Put("-> Using largest hole ("); Put_Size(Biggest_Size); Put(") RAM @"); 
       Put_Hex(Biggest_Base); Put(LF);
    Put_Line("-> Initialising kernel page mapper");
 
-   -- X86.Debug.Print_Multiboot_Map
-
    -- set up the kernel page mapper
-   MMap.Initialise(Biggest_Base + 16#8000#, Biggest_Size- 16#8000#, PAGE_SIZE);
+   MMap.Initialise(Biggest_Base + 16#8000#, Biggest_Size- 16#8000#, Common.PAGE_SIZE);
+   -- MMap.Exclude(X86.KERNEL_PHYS_BASE, X86.KERNEL_SIZE); -- exclude the kernel
+   -- MMap.Exclude(X86.PD_POOL_BASE, X86.PD_POOL_SIZE); -- exclude the our PD dirs
      
 
    -- initialise architecture-specific interrupts
    Put_Line("-> (re)enabling interrupts");
    Arch.Initialise_Interrupts;
-      -- KernelInteract;
-   --X86.Vm.Dump_Pages; 
-   -- inserting a page directory
-   --Y :=X86.VM.Insert_Directory(Address(16#107000#), 2);
---   X := X86.VM.Map_Page(Address(16#107000#), Address(16#250000#), X86.VM.PAGE_4K_LEVEL);
 
-   --X := X86.VM.Map_Page(Address(16#107000#), Address(16#251000#), X86.VM.PAGE_4K_LEVEL);
-
-   -- X86.Vm.Dump_Pages;
-   --map some memory into the VM space
-   -- Put_Line("-> mapping 25 2M pages of memory..");
-   -- for I in 1..522 loop
-   --    --X := X86.VM.Map_Page(Address(16#107000#), Address(16#200000# * I), X86.VM.PAGE_4K_LEVEL);
-   --    Put(I); Put(" given "); Put_Hex(Address(X)); Put(LF);
+   Put_Line("-> mapping physical memory");
+   -- for I in 0 .. (Biggest_Size / 16#1000#) -1 loop 
+   --    Y :=X86.VM.Map_Page(Arch.CR3_Address, 16#1000_0000_0000# + Virtual_Address(I) * 16#1000#, Physical_Address(Biggest_Base + Address(I) * 16#1000#), X86.VM.Page_4K);
    -- end loop;
-   --KernelInteract;    
-   -- X86.Vm.Get_Table_VMAS(2**64 - 16#2000#, Tables);
-   Y := X86.Vm.Map_Page(16#106000#, 16#eeee_eeee_eeee_0000#, 16#2000_0000#, X86.Vm.Page_2M);
+
+
+
+   X86.VM2.Initialise;
+   X86.VM2.Create_Mapping(X86.PD_POOL_BASE, 16#0#, 16#0#, X86.VM2.IS_PAGE or X86.VM2.PRESENT or X86.VM2.WRITEABLE, X86.VM2.Page_2M, Y);
+   Asm(  "movq $0x200000, %%rax" & LF &
+         "movq %%rax, %%cr3",
+         Clobber => ("rax"),
+         Volatile => True
+   );
+
 
    Put(LF);
 
+   -- Asm("movq $0, %%rdi", Clobber => ("rdi"), Volatile => True);
+   --Asm("syscall", Volatile => True);
    -- enter the kernel interaction console
    KernelInteract;    
 

@@ -1,0 +1,136 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U mmap%b		mmap.adb		dcd825fe OO PK
+W common%s		common.ads		common.ali
+W console%s		console.adb		console.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+U mmap%s		mmap.ads		a5c4d9e9 OO PK
+W common%s		common.ads		common.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D mmap.ads		20190410093505 5526344e mmap%s
+D mmap.adb		20190410115644 10774ebd mmap%b
+D system.ads		20180525181036 d54140d3 system%s
+D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+X 1 common.ads
+3K9*Common 12e11 4|3w6 3r18 5|3w6 3r18
+5M10*Address<3|77M9> 4|15r48 16r25 18r13 24r29 35r17 5|7r16 18r28 28r26 43r45
+. 46r13 63r63 72r22 83r32 85r18 87r60 95r38
+9m4*NULL_ADDRESS{5M10} 5|7r27 15r31 24r29 46r24
+X 2 console.ads
+5K9*Console 50e12 5|1w6 1r19
+10e4*LF{character} 5|116r9 126r13 128r9
+14n28*Grey{12E9} 5|110r20
+34U15*At_X 5|111s5 112s5 113s5 114s5 115s5 120s9 121s9 122s9 123s9 125s9
+35U15*Put 5|116s5 126s9 128s5
+36U15*Put 5|111s16 112s16 113s16 114s16 115s16 125s37
+38U15*Put 5|123s20 125s54
+39U15*Put_Hex 5|122s20
+40U15*Put_Hex 5|120s20
+41U15*Put_Size 5|121s20
+44U15*Set_Colour 5|110s5 118s5
+X 3 interfac.ads
+38K9*Interfaces 184e15 4|2w6 2r22
+77M9*Unsigned_64 4|15r28 16r42 19r16 20r13 25r31 36r17 5|8r19 9r14 18r45
+. 18r64 29r28 43r25 72r39
+X 4 mmap.ads
+8K9*MMap 41l5 41e9 5|5b14 131l5 131t9
+10i4*MAX_ALLOCATIONS{integer} 31r43 5|12r21 34r17
+12R9*Node 33c9 37e14 39r43
+13A9*Node_List(12R9) 39c9 5|14r13
+15V13*Allocate{1|5M10} 15>22 5|43b10 68l5 68t13
+15m22 Size{3|77M9} 5|43b19 48r61 56r38 61r38 63r71 64r65
+16U14*Free 16>19 16>34 5|72b11 104l5 104t9
+16m19 Base{1|5M10} 5|72b16 78r33 83r67 85r11 91r43
+16m34 Length{3|77M9} 5|72b31 84r40 85r26 86r40 87r68 91r49
+17U14*Initialise 18>7 19>7 20>7 5|18b11 26l5 26t15
+18m7 Base{1|5M10} 5|18b22 21r20 25r29
+19m7 Length{3|77M9} 5|18b37 22r18 25r45
+20m7 Unit{3|77M9} 5|18b58 20r23
+22U14*Print 5|107b11 129t4
+24V13*Get_Base{1|5M10} 5|28b10
+25V13*Get_Length{3|77M9} 5|29b10
+31I12 Node_Index{integer} 34r17 39r28 5|11r7 12r7 32r31 44r13 45r13 73r12
+. 74r12 75r12 108r9
+34i7*Next{31I12} 5|45r44 50r36 57m26 57r52 80r34 90m26 99m26 99r51 101r34
+. 108r40 124r28
+35m7*Base{1|5M10} 5|59r35 62r35 63m27 63r56 78r58 83r25 85r53 87m26 87r53
+. 95r31 96r33 120r42
+36m7*Length{3|77M9} 5|35r26 48r52 56r29 58m27 61r29 64m27 64r56 83r57 84m26
+. 86m26 95r63 98m26 98r57 100m26 121r43 122r42
+X 5 mmap.adb
+7m1 Address_Base{1|5M10} 21m4 28r38
+8m1 Allocation_Unit{3|77M9} 20m4
+9m1 Max_Length{3|77M9} 22m4 29r44
+11i1 Head{4|31I12} 44r27 45r38 73r26 74r26 108r34
+12i1 Tail{4|31I12} 25r22 48r20 53r16 78r19 94r19 119r16 125r27
+14a1 Free_Nodes{4|13A9} 24m4 25m4 35r12 45r27 48r34 50r18 56r11 57m9 57r34
+. 58m9 59r17 61r11 62r17 63m9 63r38 64m9 64r38 78r41 80r17 83r8 83r40 84m9
+. 85r36 86m9 87m9 87r36 90m9 91m9 95r14 95r46 96r16 98m9 98r40 99m9 99r34
+. 100m9 101r17 108r23 120r28 121r29 122r28 124r14
+32V10 Get_Free_Node{4|31I12} 40l5 40t18 89s17
+34i9 I{integer} 35r23 36r20
+44i5 Prev{4|31I12} 49m9 57r20
+45i5 Match{4|31I12} 48r11 48r45 49r17 50m9 50r29 53r8 56r22 57r45 58r20 59r28
+. 61r22 62r28 63r20 63r49 64r20 64r49
+46m5 Addr{1|5M10} 59m9 62m9 67r12
+73i5 Prev{4|31I12} 79m9 83r19 83r51 84r20 90r20 95r25 95r57 98r20 99r20
+74i5 Curr{4|31I12} 78r11 78r52 79r17 80m9 80r28 85r47 86r20 87r20 87r47 91r37
+. 94r11 96r27 98r51 99r45 100r20 101m9 101r28
+75i5 Free{4|31I12} 89m9 90r36 91r20
+108i5 I{4|31I12} 119r11 120r39 121r40 122r39 123r24 124m9 124r25 125r23 125r58
+X 6 system.ads
+60K9*System 4|1w6 5|2r6 2r35 6|172e11
+X 7 s-stoele.ads
+42K16*Storage_Elements 5|2w13 2r42 7|117e28
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS mmap__allocate 0
+GG EK_GLOBALS mmap__allocate local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 3 mmap__head mmap__tail mmap__free_nodes proper_output 1 mmap__free_nodes refined_proof_in 0 refined_input 3 mmap__head mmap__tail mmap__free_nodes refined_output 1 mmap__free_nodes calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 3 mmap__head mmap__tail mmap__free_nodes LOCKS 0
+GG EK_DIRECT_CALLS mmap__free 0
+GG EK_GLOBALS mmap__free local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 3 mmap__head mmap__tail mmap__free_nodes proper_output 1 mmap__free_nodes refined_proof_in 0 refined_input 3 mmap__head mmap__tail mmap__free_nodes refined_output 1 mmap__free_nodes calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 3 mmap__head mmap__tail mmap__free_nodes LOCKS 0
+GG EK_DIRECT_CALLS mmap__initialise 0
+GG EK_GLOBALS mmap__initialise local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 mmap__address_base mmap__allocation_unit mmap__max_length mmap__tail mmap__free_nodes proper_output 4 mmap__address_base mmap__allocation_unit mmap__max_length mmap__free_nodes refined_proof_in 0 refined_input 5 mmap__address_base mmap__allocation_unit mmap__max_length mmap__tail mmap__free_nodes refined_output 4 mmap__address_base mmap__allocation_unit mmap__max_length mmap__free_nodes calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 5 mmap__address_base mmap__allocation_unit mmap__max_length mmap__tail mmap__free_nodes LOCKS 0
+GG EK_DIRECT_CALLS mmap__print 0
+GG EK_GLOBALS mmap__print local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 3 mmap__head mmap__tail mmap__free_nodes proper_output 0 refined_proof_in 0 refined_input 3 mmap__head mmap__tail mmap__free_nodes refined_output 0 calls_proof 0 calls 0 calls_conditional 8 console__at_x console__put console__put__2 console__put__4 console__put_hex console__put_hex__2 console__put_size console__set_colour local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 3 mmap__head mmap__tail mmap__free_nodes LOCKS 0
+GG EK_DIRECT_CALLS mmap__get_base 0
+GG EK_GLOBALS mmap__get_base local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 mmap__address_base proper_output 0 refined_proof_in 0 refined_input 1 mmap__address_base refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 mmap__address_base LOCKS 0
+GG EK_DIRECT_CALLS mmap__get_length 0
+GG EK_GLOBALS mmap__get_length local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 mmap__max_length proper_output 0 refined_proof_in 0 refined_input 1 mmap__max_length refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 mmap__max_length LOCKS 0
+GG EK_DIRECT_CALLS mmap__get_free_node 0
+GG EK_GLOBALS mmap__get_free_node local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 mmap__free_nodes proper_output 0 refined_proof_in 0 refined_input 1 mmap__free_nodes refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 mmap__free_nodes LOCKS 0
+GG EK_DIRECT_CALLS mmap 0
+GG EK_GLOBALS mmap local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 6 mmap__address_base mmap__allocation_unit mmap__max_length mmap__head mmap__tail mmap__free_nodes FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

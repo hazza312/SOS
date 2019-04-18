@@ -1,0 +1,51 @@
+{
+  "spark": [
+    {
+      "name": "X86.Dev.PIT_8253.Handler",
+      "sloc": [
+        {
+          "file": "x86-dev-pit_8253.ads",
+          "line": 6
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.PIT_8253.Get_Ticks",
+      "sloc": [
+        {
+          "file": "x86-dev-pit_8253.ads",
+          "line": 8
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.PIT_8253.Reset",
+      "sloc": [
+        {
+          "file": "x86-dev-pit_8253.ads",
+          "line": 10
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 6.60000019706786E-04,
+    "globals (basic)": 3.42999992426485E-04,
+    "globals/properties (advanced)": 2.19199992716312E-03,
+    "flow analysis": 8.29999989946373E-05,
+    "codepeer results": 3.99999998990097E-06,
+    "init_why_sections": 2.78999999864027E-04,
+    "translation of standard": 3.73300001956522E-03,
+    "translation of compilation unit": 1.36280003935099E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

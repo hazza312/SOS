@@ -1,0 +1,104 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U x86.dev.rtc%b		x86-dev-rtc.adb		a200a59b OO PK
+W arch%s		arch.adb		arch.ali
+W console%s		console.adb		console.ali
+W interfaces%s		interfac.ads		interfac.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+
+U x86.dev.rtc%s		x86-dev-rtc.ads		51fe6bd0 OO PK
+W arch%s		arch.adb		arch.ali
+W interfaces%s		interfac.ads		interfac.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+
+D arch.ads		20190415094400 6050e898 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D system.ads		20180525181036 d54140d3 system%s
+D x86.ads		20190418080136 2a12145a x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-rtc.ads	20190408175552 dc494b72 x86.dev.rtc%s
+D x86-dev-rtc.adb	20190408175552 8ff0be0c x86.dev.rtc%b
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+X 1 arch.ads
+12K9*Arch 39e9 9|1w6 1r16 10|2w6 2r16
+16M10*IO_Port<5|66M9> 9|6r21 7r17
+21V14*IO_Inb{5|63M9} 10|17s14 30s16 38s16
+22U15*IO_Outb 10|16s9 29s9 32s9 33s9 37s9 40s9 41s9
+X 3 console.ads
+5K9*Console 50e12 10|3w6 3r19
+X 5 interfac.ads
+38K9*Interfaces 184e15 9|2w6 2r22 10|1w6 1r22
+63M9*Unsigned_8 10|12r13 26r15
+66M9*Unsigned_16
+77M9*Unsigned_64 9|27r31 10|9r13 45r31
+X 7 x86.ads
+3K9*X86 19e8 9|4r9 29r5 10|5r14 49r5
+X 8 x86-dev.ads
+1K13*Dev 7|3k9 8|4e12 9|4r13 29r9 10|5r18 49r9
+X 9 x86-dev-rtc.ads
+4K17*RTC 8|1k13 9|29l13 29e16 10|5b22 49l13 49t16
+6m5*Selector_Port{1|16M10} 10|16r17 29r17 32r17 37r17 40r17
+7m5*Data_Port{1|16M10} 10|17r21 30r23 33r17 38r23 41r17
+9E10*Time_Unit 12e6 14r9
+10n9*Seconds{9E10} 15r9
+10n18*Minutes{9E10} 15r23
+10n27*Hours{9E10} 15r37
+10n34*Weekday{9E10} 15r49
+11n9*Day_Of_Month{9E10} 16r9
+11n23*Month{9E10} 16r28
+11n30*Year{9E10} 16r40
+11n36*Century{9E10} 17r9
+20E10*Status_Register 20e38 21r9
+20n30*A{20E10} 21r30 10|37r42 40r42
+20n33*B{20E10} 21r39 10|29r42 32r42
+20n36*C{20E10} 21r48 10|16r32
+24U15*Handler 10|11b15 18l9 18t16
+25U15*Read_Time 10|20b15 23l9 23t18
+26U15*Initialise 10|25b15 43l9 43t19
+27V14*Get_Ticks{5|77M9} 10|45b14
+X 10 x86-dev-rtc.adb
+9m5 Ticks{5|77M9} 15m9 15r18 45r47
+12m9 X{5|63M9} 17m9
+26m9 Old{5|63M9} 30m9 33r28 38m9 41r29
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS x86__dev__rtc__handler 0
+GG EK_GLOBALS x86__dev__rtc__handler local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 3 x86__dev__rtc__ticks x86__dev__rtc__selector_port x86__dev__rtc__data_port proper_output 1 x86__dev__rtc__ticks refined_proof_in 0 refined_input 3 x86__dev__rtc__ticks x86__dev__rtc__selector_port x86__dev__rtc__data_port refined_output 1 x86__dev__rtc__ticks calls_proof 0 calls 0 calls_conditional 2 arch__io_inb arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 3 x86__dev__rtc__ticks x86__dev__rtc__selector_port x86__dev__rtc__data_port LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__rtc__read_time 0
+GG EK_GLOBALS x86__dev__rtc__read_time local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__rtc__initialise 0
+GG EK_GLOBALS x86__dev__rtc__initialise local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 x86__dev__rtc__selector_port x86__dev__rtc__data_port proper_output 0 refined_proof_in 0 refined_input 2 x86__dev__rtc__selector_port x86__dev__rtc__data_port refined_output 0 calls_proof 0 calls 0 calls_conditional 2 arch__io_inb arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 x86__dev__rtc__selector_port x86__dev__rtc__data_port LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__rtc__get_ticks 0
+GG EK_GLOBALS x86__dev__rtc__get_ticks local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__dev__rtc__ticks proper_output 0 refined_proof_in 0 refined_input 1 x86__dev__rtc__ticks refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__dev__rtc__ticks LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__rtc 0
+GG EK_GLOBALS x86__dev__rtc local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 2 x86__dev__rtc__selector_port x86__dev__rtc__data_port calls_proof 0 calls 0 calls_conditional 0 local_var 3 x86__dev__rtc__ticks x86__dev__rtc__selector_port x86__dev__rtc__data_port FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

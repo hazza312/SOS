@@ -1,0 +1,61 @@
+{
+  "spark": [
+    {
+      "name": "X86.Dev.RTC.Handler",
+      "sloc": [
+        {
+          "file": "x86-dev-rtc.ads",
+          "line": 24
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.RTC.Read_Time",
+      "sloc": [
+        {
+          "file": "x86-dev-rtc.ads",
+          "line": 25
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.RTC.Initialise",
+      "sloc": [
+        {
+          "file": "x86-dev-rtc.ads",
+          "line": 26
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.RTC.Get_Ticks",
+      "sloc": [
+        {
+          "file": "x86-dev-rtc.ads",
+          "line": 27
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 5.85999980103225E-04,
+    "globals (basic)": 6.45000021904707E-04,
+    "globals/properties (advanced)": 3.62599990330637E-03,
+    "flow analysis": 7.20000025467016E-05,
+    "codepeer results": 3.99999998990097E-06,
+    "init_why_sections": 2.61000008322299E-04,
+    "translation of standard": 4.82599996030331E-03,
+    "translation of compilation unit": 1.19960000738502E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

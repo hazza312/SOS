@@ -1,0 +1,21 @@
+{
+  "spark": [
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 3.03000007988885E-04,
+    "globals (basic)": 1.61000003572553E-04,
+    "globals/properties (advanced)": 5.38000022061169E-04,
+    "flow analysis": 2.20000001718290E-05,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 2.47999996645376E-04,
+    "translation of standard": 2.70000007003546E-03,
+    "translation of compilation unit": 4.44199983030558E-03,
+    "proof": 3.99999998990097E-06
+  }
+}

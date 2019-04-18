@@ -1,0 +1,3604 @@
+{
+  "spark": [
+    {
+      "name": "X86.Vm2",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 5
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Flags_TypePredicate",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 27
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "X86.Vm2.Dump_Pages",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 32
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Initialise",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 34
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Create_Mapping",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 39
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "X86.Vm2.Has_Free_Dir_Page",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 75
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "X86.Vm2.Get_Free_Dir_Page",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 81
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "X86.Vm2.Make_Directory_Entry",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 91
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Make_Frame_Entry",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 100
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Get_Directory_Address",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 108
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Get_Directory_Ref",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 113
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Get_Frame_Address",
+      "sloc": [
+        {
+          "file": "x86-vm2.ads",
+          "line": 118
+        }
+      ],
+      "spark": "spec"
+    },
+    {
+      "name": "X86.Vm2.Free_Dir_Page",
+      "sloc": [
+        {
+          "file": "x86-vm2.adb",
+          "line": 66
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm2.Offsets_To_VMA",
+      "sloc": [
+        {
+          "file": "x86-vm2.adb",
+          "line": 72
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm2.VMA_To_Offsets",
+      "sloc": [
+        {
+          "file": "x86-vm2.adb",
+          "line": 83
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm2.Flush_TLB",
+      "sloc": [
+        {
+          "file": "x86-vm2.adb",
+          "line": 94
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm2.Print_Page",
+      "sloc": [
+        {
+          "file": "x86-vm2.adb",
+          "line": 178
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm2.Dump_Rec",
+      "sloc": [
+        {
+          "file": "x86-vm2.adb",
+          "line": 234
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+    {
+      "file": "x86-vm2.ads",
+      "line": 44,
+      "col": 31,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__1.trace",
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 126,
+      "col": 44,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__2.trace",
+      "msg_id": 1,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 126,
+      "col": 29,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__3.trace",
+      "msg_id": 2,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 128,
+      "col": 17,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__4.trace",
+      "msg_id": 3,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 129,
+      "col": 17,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__5.trace",
+      "msg_id": 4,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 133,
+      "col": 19,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__6.trace",
+      "msg_id": 5,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 133,
+      "col": 19,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__7.trace",
+      "msg_id": 6,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 137,
+      "col": 17,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__8.trace",
+      "msg_id": 7,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 140,
+      "col": 17,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__9.trace",
+      "msg_id": 8,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 144,
+      "col": 19,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__10.trace",
+      "msg_id": 9,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 144,
+      "col": 43,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__11.trace",
+      "msg_id": 10,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 144,
+      "col": 19,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__12.trace",
+      "msg_id": 11,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 151,
+      "col": 64,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__13.trace",
+      "msg_id": 12,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 151,
+      "col": 49,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__14.trace",
+      "msg_id": 13,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.ads",
+      "line": 81,
+      "col": 32,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__15.trace",
+      "msg_id": 14,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.ads",
+      "line": 87,
+      "col": 31,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__16.trace",
+      "msg_id": 15,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm2.ads",
+      "line": 88,
+      "col": 29,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm2__flow__17.trace",
+      "msg_id": 16,
+      "how_proved": "flow"
+    }
+  ],
+  "proof": [
+    {
+      "file": "x86-vm2.adb",
+      "line": 48,
+      "col": 55,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 35,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 48,
+      "check_col": 55,
+      "msg_id": 17,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.ads",
+      "line": 78,
+      "col": 13,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Has_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 75
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "x86-vm2.ads",
+      "check_line": 78,
+      "check_col": 13,
+      "msg_id": 18,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.ads",
+      "line": 87,
+      "col": 25,
+      "rule": "VC_CONTRACT_CASE",
+      "severity": "medium",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (none)",
+              "steps": 18517,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Unknown (other)",
+              "steps": 18518,
+              "time": 2.10000000000000E-01
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (other)",
+                    "steps": 18513,
+                    "time": 2.00000000000000E-01
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "Z3": {
+                    "result": "Valid",
+                    "steps": 8328,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "Z3": {
+                    "result": "Valid",
+                    "steps": 63,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 18518,
+                    "time": 0
+                  },
+                  "Z3": {
+                    "result": "Valid",
+                    "steps": 84,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "Z3": {
+                    "result": "Timeout",
+                    "steps": -1,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "Z3": {
+                    "result": "Valid",
+                    "steps": 1619,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.ads",
+      "check_line": 87,
+      "check_col": 25,
+      "tracefile": "x86-vm2.ads_87_25_contract_case.trace",
+      "cntexmp": {
+        "x86-vm2.adb": {
+          "45": [
+            {
+              "name": "Dir_Pages",
+              "value": "(others => False)",
+              "kind": "variable"
+            },
+            {
+              "name": "I",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Page",
+              "value": "0",
+              "kind": "variable"
+            }
+          ],
+          "46": [
+            {
+              "name": "Dir_Pages",
+              "value": "(0 => True, others => False)",
+              "kind": "variable"
+            },
+            {
+              "name": "I",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Page",
+              "value": "2097152",
+              "kind": "variable"
+            }
+          ],
+          "47": [
+            {
+              "name": "Dir_Pages",
+              "value": "(0 => True, others => False)",
+              "kind": "variable"
+            }
+          ],
+          "48": [
+            {
+              "name": "Page",
+              "value": "2097152",
+              "kind": "variable"
+            }
+          ]
+        },
+        "x86-vm2.ads": {
+          "87": [
+            {
+              "name": "Dir_Pages",
+              "value": "(others => False)",
+              "kind": "variable"
+            },
+            {
+              "name": "Page",
+              "value": "2097152",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 19,
+      "how_proved": "prover"
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 48,
+      "col": 50,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 177,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 177,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 49,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4": {
+                    "result": "Unknown (none)",
+                    "steps": 119,
+                    "time": 0
+                  },
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 119,
+                    "time": 0
+                  },
+                  "Z3": {
+                    "result": "Unknown (none)",
+                    "steps": 5906,
+                    "time": 0
+                  },
+                  "altergo": {
+                    "result": "Timeout",
+                    "steps": -1,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 48,
+      "check_col": 50,
+      "msg_id": 20,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 144,
+      "col": 61,
+      "rule": "VC_PREDICATE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 144,
+      "check_col": 61,
+      "msg_id": 21,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 51,
+      "col": 64,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 14,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 144,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 74,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 18512,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 51,
+      "check_col": 64,
+      "msg_id": 22,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.ads",
+      "line": 60,
+      "col": 9,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "x86-vm2.ads",
+      "check_line": 60,
+      "check_col": 9,
+      "msg_id": 23,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 48,
+      "col": 50,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4": {
+                    "result": "Valid",
+                    "steps": 5,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4": {
+                    "result": "Valid",
+                    "steps": 5,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 18514,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4": {
+                    "result": "Valid",
+                    "steps": 5,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4": {
+                    "result": "Unknown (none)",
+                    "steps": 42332,
+                    "time": 0
+                  },
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 42332,
+                    "time": 0
+                  },
+                  "Z3": {
+                    "result": "Timeout",
+                    "steps": -1,
+                    "time": 0
+                  },
+                  "altergo": {
+                    "result": "Timeout",
+                    "steps": -1,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 48,
+      "check_col": 50,
+      "msg_id": 24,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.ads",
+      "line": 88,
+      "col": 25,
+      "rule": "VC_CONTRACT_CASE",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 101,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.ads",
+      "check_line": 88,
+      "check_col": 25,
+      "msg_id": 25,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 144,
+      "col": 22,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 626,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 144,
+      "check_col": 22,
+      "msg_id": 26,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 8,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 133,
+      "col": 22,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "Z3": {
+              "result": "Valid",
+              "steps": 1789,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "Z3": {
+              "result": "Valid",
+              "steps": 5485,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 133,
+      "check_col": 22,
+      "msg_id": 27,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 6,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        },
+        "Z3": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 151,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 655,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 559,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 338,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 151,
+      "check_col": 19,
+      "msg_id": 28,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 51,
+      "col": 33,
+      "rule": "VC_LOOP_INVARIANT_PRESERV",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 41,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 76,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 51,
+      "check_col": 33,
+      "msg_id": 29,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 154,
+      "col": 7,
+      "rule": "VC_RAISE",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 154,
+      "check_col": 7,
+      "msg_id": 30,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 51,
+      "col": 33,
+      "rule": "VC_LOOP_INVARIANT_INIT",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 17,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 173,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 51,
+      "check_col": 33,
+      "msg_id": 31,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "x86-vm2.adb",
+      "line": 142,
+      "col": 16,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm2.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm2.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "x86-vm2.adb",
+      "check_line": 142,
+      "check_col": 16,
+      "msg_id": 32,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Dump_Pages",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 32
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "X86.Vm2.Has_Free_Dir_Page",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 75
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "X86.Vm2.Make_Directory_Entry",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 91
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "X86.Vm2.Get_Directory_Ref",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 113
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "X86.Vm2.Get_Free_Dir_Page",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 81
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "X86.Vm2.Has_Free_Dir_Page",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 75
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "X86.Vm2.Make_Directory_Entry",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 91
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "X86.Vm2.Make_Frame_Entry",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 100
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "X86.Vm2.VMA_To_Offsets",
+            "sloc": [
+              {
+                "file": "x86-vm2.adb",
+                "line": 83
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "X86.Vm2.Get_Directory_Ref",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 113
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "X86.Vm2.Get_Free_Dir_Page",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 81
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "X86.Vm2.Has_Free_Dir_Page",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 75
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "X86.Vm2.Make_Directory_Entry",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 91
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "X86.Vm2.Make_Frame_Entry",
+            "sloc": [
+              {
+                "file": "x86-vm2.ads",
+                "line": 100
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "X86.Vm2.VMA_To_Offsets",
+            "sloc": [
+              {
+                "file": "x86-vm2.adb",
+                "line": 83
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Create_Mapping",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 39
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Get_Directory_Address",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 108
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "X86.Vm2.Flags_TypePredicate",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Flags_TypePredicate",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Initialise",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 34
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "X86.Vm2.Make_Directory_Entry",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 91
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Get_Directory_Ref",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 113
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Make_Directory_Entry",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 91
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Make_Frame_Entry",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Get_Frame_Address",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 118
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "X86.Vm2.Has_Free_Dir_Page",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "X86.Vm2.Has_Free_Dir_Page",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm2.Has_Free_Dir_Page",
+          "sloc": [
+            {
+              "file": "x86-vm2.ads",
+              "line": 75
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 9.75999981164932E-04,
+    "globals (basic)": 5.01999980770051E-04,
+    "globals/properties (advanced)": 4.13599982857704E-03,
+    "flow analysis": 6.04900019243360E-03,
+    "codepeer results": 1.10000000859145E-05,
+    "init_why_sections": 1.90000006114133E-04,
+    "translation of standard": 2.43799993768334E-03,
+    "translation of compilation unit": 3.75019982457161E-02,
+    "proof": 2.81124401092529E+00
+  }
+}

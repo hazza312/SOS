@@ -5,11 +5,11 @@ with Console; use Console;
 with Error; use Error;
 with System.Storage_Elements; use System.Storage_Elements;
 with MMap; use MMap;
+with X86.Dev.Keyboard;
 
 package body X86.VM is
 
-   Dir_Pages_Base : constant := 16#2_00_000#;
-   type Page_Bit_Array is array(0..8192-1) of Boolean with Pack;
+   type Page_Bit_Array is array(0..PD_POOL_SIZE / TABLE_SIZE) of Boolean with Pack;
    Dir_Pages : Page_Bit_Array;
 
    -- offsets into the VMA
@@ -26,7 +26,7 @@ package body X86.VM is
       for I in Dir_Pages'Range loop
          if Dir_Pages(I) = False then 
             Dir_Pages(I) := True;
-            return Virtual_Address(Dir_Pages_Base + I * 16#1000#);
+            return Virtual_Address(PD_POOL_BASE + I * TABLE_SIZE);
          end if;
       end loop;
       return Virtual_Address(0);
@@ -35,7 +35,7 @@ package body X86.VM is
 
    procedure Free_Dir_Page(VMA: Virtual_Address) is 
    begin
-      Dir_Pages(Integer((VMA - Dir_Pages_Base) / 16#1000#)) := False;
+      Dir_Pages(Integer((VMA - PD_POOL_BASE) / TABLE_SIZE)) := False;
    end;
 
 
@@ -85,9 +85,6 @@ package body X86.VM is
       Parent_Level: Level := (if Size = Page_4K then 1 else 2);
    begin
       Offsets := VMA_To_Offsets(VMA);
-      for I of Offsets loop 
-         Put_Hex(Unsigned_64(I)); Put(LF);
-      end loop;
       return Create_Mapping(Address(PML4), Offsets, PA, Parent_Level, 4);     
    end;
 
@@ -154,13 +151,13 @@ package body X86.VM is
 
       Set_Colour;
       At_X(53);      Put_Size(2**Shifts(L));
-      if PTE.Dirty              then Put(" D");    end if;
-      if PTE.Accessed           then Put(" A") ;   end if;
-      if PTE.Cache_Disable      then Put(" CD");   end if;
-      if PTE.Writethrough       then Put(" WT");   end if;
-      if PTE.User_Access        then Put(" U");    end if;
-      if PTE.Writeable          then Put(" W");    end if;
-      if PTE.Present            then Put(" P");    end if;
+      if PTE.Dirty          then Put(" D");                   end if;
+      if PTE.Accessed       then Put(" A") ;                  end if;
+      if PTE.Cache_Disable  then Put(" CD");                  end if;
+      if PTE.Writethrough   then Put(" WT");                  end if;
+      if PTE.User_Access    then Put(" U");   else Put(" S"); end if;
+      if PTE.Writeable      then Put(" W");                   end if;
+      if PTE.Present        then Put(" P");                   end if;
       Put(LF);
 
       Set_Colour(FG=>Grey);
@@ -201,6 +198,8 @@ package body X86.VM is
    begin
       -- for every index in this page table
       for I in PMLX'Range loop
+         exit when X86.Dev.Keyboard.Has_Input;
+
          -- Page_Entry refers to the entry at index I
          Page_Entry := PMLX(I);
 
@@ -216,24 +215,27 @@ package body X86.VM is
             -- otherwise, it is a reference to a PT another layer down, recurse.
             else            
                Table_Addresses(L-1) := Entry_Ref;  
-               Dump_Rec(Table_Addresses, Offsets, L-1);              
+               Dump_Rec(Table_Addresses, Offsets, L-1); 
+                             
             end if;                
          end if;
-        end loop;    
+      end loop;
+
+      Offsets(L) := 0;           
     end Dump_Rec;
 
  
    procedure Dump_Pages is 
       PML4_Base : Address := Null_Address;
       Table_Addresses: Tables;
-      Offsets: Table_Offsets;
+      Offsets: Table_Offsets := (0,0,0,0);
       use ASCII;
    begin 
-      Asm("movq    %%cr3, %%rax" & ASCII.LF &
-         "movq    %%rax, %0", 
-         Outputs => Address'Asm_Output("=g", PML4_Base), 
-         Clobber => "rax",
-         Volatile => True);
+      Asm(  "movq    %%cr3, %%rax" & ASCII.LF &
+            "movq    %%rax, %0", 
+            Outputs     => Address'Asm_Output("=g", PML4_Base), 
+            Clobber     => "rax",
+            Volatile    => True);
 
       Table_Addresses := (0,0,0,PML4_Base);         
       Dump_Rec(Table_Addresses, Offsets, 4);

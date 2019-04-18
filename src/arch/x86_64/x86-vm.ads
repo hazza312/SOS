@@ -21,7 +21,20 @@ package X86.Vm is
 
   
 private
-   TABLE_SIZE : constant := 4_096;
+   TABLE_SIZE           : constant := 2#1000#;
+
+   -- PRESENT_MASK         : constant := 2#1#;
+   -- WRITEABLE_MASK       : constant := 2#10#;
+   -- USER_MASK            : constant := 2#100#;
+   -- WRITETHROUGH_MASK    : constant := 2#1000#;
+   -- CACHE_DISABLE_MASK   : constant := 2#1_0000#;
+   -- ACCESSED_MASK        : constant := 2#10_0000#;
+   -- DIRTY_MASK           : constant := 2#100_0000#;
+   -- PAGE_SIZE_MASK       : constant := 2#1000_0000#;
+   -- GLOBAL_MASK          : constant := 2#1_0000_0000#;
+
+
+
    type Level is range 1..4;
    type Entry_Index is mod 512; 
    type Table_Offsets is array(Level) of Entry_Index;
@@ -72,11 +85,11 @@ private
    for Page_Table'Size use 512*64;
 
    function Create_Mapping(   Base:          Address; 
-                           Offsets:       Table_Offsets; 
-                           PA:            Physical_Address;
-                           Parent_Level:  Level;
-                           L:             Level) 
-                           return Boolean;
+                              Offsets:       Table_Offsets; 
+                              PA:            Physical_Address;
+                              Parent_Level:  Level;
+                              L:             Level) 
+                              return Boolean;
 
     
 end X86.Vm;

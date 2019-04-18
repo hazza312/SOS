@@ -1,0 +1,144 @@
+V "GNAT Lib v2018"
+M P W=b
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnatp
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U kernelinteract%b	kernelinteract.adb	db50c47d OO SU
+W arch%s		arch.adb		arch.ali
+W common%s		common.ads		common.ali
+W console%s		console.adb		console.ali
+W input%s		input.adb		input.ali
+W interfaces%s		interfac.ads		interfac.ali
+W mmap%s		mmap.adb		mmap.ali
+W system%s		system.ads		system.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+W x86%s			x86.ads			x86.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
+W x86.dev.pit_8253%s	x86-dev-pit_8253.adb	x86-dev-pit_8253.ali
+W x86.dev.rtc%s		x86-dev-rtc.adb		x86-dev-rtc.ali
+W x86.vm%s		x86-vm.adb		x86-vm.ali
+
+D arch.ads		20190415094400 6050e898 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D input.ads		20190408175552 2aabff2f input%s
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D kernelinteract.adb	20190413123751 d7db4e08 kernelinteract%b
+D mmap.ads		20190410093505 5526344e mmap%s
+D system.ads		20180525181036 d54140d3 system%s
+D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
+D x86.ads		20190415080605 2a12145a x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D x86-dev-pit_8253.ads	20190407110310 a4eb0daf x86.dev.pit_8253%s
+D x86-dev-rtc.ads	20190408175552 dc494b72 x86.dev.rtc%s
+D x86-vm.ads		20190415191015 b634a457 x86.vm%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190406073625 00000000
+X 1 arch.ads
+12K9*Arch 39e9 7|7w6 68r10
+18U15*Scout_Memory 7|68s15
+X 2 common.ads
+3K9*Common 12e11 7|8w6 8r18
+5M10*Address<6|77M9> 7|29r16 34r11 94r27 96r23
+X 3 console.ads
+5K9*Console 50e12 7|1w6 1r19
+10e4*LF{character} 7|81r11 89r11
+13n7*Black{12E9} 7|59r54 63r51 67r49
+14n7*Red{12E9} 7|103r25
+15n30*Light_Green{12E9} 7|85r25
+16n18*Light_Magenta{12E9} 7|76r30
+16n41*White{12E9} 7|59r43 63r40 67r38 76r49
+34U15*At_X 7|71s10 72s10 73s10 77s13 78s13 79s13 87s13
+35U15*Put 7|81s7 89s7
+36U15*Put 7|42s7 71s22 72s22 73s22 84s10 87s53 92s10 104s10
+37U15*Put 7|77s23 78s23 79s23 87s23
+42U15*Put_Line 7|38s4 46s7 49s10 50s10 51s10 52s10 53s10 54s10 55s10 56s10
+. 104s24
+43U15*Banner 7|59s10 63s10 67s10
+44U15*Set_Colour 7|41s7 76s13 85s10 103s10
+X 5 input.ads
+3K9*Input 11e10 7|4w6 43r25 93r55
+8V13*Get_Line{positive} 7|43s31
+9V13*Get_Char{character} 7|93s61
+X 6 interfac.ads
+38K9*Interfaces 184e15 7|3w6 3r22
+63M9*Unsigned_8 7|28r23 93r30
+77M9*Unsigned_64 7|35r18
+X 7 kernelinteract.adb
+11U11*KernelInteract 11b11 108l5 108t19
+13V13 Equals{boolean} 26l8 26t14 45s10 48s13 58s13 62s13 66s13 70s13 83s13
+. 91s13
+13a20 S1{string} 14r26 18r13
+13a23 S2{string} 15r26 17r45 18r25 25r47
+13i35 Length{positive} 17r21 25r23
+14i7 S1_I{positive} 17r13 18r16 22m10 22r18 25r15
+15i7 S2_I{positive} 17r37 18r28 23m10 23r18 25r39
+28m4 Exception_Number{6|63M9} 93m10 94r36
+29m4 IDT_Entry{2|5M10} 94m10 96r46
+30a4 Command{string} 43m40 43r40 45r17 48r20 58r20 62r20 66r20 70r20 83r20
+. 91r20 104r14
+31i4 Command_Length{positive} 43m7 45r33 48r37 58r37 62r37 66r42 70r38 83r39
+. 91r38 99r13
+34m4 Base{2|5M10} 68m28 68r28
+35m4 Base_Length{6|77M9} 68m34 68r34
+X 8 mmap.ads
+8K9*MMap 7|6w6 64r10 8|41e9
+22U14*Print 7|64s15
+X 9 system.ads
+60K9*System 7|2r6 2r31 9|172e11
+X 10 s-maccod.ads
+36K16*Machine_Code 7|2w13 2r38 10|131e24
+83U14*Asm 7|95s10
+X 11 x86.ads
+3K9*X86 7|5r6 9r6 9r24 9r42 60r10 75r20 77r27 78r27 79r27 86r20 87r27 11|20e8
+X 12 x86-dev.ads
+1K13*Dev 7|9r10 9r28 9r46 75r24 77r31 78r31 79r31 86r24 87r31 12|4e12
+X 13 x86-dev-keyboard.ads
+5K17*Keyboard 7|9w32 75r28 78r35 86r28 13|31e21
+21V14*Get_Ticks{6|77M9} 7|78s44
+23V14*Has_Input{boolean} 7|75s37 86s37
+X 14 x86-dev-pit_8253.ads
+4K17*PIT_8253 7|9w14 77r35 14|12e21
+8V14*Get_Ticks{6|77M9} 7|77s44
+X 15 x86-dev-rtc.ads
+4K17*RTC 7|9w50 79r35 87r35 15|29e16
+27V14*Get_Ticks{6|77M9} 7|79s39 87s39
+X 16 x86-vm.ads
+5K13*Vm 7|5w10 60r14 16|95e11
+12U14*Dump_Pages 7|60s17
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS kernelinteract__equals 0
+GG EK_GLOBALS kernelinteract__equals local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS kernelinteract 0
+GG EK_GLOBALS kernelinteract local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 17 console__at_x console__put console__put__2 console__put__3 console__put_line console__banner console__set_colour system__machine_code__asm__4 input__get_line input__get_char x86__dev__keyboard__get_ticks x86__dev__keyboard__has_input arch__scout_memory x86__vm__dump_pages mmap__print x86__dev__pit_8253__get_ticks x86__dev__rtc__get_ticks local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

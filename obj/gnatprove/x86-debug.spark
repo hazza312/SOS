@@ -1,0 +1,31 @@
+{
+  "spark": [
+    {
+      "name": "X86.Debug.Print_Multiboot_Map",
+      "sloc": [
+        {
+          "file": "x86-debug.ads",
+          "line": 3
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 3.49999987520278E-04,
+    "globals (basic)": 2.18000001041219E-04,
+    "globals/properties (advanced)": 1.46000005770475E-03,
+    "flow analysis": 4.70000013592653E-05,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 1.65999997989275E-04,
+    "translation of standard": 2.77399993501604E-03,
+    "translation of compilation unit": 1.16069996729493E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

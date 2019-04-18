@@ -1,0 +1,99 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnatp
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U input%b		input.adb		8fdd66ba OO PK
+W arch%s		arch.adb		arch.ali
+W console%s		console.adb		console.ali
+W x86%s			x86.ads			x86.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
+
+U input%s		input.ads		74fc5449 OO PK
+W x86%s			x86.ads			x86.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
+
+D arch.ads		20190415094400 6050e898 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D input.ads		20190408175552 2aabff2f input%s
+D input.adb		20190408175552 502d307e input%b
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D system.ads		20180525181036 d54140d3 system%s
+D x86.ads		20190415080605 2a12145a x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190406073625 00000000
+X 1 arch.ads
+12K9*Arch 39e9 6|3w6 3r16
+X 3 console.ads
+5K9*Console 50e12 6|2w6 43r17 60r7
+10e4*LF{character} 6|43r25
+35U15*Put 6|60s15
+X 5 input.ads
+3K9*Input 11l5 11e10 6|5b14 64l5 64t10
+5U14*Enable_Cursor
+6U14*Disable_Cursor 6|9b14 14t7
+7V13*Get_Word{positive} 7=22 6|18b13 32l8 32t16
+7a22 S{string} 6|18b22 19r22 24r17 27m10 31r18
+8V13*Get_Line{positive} 8=22 6|35b14 52l8 52t16
+8a22 S{string} 6|35b23 36r22 41r17 44m13 47m10 51r18
+9V13*Get_Char{character} 6|25s15 42s15 55b13 62l8 62t16
+X 6 input.adb
+7U14 Enable_Cursor
+19i7 I{positive} 24r13 27r12 28m10 28r15 31r14
+20e7 C{character} 25m10 26r20 27r18
+36i7 I{positive} 41r13 44r15 47r12 48m10 48r15 51r14
+37e7 C{character} 42m10 43r13 47r18
+56e7 C{character} 59m7 60r19 61r14
+X 9 x86.ads
+3K9*X86 5|1r6 6|1r6 22r7 39r7 58r17 59r12 9|20e8
+X 10 x86-dev.ads
+1K13*Dev 5|1r10 6|1r10 22r11 39r11 58r21 59r16 10|4e12
+X 11 x86-dev-keyboard.ads
+5K17*Keyboard 5|1w14 6|1w14 22r15 39r15 58r25 59r20 11|31e21
+20V14*Get_Character{character} 6|59s29
+23V14*Has_Input{boolean} 6|58s34
+24U15*Flush 6|22s24 39s24
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS input__enable_cursor 0
+GG EK_GLOBALS input__enable_cursor local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS input__disable_cursor 0
+GG EK_GLOBALS input__disable_cursor local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS input__get_word 0
+GG EK_GLOBALS input__get_word local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 4 x86__dev__keyboard__get_character x86__dev__keyboard__has_input x86__dev__keyboard__flush console__put local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS input__get_line 0
+GG EK_GLOBALS input__get_line local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 4 x86__dev__keyboard__get_character x86__dev__keyboard__has_input x86__dev__keyboard__flush console__put local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS input__get_char 0
+GG EK_GLOBALS input__get_char local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 3 x86__dev__keyboard__get_character x86__dev__keyboard__has_input console__put local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS input 0
+GG EK_GLOBALS input local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

@@ -1,0 +1,61 @@
+{
+  "spark": [
+    {
+      "name": "X86.Dev.VGA_Console.At_X",
+      "sloc": [
+        {
+          "file": "x86-dev-vga_console.ads",
+          "line": 23
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.VGA_Console.Put",
+      "sloc": [
+        {
+          "file": "x86-dev-vga_console.ads",
+          "line": 24
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.VGA_Console.Clear",
+      "sloc": [
+        {
+          "file": "x86-dev-vga_console.ads",
+          "line": 25
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Dev.VGA_Console.Shift_Lines",
+      "sloc": [
+        {
+          "file": "x86-dev-vga_console.ads",
+          "line": 29
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 6.76000025123358E-04,
+    "globals (basic)": 3.16999998176470E-04,
+    "globals/properties (advanced)": 2.12100008502603E-03,
+    "flow analysis": 7.50000035623088E-05,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 2.58999993093312E-04,
+    "translation of standard": 4.97600017115474E-03,
+    "translation of compilation unit": 1.46059999242425E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

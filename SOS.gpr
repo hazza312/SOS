@@ -7,6 +7,7 @@ project Sos is
    Architecture : Architecture_Type := external ("arch", "x86_64");   
    Machine : Machine_Type := external ("machine", "pc");   
    Mode: Mode_Type := external ("mode", "release");
+   Tool := External ("GPR_TOOL", "none");
 
    for Languages use ("Ada", "Asm");
    for Source_Dirs use ("src", "src/arch", "src/arch/" & Architecture, 
@@ -18,19 +19,29 @@ project Sos is
 
    package Compiler is
       for Local_Configuration_Pragmas use "pragmas.adc";
-
-      Ada_Switches := (
-         --"-g", -- generate debug info
-         "-gnatp", -- suppress all checks
-         "-gnat12", "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp",
+      Verify_Switches := (
+         "-gnat12", 
          "-mno-red-zone");
 
-       case Mode is
-         when "debug"   => Ada_Switches := Ada_Switches & "-g";
-         when "release" => Ada_Switches := Ada_Switches ;
+      Normal_Switches := (
+         "-nostartfiles", "-nodefaultlibs", "-nostdlib", "--RTS=zfp",
+         --"-g", -- generate debug info
+         "-gnatp", -- suppress all checks
+         "-gnat12", 
+         "-mno-red-zone");
+      Ada_Switches := ();
+
+       
+      case Tool is 
+         when "gnatprove" => Ada_Switches := Verify_Switches;
+         when others => case Mode is
+            when "debug"   => Ada_Switches := Normal_Switches & "-g";
+            when "release" => Ada_Switches := Normal_Switches ;
+            end case;
        end case;
 
       for Switches("error.adb") use Ada_Switches & ("-fomit-frame-pointer");
+      for Switches("syscall.adb") use Ada_Switches & ("-fomit-frame-pointer");
       for Default_Switches ("Ada") use Ada_Switches;
    end Compiler;
 

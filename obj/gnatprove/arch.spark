@@ -1,0 +1,81 @@
+{
+  "spark": [
+    {
+      "name": "Arch.Scout_Memory",
+      "sloc": [
+        {
+          "file": "arch.ads",
+          "line": 18
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Arch.Initialise_Interrupts",
+      "sloc": [
+        {
+          "file": "arch.ads",
+          "line": 19
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Arch.IO_Inb",
+      "sloc": [
+        {
+          "file": "arch.ads",
+          "line": 21
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Arch.IO_Outb",
+      "sloc": [
+        {
+          "file": "arch.ads",
+          "line": 22
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Arch.CR3_Address",
+      "sloc": [
+        {
+          "file": "arch.ads",
+          "line": 23
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Arch.Parse_Memory_Entries",
+      "sloc": [
+        {
+          "file": "arch.adb",
+          "line": 102
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 1.38000003062189E-03,
+    "globals (basic)": 8.20000015664846E-04,
+    "globals/properties (advanced)": 4.10200003534555E-03,
+    "flow analysis": 7.00000018696301E-05,
+    "codepeer results": 1.99999999495049E-06,
+    "init_why_sections": 1.53000000864267E-04,
+    "translation of standard": 2.83799995668232E-03,
+    "translation of compilation unit": 3.05700004100800E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

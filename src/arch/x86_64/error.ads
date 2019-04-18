@@ -4,11 +4,11 @@ with X86.Interrupts; use X86.Interrupts;
 
 package Error is 
 
-    -- procedure lastchance(Msg : String; Line: Integer)
-    -- with 
-    --     Export => True, 
-    --     Convention => C, 
-    --     External_Name => "__gnat_last_chance_handler";
+    procedure lastchance(Msg : String; Line: Integer)
+    with 
+        Export => True, 
+        Convention => C, 
+        External_Name => "__gnat_last_chance_handler";
 
     procedure Exception_Handler
     with 

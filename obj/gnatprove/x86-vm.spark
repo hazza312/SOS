@@ -1,0 +1,147 @@
+{
+  "spark": [
+    {
+      "name": "X86.Vm.Dump_Pages",
+      "sloc": [
+        {
+          "file": "x86-vm.ads",
+          "line": 12
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Map_Page",
+      "sloc": [
+        {
+          "file": "x86-vm.ads",
+          "line": 16
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Page_Table_EntryPredicate",
+      "sloc": [
+        {
+          "file": "x86-vm.ads",
+          "line": 47
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "X86.Vm.Create_Mapping",
+      "sloc": [
+        {
+          "file": "x86-vm.ads",
+          "line": 87
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Get_Free_Dir_Page",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 24
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Free_Dir_Page",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 36
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Offsets_To_VMA",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 42
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.VMA_To_Offsets",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 53
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Flush_TLB",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 62
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Print_Page",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 132
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Dump_Rec",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 191
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "X86.Vm.Page_Table_EntryPredicate",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 47
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 3.16300010308623E-03,
+    "globals (basic)": 8.58000013977289E-04,
+    "globals/properties (advanced)": 7.05899996683002E-03,
+    "flow analysis": 3.64700006321073E-03,
+    "codepeer results": 7.99999997980194E-06,
+    "init_why_sections": 1.90999999176711E-04,
+    "translation of standard": 2.86599993705750E-03,
+    "translation of compilation unit": 3.44429984688759E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

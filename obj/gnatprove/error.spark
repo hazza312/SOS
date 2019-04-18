@@ -1,0 +1,41 @@
+{
+  "spark": [
+    {
+      "name": "Error.Exception_Handler",
+      "sloc": [
+        {
+          "file": "error.ads",
+          "line": 13
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Error.Panic",
+      "sloc": [
+        {
+          "file": "error.ads",
+          "line": 19
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 7.21000018529594E-04,
+    "globals (basic)": 3.75000003259629E-04,
+    "globals/properties (advanced)": 2.03699991106987E-03,
+    "flow analysis": 3.89999986509793E-05,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 1.65999997989275E-04,
+    "translation of standard": 3.00700007937849E-03,
+    "translation of compilation unit": 1.54910003766418E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

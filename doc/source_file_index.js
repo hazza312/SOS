@@ -32,6 +32,10 @@ GNATdoc.SourceFileIndex = [
     "srcHref": "srcs/multiboot.ads.html"
   },
   {
+    "label": "syscall.ads",
+    "srcHref": "srcs/syscall.ads.html"
+  },
+  {
     "label": "x86-debug.ads",
     "srcHref": "srcs/x86-debug.ads.html"
   },
@@ -66,6 +70,10 @@ GNATdoc.SourceFileIndex = [
   {
     "label": "x86-vm.ads",
     "srcHref": "srcs/x86-vm.ads.html"
+  },
+  {
+    "label": "x86-vm2.ads",
+    "srcHref": "srcs/x86-vm2.ads.html"
   },
   {
     "label": "x86.ads",

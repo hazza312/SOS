@@ -1,0 +1,31 @@
+{
+  "spark": [
+    {
+      "name": "Kernel",
+      "sloc": [
+        {
+          "file": "kernel.adb",
+          "line": 13
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 7.22999975550920E-04,
+    "globals (basic)": 6.05000008363277E-04,
+    "globals/properties (advanced)": 4.16699983179569E-03,
+    "flow analysis": 3.40000005962793E-05,
+    "codepeer results": 1.99999999495049E-06,
+    "init_why_sections": 1.53000000864267E-04,
+    "translation of standard": 2.49200011603534E-03,
+    "translation of compilation unit": 3.83500009775162E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

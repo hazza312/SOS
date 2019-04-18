@@ -1,0 +1,88 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnatp
+A -gnat12
+A -mno-red-zone
+A -fomit-frame-pointer
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U syscall%b		syscall.adb		6787d293 OO PK
+W console%s		console.adb		console.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+W x86%s			x86.ads			x86.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
+
+U syscall%s		syscall.ads		94307092 OO PK
+
+D arch.ads		20190415094400 6050e898 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D syscall.ads		20190415134434 94307092 syscall%s
+D syscall.adb		20190415174333 842056c8 syscall%b
+D system.ads		20180525181036 d54140d3 system%s
+D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
+D x86.ads		20190415080605 2a12145a x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190406073625 00000000
+X 3 console.ads
+5K9*Console 50e12 7|1w14 2r5
+10e4*LF{character} 7|10r11
+35U15*Put 7|10s7
+39U15*Put_Hex 7|9s7
+42U15*Put_Line 7|13s28 14s28
+X 5 interfac.ads
+38K9*Interfaces 184e15 7|1w23 2r14
+77M9*Unsigned_64 7|9r16
+X 6 syscall.ads
+1K9*Syscall 7l5 7e12 7|4b14 24l5 24t12
+3E10*System_Call 3e44 5r28 7|6r27 9r28
+3n26*Test{3E10} 7|13r15
+3n32*Read{3E10}
+3n38*Write{3E10}
+5U15*Handle 5>22 7|6b14 22l8 22t14
+5e22 Call{3E10} 7|6b21 9r49 12r12
+X 8 system.ads
+60K9*System 7|1w6 1r53 2r26 8|172e11
+X 9 s-maccod.ads
+36K16*Machine_Code 7|1w60 2r33 9|131e24
+X 10 x86.ads
+3K9*X86 7|1r35 10|20e8
+X 11 x86-dev.ads
+1K13*Dev 7|1r39 11|4e12
+X 12 x86-dev-keyboard.ads
+5K17*Keyboard 7|1w43 12|31e21
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS syscall__handle 0
+GG EK_GLOBALS syscall__handle local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 3 console__put console__put_hex console__put_line local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS syscall 0
+GG EK_GLOBALS syscall local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

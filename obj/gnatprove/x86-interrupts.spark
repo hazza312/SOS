@@ -1,0 +1,41 @@
+{
+  "spark": [
+    {
+      "name": "X86.Interrupts.Slow_Handler",
+      "sloc": [
+        {
+          "file": "x86-interrupts.ads",
+          "line": 29
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Interrupts.Register_Handler",
+      "sloc": [
+        {
+          "file": "x86-interrupts.ads",
+          "line": 30
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 6.77999982144684E-04,
+    "globals (basic)": 3.37000004947186E-04,
+    "globals/properties (advanced)": 1.90000003203750E-03,
+    "flow analysis": 5.70000011066440E-05,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 2.46999989030883E-04,
+    "translation of standard": 4.75700013339520E-03,
+    "translation of compilation unit": 1.55189996585250E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

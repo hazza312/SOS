@@ -1,0 +1,135 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_UNCHECKED_CONVERSION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U x86.dev.pic_8259a%b	x86-dev-pic_8259a.adb	f2140825 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s  a-unccon.ads	a-unccon.ali
+W arch%s		arch.adb		arch.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+
+U x86.dev.pic_8259a%s	x86-dev-pic_8259a.ads	e9e0b6d5 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s  a-unccon.ads	a-unccon.ali
+W arch%s		arch.adb		arch.ali
+W interfaces%s		interfac.ads		interfac.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+
+D ada.ads		20180525181036 76789da1 ada%s
+D a-unccon.ads		20180525181036 0e9b276f ada.unchecked_conversion%s
+D arch.ads		20190415094400 6050e898 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D system.ads		20180525181036 d54140d3 system%s
+D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
+D x86.ads		20190418080136 2a12145a x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-pic_8259a.ads	20190407072905 6accb118 x86.dev.pic_8259a%s
+D x86-dev-pic_8259a.adb	20190408175552 f61376ca x86.dev.pic_8259a%b
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+X 1 ada.ads
+16K9*Ada 20e8 11|3r6 12|2r6 6r29
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 11|3w10 12|2w10 6r33
+X 3 arch.ads
+12K9*Arch 39e9 11|2w6 2r16 12|1w6 1r16
+16M10*IO_Port<6|66M9> 11|15r51
+22U15*IO_Outb 12|10s9
+X 6 interfac.ads
+38K9*Interfaces 184e15 11|1w6 1r22
+63M9*Unsigned_8 12|10r32
+66M9*Unsigned_16 12|6r68
+X 9 x86.ads
+3K9*X86 19e8 11|5r9 71r5 12|4r14 37r5
+X 10 x86-dev.ads
+1K13*Dev 9|3k9 10|4e12 11|5r13 71r9 12|4r18 37r9
+X 11 x86-dev-pic_8259a.ads
+5K17*PIC_8259A 10|1k13 11|71l13 71e22 12|4b22 37l13 37t22
+7I10*IRQ<short_short_integer> 11r42 34r32 68r29 12|31r29
+8E10*Device 8e35 11r31 15r27 66r23 12|8r23
+8n21*Master{8E10} 12r9 16r9 12|18r14 21r14 21r44 24r14 27r14
+8n29*Slave{8E10} 13r9 17r9 12|19r14 22r14 22r43 25r14 28r14
+9E10*Destination 9e40 15r35 66r37 12|8r37
+9n26*Command{9E10} 16r20 17r20 12|18r22 19r21
+9n35*Data{9E10} 16r39 17r39 12|21r22 22r21 24r22 25r21 27r22 28r21
+11a5*IRQ_Base(7I10) 12|21r35 22r34
+15a5*Port(3|16M10) 12|10r17
+19E10*CW_Type 19e64 25r27
+19n22*ICW1{19E10} 27r14 12|14r35
+19n28*ICW2{19E10} 33r14 12|21r29 22r28
+19n34*ICW3_Master{19E10} 35r14 12|24r29
+19n47*ICW3_Slave{19E10} 37r14 12|25r28
+19n59*ICW4{19E10} 39r14 12|16r14
+20A10*Bit_Field(boolean)<integer> 36r32 38r32
+25R10*Control_Word 25d23 47e15 49r9 66r55 12|6r54 8r55 14r18 15r19
+25e23*Id{19E10} 26r14
+28b13*ICW4_Present{boolean} 50r9 12|14m41
+29b13*Cascade{boolean} 51r9
+30b13*CAI_4{boolean} 52r9
+31b13*Level_Triggered{boolean} 53r9
+32i13*Reserved_0{integer} 54r9
+34i13*Offset{7I10} 55r9
+36a13*Master_Mask{20A10} 56r9
+38a13*Slave_Mask{20A10} 57r9
+40b13*Mode_80xx{boolean} 58r9 12|16m20
+41b13*Auto_EOI{boolean} 59r9 12|16m39
+42b13*Master{boolean} 60r9
+43b13*Buffered{boolean} 61r9
+44b13*SFNM_Mode{boolean} 62r9
+45i13*Reserved_1{integer} 63r9
+66U15*Send 66>20 66>31 66>50 12|8b15 11l9 11t13 18s9 19s9 21s9 22s9 24s9
+. 25s9 27s9 28s9
+66e20 D{8E10} 12|8b20 10r22
+66e31 Dest{9E10} 12|8b31 10r25
+66r50 Msg{25R10} 12|8b50 10r51
+67U15*Initialise 12|13b15 29l9 29t19
+68U15*Send_EOI 68>24 12|31b15 34l9 34t17
+68i24 Num{7I10} 12|31b24
+X 12 x86-dev-pic_8259a.adb
+6V14 Convert[2|20]{6|66M9}
+6V14*Convert[2|20]{6|66M9} 10s43
+14r9 Restart{11|25R10} 18r31 19r30
+15r9 X86_Mode{11|25R10} 27r28 28r27
+17R9*Source{11|25R10} 20r40[6]
+18M9*Target{6|66M9} 20r55[6]
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS x86__dev__pic_8259a__send 0
+GG EK_GLOBALS x86__dev__pic_8259a__send local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__pic_8259a__initialise 0
+GG EK_GLOBALS x86__dev__pic_8259a__initialise local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__pic_8259a__send_eoi 0
+GG EK_GLOBALS x86__dev__pic_8259a__send_eoi local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__pic_8259a__convert 0
+GG EK_GLOBALS x86__dev__pic_8259a__convert local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__dev__pic_8259a 0
+GG EK_GLOBALS x86__dev__pic_8259a local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

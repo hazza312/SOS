@@ -1,0 +1,31 @@
+{
+  "spark": [
+    {
+      "name": "Syscall.Handle",
+      "sloc": [
+        {
+          "file": "syscall.ads",
+          "line": 5
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 7.52000021748245E-04,
+    "globals (basic)": 6.67000014800578E-04,
+    "globals/properties (advanced)": 4.17899992316961E-03,
+    "flow analysis": 5.70000011066440E-05,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 2.49000004259869E-04,
+    "translation of standard": 5.21299988031387E-03,
+    "translation of compilation unit": 1.65580008178949E-02,
+    "proof": 1.99999999495049E-06
+  }
+}

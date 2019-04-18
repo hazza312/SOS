@@ -1,0 +1,233 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
+A -gnat12
+A -gnatp
+A -gnat12
+A -mno-red-zone
+A -gnatc
+P GP FX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RR NO_DISPATCH
+RR NO_ENUMERATION_MAPS
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IMPLICIT_DYNAMIC_CODE
+RR NO_PROTECTED_TYPES
+RV NO_RECURSION
+RR NO_SECONDARY_STACK
+RR NO_TASKING
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U x86.vm%b		x86-vm.adb		f2c4681b OO PK
+W arch%s		arch.adb		arch.ali
+W common%s		common.ads		common.ali
+W console%s		console.adb		console.ali
+W error%s		error.adb		error.ali
+W mmap%s		mmap.adb		mmap.ali
+W system%s		system.ads		system.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W x86%s			x86.ads			x86.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
+
+U x86.vm%s		x86-vm.ads		d9d5f5e1 OO PK
+W arch%s		arch.adb		arch.ali
+W common%s		common.ads		common.ali
+W interfaces%s		interfac.ads		interfac.ali
+W x86%s			x86.ads			x86.ali
+
+D arch.ads		20190415094400 6050e898 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190408175552 cb5cea15 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D error.ads		20190408175552 ecbdfbf0 error%s
+D interfac.ads		20180525181036 5ab55268 interfaces%s
+D mmap.ads		20190410093505 5526344e mmap%s
+D system.ads		20180525181036 d54140d3 system%s
+D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
+D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
+D x86.ads		20190415080605 2a12145a x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D x86-interrupts.ads	20190408175552 133dfb82 x86.interrupts%s
+D x86-vm.ads		20190415191015 b634a457 x86.vm%s
+D x86-vm.adb		20190415112319 378db800 x86.vm%b
+D /home/harry/Desktop/SOS/pragmas.adc  20190406073625 00000000
+X 1 arch.ads
+12K9*Arch 39e9 16|2w6 2r16 17|2w6 2r16
+X 2 common.ads
+3K9*Common 12e11 16|3w6 3r18 17|3w6 3r18
+5M10*Address<6|77M9> 16|45r35 87r46 17|88r29 92r46 100r19 117r23 119r58 124r20
+. 124r39 135r29 145r15 197r19 209r26 229r19 236r28
+6M10*Physical_Address<5M10> 16|16r34 18r34 89r46 17|78r34 80r34 94r46
+7M10*Virtual_Address<5M10> 16|17r34 17|24r38 29r20 32r14 36r33 42r53 50r14
+. 53r33 79r34
+9m4*NULL_ADDRESS{5M10} 17|229r30
+X 3 console.ads
+5K9*Console 50e12 17|4w6 4r19 242r11
+10e4*LF{character} 17|161r11 175r11 186r11 187r11 242r19
+13n27*Cyan{12E9} 17|172r22 183r22
+14n28*Grey{12E9} 17|149r22 163r22 176r22
+16n7*Light_Red{12E9} 17|143r22
+16n41*White{12E9} 17|167r22 179r22
+34U15*At_X 17|150s7 153s7 168s7 169s7 173s7 174s7 180s22 181s22 184s22 184s34
+. 185s22 185s34
+35U15*Put 17|161s7 175s7 186s7 187s7 242s7
+36U15*Put 17|146s7 150s17 154s34 155s34 156s34 157s34 158s34 158s52 159s34
+. 160s34 164s7 165s7 177s7
+39U15*Put_Hex 17|173s19 174s19 184s46 185s46
+40U15*Put_Hex 17|145s7 147s7 168s18 169s18 180s34 181s34
+41U15*Put_Size 17|153s22
+44U15*Set_Colour 17|143s7 149s7 152s7 163s7 167s7 172s7 176s7 179s7 183s7
+X 5 error.ads
+5K9*Error 21e10 17|5w6 5r17
+X 6 interfac.ads
+38K9*Interfaces 184e15 16|1w6 1r22
+77M9*Unsigned_64 16|43r26 17|43r15 46r36 173r27 174r27 184r54 185r54
+141V13*Shift_Left{77M9} 17|46s25 124s28
+145V13*Shift_Right{77M9} 17|57s30 109s46 119s46
+X 7 mmap.ads
+8K9*MMap 41e9 17|7w6 7r16
+X 8 system.ads
+60K9*System 172e11 17|1r6 1r31 6r6 6r35 99r41 195r40
+90M9*Address 17|99r41 195r40
+X 9 s-maccod.ads
+36K16*Machine_Code 131e24 17|1w13 1r38
+83U14*Asm 17|66s7 234s7
+X 10 s-stoele.ads
+42K16*Storage_Elements 117e28 17|6w13 6r42
+X 12 x86.ads
+3K9*X86 20e8 16|5r9 95r5 17|8r6 10r14 201r20 250r5
+13N5*PD_POOL_BASE 17|29r36 38r32
+14N5*PD_POOL_SIZE 17|12r36
+X 13 x86-dev.ads
+1K13*Dev 4e12 17|8r10 201r24
+X 14 x86-dev-keyboard.ads
+5K17*Keyboard 31e21 17|8w14 201r28
+23V14*Has_Input{boolean} 17|201s37
+X 16 x86-vm.ads
+5K13*Vm 12|3k9 16|95l9 95e11 17|10b18 250l9 250t11
+8E9*Page_Size 8e40 19r34 17|81r34
+8n23*Page_4K{8E9} 17|85r41
+8n32*Page_2M{8E9}
+12U14*Dump_Pages 17|228b14 243l8 243t18
+16V13*Map_Page{boolean} 16>25 17>25 18>25 19>25 17|78b13 89t7
+16m25 PML4{2|6M10} 17|78b25 88r37
+17m25 VMA{2|7M10} 17|79b25 87r33
+18m25 PA{2|6M10} 17|80b25 88r53
+19e25 Size{8E9} 17|81b25 85r34
+24N4 TABLE_SIZE 17|12r51 29r55 38r48
+38I9 Level<short_short_integer> 40r32 45r25 90r46 91r46 17|16r28 19r29 56r16
+. 85r21 95r46 96r46 137r29 193r43
+39M9 Entry_Index 40r42 84r29 17|57r18
+40A9 Table_Offsets(39M9)<38I9> 88r46 17|42r31 45r26 53r57 54r11 84r16 93r46
+. 134r29 192r50 231r16
+41M9 Address_4K_Truncate 50r23 17|109r26 119r26
+42E9 Entry_Type 42e58
+42n24 Page_Table_Ref{42E9}
+42n40 Physical_Page_Ref{42E9}
+43M9 Table_Ref<6|77M9>
+45A9 Tables(2|5M10)<38I9> 17|133r29 191r50 230r24
+47R9 Page_Table_Entry 63e7 66r8 81r8 84r45 17|136r29 196r19
+48b7*No_Execute{boolean} 79r7
+49i7*Used_Entries{integer} 78r7
+50m7*Reference{41M9} 77r7 17|109m13 119m13 124r64 209r45
+51i7*Available{integer} 76r7
+52b7*Global{boolean} 75r7
+53b7*Page_Size{boolean} 74r7 17|110m13 120m13 212r27
+54b7*Dirty{boolean} 73r7 17|154r14
+55b7*Accessed{boolean} 72r7 17|155r14
+56b7*Cache_Disable{boolean} 71r7 17|156r14
+57b7*Writethrough{boolean} 70r7 17|157r14
+58b7*User_Access{boolean} 69r7 17|158r14
+59b7*Writeable{boolean} 68r7 17|110m49 120m50 159r14
+60b7*Present{boolean} 67r7 17|103r53 110m32 116r31 120m33 160r14 207r24
+84A9 Page_Table(47R9)<39M9> 85r8 17|99r14 195r13
+87V13 Create_Mapping{boolean} 87>31 88>31 89>31 90>31 91>31 17|88s14 92b13
+. 125s14 126l8 126t22
+87m31 Base{2|5M10} 17|92b31 99r59
+88a31 Offsets{40A9} 17|93b31 103r41 108r15 116r19 118r15 124r52 125r40
+89m31 PA{2|6M10} 17|94b31 109r58 125r49
+90i31 Parent_Level{38I9} 17|95b31 103r14 107r17 125r53
+91i31 L{38I9} 17|96b31 103r10 103r49 107r13 108r23 116r27 118r23 124r60 125r67
+X 17 x86-vm.adb
+12A9 Page_Bit_Array(boolean)<integer> 13r16
+13a4 Dir_Pages{12A9} 26r16 27r13 28m13 38m7
+16a4 Shifts(natural) 46r73 57r47 153r34
+19a4 Columns(natural)
+24V13 Get_Free_Dir_Page{2|7M10} 33t7 117s31
+26i11 I{integer} 27r23 28r23 29r51
+36U14 Free_Dir_Page 39t7
+36m28 VMA{2|7M10} 38r26
+42V13 Offsets_To_VMA{2|7M10} 51l8 51t22 145s23
+42a28 T{16|40A9} 46r48
+43m7 Result{6|77M9} 46m10 50r30
+45i11 Table_Level<short_short_integer> 46r50 46r80
+53V13 VMA_To_Offsets{16|40A9} 60l8 60t22 87s18
+53m28 VMA{2|7M10} 57r42
+54a7 T{16|40A9} 57m10 59r14
+56i11 L{16|38I9} 57r12 57r54
+62U14 Flush_TLB 71l8 71t17
+84a7 Offsets{16|40A9} 87m7 88r44
+85i7 Parent_Level{16|38I9} 88r57
+99a7 PMLX{16|84A9} 103r36 108m10 116r14 118m10 124r47
+100m7 Next_Base{2|5M10} 117m10 119r66 124m7 125r29
+132U14 Print_Page 189l9 189t19 213s16
+133a7 Table_Addresses{16|45A9} 168r26 169r26 180r42 181r42
+134a7 Offsets{16|40A9} 145r38 173r39 174r39 184r66 185r66
+135m7 Physical_Address{2|5M10} 147r15
+136r7 PTE{16|47R9} 154r10 155r10 156r10 157r10 158r10 159r10 160r10
+137i7 L{16|38I9} 153r41 180r10 181r10 184r10 185r10
+191U15 Dump_Rec 218s16 225l9 225t17 241s7
+191a25 Table_Addresses{16|45A9} 195r58 213r27 217m16 218m25
+192a25 Offsets{16|40A9} 208m13 213r44 218m42 224m7
+193i25 L{16|38I9} 195r74 208r21 213r76 217r32 218r51 224r15
+195a7 PMLX{16|84A9} 200r16 204r24
+196r7 Page_Entry{16|47R9} 204m10 207r13 209r34 212r16 213r64
+197m7 Entry_Ref{2|5M10} 209m13 213r53 217r40
+200m11 I{16|39M9} 204r29 208r27
+229m7 PML4_Base{2|5M10} 236m53 236r53 240r33
+230a7 Table_Addresses{16|45A9} 240m7 241m16 241r16
+231a7 Offsets{16|40A9} 241m33 241r33
+
+QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS x86__vm__dump_pages 0
+GG EK_GLOBALS x86__vm__dump_pages local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 10 interfaces__shift_left__4 system__machine_code__asm__4 console__at_x console__put console__put__2 console__put_hex console__put_hex__2 console__put_size console__set_colour x86__dev__keyboard__has_input local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__map_page 0
+GG EK_GLOBALS x86__vm__map_page local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__vm__dir_pages proper_output 1 x86__vm__dir_pages refined_proof_in 0 refined_input 1 x86__vm__dir_pages refined_output 1 x86__vm__dir_pages calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_left__4 interfaces__shift_right__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__page_table_entryPredicate 0
+GG EK_GLOBALS x86__vm__page_table_entryPredicate local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__create_mapping 0
+GG EK_GLOBALS x86__vm__create_mapping local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__vm__dir_pages proper_output 1 x86__vm__dir_pages refined_proof_in 0 refined_input 1 x86__vm__dir_pages refined_output 1 x86__vm__dir_pages calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_left__4 interfaces__shift_right__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__get_free_dir_page 0
+GG EK_GLOBALS x86__vm__get_free_dir_page local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__vm__dir_pages proper_output 1 x86__vm__dir_pages refined_proof_in 0 refined_input 1 x86__vm__dir_pages refined_output 1 x86__vm__dir_pages calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__vm__dir_pages LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__free_dir_page 0
+GG EK_GLOBALS x86__vm__free_dir_page local TRUE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__vm__dir_pages proper_output 1 x86__vm__dir_pages refined_proof_in 0 refined_input 1 x86__vm__dir_pages refined_output 1 x86__vm__dir_pages calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__vm__dir_pages LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__offsets_to_vma 0
+GG EK_GLOBALS x86__vm__offsets_to_vma local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 interfaces__shift_left__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__vma_to_offsets 0
+GG EK_GLOBALS x86__vm__vma_to_offsets local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 interfaces__shift_right__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__flush_tlb 0
+GG EK_GLOBALS x86__vm__flush_tlb local TRUE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__print_page 0
+GG EK_GLOBALS x86__vm__print_page local TRUE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 8 interfaces__shift_left__4 console__at_x console__put console__put__2 console__put_hex console__put_hex__2 console__put_size console__set_colour local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm__dump_rec 0
+GG EK_GLOBALS x86__vm__dump_rec local TRUE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 9 interfaces__shift_left__4 console__at_x console__put console__put__2 console__put_hex console__put_hex__2 console__put_size console__set_colour x86__dev__keyboard__has_input local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS x86__vm 0
+GG EK_GLOBALS x86__vm local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 1 x86__vm__dir_pages FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

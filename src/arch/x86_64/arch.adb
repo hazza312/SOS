@@ -29,6 +29,15 @@ package body Arch is
             Volatile => True);
     end IO_Outb;
 
+    function CR3_Address return Physical_Address is 
+        Val: Physical_Address;
+    begin 
+        Asm(    "movq %%cr3, %0", 
+                Outputs     => Physical_Address'Asm_Output("=a", Val),
+                Volatile    => True);
+        return Val;
+    end CR3_Address;
+
 
     procedure Initialise_Interrupts is
         Native_A : Unsigned_64 with Import, External_Name => "x86_dev_pit_8253_handler";

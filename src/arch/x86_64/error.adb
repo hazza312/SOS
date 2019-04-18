@@ -76,15 +76,15 @@ begin
 
 end Exception_Handler;
 
--- procedure lastchance(Msg : String; Line: Integer) is
--- begin
---     Put(Console.LF);
---     Banner("KERNEL PANIC", bg=>Console.Red);
---     Put_Line("Some unknown error occured in");
---     Put("==> ");    Put(Msg);    Put(", line: ");    Put(Line);
+procedure lastchance(Msg : String; Line: Integer) is
+begin
+    Put(Console.LF);
+    Banner("KERNEL PANIC", bg=>Console.Red);
+    Put_Line("Some unknown error occured in");
+    Put("==> ");    Put(Msg);    Put(", line: ");    Put(Line);
 
---     Asm("cli", Volatile=>True);
---     Asm("hlt", Volatile=>True);
--- end lastchance;
+    Asm("cli", Volatile=>True);
+    Asm("hlt", Volatile=>True);
+end lastchance;
 
 end Error;

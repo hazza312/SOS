@@ -20,6 +20,7 @@ package Arch is
 
     function IO_Inb(Port: IO_Port) return Unsigned_8 with Inline_Always;
     procedure IO_Outb(Port: IO_Port; Data: Unsigned_8) with Inline_Always;
+    function CR3_Address return Physical_Address with Inline_Always;
 
    -- package Console is
         -- procedure X(C : Natural);
