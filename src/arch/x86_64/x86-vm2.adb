@@ -72,8 +72,8 @@ package body X86.VM2 is
    function Offsets_To_VMA(T: Table_Offsets) return Virtual_Address is
       Result: Unsigned_64 := 0; 
    begin
-      for Table_Level in Table_Offsets'Range loop 
-         Result := @ or Shift_Left(Unsigned_64(T(Table_Level)) and 511, Shifts(Table_Level));
+      for L in Table_Offsets'Range loop 
+         Result := @ or Shift_Left(Unsigned_64(T(L)) and 511, Shifts(L));
       end loop;
 
       -- TODO: sign extension
@@ -122,19 +122,9 @@ package body X86.VM2 is
       PTE            : Table_Entry;
       Target_Level   : Table_Level      := (if Size = Page_4K then 1 else 2);
    begin
-      for L in reverse Table_Level'Range loop
+      for L in reverse Table_Level'First..Target_Level loop
          PTE := Directories(Current_Table)(Offsets(L));
-
-         if L = Target_Level then
-            if (PTE and PRESENT) /= 0 then
-               Success := False; return;
-            else
-               Directories(Current_Table)(Offsets(L)) 
-                  := Make_Frame_Entry(PA, Flags);
-               Success := True; return;
-            end if;
-
-         elsif (PTE and IS_PAGE) /= 0 then 
+         if (PTE and IS_PAGE) /= 0 then 
             Success := False; return;
 
          elsif (PTE and PRESENT) = 0 then
@@ -150,8 +140,15 @@ package body X86.VM2 is
             Current_Table 
                := Get_Directory_Ref(Directories(Current_Table)(Offsets(L)));
       end loop;
-
-      raise Program_Error;
+      
+      PTE := Directories(Current_Table)(Offsets(Target_Level));
+      if (PTE and PRESENT) = 0 then
+         Directories(Current_Table)(Offsets(Target_Level)) 
+            := Make_Frame_Entry(PA, Flags);
+         Success := True;
+      else 
+         Success := False;
+      end if;
    end;
 
 

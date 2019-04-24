@@ -84,7 +84,7 @@ private
    Pre      => Has_Free_Dir_Page,
 
    Contract_Cases => (
-      Has_Free_Dir_Page =>  ((Page and not REFERENCE) = 0),
+      Has_Free_Dir_Page =>  ((Page mod 4096) = 0),
       others            =>  Page = 0
    );
 

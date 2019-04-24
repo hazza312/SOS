@@ -1,19 +1,19 @@
 Summary of SPARK analysis
 =========================
 
--------------------------------------------------------------------------------------------------------------------
-SPARK Analysis results        Total        Flow   Interval   CodePeer                Provers   Justified   Unproved
--------------------------------------------------------------------------------------------------------------------
-Data Dependencies                 .           .          .          .                      .           .          .
-Flow Dependencies                 .           .          .          .                      .           .          .
-Initialization                   17          17          .          .                      .           .          .
-Non-Aliasing                      .           .          .          .                      .           .          .
-Run-time Checks                   7           .          .          .               7 (CVC4)           .          .
-Assertions                        2           .          .          .               2 (CVC4)           .          .
-Functional Contracts              7           .          .          .    6 (CVC4 93%, Z3 7%)           .          1
-LSP Verification                  .           .          .          .                      .           .          .
--------------------------------------------------------------------------------------------------------------------
-Total                            33    17 (52%)          .          .               15 (45%)           .     1 (3%)
+--------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   Interval   CodePeer     Provers   Justified   Unproved
+--------------------------------------------------------------------------------------------------------
+Data Dependencies                 .           .          .          .           .           .          .
+Flow Dependencies                 .           .          .          .           .           .          .
+Initialization                   21          21          .          .           .           .          .
+Non-Aliasing                      .           .          .          .           .           .          .
+Run-time Checks                   7           .          .          .    7 (CVC4)           .          .
+Assertions                        2           .          .          .    2 (CVC4)           .          .
+Functional Contracts              7           .          .          .    5 (CVC4)           .          2
+LSP Verification                  .           .          .          .           .           .          .
+--------------------------------------------------------------------------------------------------------
+Total                            37    21 (57%)          .          .    14 (38%)           .     2 (5%)
 
 
 Analyzed 17 units
@@ -107,20 +107,20 @@ in unit x86-vm, 1 subprograms and packages out of 11 analyzed
   X86.Vm.VMA_To_Offsets at x86-vm.adb:53 skipped
 in unit x86-vm2, 4 subprograms and packages out of 18 analyzed
   X86.Vm2 at x86-vm2.ads:5 skipped
-  X86.Vm2.Create_Mapping at x86-vm2.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (6 checks)
+  X86.Vm2.Create_Mapping at x86-vm2.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 4 checks out of 5 proved
   X86.Vm2.Dump_Pages at x86-vm2.ads:32 skipped
-  X86.Vm2.Dump_Rec at x86-vm2.adb:234 skipped
+  X86.Vm2.Dump_Rec at x86-vm2.adb:231 skipped
   X86.Vm2.Flags_TypePredicate at x86-vm2.ads:27 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   X86.Vm2.Flush_TLB at x86-vm2.adb:94 skipped
   X86.Vm2.Free_Dir_Page at x86-vm2.adb:66 skipped
   X86.Vm2.Get_Directory_Address at x86-vm2.ads:108 skipped
   X86.Vm2.Get_Directory_Ref at x86-vm2.ads:113 skipped
   X86.Vm2.Get_Frame_Address at x86-vm2.ads:118 skipped
-  X86.Vm2.Get_Free_Dir_Page at x86-vm2.ads:81 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 7 checks out of 8 proved
+  X86.Vm2.Get_Free_Dir_Page at x86-vm2.ads:81 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 8 checks out of 9 proved
   X86.Vm2.Has_Free_Dir_Page at x86-vm2.ads:75 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   X86.Vm2.Initialise at x86-vm2.ads:34 skipped
   X86.Vm2.Make_Directory_Entry at x86-vm2.ads:91 skipped
   X86.Vm2.Make_Frame_Entry at x86-vm2.ads:100 skipped
   X86.Vm2.Offsets_To_VMA at x86-vm2.adb:72 skipped
-  X86.Vm2.Print_Page at x86-vm2.adb:178 skipped
+  X86.Vm2.Print_Page at x86-vm2.adb:175 skipped
   X86.Vm2.VMA_To_Offsets at x86-vm2.adb:83 skipped

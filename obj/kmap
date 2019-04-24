@@ -137,12 +137,12 @@ Discarded input sections
  .debug_line    0x0000000000000000      0x225 /home/harry/Desktop/SOS/obj/x86-vm.o
  .debug_str     0x0000000000000000      0x684 /home/harry/Desktop/SOS/obj/x86-vm.o
  .eh_frame      0x0000000000000000      0x238 /home/harry/Desktop/SOS/obj/x86-vm.o
- .debug_info    0x0000000000000000      0x969 /home/harry/Desktop/SOS/obj/x86-vm2.o
- .debug_abbrev  0x0000000000000000      0x289 /home/harry/Desktop/SOS/obj/x86-vm2.o
+ .debug_info    0x0000000000000000      0x97e /home/harry/Desktop/SOS/obj/x86-vm2.o
+ .debug_abbrev  0x0000000000000000      0x296 /home/harry/Desktop/SOS/obj/x86-vm2.o
  .debug_aranges
                 0x0000000000000000       0x30 /home/harry/Desktop/SOS/obj/x86-vm2.o
- .debug_line    0x0000000000000000      0x26b /home/harry/Desktop/SOS/obj/x86-vm2.o
- .debug_str     0x0000000000000000      0x813 /home/harry/Desktop/SOS/obj/x86-vm2.o
+ .debug_line    0x0000000000000000      0x26e /home/harry/Desktop/SOS/obj/x86-vm2.o
+ .debug_str     0x0000000000000000      0x834 /home/harry/Desktop/SOS/obj/x86-vm2.o
  .eh_frame      0x0000000000000000      0x328 /home/harry/Desktop/SOS/obj/x86-vm2.o
  .debug_info    0x0000000000000000      0x38f /home/harry/Desktop/SOS/obj/kernelinteract.o
  .debug_abbrev  0x0000000000000000      0x115 /home/harry/Desktop/SOS/obj/kernelinteract.o
@@ -186,7 +186,7 @@ LOAD /home/harry/Desktop/SOS/obj/kernelinteract.o
 LOAD libsos.a
                 0x0000000000100000                . = 0x100000
 
-.text           0x0000000000100000     0x5eee
+.text           0x0000000000100000     0x5f0a
  *(.multiboot_header)
  .multiboot_header
                 0x0000000000100000       0x18 init.o
@@ -313,7 +313,7 @@ LOAD libsos.a
                 0x0000000000103e18                x86__vm__map_page
                 0x0000000000103e78                x86__vm__create_mapping
                 0x000000000010468c                x86__vm__dump_pages
- .text          0x0000000000104706      0xcbf /home/harry/Desktop/SOS/obj/x86-vm2.o
+ .text          0x0000000000104706      0xcdb /home/harry/Desktop/SOS/obj/x86-vm2.o
                 0x0000000000104706                x86__vm2__flags_typePredicate
                 0x0000000000104728                x86__vm2__TtableBIP
                 0x0000000000104744                x86__vm2__Tpage_bit_arrayBIP
@@ -328,81 +328,81 @@ LOAD libsos.a
                 0x00000000001048ec                x86__vm2__get_directory_ref
                 0x0000000000104914                x86__vm2__has_free_dir_page
                 0x0000000000104aea                x86__vm2__create_mapping
-                0x0000000000104ca2                x86__vm2__initialise
-                0x000000000010534e                x86__vm2__dump_pages
-                0x00000000001053ba                x86__vm2___elabb
- *fill*         0x00000000001053c5        0x1 
- .text          0x00000000001053c6      0xaf4 /home/harry/Desktop/SOS/obj/kernelinteract.o
-                0x0000000000105474                _ada_kernelinteract
- .text          0x0000000000105eba        0x0 libsos.a(_idt.o)
- .text          0x0000000000105eba       0x18 libsos.a(_syscall.o)
-                0x0000000000105eba                syscall_entry
- .text          0x0000000000105ed2       0x1c libsos.a(fast-handlers.o)
-                0x0000000000105ed2                x86_dev_pit_8253_handler
-                0x0000000000105edc                x86_dev_rtc_handler
+                0x0000000000104cbe                x86__vm2__initialise
+                0x000000000010536a                x86__vm2__dump_pages
+                0x00000000001053d6                x86__vm2___elabb
+ *fill*         0x00000000001053e1        0x1 
+ .text          0x00000000001053e2      0xaf4 /home/harry/Desktop/SOS/obj/kernelinteract.o
+                0x0000000000105490                _ada_kernelinteract
+ .text          0x0000000000105ed6        0x0 libsos.a(_idt.o)
+ .text          0x0000000000105ed6       0x18 libsos.a(_syscall.o)
+                0x0000000000105ed6                syscall_entry
+ .text          0x0000000000105eee       0x1c libsos.a(fast-handlers.o)
+                0x0000000000105eee                x86_dev_pit_8253_handler
+                0x0000000000105ef8                x86_dev_rtc_handler
 
-.rodata         0x0000000000105f00     0x10d8
- .rodata        0x0000000000105f00       0xf0 kernel.o
- *fill*         0x0000000000105ff0       0x10 
- .rodata        0x0000000000106000       0x3c b__kernel.o
-                0x0000000000106000                __gnat_version
-                0x0000000000106030                __gnat_ada_main_program_name
- *fill*         0x000000000010603c        0x4 
- .rodata        0x0000000000106040        0x8 /home/harry/Desktop/SOS/obj/common.o
-                0x0000000000106040                common__null_address
- *fill*         0x0000000000106048        0x8 
- .rodata        0x0000000000106050       0x50 /home/harry/Desktop/SOS/obj/console.o
-                0x0000000000106078                console__width
-                0x000000000010607c                console__height
-                0x0000000000106080                console(long, float)
- .rodata        0x00000000001060a0       0x54 /home/harry/Desktop/SOS/obj/mmap.o
-                0x00000000001060e8                mmap__max_allocations
-                0x00000000001060ec                mmap__head
-                0x00000000001060f0                mmap__tail
- *fill*         0x00000000001060f4        0xc 
- .rodata        0x0000000000106100       0x10 /home/harry/Desktop/SOS/obj/multiboot.o
-                0x0000000000106100                multiboot__memory_typeA
- .rodata        0x0000000000106110       0x60 /home/harry/Desktop/SOS/obj/x86-debug.o
- .rodata        0x0000000000106170       0x10 /home/harry/Desktop/SOS/obj/x86-dev-vga_console.o
-                0x0000000000106170                x86__dev__vga_console__width
-                0x0000000000106174                x86__dev__vga_console__height
- .rodata        0x0000000000106180      0x1a1 /home/harry/Desktop/SOS/obj/x86-interrupts.o
-                0x0000000000106300                x86__interrupts__interruptA
- *fill*         0x0000000000106321        0x7 
- .rodata        0x0000000000106328      0x1a1 /home/harry/Desktop/SOS/obj/x86-dev-rtc.o
-                0x00000000001064c0                x86__dev__rtc__time_unitA
-                0x00000000001064c8                x86__dev__rtc__status_registerA
- *fill*         0x00000000001064c9        0x7 
- .rodata        0x00000000001064d0       0x10 /home/harry/Desktop/SOS/obj/x86-dev-pic_8259a.o
-                0x00000000001064d0                x86__dev__pic_8259a__irq_base
-                0x00000000001064d8                x86__dev__pic_8259a__port
- .rodata        0x00000000001064e0       0x54 /home/harry/Desktop/SOS/obj/x86-dev-keyboard.o
-                0x00000000001064e0                x86__dev__keyboard__null_character
-                0x00000000001064e1                x86__dev__keyboard__backspace
-                0x00000000001064e2                x86__dev__keyboard__tab
-                0x00000000001064e3                x86__dev__keyboard(long, float)
-                0x00000000001064f0                x86__dev__keyboard__num_row
-                0x0000000000106500                x86__dev__keyboard__first_row
-                0x0000000000106510                x86__dev__keyboard__second_row
-                0x0000000000106520                x86__dev__keyboard__third_row
-                0x0000000000106530                x86__dev__keyboard__command_port
-                0x0000000000106532                x86__dev__keyboard__data_port
- *fill*         0x0000000000106534        0x4 
- .rodata        0x0000000000106538       0x70 /home/harry/Desktop/SOS/obj/arch.o
- .rodata        0x00000000001065a8      0x580 /home/harry/Desktop/SOS/obj/error.o
- .rodata        0x0000000000106b28       0x28 /home/harry/Desktop/SOS/obj/syscall.o
- .rodata        0x0000000000106b50      0x120 /home/harry/Desktop/SOS/obj/x86-vm.o
- .rodata        0x0000000000106c70       0xa0 /home/harry/Desktop/SOS/obj/x86-vm2.o
-                0x0000000000106cc8                x86__vm2__directories
-                0x0000000000106cd0                x86__vm2__shifts
- .rodata        0x0000000000106d10      0x2c8 /home/harry/Desktop/SOS/obj/kernelinteract.o
+.rodata         0x0000000000105f20     0x10d8
+ .rodata        0x0000000000105f20       0xf0 kernel.o
+ *fill*         0x0000000000106010       0x10 
+ .rodata        0x0000000000106020       0x3c b__kernel.o
+                0x0000000000106020                __gnat_version
+                0x0000000000106050                __gnat_ada_main_program_name
+ *fill*         0x000000000010605c        0x4 
+ .rodata        0x0000000000106060        0x8 /home/harry/Desktop/SOS/obj/common.o
+                0x0000000000106060                common__null_address
+ *fill*         0x0000000000106068        0x8 
+ .rodata        0x0000000000106070       0x50 /home/harry/Desktop/SOS/obj/console.o
+                0x0000000000106098                console__width
+                0x000000000010609c                console__height
+                0x00000000001060a0                console(long, float)
+ .rodata        0x00000000001060c0       0x54 /home/harry/Desktop/SOS/obj/mmap.o
+                0x0000000000106108                mmap__max_allocations
+                0x000000000010610c                mmap__head
+                0x0000000000106110                mmap__tail
+ *fill*         0x0000000000106114        0xc 
+ .rodata        0x0000000000106120       0x10 /home/harry/Desktop/SOS/obj/multiboot.o
+                0x0000000000106120                multiboot__memory_typeA
+ .rodata        0x0000000000106130       0x60 /home/harry/Desktop/SOS/obj/x86-debug.o
+ .rodata        0x0000000000106190       0x10 /home/harry/Desktop/SOS/obj/x86-dev-vga_console.o
+                0x0000000000106190                x86__dev__vga_console__width
+                0x0000000000106194                x86__dev__vga_console__height
+ .rodata        0x00000000001061a0      0x1a1 /home/harry/Desktop/SOS/obj/x86-interrupts.o
+                0x0000000000106320                x86__interrupts__interruptA
+ *fill*         0x0000000000106341        0x7 
+ .rodata        0x0000000000106348      0x1a1 /home/harry/Desktop/SOS/obj/x86-dev-rtc.o
+                0x00000000001064e0                x86__dev__rtc__time_unitA
+                0x00000000001064e8                x86__dev__rtc__status_registerA
+ *fill*         0x00000000001064e9        0x7 
+ .rodata        0x00000000001064f0       0x10 /home/harry/Desktop/SOS/obj/x86-dev-pic_8259a.o
+                0x00000000001064f0                x86__dev__pic_8259a__irq_base
+                0x00000000001064f8                x86__dev__pic_8259a__port
+ .rodata        0x0000000000106500       0x54 /home/harry/Desktop/SOS/obj/x86-dev-keyboard.o
+                0x0000000000106500                x86__dev__keyboard__null_character
+                0x0000000000106501                x86__dev__keyboard__backspace
+                0x0000000000106502                x86__dev__keyboard__tab
+                0x0000000000106503                x86__dev__keyboard(long, float)
+                0x0000000000106510                x86__dev__keyboard__num_row
+                0x0000000000106520                x86__dev__keyboard__first_row
+                0x0000000000106530                x86__dev__keyboard__second_row
+                0x0000000000106540                x86__dev__keyboard__third_row
+                0x0000000000106550                x86__dev__keyboard__command_port
+                0x0000000000106552                x86__dev__keyboard__data_port
+ *fill*         0x0000000000106554        0x4 
+ .rodata        0x0000000000106558       0x70 /home/harry/Desktop/SOS/obj/arch.o
+ .rodata        0x00000000001065c8      0x580 /home/harry/Desktop/SOS/obj/error.o
+ .rodata        0x0000000000106b48       0x28 /home/harry/Desktop/SOS/obj/syscall.o
+ .rodata        0x0000000000106b70      0x120 /home/harry/Desktop/SOS/obj/x86-vm.o
+ .rodata        0x0000000000106c90       0xa0 /home/harry/Desktop/SOS/obj/x86-vm2.o
+                0x0000000000106ce0                x86__vm2__directories
+                0x0000000000106cf0                x86__vm2__shifts
+ .rodata        0x0000000000106d30      0x2c8 /home/harry/Desktop/SOS/obj/kernelinteract.o
 
-.iplt           0x0000000000106fd8        0x0
- .iplt          0x0000000000106fd8        0x0 init.o
+.iplt           0x0000000000106ff8        0x0
+ .iplt          0x0000000000106ff8        0x0 init.o
 
-.rela.dyn       0x0000000000106fd8        0x0
- .rela.got      0x0000000000106fd8        0x0 init.o
- .rela.iplt     0x0000000000106fd8        0x0 init.o
+.rela.dyn       0x0000000000106ff8        0x0
+ .rela.got      0x0000000000106ff8        0x0 init.o
+ .rela.iplt     0x0000000000106ff8        0x0 init.o
 
 /DISCARD/
  *(.eh_frame)
