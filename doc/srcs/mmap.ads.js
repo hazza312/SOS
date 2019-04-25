@@ -885,27 +885,11 @@ GNATdoc.SourceFile = {
       "kind": "line",
       "number": 26,
       "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "   "
-        },
-        {
-          "kind": "span",
-          "cssClass": "comment",
-          "text": "-- procedure Exclude(Base: Address; Length: Unsigned_64);"
-        }
       ]
     },
     {
       "kind": "line",
       "number": 27,
-      "children": [
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 28,
       "children": [
         {
           "kind": "span",
@@ -916,7 +900,7 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 29,
+      "number": 28,
       "children": [
         {
           "kind": "span",
@@ -927,13 +911,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 30,
+      "number": 29,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 41,
+      "number": 40,
       "children": [
         {
           "kind": "span",

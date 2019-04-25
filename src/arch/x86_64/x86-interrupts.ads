@@ -28,6 +28,69 @@ package X86.Interrupts is
 
     procedure Slow_Handler(IRQ: Interrupt; Handler: System.Address);
     procedure Register_Handler(IRQ: Interrupt; Handler: System.Address);
+    procedure Dump_Mapping;
+
+
+
+
+
+
+
+   -- create a constant ragged array, so we can pretty print the interrupt names
+   DE_Str      : aliased constant String := "Divide by Zero (#DE)";
+   DB_Str      : aliased constant String := "Debug (#DB)";
+   NMI_Str     : aliased constant String := "NMI";
+   BP_Str      : aliased constant String := "Breakpoint (#BP)";
+   OFE_Str     : aliased constant String := "Overflow (#OF)";
+   BR_Str      : aliased constant String := "Bound_Range (#BR)";
+   UD_Str      : aliased constant String := "Invalid Opcode (#UD)";
+   NM_Str      : aliased constant String := "Device Not Available (#NM)";
+   DF_Str      : aliased constant String := "Double Fault (#DF)";
+   TS_Str      : aliased constant String := "Invalid TSS (#TS)";
+   NP_Str      : aliased constant String := "Segment Not Present (#NP)";
+   SS_Str      : aliased constant String := "Stack Exception (#SS)";
+   GP_Str      : aliased constant String := "General Protection Fault (#GP)";
+   PF_Str      : aliased constant String := "Page Fault (#PF)";
+   MF_Str      : aliased constant String := "X87 FP Exception (#MF)";
+   AC_Str      : aliased constant String := "Alignment Check Exception (#AC)";
+   MC_Str      : aliased constant String := "Machine Check Exception (#MC)";
+   XF_Str      : aliased constant String := "SIMD FP Exception (#XF)";
+   VC_Str      : aliased constant String := "VMM Communication Exception (#VC)";
+   SX_Str      : aliased constant String := "Security Exception (#SX)";
+
+   PIT_Str     : aliased constant String := "PIT";
+   KEY_Str     : aliased constant String := "Keyboard";
+   PICS_Str    : aliased constant String := "PIC Slave";
+   COM2_4_Str  : aliased constant String := "Serial COM2/4";
+   COM1_3_Str  : aliased constant String := "Serial COM1/3";
+   LPT2_Str    : aliased constant String := "LPT2";
+   Floppy_Str  : aliased constant String := "Floppy";
+   LPT1_Str    : aliased constant String := "LPT1";
+   RTC_Str     : aliased constant String := "RTC";
+   Mouse_Str   : aliased constant String := "Mouse";
+   Math_Str    : aliased constant String := "Math Coprocessor";
+   HD1_Str     : aliased constant String := "Hard Disk Controller 1";
+   HD2_Str     : aliased constant String := "Hard Disk Controller 2";
+   Other_Str   : aliased constant String := "Unknown";
+
+   -- type Name_Handle is access constant String;
+   Interrupt_Name : array(Interrupt) of access constant String := (
+       DE=>DE_Str'Access,  DB=>DB_Str'Access,  NMI=>NMI_Str'Access,
+       BP=>BP_Str'Access,  OFE=>OFE_Str'Access,BR=>BR_Str'Access,
+       UD=>UD_Str'Access,  NM=>NM_Str'Access,  DF=>DF_Str'Access,
+       TS=>TS_Str'Access,  NP=>NP_Str'Access,  SS=>SS_Str'Access,
+       GP=>GP_Str'Access,  PF=>PF_Str'Access,  MF=>MF_Str'Access,
+       AC=>AC_Str'Access,  MC=>MC_Str'Access,  XF=>XF_Str'Access,
+       VC=>VC_Str'Access,  SX=>SX_Str'Access,  PIT=>PIT_Str'Access,
+       Keyboard=>Key_Str'Access,  PIC_Slave=>PICS_Str'Access,
+       COM2_4=>COM2_4_Str'Access, COM1_3=>COM1_3_Str'Access,
+       LPT2=>LPT2_Str'Access,     Floppy=>Floppy_Str'Access,
+       LPT1=>LPT1_Str'Access,     RTC=>RTC_Str'Access,
+       Mouse=>Mouse_Str'Access,   Math_Coprocessor=>Math_Str'Access,
+       HD1=>HD1_Str'Access,       HD2=>HD2_Str'Access 
+   );
+
+
 
 private
 
@@ -58,7 +121,7 @@ private
     for IDT_Entry'Size use 16*8;
 
 
-    Table : array(Integer range 0..63) of IDT_Entry 
+    Table : array(0..63) of IDT_Entry 
         with Import, Convention => Assembler, External_Name => "IDT";
     for Table'Size use 64*16*8;
 

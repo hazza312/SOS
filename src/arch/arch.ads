@@ -22,6 +22,8 @@ package Arch is
     procedure IO_Outb(Port: IO_Port; Data: Unsigned_8) with Inline_Always;
     function CR3_Address return Physical_Address with Inline_Always;
 
+    procedure Reload_CR3(Address: Physical_Address);
+
    -- package Console is
         -- procedure X(C : Natural);
         -- procedure Put(C : Character);

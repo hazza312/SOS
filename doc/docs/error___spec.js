@@ -11,7 +11,7 @@ GNATdoc.Documentation = {
         {
           "label": "Exception_Handler",
           "qualifier": "",
-          "line": 13,
+          "line": 16,
           "column": 15,
           "src": "srcs/error.ads.html",
           "summary": [
@@ -22,7 +22,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 13,
+                  "number": 16,
                   "children": [
                     {
                       "kind": "span",
@@ -43,13 +43,13 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Exception_Handler",
-                      "href": "docs/error___spec.html#L13C15"
+                      "href": "docs/error___spec.html#L16C15"
                     }
                   ]
                 },
                 {
                   "kind": "line",
-                  "number": 14,
+                  "number": 17,
                   "children": [
                     {
                       "kind": "span",
@@ -70,7 +70,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 15,
+                  "number": 18,
                   "children": [
                     {
                       "kind": "span",
@@ -81,7 +81,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 16,
+                  "number": 19,
                   "children": [
                     {
                       "kind": "span",
@@ -92,7 +92,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 17,
+                  "number": 20,
                   "children": [
                     {
                       "kind": "span",
@@ -113,7 +113,7 @@ GNATdoc.Documentation = {
         {
           "label": "lastchance",
           "qualifier": "",
-          "line": 7,
+          "line": 10,
           "column": 15,
           "src": "srcs/error.ads.html",
           "summary": [
@@ -124,7 +124,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 7,
+                  "number": 10,
                   "children": [
                     {
                       "kind": "span",
@@ -145,7 +145,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "lastchance",
-                      "href": "docs/error___spec.html#L7C15"
+                      "href": "docs/error___spec.html#L10C15"
                     },
                     {
                       "kind": "span",
@@ -156,7 +156,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Msg",
-                      "href": "docs/error___spec.html#L7C26"
+                      "href": "docs/error___spec.html#L10C26"
                     },
                     {
                       "kind": "span",
@@ -192,7 +192,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Line",
-                      "href": "docs/error___spec.html#L7C40"
+                      "href": "docs/error___spec.html#L10C40"
                     },
                     {
                       "kind": "span",
@@ -218,7 +218,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 8,
+                  "number": 11,
                   "children": [
                     {
                       "kind": "span",
@@ -239,7 +239,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 9,
+                  "number": 12,
                   "children": [
                     {
                       "kind": "span",
@@ -250,7 +250,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 10,
+                  "number": 13,
                   "children": [
                     {
                       "kind": "span",
@@ -261,7 +261,7 @@ GNATdoc.Documentation = {
                 },
                 {
                   "kind": "line",
-                  "number": 11,
+                  "number": 14,
                   "children": [
                     {
                       "kind": "span",
@@ -281,7 +281,7 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "Msg",
-              "line": 7,
+              "line": 10,
               "column": 26,
               "type": {
                 "label": "String"
@@ -291,7 +291,7 @@ GNATdoc.Documentation = {
             },
             {
               "label": "Line",
-              "line": 7,
+              "line": 10,
               "column": 40,
               "type": {
                 "label": "Integer"
@@ -304,7 +304,7 @@ GNATdoc.Documentation = {
         {
           "label": "Panic",
           "qualifier": "",
-          "line": 19,
+          "line": 22,
           "column": 15,
           "src": "srcs/error.ads.html",
           "summary": [
@@ -315,7 +315,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 19,
+                  "number": 22,
                   "children": [
                     {
                       "kind": "span",
@@ -336,7 +336,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Panic",
-                      "href": "docs/error___spec.html#L19C15"
+                      "href": "docs/error___spec.html#L22C15"
                     },
                     {
                       "kind": "span",
@@ -347,7 +347,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "S",
-                      "href": "docs/error___spec.html#L19C21"
+                      "href": "docs/error___spec.html#L22C21"
                     },
                     {
                       "kind": "span",
@@ -382,8 +382,161 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "S",
-              "line": 19,
+              "line": 22,
               "column": 21,
+              "type": {
+                "label": "String"
+              },
+              "description": [
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Panic_If",
+          "qualifier": "",
+          "line": 7,
+          "column": 15,
+          "src": "srcs/error.ads.html",
+          "summary": [
+          ],
+          "description": [
+            {
+              "kind": "code",
+              "children": [
+                {
+                  "kind": "line",
+                  "number": 7,
+                  "children": [
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": "    "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "keyword",
+                      "text": "procedure"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Panic_If",
+                      "href": "docs/error___spec.html#L7C15"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "("
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Condition",
+                      "href": "docs/error___spec.html#L7C24"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Boolean"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "S",
+                      "href": "docs/error___spec.html#L7C44"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "String"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ")"
+                    }
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "number": 8,
+                  "children": [
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": "    "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "keyword",
+                      "text": "with"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " Inline"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "label": "Condition",
+              "line": 7,
+              "column": 24,
+              "type": {
+                "label": "Boolean"
+              },
+              "description": [
+              ]
+            },
+            {
+              "label": "S",
+              "line": 7,
+              "column": 44,
               "type": {
                 "label": "String"
               },

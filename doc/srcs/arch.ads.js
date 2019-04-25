@@ -956,12 +956,60 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": "   "
+          "text": "    "
         },
         {
           "kind": "span",
-          "cssClass": "comment",
-          "text": "-- package Console is"
+          "cssClass": "keyword",
+          "text": "procedure"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Reload_CR3",
+          "href": "docs/arch___spec.html#L25C15"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "("
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Address",
+          "href": "docs/arch___spec.html#L25C26"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "Physical_Address",
+          "href": "docs/common___spec.html#L6C10"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ")"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
         }
       ]
     },
@@ -969,16 +1017,6 @@ GNATdoc.SourceFile = {
       "kind": "line",
       "number": 26,
       "children": [
-        {
-          "kind": "span",
-          "cssClass": "text",
-          "text": "        "
-        },
-        {
-          "kind": "span",
-          "cssClass": "comment",
-          "text": "-- procedure X(C : Natural);"
-        }
       ]
     },
     {
@@ -988,12 +1026,12 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": "        "
+          "text": "   "
         },
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Put(C : Character);"
+          "text": "-- package Console is"
         }
       ]
     },
@@ -1009,7 +1047,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Put(S: String);"
+          "text": "-- procedure X(C : Natural);"
         }
       ]
     },
@@ -1025,7 +1063,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Put(N : Unsigned_64);"
+          "text": "-- procedure Put(C : Character);"
         }
       ]
     },
@@ -1041,7 +1079,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Put_Int(N : Integer);"
+          "text": "-- procedure Put(S: String);"
         }
       ]
     },
@@ -1057,7 +1095,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Put_Hex(N: Positive);"
+          "text": "-- procedure Put(N : Unsigned_64);"
         }
       ]
     },
@@ -1073,7 +1111,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Put_Size(s: Unsigned_64);"
+          "text": "-- procedure Put_Int(N : Integer);"
         }
       ]
     },
@@ -1089,7 +1127,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Put_Line(S: String);    "
+          "text": "-- procedure Put_Hex(N: Positive);"
         }
       ]
     },
@@ -1105,13 +1143,45 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "comment",
-          "text": "-- procedure Banner(S : String); "
+          "text": "-- procedure Put_Size(s: Unsigned_64);"
         }
       ]
     },
     {
       "kind": "line",
       "number": 35,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Put_Line(S: String);    "
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 36,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- procedure Banner(S : String); "
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 37,
       "children": [
         {
           "kind": "span",
@@ -1127,18 +1197,6 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 36,
-      "children": [
-      ]
-    },
-    {
-      "kind": "line",
-      "number": 37,
-      "children": [
-      ]
-    },
-    {
-      "kind": "line",
       "number": 38,
       "children": [
       ]
@@ -1146,6 +1204,18 @@ GNATdoc.SourceFile = {
     {
       "kind": "line",
       "number": 39,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 40,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 41,
       "children": [
         {
           "kind": "span",

@@ -23,7 +23,6 @@ package MMap is
 
    function Get_Base return Address;
    function Get_Length return Unsigned_64;
-   -- procedure Exclude(Base: Address; Length: Unsigned_64);
 
     
 private

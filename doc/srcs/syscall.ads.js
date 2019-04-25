@@ -88,12 +88,23 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "("
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 4,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
         },
         {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Test",
-          "href": "docs/syscall___spec.html#L3C26"
+          "href": "docs/syscall___spec.html#L4C9"
         },
         {
           "kind": "span",
@@ -103,13 +114,29 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": " "
+          "text": "   "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- TEST CALL"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 5,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
         },
         {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Read",
-          "href": "docs/syscall___spec.html#L3C32"
+          "href": "docs/syscall___spec.html#L5C9"
         },
         {
           "kind": "span",
@@ -119,13 +146,50 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "text",
-          "text": " "
+          "text": "   "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- READ"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 6,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "        "
         },
         {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Write",
-          "href": "docs/syscall___spec.html#L3C38"
+          "href": "docs/syscall___spec.html#L6C9"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "  "
+        },
+        {
+          "kind": "span",
+          "cssClass": "comment",
+          "text": "-- WRITE"
+        }
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 7,
+      "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "    "
         },
         {
           "kind": "span",
@@ -142,13 +206,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 4,
+      "number": 8,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 5,
+      "number": 9,
       "children": [
         {
           "kind": "span",
@@ -169,7 +233,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Handle",
-          "href": "docs/syscall___spec.html#L5C15"
+          "href": "docs/syscall___spec.html#L9C15"
         },
         {
           "kind": "span",
@@ -180,7 +244,7 @@ GNATdoc.SourceFile = {
           "kind": "span",
           "cssClass": "identifier",
           "text": "Call",
-          "href": "docs/syscall___spec.html#L5C22"
+          "href": "docs/syscall___spec.html#L9C22"
         },
         {
           "kind": "span",
@@ -212,13 +276,13 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 6,
+      "number": 10,
       "children": [
       ]
     },
     {
       "kind": "line",
-      "number": 7,
+      "number": 11,
       "children": [
         {
           "kind": "span",

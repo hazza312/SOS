@@ -1248,7 +1248,7 @@ GNATdoc.Documentation = {
         {
           "label": "Banner",
           "qualifier": "",
-          "line": 43,
+          "line": 44,
           "column": 15,
           "src": "srcs/console.ads.html",
           "summary": [
@@ -1259,7 +1259,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 43,
+                  "number": 44,
                   "children": [
                     {
                       "kind": "span",
@@ -1280,7 +1280,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Banner",
-                      "href": "docs/console___spec.html#L43C15"
+                      "href": "docs/console___spec.html#L44C15"
                     },
                     {
                       "kind": "span",
@@ -1291,7 +1291,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "S",
-                      "href": "docs/console___spec.html#L43C22"
+                      "href": "docs/console___spec.html#L44C22"
                     },
                     {
                       "kind": "span",
@@ -1327,7 +1327,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "FG",
-                      "href": "docs/console___spec.html#L43C34"
+                      "href": "docs/console___spec.html#L44C34"
                     },
                     {
                       "kind": "span",
@@ -1379,7 +1379,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "BG",
-                      "href": "docs/console___spec.html#L43C55"
+                      "href": "docs/console___spec.html#L44C55"
                     },
                     {
                       "kind": "span",
@@ -1430,7 +1430,7 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "S",
-              "line": 43,
+              "line": 44,
               "column": 22,
               "type": {
                 "label": "String"
@@ -1440,7 +1440,7 @@ GNATdoc.Documentation = {
             },
             {
               "label": "FG",
-              "line": 43,
+              "line": 44,
               "column": 34,
               "type": {
                 "label": "Console.Colour",
@@ -1451,7 +1451,7 @@ GNATdoc.Documentation = {
             },
             {
               "label": "BG",
-              "line": 43,
+              "line": 44,
               "column": 55,
               "type": {
                 "label": "Console.BG_Colour",
@@ -1465,7 +1465,7 @@ GNATdoc.Documentation = {
         {
           "label": "Clear",
           "qualifier": "",
-          "line": 45,
+          "line": 46,
           "column": 15,
           "src": "srcs/console.ads.html",
           "summary": [
@@ -1476,7 +1476,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 45,
+                  "number": 46,
                   "children": [
                     {
                       "kind": "span",
@@ -1497,7 +1497,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Clear",
-                      "href": "docs/console___spec.html#L45C15"
+                      "href": "docs/console___spec.html#L46C15"
                     },
                     {
                       "kind": "span",
@@ -1700,168 +1700,6 @@ GNATdoc.Documentation = {
         {
           "label": "Put",
           "qualifier": "",
-          "line": 37,
-          "column": 15,
-          "src": "srcs/console.ads.html",
-          "summary": [
-          ],
-          "description": [
-            {
-              "kind": "code",
-              "children": [
-                {
-                  "kind": "line",
-                  "number": 37,
-                  "children": [
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": "    "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "keyword",
-                      "text": "procedure"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Put",
-                      "href": "docs/console___spec.html#L37C15"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "("
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "N",
-                      "href": "docs/console___spec.html#L37C19"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ":"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Unsigned_64"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ";"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Base",
-                      "href": "docs/console___spec.html#L37C36"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ":"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": "Unsigned_64"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ":="
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "text",
-                      "text": " "
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "number",
-                      "text": "10"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ")"
-                    },
-                    {
-                      "kind": "span",
-                      "cssClass": "identifier",
-                      "text": ";"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "label": "N",
-              "line": 37,
-              "column": 19,
-              "type": {
-                "label": "Unsigned_64"
-              },
-              "description": [
-              ]
-            },
-            {
-              "label": "Base",
-              "line": 37,
-              "column": 36,
-              "type": {
-                "label": "Unsigned_64"
-              },
-              "description": [
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Put",
-          "qualifier": "",
           "line": 38,
           "column": 15,
           "src": "srcs/console.ads.html",
@@ -1925,7 +1763,63 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Integer"
+                      "text": "Unsigned_64"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Base",
+                      "href": "docs/console___spec.html#L38C36"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Unsigned_64"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":="
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "number",
+                      "text": "10"
                     },
                     {
                       "kind": "span",
@@ -1948,7 +1842,17 @@ GNATdoc.Documentation = {
               "line": 38,
               "column": 19,
               "type": {
-                "label": "Integer"
+                "label": "Unsigned_64"
+              },
+              "description": [
+              ]
+            },
+            {
+              "label": "Base",
+              "line": 38,
+              "column": 36,
+              "type": {
+                "label": "Unsigned_64"
               },
               "description": [
               ]
@@ -1956,7 +1860,7 @@ GNATdoc.Documentation = {
           ]
         },
         {
-          "label": "Put_Hex",
+          "label": "Put",
           "qualifier": "",
           "line": 39,
           "column": 15,
@@ -1989,7 +1893,7 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Put_Hex",
+                      "text": "Put",
                       "href": "docs/console___spec.html#L39C15"
                     },
                     {
@@ -2001,7 +1905,12 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "N",
-                      "href": "docs/console___spec.html#L39C23"
+                      "href": "docs/console___spec.html#L39C19"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
                     },
                     {
                       "kind": "span",
@@ -2016,7 +1925,7 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Unsigned_64"
+                      "text": "Integer"
                     },
                     {
                       "kind": "span",
@@ -2037,9 +1946,115 @@ GNATdoc.Documentation = {
             {
               "label": "N",
               "line": 39,
-              "column": 23,
+              "column": 19,
               "type": {
-                "label": "Unsigned_64"
+                "label": "Integer"
+              },
+              "description": [
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Put_C",
+          "qualifier": "",
+          "line": 37,
+          "column": 15,
+          "src": "srcs/console.ads.html",
+          "summary": [
+          ],
+          "description": [
+            {
+              "kind": "code",
+              "children": [
+                {
+                  "kind": "line",
+                  "number": 37,
+                  "children": [
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": "    "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "keyword",
+                      "text": "procedure"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Put_C",
+                      "href": "docs/console___spec.html#L37C15"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "("
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "S",
+                      "href": "docs/console___spec.html#L37C21"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "String"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ")"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "keyword",
+                      "text": "with"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " Export, Convention => C, External_Name => \"put_str\""
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "label": "S",
+              "line": 37,
+              "column": 21,
+              "type": {
+                "label": "String"
               },
               "description": [
               ]
@@ -2107,8 +2122,7 @@ GNATdoc.Documentation = {
                     {
                       "kind": "span",
                       "cssClass": "identifier",
-                      "text": "Address",
-                      "href": "docs/common___spec.html#L5C10"
+                      "text": "Unsigned_64"
                     },
                     {
                       "kind": "span",
@@ -2131,6 +2145,98 @@ GNATdoc.Documentation = {
               "line": 40,
               "column": 23,
               "type": {
+                "label": "Unsigned_64"
+              },
+              "description": [
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Put_Hex",
+          "qualifier": "",
+          "line": 41,
+          "column": 15,
+          "src": "srcs/console.ads.html",
+          "summary": [
+          ],
+          "description": [
+            {
+              "kind": "code",
+              "children": [
+                {
+                  "kind": "line",
+                  "number": 41,
+                  "children": [
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": "    "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "keyword",
+                      "text": "procedure"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Put_Hex",
+                      "href": "docs/console___spec.html#L41C15"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "("
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "N",
+                      "href": "docs/console___spec.html#L41C23"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Address",
+                      "href": "docs/common___spec.html#L5C10"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ")"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "label": "N",
+              "line": 41,
+              "column": 23,
+              "type": {
                 "label": "Common.Address",
                 "docHref": "docs/common___spec.html#L5C10"
               },
@@ -2142,7 +2248,7 @@ GNATdoc.Documentation = {
         {
           "label": "Put_Line",
           "qualifier": "",
-          "line": 42,
+          "line": 43,
           "column": 15,
           "src": "srcs/console.ads.html",
           "summary": [
@@ -2153,7 +2259,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 42,
+                  "number": 43,
                   "children": [
                     {
                       "kind": "span",
@@ -2174,7 +2280,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Put_Line",
-                      "href": "docs/console___spec.html#L42C15"
+                      "href": "docs/console___spec.html#L43C15"
                     },
                     {
                       "kind": "span",
@@ -2185,7 +2291,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "S",
-                      "href": "docs/console___spec.html#L42C24"
+                      "href": "docs/console___spec.html#L43C24"
                     },
                     {
                       "kind": "span",
@@ -2220,7 +2326,7 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "S",
-              "line": 42,
+              "line": 43,
               "column": 24,
               "type": {
                 "label": "String"
@@ -2233,7 +2339,7 @@ GNATdoc.Documentation = {
         {
           "label": "Put_Size",
           "qualifier": "",
-          "line": 41,
+          "line": 42,
           "column": 15,
           "src": "srcs/console.ads.html",
           "summary": [
@@ -2244,7 +2350,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 41,
+                  "number": 42,
                   "children": [
                     {
                       "kind": "span",
@@ -2265,7 +2371,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Put_Size",
-                      "href": "docs/console___spec.html#L41C15"
+                      "href": "docs/console___spec.html#L42C15"
                     },
                     {
                       "kind": "span",
@@ -2276,7 +2382,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "N",
-                      "href": "docs/console___spec.html#L41C24"
+                      "href": "docs/console___spec.html#L42C24"
                     },
                     {
                       "kind": "span",
@@ -2311,7 +2417,7 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "N",
-              "line": 41,
+              "line": 42,
               "column": 24,
               "type": {
                 "label": "Unsigned_64"
@@ -2324,7 +2430,7 @@ GNATdoc.Documentation = {
         {
           "label": "Set_Colour",
           "qualifier": "",
-          "line": 44,
+          "line": 45,
           "column": 15,
           "src": "srcs/console.ads.html",
           "summary": [
@@ -2335,7 +2441,7 @@ GNATdoc.Documentation = {
               "children": [
                 {
                   "kind": "line",
-                  "number": 44,
+                  "number": 45,
                   "children": [
                     {
                       "kind": "span",
@@ -2356,7 +2462,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "Set_Colour",
-                      "href": "docs/console___spec.html#L44C15"
+                      "href": "docs/console___spec.html#L45C15"
                     },
                     {
                       "kind": "span",
@@ -2367,7 +2473,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "FG",
-                      "href": "docs/console___spec.html#L44C26"
+                      "href": "docs/console___spec.html#L45C26"
                     },
                     {
                       "kind": "span",
@@ -2419,7 +2525,7 @@ GNATdoc.Documentation = {
                       "kind": "span",
                       "cssClass": "identifier",
                       "text": "BG",
-                      "href": "docs/console___spec.html#L44C47"
+                      "href": "docs/console___spec.html#L45C47"
                     },
                     {
                       "kind": "span",
@@ -2475,7 +2581,7 @@ GNATdoc.Documentation = {
           "parameters": [
             {
               "label": "FG",
-              "line": 44,
+              "line": 45,
               "column": 26,
               "type": {
                 "label": "Console.Colour",
@@ -2486,7 +2592,7 @@ GNATdoc.Documentation = {
             },
             {
               "label": "BG",
-              "line": 44,
+              "line": 45,
               "column": 47,
               "type": {
                 "label": "Console.BG_Colour",

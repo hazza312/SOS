@@ -34,6 +34,7 @@ package Console is
     procedure At_X(X : Natural);
     procedure Put(C : Character);
     procedure Put(S: String);
+    procedure Put_C(S: String) with Export, Convention => C, External_Name => "put_str";
     procedure Put(N : Unsigned_64; Base : Unsigned_64 := 10);
     procedure Put(N : Integer);
     procedure Put_Hex(N: Unsigned_64);

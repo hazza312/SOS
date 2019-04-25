@@ -9,7 +9,7 @@ project Sos is
    Mode: Mode_Type := external ("mode", "release");
    Tool := External ("GPR_TOOL", "none");
 
-   for Languages use ("Ada", "Asm");
+   for Languages use ("Ada", "Asm", "C");
    for Source_Dirs use ("src", "src/arch", "src/arch/" & Architecture, 
       "src/arch/" & Architecture & "/dev");
 
@@ -43,6 +43,8 @@ project Sos is
       for Switches("error.adb") use Ada_Switches & ("-fomit-frame-pointer");
       for Switches("syscall.adb") use Ada_Switches & ("-fomit-frame-pointer");
       for Default_Switches ("Ada") use Ada_Switches;
+      for Default_Switches ("C") use ("-nostartfiles", "-nodefaultlibs", "-nostdlib",
+         "-mno-red-zone");
    end Compiler;
 
    package Builder is

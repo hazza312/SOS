@@ -1,5 +1,6 @@
 with Interfaces; use Interfaces;
 with Common; use Common;
+with Arch; use Arch;
 
 package body console is
 
@@ -30,6 +31,7 @@ package body console is
    end Clear;
 
    procedure Put(C: Character) is
+      P : Unsigned_16;
    begin
       if c /= LF then
          VMem(Y,X) := (fg => Current_FG, bg =>Current_BG, c => c);
@@ -46,6 +48,15 @@ package body console is
             Shift_Lines;
          end if;
       end if;
+
+      P := Unsigned_16(Y) * Unsigned_16(WIDTH) + Unsigned_16(X);
+
+      IO_Outb(16#3D4#, 16#F#);
+      IO_Outb(16#3D5#, Unsigned_8(P and 16#ff#));
+
+      IO_Outb(16#3D4#, 16#E#);
+      IO_Outb(16#3D5#, Unsigned_8( Shift_Right(P, 8) and 16#ff#));
+
    end Put;
 
 
@@ -56,6 +67,11 @@ package body console is
          Put(c);
       end loop;
    end Put;
+
+   procedure Put_C(S: String) is
+   begin
+      Put(S);
+   end Put_C;
 
 
    procedure Put_Line(S: String) is

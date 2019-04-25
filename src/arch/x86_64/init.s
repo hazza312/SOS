@@ -59,12 +59,12 @@ stack_end:
         .align     0x1000                            # align on a page boundary 
 
 GDT:    /**********  base limit    code A RW EC DPL P AVL L DB G */    
-.0x00$: GDT_Entry    0    0        0    0 0  0  0   0 0   0 0  0        # null
-.0x08$: GDT_Entry    0    0        0    0 0  0  0   0 0   0 0  0        # null
-.0x10$: GDT_Entry    0    0xf0000  1    0 1  0  0   1 0   1 0  1        # CPL0
-.0x18$: GDT_Entry    0    0        0    0 1  0  0   1 0   1 0  1        # CPL0
-.0x20$: GDT_Entry    0    0xf0000  1    0 1  0  3   1 0   1 0  1        # CPL3
-.0x28$: GDT_Entry    0    0        0    0 1  0  3   1 0   1 0  1        # CPL3
+.0x00$: GDT_Entry    0    0xffffff  0    0 0  0  0   0 0   1 0  0        # null
+.0x08$: GDT_Entry    0    0xffffff  0    0 0  0  0   0 0   1 0  0        # null
+.0x10$: GDT_Entry    0    0xffffff  1    0 1  0  0   1 0   1 0  1        # CPL0
+.0x18$: GDT_Entry    0    0xffffff  0    0 1  0  0   1 0   1 0  1        # CPL0
+.0x20$: GDT_Entry    0    0xffffff  1    0 1  0  3   1 0   1 0  1        # CPL3
+.0x28$: GDT_Entry    0    0xffffff  0    0 1  0  3   1 0   1 0  1        # CPL3
 
         .equ    tss_base, 0x12b080 
 
@@ -119,13 +119,13 @@ _entry:
         movl     %ebx, (bootinfo)
 
 .disable_blinky_cursor:                         # just as important as paging
-        movb     $0xA, %al                      # TODO: move elsewhere
-        movw     $0x3D4, %dx
-        out      %al, %dx
+ #       movb     $0xA, %al                      # TODO: move elsewhere
+  #      movw     $0x3D4, %dx
+   #     out      %al, %dx
 
-        movb     $0x20, %al
-        movw     $0x3D5, %dx
-        out      %al, %dx
+    #    movb     $0x20, %al
+    #    movw     $0x3D5, %dx
+    #    out      %al, %dx
                                                 
 .init_page_tables:
                                              # see P135 in AMD64SP
@@ -170,7 +170,7 @@ next:   lidt    idtinfo
                                         # setup syscall/sysret before kerneling
         # load STAR
         movq    $MSR_STAR, %rcx        
-        .equ    SYSRET_CS,      ((0x00 << 3) | 3)
+        .equ    SYSRET_CS,      ((0x20 << 3) | 3)
         .equ    SYSCALL_CS,     (0x10 << 3)
         rdmsr
         movq   $0xffffffffffffffff, %rdi # todo change

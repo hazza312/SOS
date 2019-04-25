@@ -621,15 +621,6 @@ GNATdoc.Documentation = {
                   ]
                 }
               ]
-            },
-            {
-              "kind": "paragraph",
-              "children": [
-                {
-                  "kind": "span",
-                  "text": "procedure Exclude(Base: Address; Length: Unsigned_64);\n"
-                }
-              ]
             }
           ]
         },

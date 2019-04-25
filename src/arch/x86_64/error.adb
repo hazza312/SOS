@@ -2,8 +2,16 @@ with Console; use Console;
 with Interfaces; use Interfaces;
 with System.Machine_Code; use System.Machine_Code;
 with X86.Interrupts; use X86.Interrupts;
+with X86.Dev.Keyboard;
 
 package body Error is 
+
+procedure Panic_If(Condition: Boolean; S: String) is
+begin   
+    if Condition then 
+        Panic(S);
+    end if;
+end Panic_If;
 
 procedure Panic(S: String) is 
 begin 
@@ -16,64 +24,40 @@ end Panic;
 
 procedure Exception_Handler is
     V : Interrupt;
-    A : Unsigned_64;
 begin 
     Asm("movb %%al, %0", Outputs => Interrupt'Asm_Output("=g", V), Volatile=>True);
+    Asm("cli", Volatile=>True);
     Put(LF);
 
-    if V in CPU_Exception then 
+    if not V'Valid then 
+        Banner("???", bg=>Console.Red);
+        Put("Some impossible event occured (unknown interrupt/exception): ");
+
+    elsif V in CPU_Exception then 
         Banner("CPU EXCEPTION", bg=>Console.Red);
         Put("Some uncaught exception occured: ");
+        Put(Interrupt_Name(V).all);
+
     else 
-        Banner("Unhandled Interrupt", bg=>Console.Red);
+        Banner("UNHANDLED INTERRUPT", bg=>Console.Red);
         Put("Some unhandled (external) interrupt occured: ");
+        Put(Interrupt_Name(V).all);
     end if;
+    Put(" -> ");    Put_Hex(Unsigned_64(Interrupt'Enum_Rep(V)));
+    Put(LF);
+
     
-    Put_Hex(Unsigned_64(Interrupt'Enum_Rep(V)));
-    Put(" -> ");
+    Put_Line("Halted.");
+    Asm("hlt", Volatile => True);
+    
+    -- Asm("sti");
+    -- Put_Line("Press any key to restart..");
+    -- X86.Dev.Keyboard.Flush;
+    -- while not X86.Dev.Keyboard.Has_Input loop null; end loop;
+    -- Put_Line("ok");
 
-    case V is
-        when DE      => Put_Line("Divide by Zero (#DE)");
-        when DB      => Put_Line("Debug (#DB)");
-        when NMI     => Put_Line("NMI");
-        when BP      => Put_Line("Breakpoint (#BP)");
-        when OFE     => Put_Line("Overflow (#OF)");
-        when BR      => Put_Line("Bound_Range (#BR)");
-        when UD      => Put_Line("Invalid Opcode (#UD)");
-        when NM      => Put_Line("Device Not Available (#NM)");
-        when DF      => Put_Line("Double Fault (#DF)");
-        when TS      => Put_Line("Invalid TSS (#TS)");
-        when NP      => Put_Line("Segment Not Present (#NP)");
-        when SS      => Put_Line("Stack Exception (#SS)");
-        when GP      => Put_Line("General Protection Fault (#GP)");
-        when PF      => Put_Line("Page Fault (#PF)");
-                        Asm("pop %0", Outputs => Unsigned_64'Asm_Output("=g", A), Volatile => True);
-                        Put_Hex(A); Put(LF);
-        when MF      => Put_Line("X87 FP Exception (#MF)");
-        when AC      => Put_Line("Alignment Check Exception (#AC)");
-        when MC      => Put_Line("Machine Check Exception (#MC)");
-        when XF      => Put_Line("SIMD FP Exception (#XF)");
-        when VC      => Put_Line("VMM Communication Exception (#VC)");
-        when SX      => Put_Line("Security Exception (#SX)");
-
-        when PIT                => Put_Line("PIT");
-        when Keyboard           => Put_Line("Keyboard");
-        when PIC_Slave          => Put_Line("PIC Slave");
-        when COM2_4             => Put_Line("Serial COM2/4");
-        when COM1_3             => Put_Line("Serial COM1/3");
-        when LPT2               => Put_Line("LPT2");
-        when Floppy             => Put_Line("Floppy");
-        when LPT1               => Put_Line("LPT1");
-        when RTC                => Put_Line("Real Time Clock");
-        when Mouse              => Put_Line("Mouse");
-        when Math_Coprocessor   => Put_Line("Math Coprocessor");
-        when HD1                => Put_Line("Hard Disk Controller 1");
-        when HD2                => Put_Line("Hard Disk Controller 2");
-        when others             => Put_Line("unknown");
-    end case;
-    Asm("cli", Volatile=>True);
-    Asm("hlt", Volatile=>True);
-
+    -- Asm("movq $0xdeadbeef, %%rax" & ASCII.LF &
+    --     "movq %%rax, %%cr3", Volatile=>True);
 end Exception_Handler;
 
 procedure lastchance(Msg : String; Line: Integer) is

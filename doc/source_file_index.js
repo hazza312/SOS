@@ -72,10 +72,6 @@ GNATdoc.SourceFileIndex = [
     "srcHref": "srcs/x86-vm.ads.html"
   },
   {
-    "label": "x86-vm2.ads",
-    "srcHref": "srcs/x86-vm2.ads.html"
-  },
-  {
     "label": "x86.ads",
     "srcHref": "srcs/x86.ads.html"
   }

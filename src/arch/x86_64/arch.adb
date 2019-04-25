@@ -45,13 +45,13 @@ package body Arch is
         Native_C : Unsigned_64 with Import, External_Name => "x86_dev_rtc_handler";
     begin 
         X86.Dev.Pic_8259A.Initialise;
-        Asm("sti", Volatile=>True);
 
 -- PIT 8253A
         Put("-> registering PIT 8253A @IRQ ");  
             Put_Hex(Unsigned_64(Interrupt'Enum_Rep(PIT)));   
             Put(LF);
         X86.Interrupts.Register_Handler(PIT, Native_A'Address);
+        Asm("sti", Volatile=>True);
         
         -- Put("-> testing PIT 8253A ");
         -- X86.Dev.Pit_8253.Reset;
@@ -74,27 +74,12 @@ package body Arch is
         X86.Interrupts.Register_Handler(RTC, Native_C'Address);
         X86.Dev.RTC.Initialise;
 
-        -- Put("-> testing PIT 8253A ..");
+        -- Put("-> testing RTC ........");
         -- for I in 0..4 loop 
         --     while I >= Integer(X86.Dev.RTC.Get_Ticks) loop null; end loop;
         --     Put("..........");
         -- end loop;
-        -- Put_Line(" done");
-        
--- done
-        -- At_X(0);    Put("-> PIT ticks:");
-        -- At_X(24);   Put("Keyboard ticks:");
-        -- At_X(47);   Put("RTC Seconds:");
-
-        -- loop 
-        --     Set_Colour(bg => Light_Magenta, fg=>White);
-        --     At_X(14); Put(X86.Dev.Pit_8253.Get_Ticks);
-        --     At_X(40); Put(X86.Dev.Keyboard.Get_Ticks);
-        --     At_X(60); Put(X86.Dev.RTC.Get_Ticks/2);
-        --     At_X(70); Put(X86.Dev.Keyboard.Buffer);
-        -- end loop;
-
-        
+        -- Put_Line(" done");        
         
     end Initialise_Interrupts;  
 
@@ -144,5 +129,17 @@ package body Arch is
             end;     
         end loop;       
     end Scout_Memory;
+
+
+   procedure Reload_CR3(Address: Physical_Address) is 
+   begin 
+   Asm(  "movq %0, %%rax" & LF &
+         "movq %%rax, %%cr3",
+         Inputs => Physical_Address'Asm_Input("g", Address),
+         Clobber => ("rax"),
+         Volatile => True
+   );
+
+    end Reload_CR3;
 
 end Arch;

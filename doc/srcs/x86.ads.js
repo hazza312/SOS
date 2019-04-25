@@ -347,7 +347,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "number",
-          "text": "100_000"
+          "text": "0"
         },
         {
           "kind": "span",
@@ -424,7 +424,7 @@ GNATdoc.SourceFile = {
         {
           "kind": "span",
           "cssClass": "number",
-          "text": "100_000"
+          "text": "200_000"
         },
         {
           "kind": "span",
@@ -608,11 +608,93 @@ GNATdoc.SourceFile = {
       "kind": "line",
       "number": 16,
       "children": [
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "    "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "UNRESERVED_BASE",
+          "href": "docs/x86___spec.html#L16C5"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": "     "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "keyword",
+          "text": "constant"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ":="
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "PD_POOL_BASE"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "+"
+        },
+        {
+          "kind": "span",
+          "cssClass": "text",
+          "text": " "
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": "PD_POOL_SIZE"
+        },
+        {
+          "kind": "span",
+          "cssClass": "identifier",
+          "text": ";"
+        }
       ]
     },
     {
       "kind": "line",
       "number": 17,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 18,
       "children": [
         {
           "kind": "span",
@@ -628,12 +710,6 @@ GNATdoc.SourceFile = {
     },
     {
       "kind": "line",
-      "number": 18,
-      "children": [
-      ]
-    },
-    {
-      "kind": "line",
       "number": 19,
       "children": [
       ]
@@ -641,6 +717,12 @@ GNATdoc.SourceFile = {
     {
       "kind": "line",
       "number": 20,
+      "children": [
+      ]
+    },
+    {
+      "kind": "line",
+      "number": 21,
       "children": [
         {
           "kind": "span",

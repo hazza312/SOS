@@ -2,94 +2,132 @@ with Interfaces; use Interfaces;
 with Arch; use Arch;
 with Common; use Common;
 
-package X86.Vm is 
+package X86.Vm 
+   with SPARK_Mode, Elaborate_Body
+is 
+   TABLE_SIZE     : constant := 4_096;
 
-   -- public constants & types
+---PAGE TABLE ENTRY MASKS------------------------------------------------------- 
+
+   PRESENT        : constant := 2#1#;
+   WRITEABLE      : constant := 2#10#;
+   USER           : constant := 2#100#;
+   WRITETHROUGH   : constant := 2#1000#;
+   CACHE_DISABLE  : constant := 2#1_0000#;
+   ACCESSED       : constant := 2#10_0000#;
+   DIRTY          : constant := 2#100_0000#;
+   IS_PAGE        : constant := 2#1000_0000#;
+   GLOBAL         : constant := 2#1_0000_0000#;
+   REFERENCE      : constant := (2**52 -1) - (2**12 -1);
+
+---PUBLIC TYPES-----------------------------------------------------------------
+
    type Page_Size is (Page_4K, Page_2M);
+   type Table_Level is range 1..4;
+   type Flags_Type is new Unsigned_64
+      with Predicate => (Flags_Type and REFERENCE) = 0;
+   type Directory_Ref is range 0..(X86.PD_POOL_SIZE / TABLE_SIZE) -1;
 
 
-   -- TODO: generalise, uses %cr3 now (take PML4 base parameter for other roots?)
-   procedure Dump_Pages;
+---PUBLIC SUBPROGRAMS-----------------------------------------------------------
 
-   -- TODO: extend the setting of flags
-   -- TODO: separate Virtual_Address subtype?
-   function Map_Page(   PML4:    Physical_Address; 
-                        VMA:     Virtual_Address; 
-                        PA:      Physical_Address;
-                        Size:    Page_Size) 
-                        return Boolean;
-
-  
-private
-   TABLE_SIZE           : constant := 2#1000#;
-
-   -- PRESENT_MASK         : constant := 2#1#;
-   -- WRITEABLE_MASK       : constant := 2#10#;
-   -- USER_MASK            : constant := 2#100#;
-   -- WRITETHROUGH_MASK    : constant := 2#1000#;
-   -- CACHE_DISABLE_MASK   : constant := 2#1_0000#;
-   -- ACCESSED_MASK        : constant := 2#10_0000#;
-   -- DIRTY_MASK           : constant := 2#100_0000#;
-   -- PAGE_SIZE_MASK       : constant := 2#1000_0000#;
-   -- GLOBAL_MASK          : constant := 2#1_0000_0000#;
-
-
-
-   type Level is range 1..4;
-   type Entry_Index is mod 512; 
-   type Table_Offsets is array(Level) of Entry_Index;
-   type Address_4K_Truncate is mod 2 ** 41;
-   type Entry_Type is (Page_Table_Ref, Physical_Page_Ref);
-   type Table_Ref is new Unsigned_64;
-
-   type Tables is array(Level) of Address;
-
-   type Page_Table_Entry is record
-      No_Execute:     Boolean;
-      Used_Entries:   Integer range 0..512;
-      Reference:      Address_4K_Truncate;
-      Available:      Integer range 0..7;
-      Global:         Boolean;
-      Page_Size:      Boolean;
-      Dirty:          Boolean;
-      Accessed:       Boolean;
-      Cache_Disable:  Boolean;
-      Writethrough:   Boolean;
-      User_Access:    Boolean;
-      Writeable:      Boolean;
-      Present:        Boolean;
-   end record
-      -- the following combinations of bits are invalid.
-      with Dynamic_Predicate => 
-         not ((Dirty xor Page_Size) or (Global xor Page_Size));
-
-   for Page_Table_Entry use record 
-      Present         at 0 range 0..0;
-      Writeable       at 0 range 1..1;
-      User_Access     at 0 range 2..2;
-      Writethrough    at 0 range 3..3;
-      Cache_Disable   at 0 range 4..4;
-      Accessed        at 0 range 5..5;
-      Dirty           at 0 range 6..6;
-      Page_Size       at 0 range 7..7;
-      Global          at 1 range 0..0;
-      Available       at 1 range 1..3;
-      Reference       at 1 range 4..44;
-      Used_Entries    at 6 range 5..14;
-      No_Execute      at 7 range 7..7;
-   end record;
-   for Page_Table_Entry'Size use 64;
-
-
-   type Page_Table is array(Entry_Index) of Page_Table_Entry;
-   for Page_Table'Size use 512*64;
-
-   function Create_Mapping(   Base:          Address; 
-                              Offsets:       Table_Offsets; 
+   procedure Create_Mapping(  VMA:           Virtual_Address;
                               PA:            Physical_Address;
-                              Parent_Level:  Level;
-                              L:             Level) 
-                              return Boolean;
+                              Flags:         Flags_Type;
+                              Size:          Page_Size;
+                              Success:       out Boolean)
+   with 
+      SPARK_Mode,
+      Pre =>   ((PA and not REFERENCE) = 0) and then
+               ((Flags and IS_PAGE) /= 0);
+   
+   procedure Dump_Pages(PML4: Physical_Address);
 
-    
+   procedure Initialise;
+
+
+---C Compatability Layer (for test cases)---------------------------------------
+   
+   -- This combines allocation and Virtual Mapping, which is not something we 
+   -- neccessarily always want to do. This function does both for the purposes
+   -- of the test cases (but in reality, shouldn't be used as it might go 
+   -- against some of the other conventions in the kernel).
+   function page_alloc return Address 
+      with Export, Convention => C, External_Name => "page_alloc";
+
+   procedure page_free
+      with Export, Convention => C, External_Name => "page_free";
+  
+
+
+private
+
+---related types----------------------------------------------------------------
+   type Table_Entry is new Unsigned_64;
+   type Table_Index is range 0..511; 
+   type Table is array(Table_Index) of Table_Entry;
+
+   type Table_Address is new Virtual_Address range 
+      X86.PD_POOL_Base..(X86.PD_POOL_Base + X86.PD_POOL_SIZE * Table'Size) -1; 
+
+   type Table_Offsets is array(Table_Level) of Table_Index;
+   type Tables is array(Table_Level) of Address;
+
+
+---globals----------------------------------------------------------------------
+   type Page_Bit_Array is array(0..(PD_POOL_SIZE / TABLE_SIZE)-1) of Boolean 
+   with Pack;
+
+   Dir_Pages : Page_Bit_Array;
+
+---helpers----------------------------------------------------------------------
+
+   function Has_Free_Dir_Page return Boolean
+   with SPARK_Mode,
+   Global => (Input => Dir_Pages),
+   Post  => Has_Free_Dir_Page'Result = (for some I of Dir_Pages => I = False);
+
+
+   procedure Get_Free_Dir_Page(Page: out Virtual_Address) 
+   with SPARK_Mode,
+   Global   => (In_Out => Dir_Pages),
+   Pre      => Has_Free_Dir_Page,
+
+   Contract_Cases => (
+      Has_Free_Dir_Page =>  ((Page mod 4096) = 0),
+      others            =>  Page = 0
+   );
+
+   function Make_Directory_Entry(A: Virtual_Address; F: Flags_Type) 
+   return Table_Entry 
+   with  
+      Inline,
+      Pre   => ((A and (not REFERENCE)) = 0) and then
+               ((F and IS_PAGE) = 0),
+      Post  => (Make_Directory_Entry'Result = Table_Entry(A));
+
+
+   function Make_Frame_Entry(PA: Physical_Address; F: Flags_Type) 
+   return Table_Entry
+   with  
+      Inline,
+      Pre   => ((PA and not REFERENCE) = 0) and then
+               ((F and IS_PAGE) /= 0);  
+
+
+   function Get_Directory_Address(T: in Table_Entry) return Table_Address
+   with  
+      Inline,
+      Pre   => (T and IS_PAGE) = 0;
+
+   function Get_Directory_Ref(T: in Table_Entry) return Directory_Ref
+   with  
+      Inline,
+      Pre   => (T and IS_PAGE) = 0;
+
+   function Get_Frame_Address(T: in Table_Entry) return Physical_Address
+   with  
+      Inline,
+      Pre   => (T and IS_PAGE) /= 0;
+
 end X86.Vm;

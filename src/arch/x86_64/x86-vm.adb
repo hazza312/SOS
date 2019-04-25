@@ -9,41 +9,71 @@ with X86.Dev.Keyboard;
 
 package body X86.VM is
 
-   type Page_Bit_Array is array(0..PD_POOL_SIZE / TABLE_SIZE) of Boolean with Pack;
-   Dir_Pages : Page_Bit_Array;
+   Directories : array(Directory_Ref) of Table 
+      with Address => System'To_Address(X86.PD_POOL_BASE);
 
    -- offsets into the VMA
-   Shifts : constant array(Level) of Natural := (12, 21, 30, 39);
-
-   -- used for prettying
-   Columns : constant array(Level) of Natural := (61, 42, 19, 0);
+   Shifts : constant array(Table_Level) of Natural := (12, 21, 30, 39);
 
 
-----HELPERS --------------------------------------------------------------------
+----INLINE HELPERS -------------------------------------------------------------
 
-   function Get_Free_Dir_Page return Virtual_Address is 
-   begin 
-      for I in Dir_Pages'Range loop
+   function Make_Directory_Entry(A: Virtual_Address; F: Flags_Type) 
+   return Table_Entry 
+   is (Table_Entry(Unsigned_64(A) or Unsigned_64(F)));
+
+
+   function Make_Frame_Entry(PA: Physical_Address; F: Flags_Type) 
+   return Table_Entry 
+   is (Table_Entry(Unsigned_64(PA) or Unsigned_64(F)));
+
+
+   function Get_Directory_Address(T: in Table_Entry) return Table_Address
+   is (Table_Address(T and REFERENCE));
+
+
+   function Get_Frame_Address(T: in Table_Entry) return Physical_Address
+   is (Physical_Address(T and REFERENCE));
+
+
+---PAGE DIRECTORY MANAGEMENT----------------------------------------------------
+
+   procedure Get_Free_Dir_Page(Page: out Virtual_Address)  
+      with SPARK_MODE
+   is
+   begin
+      for I in 0..Dir_Pages'Last loop
          if Dir_Pages(I) = False then 
             Dir_Pages(I) := True;
-            return Virtual_Address(PD_POOL_BASE + I * TABLE_SIZE);
+            Page := Virtual_Address(PD_POOL_BASE + (I * TABLE_SIZE));
+            return;
          end if;
+         pragma Loop_Invariant (for all J in 0..I => Dir_Pages(J));
+
       end loop;
-      return Virtual_Address(0);
+      Page := 0;
    end;
+
+
+   function Get_Directory_Ref(T: in Table_Entry) return Directory_Ref
+   is (Directory_Ref(((T and REFERENCE) - X86.PD_POOL_BASE) / TABLE_SIZE));
+   
+
+   function Has_Free_Dir_Page return Boolean
+   is (for some Page of Dir_Pages => (not Page)) with SPARK_Mode ;
 
 
    procedure Free_Dir_Page(VMA: Virtual_Address) is 
    begin
-      Dir_Pages(Integer((VMA - PD_POOL_BASE) / TABLE_SIZE)) := False;
+      Dir_Pages(Integer((VMA - PD_POOL_BASE) / Table'Size)) := False;
    end;
 
-
+---CONVERSIONS TO AND FROM OFFSETS & VMAs---------------------------------------
    function Offsets_To_VMA(T: Table_Offsets) return Virtual_Address is
       Result: Unsigned_64 := 0; 
    begin
-      for Table_Level in Table_Offsets'Range loop 
-         Result := @ or Shift_Left(Unsigned_64(T(Table_Level)) and 511, Shifts(Table_Level));
+      for L in Table_Offsets'Range loop 
+         Result := @ or Shift_Left(Unsigned_64(T(L)) and 511, Shifts(L));
       end loop;
 
       -- TODO: sign extension
@@ -53,147 +83,141 @@ package body X86.VM is
    function VMA_To_Offsets(VMA: Virtual_Address) return Table_Offsets is 
       T : Table_Offsets := (0,0,0,0);
    begin 
-      for L in Level loop
-         T(L) := Entry_Index(Shift_Right(VMA, Shifts(L)) and 511);
+      for L in Table_Level loop
+         T(L) := Table_Index(Shift_Right(VMA, Shifts(L)) and 511);
       end loop;
       return T;
    end VMA_To_Offsets;
 
-   procedure Flush_TLB is 
-      use ASCII;
-   begin 
-      -- TODO: use invlpg command
-      Asm(  "movq %%cr3, %%rax" & ASCII.LF &
-            "movq %%rax, %%cr3",
-            Clobber => "rax",
-            Volatile => True
-         );
-   end Flush_TLB;
 
+----PAGE MANAGEMENT PROCEDURES -------------------------------------------------
 
-
-
-----PAGE MANAGEMENT PROCEDURES ------------------------------------------------- 
-
-   function Map_Page(   PML4:    Physical_Address; 
-                        VMA:     Virtual_Address; 
-                        PA:      Physical_Address;
-                        Size:    Page_Size)  
-   return Boolean 
+   procedure Create_Mapping(  VMA:           Virtual_Address;
+                              PA:            Physical_Address;
+                              Flags:         Flags_Type;
+                              Size:          Page_Size;
+                              Success:       out Boolean) 
+   with 
+      SPARK_Mode
    is
-      Offsets: Table_Offsets;
-      Parent_Level: Level := (if Size = Page_4K then 1 else 2);
+      Current_Table  : Directory_Ref    := 0;
+      Offsets        : Table_Offsets    := VMA_To_Offsets(VMA);
+      Dir_Page       : Virtual_Address;
+      PTE            : Table_Entry;
+      Target_Level   : Table_Level      := (if Size = Page_4K then 1 else 2);
    begin
-      Offsets := VMA_To_Offsets(VMA);
-      return Create_Mapping(Address(PML4), Offsets, PA, Parent_Level, 4);     
+      for L in reverse Target_Level+1..Table_Level'Last loop
+         PTE := Directories(Current_Table)(Offsets(L));
+         if (PTE and IS_PAGE) /= 0 then 
+            Success := False; return;
+
+         elsif (PTE and PRESENT) = 0 then
+            if Has_Free_Dir_Page then
+               Get_Free_Dir_Page(Dir_Page);
+               Directories(Current_Table)(Offsets(L)) 
+                  := Make_Directory_Entry(Dir_Page, PRESENT or WRITEABLE or USER);
+            else 
+               Success := False; return;
+            end if;
+ 
+         end if;
+            Current_Table 
+               := Get_Directory_Ref( Directories(Current_Table)(Offsets(L)) );
+      end loop;
+
+      PTE := Directories(Current_Table)(Offsets(Target_Level));
+      if (PTE and PRESENT) = 0 then
+         Directories(Current_Table)(Offsets(Target_Level)) 
+            := Make_Frame_Entry(PA, Flags);
+         Success := True;
+      else 
+        Success := False;
+     end if;
    end;
 
 
-   function Create_Mapping(   Base:          Address; 
-                              Offsets:       Table_Offsets; 
-                              PA:            Physical_Address;
-                              Parent_Level:  Level;
-                              L:             Level) 
-   return Boolean 
-   is 
-      PMLX : Page_Table with Address => System'To_Address(Base);
-      Next_Base : Address;
-   begin
-      -- at lowest PML and page already has a mapping 
-      if L = Parent_Level and then PMLX(Offsets(L)).Present then 
-         return False;
+   procedure Initialise is
+      Offsets: Table_Offsets := VMA_To_Offsets(PD_POOL_BASE); 
+   begin 
+      Directories(0)(Offsets(4)) := 
+         Make_Directory_Entry(PD_POOL_BASE + TABLE_SIZE, PRESENT or USER);
 
-      -- at lowest PML and page may be mapped
-      elsif L = Parent_Level then
-         PMLX(Offsets(L)) := (
-            Reference => Address_4K_Truncate(Shift_Right(PA, 12)),
-            Page_Size => True, Present => True, Writeable => True, 
-            others => <>);
-         return True;      
-      end if;
+      Directories(1)(Offsets(3)) := 
+         Make_Directory_Entry(PD_POOL_BASE + 2*TABLE_SIZE, PRESENT or USER);
 
-      -- next lowest PML needs a directory page
-      if not PMLX(Offsets(L)).Present then 
-         Next_Base := Address(Get_Free_Dir_Page);
-         PMLX(Offsets(L)) := (   
-            Reference => Address_4K_Truncate(Shift_Right(Address(Next_Base), 12)),
-            Page_Size => False, Present => True, Writeable => True, others => <>); 
-      end if;
+      Directories(2)(Offsets(2)) := 
+         Make_Frame_Entry(PD_POOL_BASE, IS_PAGE or PRESENT or WRITEABLE or USER);
 
-      -- recurse to PML next layer below.
-      Next_Base := Address(Shift_Left(Address(PMLX(Offsets(L)).Reference), 12));
-      return Create_Mapping(Next_Base, Offsets, PA, Parent_Level, L-1);
-   end Create_Mapping;
+      Dir_Pages(0) := True;
+      Dir_Pages(1) := True;
+      Dir_Pages(2) := True;   
+   end Initialise;
 
 
-  
 ----DEBUG & PRINTING PROCEDURES ------------------------------------------------
-
+   -- TODO: move to different package?
    procedure Print_Page(
       Table_Addresses     : Tables;
       Offsets             : Table_Offsets;
       Physical_Address    : Address;
-      PTE                 : Page_Table_Entry;
-      L                   : Level)
+      PTE                 : Table_Entry;
+      L                   : Table_Level)
    is
+      Cols : constant array(1..6) of Integer := (0,6,32,40,46,72);
+      Names: constant array(Table_Level) of String(1..4) 
+         := ("PT  ", "PD  ", "PDP ", "PML4");
+      Col_Shift : Integer := 0;
    begin
-      -- Set_Colour(FG=>Grey);
-      -- Put("V/P");
-
-      Set_Colour(FG=>Light_Red);
-      -- At_X(9); 
+      -- Row1: Virtual -> Physical Mapping
+      Set_Colour(BG => Cyan);
       Put_Hex(Address(Offsets_To_VMA(Offsets)));
-      Put(" -> ");
-      Put_Hex(Physical_Address);
+         Put(" -> ");   Put_Hex(Physical_Address);
 
+      -- Row1: Size and Bits
       Set_Colour(FG=>Grey);
-      At_X(42); Put("BITS");
+      At_X(Cols(4)); Put("BITS");
 
       Set_Colour;
-      At_X(53);      Put_Size(2**Shifts(L));
-      if PTE.Dirty          then Put(" D");                   end if;
-      if PTE.Accessed       then Put(" A") ;                  end if;
-      if PTE.Cache_Disable  then Put(" CD");                  end if;
-      if PTE.Writethrough   then Put(" WT");                  end if;
-      if PTE.User_Access    then Put(" U");   else Put(" S"); end if;
-      if PTE.Writeable      then Put(" W");                   end if;
-      if PTE.Present        then Put(" P");                   end if;
+      At_X(Cols(5));      Put_Size(2**Shifts(L));
+      if (PTE and DIRTY)         /= 0 then Put(" D");                   end if;
+      if (PTE and ACCESSED)      /= 0 then Put(" A") ;                  end if;
+      if (PTE and CACHE_DISABLE) /= 0 then Put(" CD");                  end if;
+      if (PTE and WRITETHROUGH)  /= 0 then Put(" WT");                  end if;
+      if (PTE and USER)          /= 0 then Put(" U");   else Put(" S"); end if;
+      if (PTE and WRITEABLE)     /= 0 then Put(" W");                   end if;
+      if (PTE and PRESENT)       /= 0 then Put(" P");                   end if;
       Put(LF);
 
+      -- Rows 2&3: Table bases and offsets
       Set_Colour(FG=>Grey);
-      Put("PML4                        [     ]       ");
-      Put("PDP                           [     ]");
 
-      Set_Colour(FG=>White);
-      At_X(9);   Put_Hex(Table_Addresses(4));
-      At_X(53);  Put_Hex(Table_Addresses(3));
-      
+      for I in reverse Table_Level'Range loop
+         Col_Shift := (Integer(I) rem 2) * 3;
 
-      Set_Colour(FG=>Cyan);
-      At_X(29);   Put_Hex(Unsigned_64(Offsets(4)));
-      At_X(73);   Put_Hex(Unsigned_64(Offsets(3)));
-      Put(LF);
-      Set_Colour(FG=>Grey);
-      Put("PD                          [     ]       PT                            [     ]");
+         if L <= I then
+            Set_Colour(FG=>Grey);
+            At_X(Cols(1 + Col_Shift));     Put(Names(I));
+            At_X(Cols(3 + Col_Shift));     Put("[     ]");
 
-      Set_Colour(FG=>White);
-      if L <= 2 then At_X(9);    Put_Hex(Table_Addresses(2)); end if;
-      if L <= 1 then At_X(53);   Put_Hex(Table_Addresses(1)); end if;
+            Set_Colour(FG=>White);
+            At_X(Cols(2 + Col_Shift));     Put_Hex(Table_Addresses(I));
 
-      Set_Colour(FG=>Cyan);
-      if L <= 2 then At_X(9);    At_X(29);   Put_Hex(Unsigned_64(Offsets(2))); end if;
-      if L <= 1 then At_X(53);   At_X(73);   Put_Hex(Unsigned_64(Offsets(1))); end if;
-      Put(LF);
-      Put(LF);
-          
+            Set_Colour(FG=>Cyan);
+            At_X(Cols(3 + Col_Shift) + 1); Put_Hex(Unsigned_64(Offsets(I)));
+         end if;
+
+         if Col_Shift /= 0 then Put(LF); end if;
+      end loop;
+
+      Put(LF);          
     end Print_Page;
 
     procedure Dump_Rec( Table_Addresses:  in out Tables;
                         Offsets:          in out Table_Offsets;
-                        L:                Level)
+                        L:                Table_Level)
     is
-      PMLX: Page_Table with Address => System'To_Address(Table_Addresses(L));
-      Page_Entry: Page_Table_Entry;
+      PMLX: Table with Address => System'To_Address(Table_Addresses(L));
+      Page_Entry: Table_Entry;
       Entry_Ref : Address;
    begin
       -- for every index in this page table
@@ -204,12 +228,12 @@ package body X86.VM is
          Page_Entry := PMLX(I);
 
          -- if there is an entry present
-         if Page_Entry.Present then
+         if (Page_Entry and PRESENT) /= 0 then
             Offsets(L) := I;
-            Entry_Ref := Address(Page_Entry.Reference * 2**12);
+            Entry_Ref := Address(Get_Frame_Address(Page_Entry));
 
             -- and it's a reference to a physical page, print page          
-            if Page_Entry.Page_Size then
+            if (Page_Entry and IS_PAGE) /= 0 then
                Print_Page(Table_Addresses, Offsets, Entry_Ref, Page_Entry, L);
 
             -- otherwise, it is a reference to a PT another layer down, recurse.
@@ -225,26 +249,46 @@ package body X86.VM is
     end Dump_Rec;
 
  
-   procedure Dump_Pages is 
-      PML4_Base : Address := Null_Address;
+   procedure Dump_Pages(PML4: Physical_Address) is 
       Table_Addresses: Tables;
       Offsets: Table_Offsets := (0,0,0,0);
-      use ASCII;
    begin 
-      Asm(  "movq    %%cr3, %%rax" & ASCII.LF &
-            "movq    %%rax, %0", 
-            Outputs     => Address'Asm_Output("=g", PML4_Base), 
-            Clobber     => "rax",
-            Volatile    => True);
-
-      Table_Addresses := (0,0,0,PML4_Base);         
+      Table_Addresses := (0,0,0, Address(PML4));         
       Dump_Rec(Table_Addresses, Offsets, 4);
       Put(Console.LF);  
    end Dump_Pages;
 
 
+---C Test case code ------------------------------------------------------------
+
+   function page_alloc return Address is
+      Physical_Page: Physical_Address; 
+      Success : Boolean;
+   begin
+      -- allocate a single page, and identity map it.
+      Physical_Page := Physical_Address(MMap.Allocate(16#1000#));
+      Panic_If(Physical_Page = 0, "Could not get physical frame (OOM?)");
+      
+      Put("allocating page.. "); Put_Hex(Address(Physical_Page)); Put(LF);
+
+      Create_Mapping(   16#1_000_000# + Virtual_Address(Physical_Page),  -- VMA
+                        Physical_Page,                                   -- PA
+                        IS_PAGE or WRITEABLE or PRESENT,                 -- Flags
+                        Page_4K,                                         -- Page Size
+                        Success);            
+      Panic_If(not Success, "Could not create mapping for page");     
+
+      return Address(16#1_000_000# + Virtual_Address(Physical_Page));
+   end page_alloc;
 
 
 
+   procedure page_free is null;
+
+
+
+begin 
+
+   Initialise;
 
 end X86.VM;

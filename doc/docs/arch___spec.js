@@ -514,6 +514,99 @@ GNATdoc.Documentation = {
           ]
         },
         {
+          "label": "Reload_CR3",
+          "qualifier": "",
+          "line": 25,
+          "column": 15,
+          "src": "srcs/arch.ads.html",
+          "summary": [
+          ],
+          "description": [
+            {
+              "kind": "code",
+              "children": [
+                {
+                  "kind": "line",
+                  "number": 25,
+                  "children": [
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": "    "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "keyword",
+                      "text": "procedure"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Reload_CR3",
+                      "href": "docs/arch___spec.html#L25C15"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "("
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Address",
+                      "href": "docs/arch___spec.html#L25C26"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ":"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "text",
+                      "text": " "
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": "Physical_Address",
+                      "href": "docs/common___spec.html#L6C10"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ")"
+                    },
+                    {
+                      "kind": "span",
+                      "cssClass": "identifier",
+                      "text": ";"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "label": "Address",
+              "line": 25,
+              "column": 26,
+              "type": {
+                "label": "Common.Physical_Address",
+                "docHref": "docs/common___spec.html#L6C10"
+              },
+              "description": [
+              ]
+            }
+          ]
+        },
+        {
           "label": "Scout_Memory",
           "qualifier": "",
           "line": 18,

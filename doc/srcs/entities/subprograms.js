@@ -24,10 +24,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Banner",
-      "docHref": "docs/console___spec.html#L44C15",
+      "docHref": "docs/console___spec.html#L43C15",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L44"
+      "srcHref": "srcs/console.ads.html#L43"
     },
     {
       "label": "Banner",
@@ -38,10 +38,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Clear",
-      "docHref": "docs/console___spec.html#L46C15",
+      "docHref": "docs/console___spec.html#L45C15",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L46"
+      "srcHref": "srcs/console.ads.html#L45"
     },
     {
       "label": "Clear",
@@ -59,10 +59,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Create_Mapping",
-      "docHref": "docs/x86__vm___spec.html#L34C14",
+      "docHref": "docs/x86__vm___spec.html#L39C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L34"
+      "srcHref": "srcs/x86-vm.ads.html#L39"
     },
     {
       "label": "Disable_Cursor",
@@ -80,10 +80,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Dump_Pages",
-      "docHref": "docs/x86__vm___spec.html#L44C14",
+      "docHref": "docs/x86__vm___spec.html#L32C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L44"
+      "srcHref": "srcs/x86-vm.ads.html#L32"
     },
     {
       "label": "Enable_Cursor",
@@ -178,10 +178,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Handle",
-      "docHref": "docs/syscall___spec.html#L9C15",
+      "docHref": "docs/syscall___spec.html#L5C15",
       "declared": "Syscall",
       "declared_qualifier": "",
-      "srcHref": "srcs/syscall.ads.html#L9"
+      "srcHref": "srcs/syscall.ads.html#L5"
     },
     {
       "label": "Handler",
@@ -234,10 +234,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Initialise",
-      "docHref": "docs/x86__vm___spec.html#L46C14",
+      "docHref": "docs/x86__vm___spec.html#L34C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L46"
+      "srcHref": "srcs/x86-vm.ads.html#L34"
     },
     {
       "label": "Initialise",
@@ -273,20 +273,6 @@ GNATdoc.EntitiesCategory = {
       "declared": "Error",
       "declared_qualifier": "",
       "srcHref": "srcs/error.ads.html#L10"
-    },
-    {
-      "label": "page_alloc",
-      "docHref": "docs/x86__vm___spec.html#L55C13",
-      "declared": "X86.Vm",
-      "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L55"
-    },
-    {
-      "label": "page_free",
-      "docHref": "docs/x86__vm___spec.html#L58C14",
-      "declared": "X86.Vm",
-      "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L58"
     },
     {
       "label": "Panic",
@@ -332,17 +318,17 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Put",
+      "docHref": "docs/console___spec.html#L37C15",
+      "declared": "Console",
+      "declared_qualifier": "",
+      "srcHref": "srcs/console.ads.html#L37"
+    },
+    {
+      "label": "Put",
       "docHref": "docs/console___spec.html#L38C15",
       "declared": "Console",
       "declared_qualifier": "",
       "srcHref": "srcs/console.ads.html#L38"
-    },
-    {
-      "label": "Put",
-      "docHref": "docs/console___spec.html#L39C15",
-      "declared": "Console",
-      "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L39"
     },
     {
       "label": "Put",
@@ -373,11 +359,11 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/consoleb.ads.html#L11"
     },
     {
-      "label": "Put_C",
-      "docHref": "docs/console___spec.html#L37C15",
+      "label": "Put_Hex",
+      "docHref": "docs/console___spec.html#L39C15",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L37"
+      "srcHref": "srcs/console.ads.html#L39"
     },
     {
       "label": "Put_Hex",
@@ -385,13 +371,6 @@ GNATdoc.EntitiesCategory = {
       "declared": "Console",
       "declared_qualifier": "",
       "srcHref": "srcs/console.ads.html#L40"
-    },
-    {
-      "label": "Put_Hex",
-      "docHref": "docs/console___spec.html#L41C15",
-      "declared": "Console",
-      "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L41"
     },
     {
       "label": "Put_Hex",
@@ -409,10 +388,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Put_Line",
-      "docHref": "docs/console___spec.html#L43C15",
+      "docHref": "docs/console___spec.html#L42C15",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L43"
+      "srcHref": "srcs/console.ads.html#L42"
     },
     {
       "label": "Put_Line",
@@ -423,10 +402,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Put_Size",
-      "docHref": "docs/console___spec.html#L42C15",
+      "docHref": "docs/console___spec.html#L41C15",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L42"
+      "srcHref": "srcs/console.ads.html#L41"
     },
     {
       "label": "Put_Size",
@@ -486,10 +465,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Set_Colour",
-      "docHref": "docs/console___spec.html#L45C15",
+      "docHref": "docs/console___spec.html#L44C15",
       "declared": "Console",
       "declared_qualifier": "",
-      "srcHref": "srcs/console.ads.html#L45"
+      "srcHref": "srcs/console.ads.html#L44"
     },
     {
       "label": "Slow_Handler",

@@ -93,10 +93,5 @@ GNATdoc.DocumentationIndex = [
     "label": "X86.Vm",
     "qualifier": "",
     "file": "docs/x86__vm___spec.html"
-  },
-  {
-    "label": "X86.Vm2",
-    "qualifier": "",
-    "file": "docs/x86__vm2___spec.html"
   }
 ];

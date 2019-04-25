@@ -4,6 +4,9 @@ with X86.Interrupts; use X86.Interrupts;
 
 package Error is 
 
+    procedure Panic_If(Condition: Boolean; S: String)
+    with Inline;
+
     procedure lastchance(Msg : String; Line: Integer)
     with 
         Export => True, 

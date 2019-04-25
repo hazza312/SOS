@@ -70,6 +70,8 @@ handler_table:
         .section .stubs
         .align STUB_WIDTH
         .code64
+
+        .globl stubs
 stubs:  Make_Stubs 0 63
         # Stubs expands here..
 

@@ -11,12 +11,13 @@ syscall_entry:
         cli
         # r11 contains old rflags
         # rcx contains rip
-        push       %r11
+        pushf
         push       %rcx
-        andq       16, %rsp
+        # andq       16, %rsp
+        # sti
         call       syscall__handle
-.done$: jmp        .done$
+.done$: # jmp        .done$
         # do some stuff here to setup for returning.
         pop        %rcx
         pop        %r11
-        sysret
+        sysretq
