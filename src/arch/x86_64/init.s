@@ -118,14 +118,6 @@ _entry:
         movl     $stack_end, %esp               # ensure SP in paged region
         movl     %ebx, (bootinfo)
 
-.disable_blinky_cursor:                         # just as important as paging
- #       movb     $0xA, %al                      # TODO: move elsewhere
-  #      movw     $0x3D4, %dx
-   #     out      %al, %dx
-
-    #    movb     $0x20, %al
-    #    movw     $0x3D5, %dx
-    #    out      %al, %dx
                                                 
 .init_page_tables:
                                              # see P135 in AMD64SP

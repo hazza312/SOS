@@ -16,7 +16,7 @@ with System.Storage_Elements; use System.Storage_Elements;
 procedure Kernel is
 
    KERNEL_PAGE : constant X86.VM.Flags_Type 
-                     := X86.VM.IS_PAGE or X86.VM.PRESENT or X86.VM.WRITEABLE or X86.VM.USER;
+                     := X86.VM.IS_PAGE or X86.VM.PRESENT or X86.VM.WRITEABLE;
 
    USER_PAGE : constant X86.VM.Flags_Type := KERNEL_PAGE or X86.VM.USER;
 
@@ -49,7 +49,8 @@ begin
    Put_Line("-> Initialising kernel page mapper");
    MMap_Base := Address'Max(X86.UNRESERVED_BASE, Biggest_Base);
    MMap_Size := Biggest_Size - Unsigned_64(MMap_Base - Biggest_Base);
-   MMap.Initialise(MMap_Base, MMap_Size, Common.PAGE_SIZE);
+   --MMap.Initialise(MMap_Base, MMap_Size, Common.PAGE_SIZE);
+   MMap.Initialise(MMap_Base, MMap_Size -16#1000#, Common.PAGE_SIZE);
      
 
    -- initialise architecture-specific interrupts
@@ -82,7 +83,7 @@ begin
    --    Page_Base := Page_Base + 16#200_000#;
    -- end loop;
 
-   Put_Line("-> preparing to enter userland");
+   -- map userland
    X86.VM.Create_Mapping(  Userland_VMA,
                            Userland_PA,
                            USER_PAGE,
@@ -90,6 +91,7 @@ begin
                            Success); 
    
    -- enter the kernel interaction console
+   Put(LF);
    KernelInteract;    
 
 end Kernel;

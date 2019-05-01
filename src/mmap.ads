@@ -23,6 +23,7 @@ package MMap is
 
    function Get_Base return Address;
    function Get_Length return Unsigned_64;
+   function Get_Free_Space return Unsigned_64;
 
     
 private

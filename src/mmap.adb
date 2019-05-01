@@ -7,6 +7,7 @@ package body MMap is
 Address_Base : Address := Null_Address;
 Allocation_Unit : Unsigned_64 := 0;
 Max_Length : Unsigned_64 := 0;
+Free_Space: Unsigned_64;
 
 Head: Node_Index := 0;
 Tail: Node_Index := MAX_ALLOCATIONS;
@@ -15,11 +16,14 @@ Nodes: Node_List := (
     others       =>   (0,     Null_Address,    0           )
 );
 
+function Get_Free_Space return Unsigned_64 is (Free_Space);
+
 procedure Initialise(Base: Address; Length: Unsigned_64; Unit: Unsigned_64) is 
 begin 
    Allocation_Unit := Unit;
    Address_Base := Base;
    Max_Length := Length;
+   Free_Space := Length;
 
    Nodes(0) := (1,     Null_Address,   0       );
    Nodes(1) := (Tail,  Base,           Length  );
@@ -45,6 +49,11 @@ function Allocate(Size: Unsigned_64) return Address is
    Match:  Node_Index := Nodes(Head).Next;
    Addr:   Address := NULL_ADDRESS;
 begin 
+   --Put_Size(Free_Space); Put(LF);
+   if Size = 0 or else Size mod Allocation_Unit /= 0 then 
+      return 0;
+   end if;
+
    while Match /= Tail and then Nodes(Match).Length < Size loop 
       Prev := Match;
       Match := Nodes(Match).Next;
@@ -58,13 +67,16 @@ begin
       Nodes(Prev).Next := Nodes(Match).Next;
       Nodes(Match).Length := 0;     
       Addr := Nodes(Match).Base;
+      Free_Space := @ - Size;
    
    elsif Nodes(Match).Length > Size then
       Addr := Nodes(Match).Base;
       Nodes(Match).Base    := Nodes(Match).Base + Address(Size);
-      Nodes(Match).Length  := Nodes(Match).Length - Size;      
+      Nodes(Match).Length  := Nodes(Match).Length - Size;    
+      Free_Space := @ - Size;  
    end if;
 
+   
    return Addr;
 end Allocate;
 
@@ -101,6 +113,8 @@ begin
       Nodes(Curr).Length := 0; -- free the node
       Curr := Nodes(Curr).Next;
    end loop;  
+
+   Free_Space := @ + Length;
     
 end Free;
 

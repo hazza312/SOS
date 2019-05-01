@@ -80,7 +80,7 @@ begin
       elsif Equals(Command, "vmtest", Command_Length) then 
          Banner("Virtual Memory Test Cases", bg=>White, fg=>Black);
          Put_Line("Any CPU Exceptions thrown suggest an error...");
-         C_VM_Test_Init(16#7_BE0_000#);
+         C_VM_Test_Init(Interfaces.C.size_t(MMap.Get_Length));
          C_VM_Test_All;
 
 

@@ -1,7 +1,7 @@
 #include <stddef.h>
 
 #define PAGE_SIZE 4096
-#define KERN_PAGES 4 // Number of pages required for kernel, change if necessary
+#define KERN_PAGES 0 // Number of pages required for kernel, change if necessary
 typedef unsigned long ptr_t;
 
 
@@ -74,6 +74,8 @@ void test_alloc_easy()
   for (int i = 0; i < nsample / 3; i++) {
     page_free(p[i]);
   }
+
+  page_free((ptr_t*)p);
 }
 
 void test_alloc_advanced()
@@ -114,6 +116,8 @@ void test_alloc_advanced()
     page_free(p[i]);
   }
 
+  page_free((ptr_t*)p);
+
 }
 
 
@@ -123,7 +127,7 @@ void test_alloc_oom()
   size_t nsample = npages - KERN_PAGES;
 
   // Keep track of allocated pages
-  ptr_t **p = (ptr_t **)page_alloc((npages  * sizeof(ptr_t)) / PAGE_SIZE);
+  ptr_t **p = (ptr_t **)page_alloc((npages  * sizeof(ptr_t) + PAGE_SIZE -1) / PAGE_SIZE);
 
   // Allocate all the pages
   int allocated = 0;
@@ -136,19 +140,23 @@ void test_alloc_oom()
   }
 
   // print: allocated `allocated` pages
-  assert(allocated >= npages - KERN_PAGES);
+  //assert(allocated >= npages - KERN_PAGES);
 
   // Free all allocated pages
   for (int i = 0; i < nsample; i++) {
     if (p[i])
       page_free(p[i]);
+
+    //if (i != 0 && (i % PAGE_SIZE == 0))
+    //  page_free((ptr_t*) &p[i]);
   }
 
 }
 
+
 void test_all()
 {
-  // Memory alloc
+  //Memory alloc
   put_str("[TC] Attempting easy test........");
   test_alloc_easy();
   put_str(".. passed\n");
@@ -157,7 +165,7 @@ void test_all()
   test_alloc_advanced();
   put_str(".. passed\n");
 
-  // put_str("[TC] Attempting OOM test.........");
-  // test_alloc_oom();
-  // put_str(".. passed\n");
+  put_str("[TC] Attempting OOM test.........");
+  test_alloc_oom();
+  put_str(".. passed\n");
 }

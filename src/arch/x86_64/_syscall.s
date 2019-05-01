@@ -20,4 +20,5 @@ syscall_entry:
         # do some stuff here to setup for returning.
         pop        %rcx
         pop        %r11
+        orq        $0x200, %r11
         sysretq

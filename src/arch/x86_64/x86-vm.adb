@@ -9,6 +9,9 @@ with X86.Dev.Keyboard;
 
 package body X86.VM is
 
+   Alloc_Count: Integer := 0;
+   Free_Count : Integer := 0;
+
    Directories : array(Directory_Ref) of Table 
       with Address => System'To_Address(X86.PD_POOL_BASE);
 
@@ -34,6 +37,13 @@ package body X86.VM is
 
    function Get_Frame_Address(T: in Table_Entry) return Physical_Address
    is (Physical_Address(T and REFERENCE));
+
+   function Get_Num_Entries(T: Table_Entry) return Natural is 
+   (
+      Natural(
+         Shift_Right((T and ENTRY_COUNT), 52)
+      )
+   );
 
 
 ---PAGE DIRECTORY MANAGEMENT----------------------------------------------------
@@ -92,11 +102,11 @@ package body X86.VM is
 
 ----PAGE MANAGEMENT PROCEDURES -------------------------------------------------
 
-   procedure Create_Mapping(  VMA:           Virtual_Address;
-                              PA:            Physical_Address;
-                              Flags:         Flags_Type;
-                              Size:          Page_Size;
-                              Success:       out Boolean) 
+   procedure Create_Mapping(  VMA:      Virtual_Address;
+                              PA:       Physical_Address;
+                              Flags:    Flags_Type;
+                              Size:     Page_Size;
+                              Success:  out Boolean) 
    with 
       SPARK_Mode
    is
@@ -105,6 +115,7 @@ package body X86.VM is
       Dir_Page       : Virtual_Address;
       PTE            : Table_Entry;
       Target_Level   : Table_Level      := (if Size = Page_4K then 1 else 2);
+      Num_Entries    : Natural;
    begin
       for L in reverse Target_Level+1..Table_Level'Last loop
          PTE := Directories(Current_Table)(Offsets(L));
@@ -127,8 +138,44 @@ package body X86.VM is
 
       PTE := Directories(Current_Table)(Offsets(Target_Level));
       if (PTE and PRESENT) = 0 then
+         Num_Entries := Get_Num_Entries(PTE);
          Directories(Current_Table)(Offsets(Target_Level)) 
             := Make_Frame_Entry(PA, Flags);
+         Success := True;
+      else 
+        Success := False;
+     end if;
+   end;
+
+   procedure Free_Mapping( VMA:      Virtual_Address;
+                           Size:     Page_Size;
+                           PA:       out Physical_Address;
+                           Success:  out Boolean) 
+   with 
+      SPARK_Mode
+   is
+      Current_Table  : Directory_Ref    := 0;
+      Offsets        : Table_Offsets    := VMA_To_Offsets(VMA);
+      Dir_Page       : Virtual_Address;
+      PTE            : Table_Entry;
+      Target_Level   : Table_Level      := (if Size = Page_4K then 1 else 2);
+      Num_Entries    : Natural;
+   begin
+      for L in reverse Target_Level+1..Table_Level'Last loop
+         PTE := Directories(Current_Table)(Offsets(L));
+         if (PTE and IS_PAGE) /= 0 or else (PTE and PRESENT) = 0 then 
+            Success := False; return;
+
+         end if;
+            Current_Table 
+               := Get_Directory_Ref( Directories(Current_Table)(Offsets(L)) );
+      end loop;
+
+      PTE := Directories(Current_Table)(Offsets(Target_Level));
+      if (PTE and PRESENT) /= 0 then
+         PA := Get_Frame_Address(PTE);
+         Directories(Current_Table)(Offsets(Target_Level)) 
+            := Make_Frame_Entry(0, 0);
          Success := True;
       else 
         Success := False;
@@ -261,34 +308,51 @@ package body X86.VM is
 
 ---C Test case code ------------------------------------------------------------
 
-   function page_alloc return Address is
-      Physical_Page: Physical_Address; 
+   function page_alloc(Num_Pages : Interfaces.C.size_t) return Address is
+      Physical_Base: Physical_Address; 
+      Current_Page: Physical_Address;
       Success : Boolean;
+      Offset : constant := 16#A0000000#;
    begin
       -- allocate a single page, and identity map it.
-      Physical_Page := Physical_Address(MMap.Allocate(16#1000#));
-      Panic_If(Physical_Page = 0, "Could not get physical frame (OOM?)");
-      
-      Put("allocating page.. "); Put_Hex(Address(Physical_Page)); Put(LF);
+      Physical_Base := Physical_Address(MMap.Allocate(16#1000# * Unsigned_64(Num_Pages)));
+      if Physical_Base /= 0 then         
+         --Panic("Could not get physical frame (OOM?)");
+         Current_Page := Physical_Base;
 
-      Create_Mapping(   16#1_000_000# + Virtual_Address(Physical_Page),  -- VMA
-                        Physical_Page,                                   -- PA
-                        IS_PAGE or WRITEABLE or PRESENT,                 -- Flags
-                        Page_4K,                                         -- Page Size
-                        Success);            
-      Panic_If(not Success, "Could not create mapping for page");     
+         for I in 0..Unsigned_64(Num_Pages)-1 loop 
+            Create_Mapping( 
+               Virtual_Address(Current_Page + Offset),        -- VMA
+               Current_Page,                                  -- PA
+               IS_PAGE or WRITEABLE or PRESENT,               -- Flags
+               Page_4K,                                       -- Size
+               Success
+            );            
+            Panic_If(not Success, "Could not create mapping for page");     
 
-      return Address(16#1_000_000# + Virtual_Address(Physical_Page));
+            Alloc_Count := @ + 1;  
+            Current_Page := @ + 16#1000#;
+         end loop;      
+         --Put_Size(MMap.Get_Free_Space); Put(' '); Put_Hex(Unsigned_64(Physical_Base)); Put(LF);
+         return Address(Physical_Base + Offset);
+      else 
+         return 0;
+      end if;
    end page_alloc;
 
-
-
-   procedure page_free is null;
-
-
+   procedure page_free(VMA: Virtual_Address) is 
+      PA: Physical_Address;
+      Success: Boolean;
+   begin
+      --Put("freeing page.. "); Put_Hex(Address(VMA)); Put(' ');
+      Free_Mapping(VMA, Page_4K, PA, Success);
+      Panic_If(not Success, "Could not free page, page not mapped?");
+      MMap.Free(Address(PA), 16#1000#);
+      Free_Count := @ + 1;
+      --Put(Free_Count); Put(' ');
+   end page_free;
 
 begin 
-
    Initialise;
 
 end X86.VM;

@@ -1,6 +1,7 @@
 with Interfaces; use Interfaces;
 with Arch; use Arch;
 with Common; use Common;
+with Interfaces.C;
 
 package X86.Vm 
    with SPARK_Mode, Elaborate_Body
@@ -18,6 +19,7 @@ is
    DIRTY          : constant := 2#100_0000#;
    IS_PAGE        : constant := 2#1000_0000#;
    GLOBAL         : constant := 2#1_0000_0000#;
+   ENTRY_COUNT    : constant := (2**63 -1) - (2**52 -1);
    REFERENCE      : constant := (2**52 -1) - (2**12 -1);
 
 ---PUBLIC TYPES-----------------------------------------------------------------
@@ -40,6 +42,11 @@ is
       SPARK_Mode,
       Pre =>   ((PA and not REFERENCE) = 0) and then
                ((Flags and IS_PAGE) /= 0);
+
+   procedure Free_Mapping( VMA:      Virtual_Address;
+                           Size:     Page_Size;
+                           PA:       out Physical_Address;
+                           Success:  out Boolean);
    
    procedure Dump_Pages(PML4: Physical_Address);
 
@@ -52,10 +59,10 @@ is
    -- neccessarily always want to do. This function does both for the purposes
    -- of the test cases (but in reality, shouldn't be used as it might go 
    -- against some of the other conventions in the kernel).
-   function page_alloc return Address 
+   function page_alloc(Num_Pages : Interfaces.C.size_t) return Address 
       with Export, Convention => C, External_Name => "page_alloc";
 
-   procedure page_free
+   procedure page_free(VMA: Virtual_Address)
       with Export, Convention => C, External_Name => "page_free";
   
 
