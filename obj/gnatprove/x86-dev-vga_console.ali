@@ -32,24 +32,24 @@ W system%s		system.ads		system.ali
 Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-U x86.dev.vga_console%s	x86-dev-vga_console.ads	7247ae69 OO PK
+U x86.dev.vga_console%s	x86-dev-vga_console.ads	9c5e5f88 OO PK
 W console%s		console.adb		console.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
-D x86-dev-vga_console.ads  20190408175552 81bdcc95 x86.dev.vga_console%s
-D x86-dev-vga_console.adb  20190407072905 fdc31da9 x86.dev.vga_console%b
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-vga_console.ads  20190408081552 81bdcc95 x86.dev.vga_console%s
+D x86-dev-vga_console.adb  20190406230858 fdc31da9 x86.dev.vga_console%b
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 2 console.ads
-5K9*Console 50e12 8|3w6 3r19
+5K9*Console 51e12 8|3w6 3r19
 10e4*LF{character} 9|19r15
 12E9*Colour 17e5 8|13r12 24r38 9|17r36
 13n7*Black{12E9} 8|24r73 9|17r70 47r42
@@ -61,7 +61,7 @@ X 4 system.ads
 60K9*System 172e11 8|1w6 9|1w6 7r25
 90M9*Address 9|7r25
 X 6 x86.ads
-3K9*X86 19e8 8|4r9 31r5 9|4r14 58r5
+3K9*X86 21e8 8|4r9 31r5 9|4r14 58r5
 X 7 x86-dev.ads
 1K13*Dev 6|3k9 7|4e12 8|4r13 31r9 9|4r18 58r9
 X 8 x86-dev-vga_console.ads

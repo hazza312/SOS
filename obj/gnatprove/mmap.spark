@@ -81,11 +81,21 @@
       "spark": "no"
     },
     {
+      "name": "MMap.Get_Free_Space",
+      "sloc": [
+        {
+          "file": "mmap.ads",
+          "line": 26
+        }
+      ],
+      "spark": "no"
+    },
+    {
       "name": "MMap.Get_Free_Node",
       "sloc": [
         {
           "file": "mmap.adb",
-          "line": 32
+          "line": 36
         }
       ],
       "spark": "no"
@@ -98,14 +108,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 5.86999987717718E-04,
-    "globals (basic)": 2.46000010520220E-04,
-    "globals/properties (advanced)": 1.77400000393391E-03,
-    "flow analysis": 5.29999997525010E-05,
+    "marking": 7.54999986384064E-04,
+    "globals (basic)": 8.00999987404794E-04,
+    "globals/properties (advanced)": 3.14199994318187E-03,
+    "flow analysis": 6.39999998384155E-05,
     "codepeer results": 1.99999999495049E-06,
-    "init_why_sections": 1.57999995280989E-04,
-    "translation of standard": 2.81400000676513E-03,
-    "translation of compilation unit": 1.71310007572174E-02,
+    "init_why_sections": 1.63999997312203E-04,
+    "translation of standard": 2.89999996311963E-03,
+    "translation of compilation unit": 1.74170006066561E-02,
     "proof": 1.99999999495049E-06
   }
 }

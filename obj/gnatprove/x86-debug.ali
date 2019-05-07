@@ -26,37 +26,37 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U x86.debug%b		x86-debug.adb		05b570bb OO PK
+U x86.debug%b		x86-debug.adb		ebac815a OO PK
 W console%s		console.adb		console.ali
 W multiboot%s		multiboot.ads		multiboot.ali
 W x86%s			x86.ads			x86.ali
 
-U x86.debug%s		x86-debug.ads		4299a7ec OO PK
+U x86.debug%s		x86-debug.ads		65b98d51 OO PK
 W multiboot%s		multiboot.ads		multiboot.ali
 W x86%s			x86.ads			x86.ali
 
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
-D multiboot.ads		20190408175552 d2bd122e multiboot%s
+D multiboot.ads		20190408131737 d2bd122e multiboot%s
 D system.ads		20180525181036 d54140d3 system%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-debug.ads		20190407072905 ba36a198 x86.debug%s
-D x86-debug.adb		20190408175552 a6622918 x86.debug%b
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-debug.ads		20190406212947 ba36a198 x86.debug%s
+D x86-debug.adb		20190408134033 a6622918 x86.debug%b
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 1 common.ads
 5M10*Address<3|77M9>
 X 2 console.ads
-5K9*Console 50e12 8|2w6 2r19
+5K9*Console 51e12 8|2w6 2r19
 10e4*LF{character} 8|14r25 25r17 27r13
 14n28*Grey{12E9} 8|9r26
 34U15*At_X 8|10s9 11s9 12s9 13s9 18s13 19s13 20s13 21s13
 35U15*Put 8|14s21 25s13 27s9
 36U15*Put 8|10s21 11s21 12s21 13s21 22s48 23s48
-39U15*Put_Hex 8|19s25
-40U15*Put_Hex 8|18s25
-41U15*Put_Size 8|20s25
-44U15*Set_Colour 8|9s9 16s9
+40U15*Put_Hex 8|19s25
+41U15*Put_Hex 8|18s25
+42U15*Put_Size 8|20s25
+45U15*Set_Colour 8|9s9 16s9
 X 3 interfac.ads
 77M9*Unsigned_64
 X 4 multiboot.ads
@@ -67,7 +67,7 @@ X 4 multiboot.ads
 16e7*Availability{9E10} 8|21r38
 21A10*Memory_Entries(13R10)<integer> 7|3r54 8|7r54
 X 6 x86.ads
-3K9*X86 19e8 7|2r9 4r5 8|4r14 31r5
+3K9*X86 21e8 7|2r9 4r5 8|4r14 31r5
 X 7 x86-debug.ads
 2K13*Debug 6|3k9 7|4l9 4e14 8|4b18 31l9 31t14
 3U15*Print_Multiboot_Map 3>35 8|7b15 28l9 28t28

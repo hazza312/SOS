@@ -53,13 +53,13 @@ package body Arch is
         X86.Interrupts.Register_Handler(PIT, Native_A'Address);
         Asm("sti", Volatile=>True);
         
-        -- Put("-> testing PIT 8253A ");
-        -- X86.Dev.Pit_8253.Reset;
-        -- for I in 0..51 loop 
-        --     while I >= Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
-        --     Put('.');
-        -- end loop;
-        -- Put_Line(" done");
+        Put("-> testing PIT 8253A ");
+        X86.Dev.Pit_8253.Reset;
+        for I in 0..51 loop 
+            while I >= Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
+            Put('.');
+        end loop;
+        Put_Line(" done");
 
 -- Keyboard
         Put("-> registering Keyboard @IRQ "); 
@@ -74,12 +74,12 @@ package body Arch is
         X86.Interrupts.Register_Handler(RTC, Native_C'Address);
         X86.Dev.RTC.Initialise;
 
-        -- Put("-> testing RTC ........");
-        -- for I in 0..4 loop 
-        --     while I >= Integer(X86.Dev.RTC.Get_Ticks) loop null; end loop;
-        --     Put("..........");
-        -- end loop;
-        -- Put_Line(" done");        
+        Put("-> testing RTC ........");
+        for I in 0..4 loop 
+            while I >= Integer(X86.Dev.RTC.Get_Ticks) loop null; end loop;
+            Put("..........");
+        end loop;
+        Put_Line(" done");        
         
     end Initialise_Interrupts;  
 

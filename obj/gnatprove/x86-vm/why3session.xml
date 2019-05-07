@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="CVC4" version="1.6-gnatprove" timelimit="0" steplimit="18500" memlimit="0"/>
+<prover id="1" name="CVC4_CE" version="1.6-gnatprove" timelimit="10" steplimit="18500" memlimit="0"/>
+<file name="../x86-vm.mlw">
+<theory name="X86__vm__package_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__flags_typePredicate__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__create_mapping__subprogram_def">
+ <goal name="WP_parameter def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="WP_parameter def.0" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.2" expl="precondition">
+  <proof prover="0"><result status="unknown" steps="521"/></proof>
+  <proof prover="1"><result status="unknown" steps="523"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.2.0" expl="precondition">
+   <proof prover="1"><result status="unknown" steps="513"/></proof>
+   </goal>
+   <goal name="WP_parameter def.2.1" expl="precondition">
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter def.3" expl="precondition">
+  </goal>
+  <goal name="WP_parameter def.4" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="316"/></proof>
+  </goal>
+  <goal name="WP_parameter def.5" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.6" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__free_mapping__subprogram_def">
+ <goal name="WP_parameter def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="WP_parameter def.0" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="precondition">
+  <proof prover="0"><result status="unknown" steps="18525"/></proof>
+  <proof prover="1"><result status="unknown" steps="18515"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.1.0" expl="precondition">
+   <proof prover="1"><result status="unknown" steps="18516"/></proof>
+   </goal>
+   <goal name="WP_parameter def.1.1" expl="precondition">
+   </goal>
+   <goal name="WP_parameter def.1.2" expl="precondition">
+   </goal>
+   <goal name="WP_parameter def.1.3" expl="precondition">
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter def.2" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.3" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.4" expl="precondition">
+  <proof prover="0"><result status="unknown" steps="18514"/></proof>
+  <proof prover="1"><result status="unknown" steps="18512"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.4.0" expl="precondition">
+   <proof prover="1"><result status="unknown" steps="18515"/></proof>
+   </goal>
+   <goal name="WP_parameter def.4.1" expl="precondition">
+   </goal>
+   <goal name="WP_parameter def.4.2" expl="precondition">
+   </goal>
+   <goal name="WP_parameter def.4.3" expl="precondition">
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__dump_pages__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__initialise__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__page_alloc__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__page_free__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__has_free_dir_page__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__get_free_dir_page__subprogram_def">
+ <goal name="WP_parameter def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="WP_parameter def.0" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.2" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.3" expl="loop invariant init" proved="true">
+  <proof prover="0"><result status="valid" steps="17"/></proof>
+  </goal>
+  <goal name="WP_parameter def.4" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.5" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="WP_parameter def.6" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.7" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.8" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.9" expl="loop invariant preservation" proved="true">
+  <proof prover="0"><result status="valid" steps="41"/></proof>
+  </goal>
+  <goal name="WP_parameter def.10" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.11" expl="assertion">
+  <proof prover="0"><result status="unknown" steps="18512"/></proof>
+  <proof prover="1"><result status="unknown" steps="18520"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.11.0" expl="assertion">
+   </goal>
+   <goal name="WP_parameter def.11.1" expl="assertion">
+   </goal>
+   <goal name="WP_parameter def.11.2" expl="assertion">
+   </goal>
+   <goal name="WP_parameter def.11.3" expl="assertion">
+   </goal>
+   <goal name="WP_parameter def.11.4" expl="assertion">
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter def.12" expl="assertion">
+  </goal>
+  <goal name="WP_parameter def.13" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.14" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__make_directory_entry__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__make_frame_entry__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__get_directory_address__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__get_directory_ref__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+<theory name="X86__vm__get_frame_address__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+ </transf>
+ </goal>
+</theory>
+</file>
+</why3session>

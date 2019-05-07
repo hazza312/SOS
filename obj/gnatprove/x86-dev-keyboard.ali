@@ -26,45 +26,45 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U x86.dev.keyboard%b	x86-dev-keyboard.adb	ed96ff48 OO PK
+U x86.dev.keyboard%b	x86-dev-keyboard.adb	34f3b3d4 OO PK
 W arch%s		arch.adb		arch.ali
 W common%s		common.ads		common.ali
 W console%s		console.adb		console.ali
 W interfaces%s		interfac.ads		interfac.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-U x86.dev.keyboard%s	x86-dev-keyboard.ads	acf674d8 OO PK
+U x86.dev.keyboard%s	x86-dev-keyboard.ads	9b8ac9a5 OO PK
 W arch%s		arch.adb		arch.ali
 W common%s		common.ads		common.ali
 W interfaces%s		interfac.ads		interfac.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-D arch.ads		20190415094400 6050e898 arch%s
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
-D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D arch.ads		20190506094226 572c55e5 arch%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
-D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
-D x86-dev-keyboard.adb	20190410071011 3d6efbd7 x86.dev.keyboard%b
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
+D x86-dev-keyboard.adb	20190408234714 3d6efbd7 x86.dev.keyboard%b
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 1 arch.ads
-12K9*Arch 39e9 9|3w6 3r16 10|2w6 2r16
+12K9*Arch 41e9 9|3w6 3r16 10|2w6 2r16
 16M10*IO_Port<5|66M9> 9|27r29 28r26
 21V14*IO_Inb{5|63M9} 10|28s25
 X 2 common.ads
 3K9*Common 12e11 9|2w6 2r18 10|4w6 4r18
 X 3 console.ads
-5K9*Console 50e12 10|3w6 3r19
+5K9*Console 51e12 10|3w6 3r19
 X 5 interfac.ads
 38K9*Interfaces 184e15 9|1w6 1r22 10|1w6 1r22
 63M9*Unsigned_8
 66M9*Unsigned_16
 77M9*Unsigned_64 9|21r31 10|17r12 97r31
 X 7 x86.ads
-3K9*X86 19e8 9|5r9 31r5 10|7r14 100r5
+3K9*X86 21e8 9|5r9 31r5 10|7r14 100r5
 X 8 x86-dev.ads
 1K13*Dev 7|3k9 8|4e12 9|5r13 31r9 10|7r18 100r9
 X 9 x86-dev-keyboard.ads

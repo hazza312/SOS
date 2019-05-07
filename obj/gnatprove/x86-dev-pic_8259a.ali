@@ -27,14 +27,14 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U x86.dev.pic_8259a%b	x86-dev-pic_8259a.adb	f2140825 OO PK
+U x86.dev.pic_8259a%b	x86-dev-pic_8259a.adb	c568b558 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_conversion%s  a-unccon.ads	a-unccon.ali
 W arch%s		arch.adb		arch.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-U x86.dev.pic_8259a%s	x86-dev-pic_8259a.ads	e9e0b6d5 OO PK
+U x86.dev.pic_8259a%s	x86-dev-pic_8259a.ads	de9c0ba8 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_conversion%s  a-unccon.ads	a-unccon.ali
 W arch%s		arch.adb		arch.ali
@@ -44,23 +44,23 @@ W x86.dev%s		x86-dev.ads		x86-dev.ali
 
 D ada.ads		20180525181036 76789da1 ada%s
 D a-unccon.ads		20180525181036 0e9b276f ada.unchecked_conversion%s
-D arch.ads		20190415094400 6050e898 arch%s
-D common.ads		20190408175552 7f16ff1c common%s
-D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D arch.ads		20190506094226 572c55e5 arch%s
+D common.ads		20190408125500 7f16ff1c common%s
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
-D x86-dev-pic_8259a.ads	20190407072905 6accb118 x86.dev.pic_8259a%s
-D x86-dev-pic_8259a.adb	20190408175552 f61376ca x86.dev.pic_8259a%b
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-pic_8259a.ads	20190406212707 6accb118 x86.dev.pic_8259a%s
+D x86-dev-pic_8259a.adb	20190407143435 f61376ca x86.dev.pic_8259a%b
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 1 ada.ads
 16K9*Ada 20e8 11|3r6 12|2r6 6r29
 X 2 a-unccon.ads
 20v14*Unchecked_Conversion 11|3w10 12|2w10 6r33
 X 3 arch.ads
-12K9*Arch 39e9 11|2w6 2r16 12|1w6 1r16
+12K9*Arch 41e9 11|2w6 2r16 12|1w6 1r16
 16M10*IO_Port<6|66M9> 11|15r51
 22U15*IO_Outb 12|10s9
 X 6 interfac.ads
@@ -68,7 +68,7 @@ X 6 interfac.ads
 63M9*Unsigned_8 12|10r32
 66M9*Unsigned_16 12|6r68
 X 9 x86.ads
-3K9*X86 19e8 11|5r9 71r5 12|4r14 37r5
+3K9*X86 21e8 11|5r9 71r5 12|4r14 37r5
 X 10 x86-dev.ads
 1K13*Dev 9|3k9 10|4e12 11|5r13 71r9 12|4r18 37r9
 X 11 x86-dev-pic_8259a.ads

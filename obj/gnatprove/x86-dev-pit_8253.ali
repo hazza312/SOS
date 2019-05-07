@@ -25,7 +25,7 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U x86.dev.pit_8253%b	x86-dev-pit_8253.adb	60d38c99 OO PK
+U x86.dev.pit_8253%b	x86-dev-pit_8253.adb	8eca7d78 OO PK
 W console%s		console.adb		console.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
@@ -36,18 +36,18 @@ U x86.dev.pit_8253%s	x86-dev-pit_8253.ads	490cc595 OO PK
 W interfaces%s		interfac.ads		interfac.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
-D x86-dev-pit_8253.ads	20190407110310 a4eb0daf x86.dev.pit_8253%s
-D x86-dev-pit_8253.adb	20190408175552 38b99e4a x86.dev.pit_8253%b
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-pit_8253.ads	20190407133943 a4eb0daf x86.dev.pit_8253%s
+D x86-dev-pit_8253.adb	20190407212415 38b99e4a x86.dev.pit_8253%b
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 2 console.ads
-5K9*Console 50e12 9|1w6 1r19
+5K9*Console 51e12 9|1w6 1r19
 X 3 interfac.ads
 38K9*Interfaces 184e15 8|1w6 1r22 9|3w6 3r22
 77M9*Unsigned_64 8|8r31 9|7r18 15r31
@@ -56,7 +56,7 @@ X 4 system.ads
 X 5 s-maccod.ads
 36K16*Machine_Code 131e24 9|2w13 2r38
 X 6 x86.ads
-3K9*X86 19e8 8|4r9 12r5 9|5r14 22r5
+3K9*X86 21e8 8|4r9 12r5 9|5r14 22r5
 X 7 x86-dev.ads
 1K13*Dev 6|3k9 7|4e12 8|4r13 12r9 9|5r18 22r9
 X 8 x86-dev-pit_8253.ads

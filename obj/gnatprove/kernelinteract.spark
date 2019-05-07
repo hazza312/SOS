@@ -5,7 +5,7 @@
       "sloc": [
         {
           "file": "kernelinteract.adb",
-          "line": 11
+          "line": 14
         }
       ],
       "spark": "no"
@@ -18,14 +18,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 1.10999995376915E-03,
-    "globals (basic)": 9.05999972019345E-04,
-    "globals/properties (advanced)": 4.88999998196959E-03,
-    "flow analysis": 3.70000016118865E-05,
+    "marking": 1.85600004624575E-03,
+    "globals (basic)": 7.94999999925494E-04,
+    "globals/properties (advanced)": 7.86499958485365E-03,
+    "flow analysis": 5.50000004295725E-05,
     "codepeer results": 3.00000010611257E-06,
-    "init_why_sections": 1.53000000864267E-04,
-    "translation of standard": 2.51000002026558E-03,
-    "translation of compilation unit": 2.47060004621744E-02,
+    "init_why_sections": 1.67000005603768E-04,
+    "translation of standard": 3.27800004743040E-03,
+    "translation of compilation unit": 4.84410002827644E-02,
     "proof": 1.99999999495049E-06
   }
 }

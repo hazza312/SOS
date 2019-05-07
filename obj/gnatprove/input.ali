@@ -4,7 +4,6 @@ A ada
 A -gnatA
 A --RTS=/home/harry/opt/GNAT/2018/lib/gcc/x86_64-pc-linux-gnu/7.3.1/rts-zfp/
 A -gnat12
-A -gnatp
 A -gnat12
 A -mno-red-zone
 A -gnatc
@@ -27,7 +26,7 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U input%b		input.adb		8fdd66ba OO PK
+U input%b		input.adb		56b82a26 OO PK
 W arch%s		arch.adb		arch.ali
 W console%s		console.adb		console.ali
 W x86%s			x86.ads			x86.ali
@@ -39,22 +38,22 @@ W x86%s			x86.ads			x86.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
 
-D arch.ads		20190415094400 6050e898 arch%s
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
-D consoleb.ads		20190408175552 7ae9b66d consoleb%s
-D input.ads		20190408175552 2aabff2f input%s
-D input.adb		20190408175552 502d307e input%b
+D arch.ads		20190506094226 572c55e5 arch%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
+D input.ads		20190408162646 2aabff2f input%s
+D input.adb		20190408165605 502d307e input%b
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
-D x86.ads		20190415080605 2a12145a x86%s
-D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
-D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
-D /home/harry/Desktop/SOS/pragmas.adc  20190406073625 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 1 arch.ads
-12K9*Arch 39e9 6|3w6 3r16
+12K9*Arch 41e9 6|3w6 3r16
 X 3 console.ads
-5K9*Console 50e12 6|2w6 43r17 60r7
+5K9*Console 51e12 6|2w6 43r17 60r7
 10e4*LF{character} 6|43r25
 35U15*Put 6|60s15
 X 5 input.ads
@@ -74,7 +73,7 @@ X 6 input.adb
 37e7 C{character} 42m10 43r13 47r18
 56e7 C{character} 59m7 60r19 61r14
 X 9 x86.ads
-3K9*X86 5|1r6 6|1r6 22r7 39r7 58r17 59r12 9|20e8
+3K9*X86 5|1r6 6|1r6 22r7 39r7 58r17 59r12 9|21e8
 X 10 x86-dev.ads
 1K13*Dev 5|1r10 6|1r10 22r11 39r11 58r21 59r16 10|4e12
 X 11 x86-dev-keyboard.ads

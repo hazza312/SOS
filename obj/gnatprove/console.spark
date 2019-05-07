@@ -31,7 +31,7 @@
       "spark": "no"
     },
     {
-      "name": "Console.Put",
+      "name": "Console.Put_C",
       "sloc": [
         {
           "file": "console.ads",
@@ -51,7 +51,7 @@
       "spark": "no"
     },
     {
-      "name": "Console.Put_Hex",
+      "name": "Console.Put",
       "sloc": [
         {
           "file": "console.ads",
@@ -71,7 +71,7 @@
       "spark": "no"
     },
     {
-      "name": "Console.Put_Size",
+      "name": "Console.Put_Hex",
       "sloc": [
         {
           "file": "console.ads",
@@ -81,7 +81,7 @@
       "spark": "no"
     },
     {
-      "name": "Console.Put_Line",
+      "name": "Console.Put_Size",
       "sloc": [
         {
           "file": "console.ads",
@@ -91,7 +91,7 @@
       "spark": "no"
     },
     {
-      "name": "Console.Banner",
+      "name": "Console.Put_Line",
       "sloc": [
         {
           "file": "console.ads",
@@ -101,7 +101,7 @@
       "spark": "no"
     },
     {
-      "name": "Console.Set_Colour",
+      "name": "Console.Banner",
       "sloc": [
         {
           "file": "console.ads",
@@ -111,7 +111,7 @@
       "spark": "no"
     },
     {
-      "name": "Console.Clear",
+      "name": "Console.Set_Colour",
       "sloc": [
         {
           "file": "console.ads",
@@ -121,11 +121,21 @@
       "spark": "no"
     },
     {
+      "name": "Console.Clear",
+      "sloc": [
+        {
+          "file": "console.ads",
+          "line": 46
+        }
+      ],
+      "spark": "no"
+    },
+    {
       "name": "Console.Shift_Lines",
       "sloc": [
         {
           "file": "console.ads",
-          "line": 48
+          "line": 49
         }
       ],
       "spark": "no"
@@ -138,14 +148,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 6.56999996863306E-04,
-    "globals (basic)": 2.64000002061948E-04,
-    "globals/properties (advanced)": 1.73200003337115E-03,
-    "flow analysis": 1.10000000859145E-04,
-    "codepeer results": 3.00000010611257E-06,
-    "init_why_sections": 2.66999995801598E-04,
-    "translation of standard": 4.82700020074844E-03,
-    "translation of compilation unit": 1.39399999752641E-02,
-    "proof": 1.99999999495049E-06
+    "marking": 6.38999976217747E-04,
+    "globals (basic)": 5.69999974686652E-04,
+    "globals/properties (advanced)": 3.31899989396334E-03,
+    "flow analysis": 1.19999996968545E-04,
+    "codepeer results": 3.99999998990097E-06,
+    "init_why_sections": 2.46999989030883E-04,
+    "translation of standard": 5.68599998950958E-03,
+    "translation of compilation unit": 2.03670002520084E-02,
+    "proof": 3.00000010611257E-06
   }
 }

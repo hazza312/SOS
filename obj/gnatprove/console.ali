@@ -27,34 +27,40 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U console%b		console.adb		9d53378e OO PK IL
+U console%b		console.adb		148455b9 OO PK IL
+W arch%s		arch.adb		arch.ali
 W common%s		common.ads		common.ali
 W interfaces%s		interfac.ads		interfac.ali
 Z system%s		system.ads		system.ali
 Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
-U console%s		console.ads		3bbe07b2 OO PK
+U console%s		console.ads		d5a7f653 OO PK
 W common%s		common.ads		common.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
-D console.adb		20190408175552 73ac70ef console%b
+D arch.ads		20190506094226 572c55e5 arch%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
+D console.adb		20190506094226 434eb6dc console%b
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
-X 1 common.ads
-3K9*Common 12e11 2|3w6 3r18 3|2w6 2r18
-5M10*Address<4|77M9> 2|40r26 3|68r25
-X 2 console.ads
-5K9*Console 50l5 50e12 3|4b14 17r7 150l5 150t12
-7i4*Width{integer} 3|6r33 36r23 107r28 108r27 138r22 144r22
-8i4*Height{integer} 3|6r20 29r19 42r17 45r18 137r19 143r16 143r28
-10e4*LF{character} 3|34r15 64r11
-12E9*Colour 17e5 19r25 23r12 43r38 44r30 3|12r17 20r29 106r38 109r16
-13n7*Black{12E9} 19r38 43r71 44r64 3|13r30 20r63 106r71 145r42
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+X 1 arch.ads
+12K9*Arch 41e9 4|3w6 3r16
+22U15*IO_Outb 4|54s7 55s7 57s7 58s7
+X 2 common.ads
+3K9*Common 12e11 3|3w6 3r18 4|2w6 2r18
+5M10*Address<6|77M9> 3|41r26 4|84r25
+X 3 console.ads
+5K9*Console 51l5 51e12 4|5b14 18r7 166l5 166t12
+7i4*Width{integer} 4|7r33 38r23 52r41 123r28 124r27 154r22 160r22
+8i4*Height{integer} 4|7r20 30r19 44r17 47r18 153r19 159r16 159r28
+10e4*LF{character} 4|36r15 80r11
+12E9*Colour 17e5 19r25 23r12 44r38 45r30 4|13r17 21r29 122r38 125r16
+13n7*Black{12E9} 19r38 44r71 45r64 4|14r30 21r63 122r71 161r42
 13n14*Blue{12E9}
 13n20*Green{12E9}
 13n27*Cyan{12E9}
@@ -69,93 +75,102 @@ X 2 console.ads
 16n7*Light_Red{12E9}
 16n18*Light_Magenta{12E9}
 16n33*Yellow{12E9}
-16n41*White{12E9} 43r48 44r40 3|12r27 20r39 106r48 145r31
-19E12*BG_Colour{12E9} 24r12 43r59 44r51 3|13r17 20r50 106r59 110r16
-21R9*cell 25e14 27r8 3|6r45
-22e7*c{character} 28r7 3|35m59 145m49
-23e7*fg{12E9} 29r7 3|35m24 145m27
-24e7*bg{19E12} 30r7 3|35m42 145m38
-34U15*At_X 34>20 3|15b14 18l8 18t12
-34i20 X{natural} 3|15b19 17r20
-35U15*Put 35>19 3|32b14 49l8 49t11 56s10 64s7 80s10 100s10 115s31 117s31
-35e19 C{character} 3|32b18 34r10 35r64
-36U15*Put 36>19 3|52b14 58l8 58t11 63s7 72s7 116s7 127s55 128s55 129s55 130s55
-36a19 S{string} 3|52b18 54r16 55r20
-37U15*Put 37>19 37>36 3|73s7 82s7 86b14 102l8 102t11 127s37 128s37 129s37
-. 130s37
-37m19 N{4|77M9} 3|86b18 89r26
-37m36 Base{4|77M9} 3|86b35 93r34 94r19
-38U15*Put 38>19 3|77b14 83t7
-38i19 N{integer} 3|77b18 79r10 82r27
-39U15*Put_Hex 39>23 3|68s43 70b14 74l8 74t15
-39m23 N{4|77M9} 3|70b22 73r11
-40U15*Put_Hex 40>23 3|68b14 68l72 68t79
-40m23 N{1|5M10} 3|68b22 68r63
-41U15*Put_Size 41>24 3|124b14 132t7
-41m24 N{4|77M9} 3|124b23 126r12 127r41 128r41 129r41 130r41
-42U15*Put_Line 42>24 3|61b14 65l8 65t16
-42a24 S{string} 3|61b23 63r11
-43U15*Banner 43>22 43>34 43>55 3|106b14 121t7
-43a22 S{string} 3|106b21 107r36 108r43 116r11
-43e34 FG{12E9} 3|106b33 113r21
-43e55 BG{19E12} 3|106b55 112r21
-44U15*Set_Colour 44>26 44>47 3|20b14 24l8 24t18
-44e26 FG{12E9} 3|20b25 23r21
-44e47 BG{19E12} 3|20b46 22r21
-45U15*Clear 3|27b14 30l8 30t13
-48U15 Shift_Lines 48>27 3|29s7 46s13 135b14 148t7
-48i27 num{positive} 3|135b26 137r28 139r34 143r23
-X 3 console.adb
-6a4 VMem(2|21R9) 7m8 7r8 35m10 139m13 139r27 145m13
-9i4 X{natural} 17m15 35r17 36m10 36r19 36r43 38m10 41r10
-10i4 Y{natural} 35r15 42r13 43m13 43r18 45m13
-12e4 Current_FG{2|12E9} 23m7 35r30 109r26 113m7 120m7
-13e4 Current_BG{2|19E12} 22m7 35r47 110r29 112m7 119m7
-54e11 c=54:16{character}
-87a7 Chars(character) 93r22
-88a7 Digit(character) 93m10 100r14
-89m7 X{4|77M9} 93r28 94m10 94r15 95r20
-90i7 i{natural} 93r16 96m10 96r15 99r27
-99i11 J{integer} 100r20
-107i7 L_Pad{positive} 108r35 115r19
-108i7 R_Pad{positive} 117r19
-109e7 Old_FG{2|12E9} 120r21
-110e7 Old_BG{2|19E12} 119r21
-115i11 i{integer}
-117i11 i{integer}
-137i11 j{integer} 139r18 139r32
-138i14 i{integer} 139r21 139r39
-143i11 j{integer} 145r18
-144i14 i{integer} 145r20
-X 4 interfac.ads
-38K9*Interfaces 2|2w6 2r22 3|1w6 1r22 4|184e15
-77M9*Unsigned_64 2|37r23 37r43 39r26 41r27 3|68r51 70r25 82r11 86r22 86r42
-. 87r21 89r11 124r26
-X 5 system.ads
-60K9*System 2|1w6 3|7r25 5|172e11
-90M9*Address 3|7r25
+16n41*White{12E9} 44r48 45r40 4|13r27 21r39 122r48 161r31
+19E12*BG_Colour{12E9} 24r12 44r59 45r51 4|14r17 21r50 122r59 126r16
+21R9*cell 25e14 27r8 4|7r45
+22e7*c{character} 28r7 4|37m59 161m49
+23e7*fg{12E9} 29r7 4|37m24 161m27
+24e7*bg{19E12} 30r7 4|37m42 161m38
+34U15*At_X 34>20 4|16b14 19l8 19t12
+34i20 X{natural} 4|16b19 18r20
+35U15*Put 35>19 4|33b14 60l8 60t11 67s10 80s7 96s10 116s10 131s31 133s31
+35e19 C{character} 4|33b18 36r10 37r64
+36U15*Put 36>19 4|63b14 69l8 69t11 73s7 79s7 88s7 132s7 143s55 144s55 145s55
+. 146s55
+36a19 S{string} 4|63b18 65r16 66r20
+37U15*Put_C 37>21 4|71b14 74l8 74t13
+37a21 S{string} 4|71b20 73r11
+38U15*Put 38>19 38>36 4|89s7 98s7 102b14 118l8 118t11 143s37 144s37 145s37
+. 146s37
+38m19 N{6|77M9} 4|102b18 105r26
+38m36 Base{6|77M9} 4|102b35 109r34 110r19
+39U15*Put 39>19 4|93b14 99t7
+39i19 N{integer} 4|93b18 95r10 98r27
+40U15*Put_Hex 40>23 4|84s43 86b14 90l8 90t15
+40m23 N{6|77M9} 4|86b22 89r11
+41U15*Put_Hex 41>23 4|84b14 84l72 84t79
+41m23 N{2|5M10} 4|84b22 84r63
+42U15*Put_Size 42>24 4|140b14 148t7
+42m24 N{6|77M9} 4|140b23 142r12 143r41 144r41 145r41 146r41
+43U15*Put_Line 43>24 4|77b14 81l8 81t16
+43a24 S{string} 4|77b23 79r11
+44U15*Banner 44>22 44>34 44>55 4|122b14 137t7
+44a22 S{string} 4|122b21 123r36 124r43 132r11
+44e34 FG{12E9} 4|122b33 129r21
+44e55 BG{19E12} 4|122b55 128r21
+45U15*Set_Colour 45>26 45>47 4|21b14 25l8 25t18
+45e26 FG{12E9} 4|21b25 24r21
+45e47 BG{19E12} 4|21b46 23r21
+46U15*Clear 4|28b14 31l8 31t13
+49U15 Shift_Lines 49>27 4|30s7 48s13 151b14 164t7
+49i27 num{positive} 4|151b26 153r28 155r34 159r23
+X 4 console.adb
+7a4 VMem(3|21R9) 8m8 8r8 37m10 155m13 155r27 161m13
+10i4 X{natural} 18m15 37r17 38m10 38r19 38r43 40m10 43r10 52r62
+11i4 Y{natural} 37r15 44r13 45m13 45r18 47m13 52r24
+13e4 Current_FG{3|12E9} 24m7 37r30 125r26 129m7 136m7
+14e4 Current_BG{3|19E12} 23m7 37r47 126r29 128m7 135m7
+34m7 P{6|66M9} 52m7 55r35 58r48
+65e11 c=65:16{character}
+103a7 Chars(character) 109r22
+104a7 Digit(character) 109m10 116r14
+105m7 X{6|77M9} 109r28 110m10 110r15 111r20
+106i7 i{natural} 109r16 112m10 112r15 115r27
+115i11 J{integer} 116r20
+123i7 L_Pad{positive} 124r35 131r19
+124i7 R_Pad{positive} 133r19
+125e7 Old_FG{3|12E9} 136r21
+126e7 Old_BG{3|19E12} 135r21
+131i11 i{integer}
+133i11 i{integer}
+153i11 j{integer} 155r18 155r32
+154i14 i{integer} 155r21 155r39
+159i11 j{integer} 161r18
+160i14 i{integer} 161r20
+X 6 interfac.ads
+38K9*Interfaces 3|2w6 2r22 4|1w6 1r22 6|184e15
+63M9*Unsigned_8 4|55r24 58r24
+66M9*Unsigned_16 4|34r11 52r12 52r29 52r50
+77M9*Unsigned_64 3|38r23 38r43 40r26 42r27 4|84r51 86r25 98r11 102r22 102r42
+. 103r21 105r11 140r26
+105V13*Shift_Right{66M9} 4|58s36
+X 7 system.ads
+60K9*System 3|1w6 4|8r25 7|172e11
+90M9*Address 4|8r25
 
 QQ SPARKVERSION 2018 (20180524)
 GG EK_DIRECT_CALLS console__at_x 0
 GG EK_GLOBALS console__at_x local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 console__x proper_output 1 console__x refined_proof_in 0 refined_input 1 console__x refined_output 1 console__x calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 console__x LOCKS 0
 GG EK_DIRECT_CALLS console__put 0
-GG EK_GLOBALS console__put local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 5 console__vmem console__x console__y console__current_fg console__current_bg LOCKS 0
+GG EK_GLOBALS console__put local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 5 console__vmem console__x console__y console__current_fg console__current_bg LOCKS 0
 GG EK_DIRECT_CALLS console__put__2 0
-GG EK_GLOBALS console__put__2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS console__put__2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS console__put_c 0
+GG EK_GLOBALS console__put_c local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS console__put__3 0
-GG EK_GLOBALS console__put__3 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS console__put__3 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS console__put__4 0
-GG EK_GLOBALS console__put__4 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS console__put__4 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS console__put_hex 0
-GG EK_GLOBALS console__put_hex local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS console__put_hex local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS console__put_hex__2 0
-GG EK_GLOBALS console__put_hex__2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS console__put_hex__2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS console__put_size 0
-GG EK_GLOBALS console__put_size local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS console__put_size local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS console__put_line 0
-GG EK_GLOBALS console__put_line local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS console__put_line local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 3 console__vmem console__x console__y refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 3 console__vmem console__x console__y calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS console__banner 0
-GG EK_GLOBALS console__banner local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 5 console__vmem console__x console__y console__current_fg console__current_bg refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 5 console__vmem console__x console__y console__current_fg console__current_bg calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 console__current_fg console__current_bg LOCKS 0
+GG EK_GLOBALS console__banner local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 5 console__vmem console__x console__y console__current_fg console__current_bg proper_output 5 console__vmem console__x console__y console__current_fg console__current_bg refined_proof_in 0 refined_input 5 console__vmem console__x console__y console__current_fg console__current_bg refined_output 5 console__vmem console__x console__y console__current_fg console__current_bg calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__2 arch__io_outb local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 console__current_fg console__current_bg LOCKS 0
 GG EK_DIRECT_CALLS console__set_colour 0
 GG EK_GLOBALS console__set_colour local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 console__current_fg console__current_bg proper_output 2 console__current_fg console__current_bg refined_proof_in 0 refined_input 2 console__current_fg console__current_bg refined_output 2 console__current_fg console__current_bg calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 console__current_fg console__current_bg LOCKS 0
 GG EK_DIRECT_CALLS console__clear 0

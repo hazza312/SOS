@@ -28,108 +28,87 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U error%b		error.adb		2d6498fc OO PK
+U error%b		error.adb		d114b078 OO PK
 W console%s		console.adb		console.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.machine_code%s	s-maccod.ads		s-maccod.ali
 W x86%s			x86.ads			x86.ali
+W x86.dev%s		x86-dev.ads		x86-dev.ali
+W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
 W x86.interrupts%s	x86-interrupts.adb	x86-interrupts.ali
 
-U error%s		error.ads		c778479d OO PK
+U error%s		error.ads		40935750 OO PK
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W x86%s			x86.ads			x86.ali
 W x86.interrupts%s	x86-interrupts.adb	x86-interrupts.ali
 
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
-D error.ads		20190417161939 5bb1aea4 error%s
-D error.adb		20190417161944 9969d2a6 error%b
+D arch.ads		20190506094226 572c55e5 arch%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
+D error.ads		20190506094226 9f517203 error%s
+D error.adb		20190506094226 52bcb068 error%b
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-interrupts.ads	20190408175552 133dfb82 x86.interrupts%s
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
-X 2 console.ads
-5K9*Console 50e12 4|1w6 1r19 25r37 28r43 81r9 82r32
-10e4*LF{character} 4|10r9 22r9 51r41 81r17
-14n7*Red{12E9} 4|11r32 25r45 28r51 82r40
-16n41*White{12E9} 4|11r41
-35U15*Put 4|10s5 22s5 51s37 81s5
-36U15*Put 4|26s9 29s9 33s5 84s5 84s21 84s34
-38U15*Put 4|84s54
-39U15*Put_Hex 4|32s5 51s25
-42U15*Put_Line 4|12s5 36s25 37s25 38s25 39s25 40s25 41s25 42s25 43s25 44s25
-. 45s25 46s25 47s25 48s25 49s25 52s25 53s25 54s25 55s25 56s25 57s25 59s36
-. 60s36 61s36 62s36 63s36 64s36 65s36 66s36 67s36 68s36 69s36 70s36 71s36
-. 72s36 83s5
-43U15*Banner 4|11s5 25s9 28s9 82s5
-X 3 error.ads
-5K9*Error 21l5 21e10 4|6b14 90l5 90t10
-7U15*lastchance 7>26 7>40 4|79b11 88l5 88t15
-7a26 Msg{string} 4|79b22 84r25
-7i40 Line{integer} 4|79b36 84r58
-13U15*Exception_Handler 4|17b11 77l5 77t22
-19U15*Panic 19>21 4|8b11 15l5 15t10
-19a21 S{string} 4|8b17 12r14
-X 4 error.adb
-18e5 V{9|6E10} 21m64 21r64 24r8 32r44 35r10
-19m5 A{5|77M9} 50m79 50r79 51r33
-X 5 interfac.ads
-38K9*Interfaces 3|2w6 2r22 4|2w6 2r22 5|184e15
-77M9*Unsigned_64 4|19r9 32r13 50r50
-X 6 system.ads
-60K9*System 3|1w6 4|3r6 3r31 6|172e11
-X 7 s-maccod.ads
-36K16*Machine_Code 4|3w13 3r38 7|131e24
-83U14*Asm 4|13s5 14s5 21s5 50s25 74s5 75s5 86s5 87s5
-X 8 x86.ads
-3K9*X86 3|3r6 3r26 4|4r6 4r26 8|19e8
-X 9 x86-interrupts.ads
-5K13*Interrupts 3|3w10 3r30 4|4w10 4r30 9|66e19
-6E10*Interrupt 4|18r9 21r37 32r25 9|13e6
-7n9*DE{6E10} 4|36r14
-7n17*DB{6E10} 4|37r14
-7n25*NMI{6E10} 4|38r14
-7n33*BP{6E10} 4|39r14
-7n41*OFE{6E10} 4|40r14
-7n49*BR{6E10} 4|41r14
-7n57*UD{6E10} 4|42r14
-7n65*NM{6E10} 4|43r14
-8n9*DF{6E10} 4|44r14
-8n17*TS{6E10} 4|45r14
-8n25*NP{6E10} 4|46r14
-8n33*SS{6E10} 4|47r14
-8n41*GP{6E10} 4|48r14
-8n49*PF{6E10} 4|49r14
-8n57*MF{6E10} 4|52r14
-8n65*AC{6E10} 4|53r14
-9n9*MC{6E10} 4|54r14
-9n17*XF{6E10} 4|55r14
-9n25*VC{6E10} 4|56r14
-9n33*SX{6E10} 4|57r14
-11n9*PIT{6E10} 4|59r14
-11n14*Keyboard{6E10} 4|60r14
-11n24*PIC_Slave{6E10} 4|61r14
-11n35*COM2_4{6E10} 4|62r14
-11n43*COM1_3{6E10} 4|63r14
-11n51*LPT2{6E10} 4|64r14
-11n57*Floppy{6E10} 4|65r14
-11n65*LPT1{6E10} 4|66r14
-12n9*RTC{6E10} 4|67r14
-12n14*Mouse{6E10} 4|68r14
-12n21*Math_Coprocessor{6E10} 4|69r14
-12n39*HD1{6E10} 4|70r14
-12n44*HD2{6E10} 4|71r14
-26E13*CPU_Exception{6E10} 4|24r13
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
+D x86-interrupts.ads	20190506094226 503637e8 x86.interrupts%s
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+X 3 console.ads
+5K9*Console 51e12 6|1w6 1r19 33r27 37r37 42r43 65r9 66r32
+10e4*LF{character} 6|18r9 30r9 47r9 65r17
+14n7*Red{12E9} 6|19r32 33r35 37r45 42r51 66r40
+16n41*White{12E9} 6|19r41
+35U15*Put 6|18s5 30s5 47s5 65s5
+36U15*Put 6|34s9 38s9 39s9 43s9 44s9 46s5 68s5 68s21 68s34
+39U15*Put 6|68s54
+40U15*Put_Hex 6|46s21
+43U15*Put_Line 6|20s5 50s5 67s5
+44U15*Banner 6|19s5 33s9 37s9 42s9 66s5
+X 5 error.ads
+5K9*Error 24l5 24e10 6|7b14 74l5 74t10
+7U15*Panic_If 7>24 7>44 6|9b11 14l5 14t13
+7b24 Condition{boolean} 6|9b20 11r8
+7a44 S{string} 6|9b40 12r15
+10U15*lastchance 10>26 10>40 6|63b11 72l5 72t15
+10a26 Msg{string} 6|63b22 68r25
+10i40 Line{integer} 6|63b36 68r58
+16U15*Exception_Handler 6|25b11 61l5 61t22
+22U15*Panic 22>21 6|12s9 16b11 23l5 23t10
+22a21 S{string} 6|16b17 20r14
+X 6 error.adb
+26e5 V{13|6E10} 28m64 28r64 32r12 36r11 39r28 44r28 46r60
+X 7 interfac.ads
+38K9*Interfaces 5|2w6 2r22 6|2w6 2r22 7|184e15
+77M9*Unsigned_64 6|46r29
+X 8 system.ads
+60K9*System 5|1w6 6|3r6 3r31 8|172e11
+X 9 s-maccod.ads
+36K16*Machine_Code 6|3w13 3r38 9|131e24
+83U14*Asm 6|21s5 22s5 28s5 29s5 51s5 70s5 71s5
+X 10 x86.ads
+3K9*X86 5|3r6 3r26 6|4r6 4r26 5r6 10|21e8
+X 11 x86-dev.ads
+1K13*Dev 6|5r10 11|4e12
+X 12 x86-dev-keyboard.ads
+5K17*Keyboard 6|5w14 12|31e21
+X 13 x86-interrupts.ads
+5K13*Interrupts 5|3w10 3r30 6|4w10 4r30 13|129e19
+6E10*Interrupt 6|26r9 28r37 46r41 13|13e6
+26E13*CPU_Exception{6E10} 6|36r16
+77a4*Interrupt_Name(string) 6|39r13 44r13
 
 QQ SPARKVERSION 2018 (20180524)
+GG EK_DIRECT_CALLS error__panic_if 0
+GG EK_GLOBALS error__panic_if local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 4 console__put console__put_line console__banner system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS error__lastchance 0
 GG EK_GLOBALS error__lastchance local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 6 console__put console__put__2 console__put__4 console__put_line console__banner system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS error__exception_handler 0
-GG EK_GLOBALS error__exception_handler local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 6 console__put console__put__2 console__put_hex console__put_line console__banner system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS error__exception_handler local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 x86__interrupts__interrupt_name __HEAP proper_output 0 refined_proof_in 0 refined_input 2 x86__interrupts__interrupt_name __HEAP refined_output 0 calls_proof 0 calls 0 calls_conditional 6 console__put console__put__2 console__put_hex console__put_line console__banner system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__interrupts__interrupt_name LOCKS 0
 GG EK_DIRECT_CALLS error__panic 0
 GG EK_GLOBALS error__panic local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 4 console__put console__put_line console__banner system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS error 0

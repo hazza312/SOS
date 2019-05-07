@@ -1,12 +1,14 @@
-kernelinteract.adb:59:43: warning: value not in range of type "BG_Colour" defined at console.ads:19
-kernelinteract.adb:59:43: warning: "Constraint_Error" will be raised at run time
-kernelinteract.adb:63:40: warning: value not in range of type "BG_Colour" defined at console.ads:19
-kernelinteract.adb:63:40: warning: "Constraint_Error" will be raised at run time
-kernelinteract.adb:67:38: warning: value not in range of type "BG_Colour" defined at console.ads:19
-kernelinteract.adb:67:38: warning: "Constraint_Error" will be raised at run time
-kernelinteract.adb:68:28: warning: "Base" may be referenced before it has a value
-kernelinteract.adb:68:34: warning: "Base_Length" may be referenced before it has a value
-kernelinteract.adb:76:30: warning: value not in range of type "BG_Colour" defined at console.ads:19
-kernelinteract.adb:76:30: warning: "Constraint_Error" will be raised at run time
-kernelinteract.adb:85:25: warning: value not in range of type "BG_Colour" defined at console.ads:19
-kernelinteract.adb:85:25: warning: "Constraint_Error" will be raised at run time
+kernelinteract.adb:81:50: warning: value not in range of type "BG_Colour" defined at console.ads:19
+kernelinteract.adb:81:50: warning: "Constraint_Error" will be raised at run time
+kernelinteract.adb:88:43: warning: value not in range of type "BG_Colour" defined at console.ads:19
+kernelinteract.adb:88:43: warning: "Constraint_Error" will be raised at run time
+kernelinteract.adb:92:40: warning: value not in range of type "BG_Colour" defined at console.ads:19
+kernelinteract.adb:92:40: warning: "Constraint_Error" will be raised at run time
+kernelinteract.adb:96:38: warning: value not in range of type "BG_Colour" defined at console.ads:19
+kernelinteract.adb:96:38: warning: "Constraint_Error" will be raised at run time
+kernelinteract.adb:100:46: warning: value not in range of type "BG_Colour" defined at console.ads:19
+kernelinteract.adb:100:46: warning: "Constraint_Error" will be raised at run time
+kernelinteract.adb:109:30: warning: value not in range of type "BG_Colour" defined at console.ads:19
+kernelinteract.adb:109:30: warning: "Constraint_Error" will be raised at run time
+kernelinteract.adb:118:25: warning: value not in range of type "BG_Colour" defined at console.ads:19
+kernelinteract.adb:118:25: warning: "Constraint_Error" will be raised at run time

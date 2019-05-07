@@ -1,11 +1,31 @@
 {
   "spark": [
     {
+      "name": "Error.Panic_If",
+      "sloc": [
+        {
+          "file": "error.ads",
+          "line": 7
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Error.lastchance",
+      "sloc": [
+        {
+          "file": "error.ads",
+          "line": 10
+        }
+      ],
+      "spark": "no"
+    },
+    {
       "name": "Error.Exception_Handler",
       "sloc": [
         {
           "file": "error.ads",
-          "line": 13
+          "line": 16
         }
       ],
       "spark": "no"
@@ -15,7 +35,7 @@
       "sloc": [
         {
           "file": "error.ads",
-          "line": 19
+          "line": 22
         }
       ],
       "spark": "no"
@@ -28,14 +48,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 7.21000018529594E-04,
-    "globals (basic)": 3.75000003259629E-04,
-    "globals/properties (advanced)": 2.03699991106987E-03,
-    "flow analysis": 3.89999986509793E-05,
+    "marking": 5.77999977394938E-04,
+    "globals (basic)": 4.45999990915880E-04,
+    "globals/properties (advanced)": 5.26800006628036E-03,
+    "flow analysis": 8.29999989946373E-05,
     "codepeer results": 3.00000010611257E-06,
-    "init_why_sections": 1.65999997989275E-04,
-    "translation of standard": 3.00700007937849E-03,
-    "translation of compilation unit": 1.54910003766418E-02,
-    "proof": 1.99999999495049E-06
+    "init_why_sections": 1.82000003405847E-04,
+    "translation of standard": 3.25600011274219E-03,
+    "translation of compilation unit": 3.15489992499352E-02,
+    "proof": 3.00000010611257E-06
   }
 }

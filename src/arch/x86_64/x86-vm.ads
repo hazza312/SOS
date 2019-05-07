@@ -19,6 +19,7 @@ is
    DIRTY          : constant := 2#100_0000#;
    IS_PAGE        : constant := 2#1000_0000#;
    GLOBAL         : constant := 2#1_0000_0000#;
+
    ENTRY_COUNT    : constant := (2**63 -1) - (2**52 -1);
    REFERENCE      : constant := (2**52 -1) - (2**12 -1);
 
@@ -33,6 +34,9 @@ is
 
 ---PUBLIC SUBPROGRAMS-----------------------------------------------------------
 
+   -- while it would be handy for this subprogram to return a boolean, this
+   -- would not be possible in SPARK, as functions must be pure, but this 
+   -- might modify mutable state (i.e. we might have to request a new page dir).
    procedure Create_Mapping(  VMA:           Virtual_Address;
                               PA:            Physical_Address;
                               Flags:         Flags_Type;
@@ -88,6 +92,12 @@ private
    Dir_Pages : Page_Bit_Array;
 
 ---helpers----------------------------------------------------------------------
+
+   -- return true if Table empty.
+   function Decrement_Entry_Count(T: in out Table; I: Table_Index) return Boolean with Inline;
+
+   -- return True if Table full
+   function Increment_Entry_Count(T: in out Table; I: Table_Index) return Boolean with Inline;
 
    function Has_Free_Dir_Page return Boolean
    with SPARK_Mode,

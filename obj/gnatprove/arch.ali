@@ -28,7 +28,7 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U arch%b		arch.adb		2d980c7f OO PK
+U arch%b		arch.adb		4dde7479 OO PK
 W common%s		common.ads		common.ali
 W console%s		console.adb		console.ali
 W multiboot%s		multiboot.ads		multiboot.ali
@@ -45,7 +45,7 @@ W x86.dev.rtc%s		x86-dev-rtc.adb		x86-dev-rtc.ali
 W x86.dev.vga_console%s	x86-dev-vga_console.adb	x86-dev-vga_console.ali
 W x86.interrupts%s	x86-interrupts.adb	x86-interrupts.ali
 
-U arch%s		arch.ads		ea5bb352 OO PK
+U arch%s		arch.ads		dd270e2f OO PK
 W common%s		common.ads		common.ali
 W consoleb%s		consoleb.adb		consoleb.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -53,105 +53,107 @@ W system%s		system.ads		system.ali
 
 D ada.ads		20180525181036 76789da1 ada%s
 D a-unccon.ads		20180525181036 0e9b276f ada.unchecked_conversion%s
-D arch.ads		20190415094400 6050e898 arch%s
-D arch.adb		20190415094323 da5a843a arch%b
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
-D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D arch.ads		20190506094226 572c55e5 arch%s
+D arch.adb		20190506094226 20727cca arch%b
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
-D multiboot.ads		20190408175552 d2bd122e multiboot%s
+D multiboot.ads		20190408131737 d2bd122e multiboot%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-debug.ads		20190407072905 ba36a198 x86.debug%s
-D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
-D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
-D x86-dev-pic_8259a.ads	20190407072905 6accb118 x86.dev.pic_8259a%s
-D x86-dev-pit_8253.ads	20190407110310 a4eb0daf x86.dev.pit_8253%s
-D x86-dev-rtc.ads	20190408175552 dc494b72 x86.dev.rtc%s
-D x86-dev-vga_console.ads  20190408175552 81bdcc95 x86.dev.vga_console%s
-D x86-interrupts.ads	20190408175552 133dfb82 x86.interrupts%s
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-debug.ads		20190406212947 ba36a198 x86.debug%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
+D x86-dev-pic_8259a.ads	20190406212707 6accb118 x86.dev.pic_8259a%s
+D x86-dev-pit_8253.ads	20190407133943 a4eb0daf x86.dev.pit_8253%s
+D x86-dev-rtc.ads	20190407193342 dc494b72 x86.dev.rtc%s
+D x86-dev-vga_console.ads  20190408081552 81bdcc95 x86.dev.vga_console%s
+D x86-interrupts.ads	20190506094226 503637e8 x86.interrupts%s
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 3 arch.ads
-12K9*Arch 39l5 39e9 4|12b14 148l5 148t9
+12K9*Arch 41l5 41e9 4|12b14 145l5 145t9
 14N5*MAX_ADDRESS_BITS
 15N5*PAGE_SIZE
 16M10*IO_Port<8|66M9> 21r27 22r29 4|14r27 19r23 24r29 28r13
-18U15*Scout_Memory 18=28 18=50 18>76 4|127b15 146l9 146t21
-18m28 Base{5|5M10} 4|127b28 136m42
-18m50 Size{8|77M9} 4|127b50 136m48
-18b76 Debug{boolean} 4|127b76 136r101
-19U15*Initialise_Interrupts 4|42b15 99l9 99t30
+18U15*Scout_Memory 18=28 18=50 18>76 4|112b15 131l9 131t21
+18m28 Base{5|5M10} 4|112b28 121m42
+18m50 Size{8|77M9} 4|112b50 121m48
+18b76 Debug{boolean} 4|112b76 121r101
+19U15*Initialise_Interrupts 4|42b15 84l9 84t30
 21V14*IO_Inb{8|63M9} 21>21 4|14b14 22l9 22t15
 21m21 Port{16M10} 4|14b21 19r46
 22U15*IO_Outb 22>23 22>38 4|24b15 30l9 30t16
 22m23 Port{16M10} 4|24b23 28r36
 22m38 Data{8|63M9} 4|24b38 27r50
 23V14*CR3_Address{5|6M10} 4|32b14 39l9 39t20
+25U15*Reload_CR3 25>26 4|134b14 143l9 143t19
+25m26 Address{5|6M10} 4|134b25 138r52
 X 4 arch.adb
 16m9 Ret{8|63M9} 20m52 20r52 21r16
 33m9 Val{5|6M10} 36m66 36r66 38r16
-43m9*Native_A{8|77M9} 54m46 54r46
+43m9*Native_A{8|77M9} 53m46 53r46
 44m9*Native_B{8|77M9}
 45m9*Native_C{8|77M9} 74m46 74r46
-102U15 Parse_Memory_Entries 124l9 124t29 136s21
-103m9 Biggest_Base{5|5M10} 111m9 120m17
-104m9 Biggest_Size{8|77M9} 110m9 118r44 121m17
-105m9 Base{10|90M9} 108r68
-105i31 N{natural} 108r47
-106b9 Debug{boolean} 113r12
-108a9 Entries{9|21A10} 114r43 116r29 117r16 118r22 120r33 121r33
-116r13 Memory_Entry=116:29{9|13R10}
-128r9 Tag{9|24R9} 131r28
-129m9 Byte_Count{8|74M9} 131r15 133r100 140m17 141r20 142m21
-133r17 Tag_S{9|24R9} 135r20 136m54 136r54 136r78 140r35
+87U15 Parse_Memory_Entries 109l9 109t29 121s21
+88m9 Biggest_Base{5|5M10} 96m9 105m17
+89m9 Biggest_Size{8|77M9} 95m9 103r44 106m17
+90m9 Base{10|90M9} 93r68
+90i31 N{natural} 93r47
+91b9 Debug{boolean} 98r12
+93a9 Entries{9|21A10} 99r43 101r29 102r16 103r22 105r33 106r33
+101r13 Memory_Entry=101:29{9|13R10}
+113r9 Tag{9|24R9} 116r28
+114m9 Byte_Count{8|74M9} 116r15 118r100 125m17 126r20 127m21
+118r17 Tag_S{9|24R9} 120r20 121m54 121r54 121r78 125r35
 X 5 common.ads
 3K9*Common 3|4w6 4r18 4|4w26 5r26 5|12e11
-5M10*Address<8|77M9> 3|18r41 4|103r30 127r41
-6M10*Physical_Address<5M10> 3|23r33 4|32r33 33r14 36r32
+5M10*Address<8|77M9> 3|18r41 4|88r30 112r41
+6M10*Physical_Address<5M10> 3|23r33 25r35 4|32r33 33r14 36r32 134r34 138r20
 X 6 console.ads
-5K9*Console 4|4w6 5r6 6|50e12
-10e4*LF{character} 4|53r17 67r17 73r17
-35U15*Put 4|53s13 67s13 73s13
-36U15*Put 4|51s9 65s9 71s9
-39U15*Put_Hex 4|52s13 66s13 72s13
+5K9*Console 4|4w6 5r6 6|51e12
+10e4*LF{character} 4|52r17 67r17 73r17 136r29
+35U15*Put 4|52s13 67s13 73s13
+36U15*Put 4|50s9 65s9 71s9
+40U15*Put_Hex 4|51s13 66s13 72s13
 X 7 consoleb.ads
 7k9*Consoleb 3|3w6 7|19e13
 X 8 interfac.ads
 38K9*Interfaces 3|1w6 1r22 8|184e15
 63M9*Unsigned_8 3|21r43 22r44 4|14r43 16r14 20r24 24r44 27r24
 66M9*Unsigned_16 3|16r25
-74M9*Unsigned_32 4|129r21
-77M9*Unsigned_64 3|18r63 4|43r20 44r20 45r20 52r21 66r21 72r21 104r30 127r63
+74M9*Unsigned_32 4|114r21
+77M9*Unsigned_64 3|18r63 4|43r20 44r20 45r20 51r21 66r21 72r21 89r30 112r63
 X 9 multiboot.ads
-4K9*Multiboot 4|4w15 5r15 108r19 117r44 128r14 128r67 133r25 133r78 9|30e14
-6m5*Boot_Info{8|74M9} 4|128r77 133r88
-9n26*Free_Ram{9E10} 4|117r54
-14m7*Base_Address{5|5M10} 4|120r46
-15m7*Length{8|77M9} 4|118r35 121r46
-16e7*Availability{9E10} 4|117r29
-21A10*Memory_Entries(13R10)<integer> 4|108r29
-24R9*Base_Tag 4|128r24 133r35 9|27e14
-25m7*Tag_Type{8|74M9} 4|131r32 135r26
-26m7*Tag_Size{8|74M9} 4|136r84 140r41
+4K9*Multiboot 4|4w15 5r15 93r19 102r44 113r14 113r67 118r25 118r78 9|30e14
+6m5*Boot_Info{8|74M9} 4|113r77 118r88
+9n26*Free_Ram{9E10} 4|102r54
+14m7*Base_Address{5|5M10} 4|105r46
+15m7*Length{8|77M9} 4|103r35 106r46
+16e7*Availability{9E10} 4|102r29
+21A10*Memory_Entries(13R10)<integer> 4|93r29
+24R9*Base_Tag 4|113r24 118r35 9|27e14
+25m7*Tag_Type{8|74M9} 4|116r32 120r26
+26m7*Tag_Size{8|74M9} 4|121r84 125r41
 X 10 system.ads
-60K9*System 3|2w6 4|1w6 1r14 1r39 2r6 2r31 105r15 128r49 133r60 10|172e11
-90M9*Address 4|105r22 128r49 133r60
+60K9*System 3|2w6 4|1w6 1r14 1r39 2r6 2r31 90r15 113r49 118r60 10|172e11
+90M9*Address 4|90r22 113r49 118r60
 X 11 s-maccod.ads
 36K16*Machine_Code 4|1w46 2r38 11|131e24
 69U14*Asm 4|26s9
-83U14*Asm 4|18s9 35s9 48s9
+83U14*Asm 4|18s9 35s9 54s9 136s4
 X 12 s-stoele.ads
 42K16*Storage_Elements 4|1w21 2r13 12|117e28
-76V14*"+"{10|90M9} 4|108s73
+76V14*"+"{10|90M9} 4|93s73
 X 14 x86.ads
-3K9*X86 4|7r6 7r25 7r43 8r9 8r30 8r43 8r59 10r5 47r9 54r9 68r9 68r47 74r9
-. 75r9 114r13 14|19e8
+3K9*X86 4|7r6 7r25 7r43 8r9 8r30 8r43 8r59 10r5 47r9 53r9 68r9 68r47 74r9
+. 75r9 99r13 14|21e8
 X 15 x86-debug.ads
-2K13*Debug 4|8w63 114r17 15|4e14
-3U15*Print_Multiboot_Map 4|114s23
+2K13*Debug 4|8w63 99r17 15|4e14
+3U15*Print_Multiboot_Map 4|99s23
 X 16 x86-dev.ads
 1K13*Dev 4|7r10 7r29 7r47 8r13 8r34 47r13 68r51 75r13 16|4e12
 X 17 x86-dev-keyboard.ads
@@ -168,13 +170,13 @@ X 20 x86-dev-rtc.ads
 X 21 x86-dev-vga_console.ads
 4K17*VGA_Console 4|8w17 21|31e24
 X 22 x86-interrupts.ads
-5K13*Interrupts 4|8w47 10r9 54r13 68r13 74r13 22|66e19
-6E10*Interrupt 4|52r33 66r33 72r33 22|13e6
-11n9*PIT{6E10} 4|52r52 54r41
+5K13*Interrupts 4|8w47 10r9 53r13 68r13 74r13 22|129e19
+6E10*Interrupt 4|51r33 66r33 72r33 22|13e6
+11n9*PIT{6E10} 4|51r52 53r41
 11n14*Keyboard{6E10} 4|66r52 68r37
 12n9*RTC{6E10} 4|72r52 74r41
 29U15*Slow_Handler 4|68s24
-30U15*Register_Handler 4|54s24 74s24
+30U15*Register_Handler 4|53s24 74s24
 
 QQ SPARKVERSION 2018 (20180524)
 GG EK_DIRECT_CALLS arch__scout_memory 0
@@ -187,6 +189,8 @@ GG EK_DIRECT_CALLS arch__io_outb 0
 GG EK_GLOBALS arch__io_outb local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 system__machine_code__asm__2 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS arch__cr3_address 0
 GG EK_GLOBALS arch__cr3_address local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS arch__reload_cr3 0
+GG EK_GLOBALS arch__reload_cr3 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS arch__parse_memory_entries 0
 GG EK_GLOBALS arch__parse_memory_entries local TRUE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 2 system__storage_elements__Oadd x86__debug__print_multiboot_map local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS arch 0

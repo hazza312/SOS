@@ -40,12 +40,12 @@ W system%s		system.ads		system.ali
 
 D ada.ads		20180525181036 76789da1 ada%s
 D a-unccon.ads		20180525181036 0e9b276f ada.unchecked_conversion%s
-D consoleb.ads		20190408175552 7ae9b66d consoleb%s
-D consoleb.adb		20190408175552 cebbe7aa consoleb%b
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
+D consoleb.adb		20190408081733 cebbe7aa consoleb%b
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 1 ada.ads
 16K9*Ada 20e8 4|3r6
 X 2 a-unccon.ads

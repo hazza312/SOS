@@ -1,66 +1,72 @@
 Summary of SPARK analysis
 =========================
 
---------------------------------------------------------------------------------------------------------
-SPARK Analysis results        Total        Flow   Interval   CodePeer     Provers   Justified   Unproved
---------------------------------------------------------------------------------------------------------
-Data Dependencies                 .           .          .          .           .           .          .
-Flow Dependencies                 .           .          .          .           .           .          .
-Initialization                   21          21          .          .           .           .          .
-Non-Aliasing                      .           .          .          .           .           .          .
-Run-time Checks                   7           .          .          .    7 (CVC4)           .          .
-Assertions                        2           .          .          .    2 (CVC4)           .          .
-Functional Contracts              7           .          .          .    5 (CVC4)           .          2
-LSP Verification                  .           .          .          .           .           .          .
---------------------------------------------------------------------------------------------------------
-Total                            37    21 (57%)          .          .    14 (38%)           .     2 (5%)
+---------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   Interval   CodePeer      Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------------------
+Data Dependencies                 .           .          .          .            .           .          .
+Flow Dependencies                 .           .          .          .            .           .          .
+Initialization                   59          58          .          .            .           .          1
+Non-Aliasing                      .           .          .          .            .           .          .
+Run-time Checks                  15           .          .          .    15 (CVC4)           .          .
+Assertions                        4           .          .          .     4 (CVC4)           .          .
+Functional Contracts             17           .          .          .    11 (CVC4)           .          6
+LSP Verification                  .           .          .          .            .           .          .
+---------------------------------------------------------------------------------------------------------
+Total                            95    58 (61%)          .          .     30 (32%)           .     7 (7%)
 
 
 Analyzed 17 units
-in unit arch, 0 subprograms and packages out of 6 analyzed
+in unit arch, 0 subprograms and packages out of 7 analyzed
   Arch.CR3_Address at arch.ads:23 skipped
   Arch.IO_Inb at arch.ads:21 skipped
   Arch.IO_Outb at arch.ads:22 skipped
   Arch.Initialise_Interrupts at arch.ads:19 skipped
-  Arch.Parse_Memory_Entries at arch.adb:102 skipped
+  Arch.Parse_Memory_Entries at arch.adb:87 skipped
+  Arch.Reload_CR3 at arch.ads:25 skipped
   Arch.Scout_Memory at arch.ads:18 skipped
-in unit console, 0 subprograms and packages out of 13 analyzed
+in unit console, 0 subprograms and packages out of 14 analyzed
   Console.At_X at console.ads:34 skipped
-  Console.Banner at console.ads:43 skipped
-  Console.Clear at console.ads:45 skipped
+  Console.Banner at console.ads:44 skipped
+  Console.Clear at console.ads:46 skipped
   Console.Put at console.ads:35 skipped
   Console.Put at console.ads:36 skipped
-  Console.Put at console.ads:37 skipped
   Console.Put at console.ads:38 skipped
-  Console.Put_Hex at console.ads:39 skipped
+  Console.Put at console.ads:39 skipped
+  Console.Put_C at console.ads:37 skipped
   Console.Put_Hex at console.ads:40 skipped
-  Console.Put_Line at console.ads:42 skipped
-  Console.Put_Size at console.ads:41 skipped
-  Console.Set_Colour at console.ads:44 skipped
-  Console.Shift_Lines at console.ads:48 skipped
-in unit error, 0 subprograms and packages out of 2 analyzed
-  Error.Exception_Handler at error.ads:13 skipped
-  Error.Panic at error.ads:19 skipped
+  Console.Put_Hex at console.ads:41 skipped
+  Console.Put_Line at console.ads:43 skipped
+  Console.Put_Size at console.ads:42 skipped
+  Console.Set_Colour at console.ads:45 skipped
+  Console.Shift_Lines at console.ads:49 skipped
+in unit error, 0 subprograms and packages out of 4 analyzed
+  Error.Exception_Handler at error.ads:16 skipped
+  Error.Panic at error.ads:22 skipped
+  Error.Panic_If at error.ads:7 skipped
+  Error.lastchance at error.ads:10 skipped
 in unit input, 0 subprograms and packages out of 3 analyzed
   Input.Disable_Cursor at input.ads:6 skipped
   Input.Enable_Cursor at input.ads:5 skipped
   Input.Get_Char at input.ads:9 skipped
 in unit kernel, 0 subprograms and packages out of 1 analyzed
-  Kernel at kernel.adb:13 skipped
+  Kernel at kernel.adb:16 skipped
 in unit kernelinteract, 0 subprograms and packages out of 1 analyzed
-  KernelInteract at kernelinteract.adb:11 skipped
-in unit mmap, 2 subprograms and packages out of 9 analyzed
+  KernelInteract at kernelinteract.adb:14 skipped
+in unit mmap, 2 subprograms and packages out of 10 analyzed
   MMap.Allocate at mmap.ads:15 skipped
   MMap.Free at mmap.ads:16 skipped
   MMap.Get_Base at mmap.ads:24 skipped
-  MMap.Get_Free_Node at mmap.adb:32 skipped
+  MMap.Get_Free_Node at mmap.adb:36 skipped
+  MMap.Get_Free_Space at mmap.ads:26 skipped
   MMap.Get_Length at mmap.ads:25 skipped
   MMap.Initialise at mmap.ads:17 skipped
   MMap.Node at mmap.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   MMap.Node_List at mmap.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   MMap.Print at mmap.ads:22 skipped
-in unit syscall, 0 subprograms and packages out of 1 analyzed
-  Syscall.Handle at syscall.ads:5 skipped
+in unit syscall, 0 subprograms and packages out of 2 analyzed
+  Syscall.DEBUG at syscall.adb:7 skipped
+  Syscall.Handle at syscall.ads:9 skipped
 in unit x86-debug, 0 subprograms and packages out of 1 analyzed
   X86.Debug.Print_Multiboot_Map at x86-debug.ads:3 skipped
 in unit x86-dev-keyboard, 0 subprograms and packages out of 7 analyzed
@@ -90,21 +96,32 @@ in unit x86-dev-vga_console, 0 subprograms and packages out of 4 analyzed
   X86.Dev.VGA_Console.Clear at x86-dev-vga_console.ads:25 skipped
   X86.Dev.VGA_Console.Put at x86-dev-vga_console.ads:24 skipped
   X86.Dev.VGA_Console.Shift_Lines at x86-dev-vga_console.ads:29 skipped
-in unit x86-interrupts, 0 subprograms and packages out of 2 analyzed
+in unit x86-interrupts, 0 subprograms and packages out of 3 analyzed
+  X86.Interrupts.Dump_Mapping at x86-interrupts.ads:31 skipped
   X86.Interrupts.Register_Handler at x86-interrupts.ads:30 skipped
   X86.Interrupts.Slow_Handler at x86-interrupts.ads:29 skipped
-in unit x86-vm, 1 subprograms and packages out of 11 analyzed
-  X86.Vm.Create_Mapping at x86-vm.ads:87 skipped
-  X86.Vm.Dump_Pages at x86-vm.ads:12 skipped
-  X86.Vm.Dump_Rec at x86-vm.adb:191 skipped
-  X86.Vm.Flush_TLB at x86-vm.adb:62 skipped
-  X86.Vm.Free_Dir_Page at x86-vm.adb:36 skipped
-  X86.Vm.Get_Free_Dir_Page at x86-vm.adb:24 skipped
-  X86.Vm.Map_Page at x86-vm.ads:16 skipped
-  X86.Vm.Offsets_To_VMA at x86-vm.adb:42 skipped
-  X86.Vm.Page_Table_EntryPredicate at x86-vm.ads:47 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  X86.Vm.Print_Page at x86-vm.adb:132 skipped
-  X86.Vm.VMA_To_Offsets at x86-vm.adb:53 skipped
+in unit x86-vm, 5 subprograms and packages out of 21 analyzed
+  X86.Vm at x86-vm.ads:6 skipped
+  X86.Vm.Create_Mapping at x86-vm.ads:36 flow analyzed (0 errors, 0 checks and 1 warnings) and not proved, 4 checks out of 5 proved
+  X86.Vm.Dump_Pages at x86-vm.ads:51 skipped
+  X86.Vm.Dump_Rec at x86-vm.adb:262 skipped
+  X86.Vm.Flags_TypePredicate at x86-vm.ads:29 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  X86.Vm.Free_Dir_Page at x86-vm.adb:76 skipped
+  X86.Vm.Free_Mapping at x86-vm.ads:46 flow analyzed (0 errors, 1 checks and 2 warnings) and not proved, 2 checks out of 4 proved
+  X86.Vm.Get_Directory_Address at x86-vm.ads:125 skipped
+  X86.Vm.Get_Directory_Ref at x86-vm.ads:130 skipped
+  X86.Vm.Get_Frame_Address at x86-vm.ads:135 skipped
+  X86.Vm.Get_Free_Dir_Page at x86-vm.ads:98 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 8 checks out of 9 proved
+  X86.Vm.Get_Num_Entries at x86-vm.adb:41 skipped
+  X86.Vm.Has_Free_Dir_Page at x86-vm.ads:92 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  X86.Vm.Initialise at x86-vm.ads:53 skipped
+  X86.Vm.Make_Directory_Entry at x86-vm.ads:108 skipped
+  X86.Vm.Make_Frame_Entry at x86-vm.ads:117 skipped
+  X86.Vm.Offsets_To_VMA at x86-vm.adb:82 skipped
+  X86.Vm.Print_Page at x86-vm.adb:206 skipped
+  X86.Vm.VMA_To_Offsets at x86-vm.adb:93 skipped
+  X86.Vm.page_alloc at x86-vm.ads:62 skipped
+  X86.Vm.page_free at x86-vm.ads:65 skipped
 in unit x86-vm2, 4 subprograms and packages out of 18 analyzed
   X86.Vm2 at x86-vm2.ads:5 skipped
   X86.Vm2.Create_Mapping at x86-vm2.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 4 checks out of 5 proved

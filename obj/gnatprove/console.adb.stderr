@@ -1,0 +1,2 @@
+console.ads:37:21: warning: type of argument "Put_C.S" is unconstrained array
+console.ads:37:21: warning: foreign caller must pass bounds explicitly

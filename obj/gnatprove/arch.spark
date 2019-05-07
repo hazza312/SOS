@@ -51,11 +51,21 @@
       "spark": "no"
     },
     {
+      "name": "Arch.Reload_CR3",
+      "sloc": [
+        {
+          "file": "arch.ads",
+          "line": 25
+        }
+      ],
+      "spark": "no"
+    },
+    {
       "name": "Arch.Parse_Memory_Entries",
       "sloc": [
         {
           "file": "arch.adb",
-          "line": 102
+          "line": 87
         }
       ],
       "spark": "no"
@@ -68,14 +78,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 1.38000003062189E-03,
-    "globals (basic)": 8.20000015664846E-04,
-    "globals/properties (advanced)": 4.10200003534555E-03,
-    "flow analysis": 7.00000018696301E-05,
+    "marking": 1.33500003721565E-03,
+    "globals (basic)": 5.64999994821846E-04,
+    "globals/properties (advanced)": 3.63499997183681E-03,
+    "flow analysis": 7.10000022081658E-05,
     "codepeer results": 1.99999999495049E-06,
-    "init_why_sections": 1.53000000864267E-04,
-    "translation of standard": 2.83799995668232E-03,
-    "translation of compilation unit": 3.05700004100800E-02,
+    "init_why_sections": 1.69000006280839E-04,
+    "translation of standard": 2.80999997630715E-03,
+    "translation of compilation unit": 4.36839982867241E-02,
     "proof": 1.99999999495049E-06
   }
 }

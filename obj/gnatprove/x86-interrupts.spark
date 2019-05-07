@@ -19,6 +19,16 @@
         }
       ],
       "spark": "no"
+    },
+    {
+      "name": "X86.Interrupts.Dump_Mapping",
+      "sloc": [
+        {
+          "file": "x86-interrupts.ads",
+          "line": 31
+        }
+      ],
+      "spark": "no"
     }
   ],
   "flow": [
@@ -28,14 +38,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 6.77999982144684E-04,
-    "globals (basic)": 3.37000004947186E-04,
-    "globals/properties (advanced)": 1.90000003203750E-03,
-    "flow analysis": 5.70000011066440E-05,
-    "codepeer results": 3.00000010611257E-06,
-    "init_why_sections": 2.46999989030883E-04,
-    "translation of standard": 4.75700013339520E-03,
-    "translation of compilation unit": 1.55189996585250E-02,
+    "marking": 5.37000014446676E-04,
+    "globals (basic)": 4.68999991426244E-04,
+    "globals/properties (advanced)": 2.47900001704693E-03,
+    "flow analysis": 5.29999997525010E-05,
+    "codepeer results": 1.99999999495049E-06,
+    "init_why_sections": 1.78000002051704E-04,
+    "translation of standard": 3.40999988839030E-03,
+    "translation of compilation unit": 2.52560004591942E-02,
     "proof": 1.99999999495049E-06
   }
 }

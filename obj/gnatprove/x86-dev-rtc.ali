@@ -26,42 +26,42 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U x86.dev.rtc%b		x86-dev-rtc.adb		a200a59b OO PK
+U x86.dev.rtc%b		x86-dev-rtc.adb		7b65e907 OO PK
 W arch%s		arch.adb		arch.ali
 W console%s		console.adb		console.ali
 W interfaces%s		interfac.ads		interfac.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-U x86.dev.rtc%s		x86-dev-rtc.ads		51fe6bd0 OO PK
+U x86.dev.rtc%s		x86-dev-rtc.ads		6682d6ad OO PK
 W arch%s		arch.adb		arch.ali
 W interfaces%s		interfac.ads		interfac.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-D arch.ads		20190415094400 6050e898 arch%s
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
-D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D arch.ads		20190506094226 572c55e5 arch%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
+D consoleb.ads		20190408081854 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
-D x86-dev-rtc.ads	20190408175552 dc494b72 x86.dev.rtc%s
-D x86-dev-rtc.adb	20190408175552 8ff0be0c x86.dev.rtc%b
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
+D x86-dev-rtc.ads	20190407193342 dc494b72 x86.dev.rtc%s
+D x86-dev-rtc.adb	20190408134621 8ff0be0c x86.dev.rtc%b
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 1 arch.ads
-12K9*Arch 39e9 9|1w6 1r16 10|2w6 2r16
+12K9*Arch 41e9 9|1w6 1r16 10|2w6 2r16
 16M10*IO_Port<5|66M9> 9|6r21 7r17
 21V14*IO_Inb{5|63M9} 10|17s14 30s16 38s16
 22U15*IO_Outb 10|16s9 29s9 32s9 33s9 37s9 40s9 41s9
 X 3 console.ads
-5K9*Console 50e12 10|3w6 3r19
+5K9*Console 51e12 10|3w6 3r19
 X 5 interfac.ads
 38K9*Interfaces 184e15 9|2w6 2r22 10|1w6 1r22
 63M9*Unsigned_8 10|12r13 26r15
 66M9*Unsigned_16
 77M9*Unsigned_64 9|27r31 10|9r13 45r31
 X 7 x86.ads
-3K9*X86 19e8 9|4r9 29r5 10|5r14 49r5
+3K9*X86 21e8 9|4r9 29r5 10|5r14 49r5
 X 8 x86-dev.ads
 1K13*Dev 7|3k9 8|4e12 9|4r13 29r9 10|5r18 49r9
 X 9 x86-dev-rtc.ads

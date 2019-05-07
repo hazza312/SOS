@@ -1,0 +1,2 @@
+error.ads:10:26: warning: type of argument "lastchance.Msg" is unconstrained array
+error.ads:10:26: warning: foreign caller must pass bounds explicitly

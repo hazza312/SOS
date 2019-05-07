@@ -21,6 +21,34 @@ package body X86.VM is
 
 ----INLINE HELPERS -------------------------------------------------------------
 
+   function Get_Count(T: Table_Entry) return Unsigned_64 is 
+      (Shift_Right(Unsigned_64(T) and ENTRY_COUNT, 52)) with Inline;
+
+   procedure Set_Count(T: in out Table; I: Table_Index; C: Unsigned_64)
+      with Inline
+   is
+   begin
+      T(I) := T(I) and Shift_Left(Table_Entry(C), 52);
+   end Set_Count;
+
+   function Decrement_Entry_Count(T: in out Table; I: Table_Index) return Boolean is
+      C: Unsigned_64;
+   begin
+      C := Get_Count(T(I)) - 1;
+      Set_Count(T, I, C);
+      return C = 0;
+   end Decrement_Entry_Count;
+
+
+   function Increment_Entry_Count(T: in out Table; I: Table_Index) return Boolean is 
+      C: Unsigned_64;
+   begin
+      C := Get_Count(T(I)) + 1;
+      Set_Count(T, I, C);
+      return C = 512;
+   end Increment_Entry_Count;
+
+
    function Make_Directory_Entry(A: Virtual_Address; F: Flags_Type) 
    return Table_Entry 
    is (Table_Entry(Unsigned_64(A) or Unsigned_64(F)));
@@ -110,6 +138,7 @@ package body X86.VM is
    with 
       SPARK_Mode
    is
+      Tables         : array(Table_Level) of Directory_Ref;
       Current_Table  : Directory_Ref    := 0;
       Offsets        : Table_Offsets    := VMA_To_Offsets(VMA);
       Dir_Page       : Virtual_Address;
@@ -134,6 +163,8 @@ package body X86.VM is
          end if;
             Current_Table 
                := Get_Directory_Ref( Directories(Current_Table)(Offsets(L)) );
+
+            Tables(L) := Current_Table;
       end loop;
 
       PTE := Directories(Current_Table)(Offsets(Target_Level));
@@ -141,7 +172,10 @@ package body X86.VM is
          Num_Entries := Get_Num_Entries(PTE);
          Directories(Current_Table)(Offsets(Target_Level)) 
             := Make_Frame_Entry(PA, Flags);
+
          Success := True;
+         --Success := not Increment_Entry_Count(
+         --   Directories(Tables(Target_Level+1)), Offsets(Target_Level+1));
       else 
         Success := False;
      end if;
@@ -156,10 +190,8 @@ package body X86.VM is
    is
       Current_Table  : Directory_Ref    := 0;
       Offsets        : Table_Offsets    := VMA_To_Offsets(VMA);
-      Dir_Page       : Virtual_Address;
       PTE            : Table_Entry;
       Target_Level   : Table_Level      := (if Size = Page_4K then 1 else 2);
-      Num_Entries    : Natural;
    begin
       for L in reverse Target_Level+1..Table_Level'Last loop
          PTE := Directories(Current_Table)(Offsets(L));

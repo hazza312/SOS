@@ -15,6 +15,9 @@ with System.Storage_Elements; use System.Storage_Elements;
 
 procedure Kernel is
 
+   --Directories : array(Directory_Ref) of Table 
+   --   with Address => System'To_Address(X86.PD_POOL_BASE);
+
    KERNEL_PAGE : constant X86.VM.Flags_Type 
                      := X86.VM.IS_PAGE or X86.VM.PRESENT or X86.VM.WRITEABLE;
 

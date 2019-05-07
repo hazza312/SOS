@@ -5,7 +5,17 @@
       "sloc": [
         {
           "file": "syscall.ads",
-          "line": 5
+          "line": 9
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Syscall.DEBUG",
+      "sloc": [
+        {
+          "file": "syscall.adb",
+          "line": 7
         }
       ],
       "spark": "no"
@@ -18,14 +28,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 7.52000021748245E-04,
-    "globals (basic)": 6.67000014800578E-04,
-    "globals/properties (advanced)": 4.17899992316961E-03,
-    "flow analysis": 5.70000011066440E-05,
-    "codepeer results": 3.00000010611257E-06,
-    "init_why_sections": 2.49000004259869E-04,
-    "translation of standard": 5.21299988031387E-03,
-    "translation of compilation unit": 1.65580008178949E-02,
-    "proof": 1.99999999495049E-06
+    "marking": 5.46000024769455E-04,
+    "globals (basic)": 4.71000006655231E-04,
+    "globals/properties (advanced)": 2.75900005362928E-03,
+    "flow analysis": 4.09999993280508E-05,
+    "codepeer results": 1.99999999495049E-06,
+    "init_why_sections": 1.59000002895482E-04,
+    "translation of standard": 2.82600009813905E-03,
+    "translation of compilation unit": 2.14990004897118E-02,
+    "proof": 3.99999998990097E-06
   }
 }

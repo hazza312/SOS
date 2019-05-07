@@ -19,6 +19,7 @@ RR NO_FINALIZATION
 RR NO_IMPLICIT_DYNAMIC_CODE
 RR NO_PROTECTED_TYPES
 RR NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
 RR NO_TASKING
 RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
@@ -26,7 +27,7 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U x86.interrupts%b	x86-interrupts.adb	bf4ad89d OO PK
+U x86.interrupts%b	x86-interrupts.adb	71927cb0 OO PK
 W common%s		common.ads		common.ali
 W console%s		console.adb		console.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -34,110 +35,179 @@ W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W x86%s			x86.ads			x86.ali
 
-U x86.interrupts%s	x86-interrupts.ads	c9cd027f OO PK
+U x86.interrupts%s	x86-interrupts.ads	ade6e4a8 OO PK
 W common%s		common.ads		common.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W x86%s			x86.ads			x86.ali
 
-D common.ads		20190408175552 7f16ff1c common%s
-D console.ads		20190408175552 cb5cea15 console%s
+D common.ads		20190408125500 7f16ff1c common%s
+D console.ads		20190506094226 25451bf4 console%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
-D x86.ads		20190418080136 2a12145a x86%s
-D x86-interrupts.ads	20190408175552 133dfb82 x86.interrupts%s
-D x86-interrupts.adb	20190408175552 ba0a6ea9 x86.interrupts%b
-D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
+D x86.ads		20190506094226 0d323ee7 x86%s
+D x86-interrupts.ads	20190506094226 503637e8 x86.interrupts%s
+D x86-interrupts.adb	20190506094226 d9c0f70f x86.interrupts%b
+D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
 X 1 common.ads
-3K9*Common 12e11 7|2w6 8|2w6 2r18
+3K9*Common 12e11 7|2w6 8|2w6 2r18 38r53 44r14 51r53 54r14 59r30 60r30 61r30
+. 75r34
+5M10*Address<3|77M9> 8|38r60 44r21 51r60 54r21 59r37 60r37 61r37 75r41
 X 2 console.ads
-5K9*Console 50e12 8|5w6 5r19
+5K9*Console 51e12 8|5w6 5r19
+10e4*LF{character} 8|72r11 85r17 92r17
+14n28*Grey{12E9} 8|66r24
+34U15*At_X 8|67s7 68s7 69s7 70s7 81s13 82s13 83s13 84s13 88s13 89s13 90s13
+. 91s13
+35U15*Put 8|72s7 85s13 92s13
+36U15*Put 8|67s22 68s22 69s22 70s22 82s28 83s28 89s28 90s28
+40U15*Put_Hex 8|81s28 88s28
+41U15*Put_Hex 8|84s28 91s28
+43U15*Put_Line 8|96s7
+45U15*Set_Colour 8|66s7 71s7
 X 3 interfac.ads
 38K9*Interfaces 184e15 7|1w6 1r22 8|1w6 1r22
-63M9*Unsigned_8 7|38r25 39r25 40r25
-66M9*Unsigned_16 7|36r25 37r25 42r25 8|22r13 22r28 23r12 23r27
-74M9*Unsigned_32 7|43r25 44r25 8|24r12 24r27
-77M9*Unsigned_64 8|14r13 14r28 21r13 21r28
-145V13*Shift_Right{77M9} 8|23s39 24s39
+63M9*Unsigned_8 7|101r25 102r25 103r25
+66M9*Unsigned_16 7|99r25 100r25 105r25 8|25r11 25r26 26r10 26r25
+74M9*Unsigned_32 7|106r25 107r25 8|27r10 27r25
+77M9*Unsigned_64 8|17r11 17r26 24r11 24r26 45r16 46r27 47r27 52r31 81r36
+. 88r36
+141V13*Shift_Left{77M9} 8|46s16 47s16
+145V13*Shift_Right{77M9} 8|26s37 27s37
 X 4 system.ads
-60K9*System 172e11 7|3w6 29r53 30r57 8|3w6 4r6 4r35 8r37 13r53 20r57
-90M9*Address 7|29r60 30r64 8|8r44 13r60 20r64
+60K9*System 172e11 7|3w6 29r53 30r57 8|3w6 4r6 4r35 6r5 11r36 16r52 23r56
+90M9*Address 7|29r60 30r64 8|11r43 16r59 23r63
 X 5 s-stoele.ads
 42K16*Storage_Elements 117e28 8|4w13 4r42
 105M9*Integer_Address
-112V13*To_Integer{105M9} 8|14s40 21s40
+112V13*To_Integer{105M9} 8|17s38 24s38 54s29 75s49
 X 6 x86.ads
-3K9*X86 19e8 7|5r9 37r52 66r5 8|6r14 36r5
-5N5*CODE_SELECTOR 7|37r56
+3K9*X86 21e8 7|5r9 100r52 129r5 8|9r14 100r5
+5N5*CODE_SELECTOR 7|100r56
 X 7 x86-interrupts.ads
-5K13*Interrupts 6|3k9 7|66l9 66e19 8|6b18 36l9 36t19
-6E10*Interrupt 13e6 15r9 26r30 27r35 29r33 30r37 8|13r33 16r23 20r37 26r15
-7n9*DE{6E10} 16r9 26r46
-7n17*DB{6E10} 16r17
-7n25*NMI{6E10} 16r25
-7n33*BP{6E10} 16r33
-7n41*OFE{6E10} 16r41
-7n49*BR{6E10} 16r49
-7n57*UD{6E10} 16r56
-7n65*NM{6E10} 16r63
-8n9*DF{6E10} 17r9
-8n17*TS{6E10} 17r17
-8n25*NP{6E10} 17r25
-8n33*SS{6E10} 17r33
-8n41*GP{6E10} 17r41
-8n49*PF{6E10} 17r49
-8n57*MF{6E10} 18r9
-8n65*AC{6E10} 18r17
-9n9*MC{6E10} 18r25
-9n17*XF{6E10} 18r33
-9n25*VC{6E10} 18r41
-9n33*SX{6E10} 18r49 26r52
-11n9*PIT{6E10} 20r9 27r51
-11n14*Keyboard{6E10} 20r18
-11n24*PIC_Slave{6E10} 20r32
-11n35*COM2_4{6E10} 20r47
-11n43*COM1_3{6E10} 21r9
-11n51*LPT2{6E10} 21r21
-11n57*Floppy{6E10} 21r30
-11n65*LPT1{6E10} 21r42
-12n9*RTC{6E10} 22r9
-12n14*Mouse{6E10} 22r18
-12n21*Math_Coprocessor{6E10} 22r29
-12n39*HD1{6E10} 22r51
-12n44*HD2{6E10} 23r9 27r58
+5K13*Interrupts 6|3k9 7|129l9 129e19 8|9b18 100l9 100t19
+6E10*Interrupt 13e6 15r9 26r30 27r35 29r33 30r37 77r27 8|16r32 19r21 23r36
+. 29r13 38r35 39r29 51r35 54r47 74r16 75r74 81r48 82r47 88r48 89r47
+7n9*DE{6E10} 16r9 26r46 78r8
+7n17*DB{6E10} 16r17 78r28
+7n25*NMI{6E10} 16r25 78r48
+7n33*BP{6E10} 16r33 79r8
+7n41*OFE{6E10} 16r41 79r28
+7n49*BR{6E10} 16r49 79r48
+7n57*UD{6E10} 16r56 80r8
+7n65*NM{6E10} 16r63 80r28
+8n9*DF{6E10} 17r9 80r48
+8n17*TS{6E10} 17r17 81r8
+8n25*NP{6E10} 17r25 81r28
+8n33*SS{6E10} 17r33 81r48
+8n41*GP{6E10} 17r41 82r8
+8n49*PF{6E10} 17r49 82r28
+8n57*MF{6E10} 18r9 82r48
+8n65*AC{6E10} 18r17 83r8
+9n9*MC{6E10} 18r25 83r28
+9n17*XF{6E10} 18r33 83r48
+9n25*VC{6E10} 18r41 84r8
+9n33*SX{6E10} 18r49 26r52 84r28
+11n9*PIT{6E10} 20r9 27r51 84r48
+11n14*Keyboard{6E10} 20r18 85r8
+11n24*PIC_Slave{6E10} 20r32 85r35
+11n35*COM2_4{6E10} 20r47 86r8
+11n43*COM1_3{6E10} 21r9 86r35
+11n51*LPT2{6E10} 21r21 87r8
+11n57*Floppy{6E10} 21r30 87r35
+11n65*LPT1{6E10} 21r42 88r8
+12n9*RTC{6E10} 22r9 88r35
+12n14*Mouse{6E10} 22r18 89r8
+12n21*Math_Coprocessor{6E10} 22r29 89r35
+12n39*HD1{6E10} 22r51 90r8
+12n44*HD2{6E10} 23r9 27r58 90r35
 26E13*CPU_Exception{6E10}
 27E13*External_Interrupt{6E10}
-29U15*Slow_Handler 29>28 29>44 8|13b15 17l9 17t21
-29e28 IRQ{6E10} 8|13b28 16r42
-29m44 Handler{4|90M9} 8|13b44 14r51 16r51
-30U15*Register_Handler 30>32 30>48 8|20b15 32l9 32t25
-30e32 IRQ{6E10} 8|20b32 26r34
-30m48 Handler{4|90M9} 8|20b48 21r51
-35R10 IDT_Entry 45e15 47r9 58r9 61r43
-36m9*Offset_0_15{3|66M9} 48r9 8|27m13
-37m9*Selector{3|66M9} 49r9
-38m9*IST{3|63M9} 50r9
-39m9*Descriptor_Type{3|63M9} 51r9
-40m9*DPL{3|63M9} 52r9
-41b9*P{boolean} 53r9
-42m9*Offset_16_31{3|66M9} 54r9 8|28m13
-43m9*Offset_32_63{3|74M9} 55r9 8|29m13
-44m9*Pad{3|74M9} 56r9
-61a5 Table(35R10) 63r9 8|26m9
+29U15*Slow_Handler 29>28 29>44 8|16b14 20l8 20t20
+29e28 IRQ{6E10} 8|16b27 19r40
+29m44 Handler{4|90M9} 8|16b43 17r49 19r49
+30U15*Register_Handler 30>32 30>48 8|23b14 35l8 35t24
+30e32 IRQ{6E10} 8|23b31 29r32
+30m48 Handler{4|90M9} 8|23b47 24r49
+31U15*Dump_Mapping 8|58b14 97l8 97t20
+40a4*DE_Str{string} 78r12
+41a4*DB_Str{string} 78r32
+42a4*NMI_Str{string} 78r53
+43a4*BP_Str{string} 79r12
+44a4*OFE_Str{string} 79r33
+45a4*BR_Str{string} 79r52
+46a4*UD_Str{string} 80r12
+47a4*NM_Str{string} 80r32
+48a4*DF_Str{string} 80r52
+49a4*TS_Str{string} 81r12
+50a4*NP_Str{string} 81r32
+51a4*SS_Str{string} 81r52
+52a4*GP_Str{string} 82r12
+53a4*PF_Str{string} 82r32
+54a4*MF_Str{string} 82r52
+55a4*AC_Str{string} 83r12
+56a4*MC_Str{string} 83r32
+57a4*XF_Str{string} 83r52
+58a4*VC_Str{string} 84r12
+59a4*SX_Str{string} 84r32
+61a4*PIT_Str{string} 84r53
+62a4*KEY_Str{string} 85r18
+63a4*PICS_Str{string} 85r46
+64a4*COM2_4_Str{string} 86r16
+65a4*COM1_3_Str{string} 86r43
+66a4*LPT2_Str{string} 87r14
+67a4*Floppy_Str{string} 87r43
+68a4*LPT1_Str{string} 88r14
+69a4*RTC_Str{string} 88r40
+70a4*Mouse_Str{string} 89r15
+71a4*Math_Str{string} 89r53
+72a4*HD1_Str{string} 90r13
+73a4*HD2_Str{string} 90r40
+74a4*Other_Str{string}
+77a4*Interrupt_Name(string) 8|82r32 89r32
+98R10 IDT_Entry 108e15 110r9 121r9 124r29 8|39r10
+99m9*Offset_0_15{3|66M9} 111r9 8|30m10 45r30
+100m9*Selector{3|66M9} 112r9
+101m9*IST{3|63M9} 113r9
+102m9*Descriptor_Type{3|63M9} 114r9
+103m9*DPL{3|63M9} 115r9
+104b9*P{boolean} 116r9
+105m9*Offset_16_31{3|66M9} 117r9 8|31m10 46r41
+106m9*Offset_32_63{3|74M9} 118r9 8|32m10 47r41
+107m9*Pad{3|74M9} 119r9
+124a5 Table(98R10) 126r9 8|29m7 39r23
 X 8 x86-interrupts.adb
-8a5 Handler_Table(4|90M9) 10r9 16m9
-14m9 H{3|77M9}
-21m9 H{3|77M9} 22r40 23r51 24r51
-22m9 A{3|66M9} 27r29
-23m9 B{3|66M9} 28r29
-24m9 C{3|74M9} 29r29
+11a4 Handler_Table(4|90M9) 13r8 19m7 75r60
+17m7 H{3|77M9}
+24m7 H{3|77M9} 25r38 26r49 27r49
+25m7 A{3|66M9} 30r26
+26m7 B{3|66M9} 31r26
+27m7 C{3|74M9} 32r26
+38V13 Get_Fast_Handler{1|5M10} 48l8 48t24 76s34
+38e30 IRQ{7|6E10} 39r48
+39r7 E{7|98R10} 45r28 46r39 47r39
+51V13 Get_Default_Stub{1|5M10} 55l8 55t24 77s34
+51e30 IRQ{7|6E10} 54r66
+52a7*Stubs(3|77M9) 54m41 54r41
+59m7 Slow_Handler_Address{1|5M10} 75m10 80r13 84r36
+60m7 Fast_Handler_Address{1|5M10} 76m10 87r16 91r36
+61m7 Default_Stub_Address{1|5M10} 77m10 87r40
+63a7 Cols(integer) 67r12 68r12 69r12 70r12 81r18 82r18 83r18 84r18 88r18
+. 89r18 90r18 91r18
+74e11 I{7|6E10} 75r93 76r51 77r51 81r67 82r57 88r67 89r57
 
 QQ SPARKVERSION 2018 (20180524)
 GG EK_DIRECT_CALLS x86__interrupts__slow_handler 0
 GG EK_GLOBALS x86__interrupts__slow_handler local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__interrupts__handler_table proper_output 1 x86__interrupts__handler_table refined_proof_in 0 refined_input 1 x86__interrupts__handler_table refined_output 1 x86__interrupts__handler_table calls_proof 0 calls 0 calls_conditional 1 system__storage_elements__to_integer local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__interrupts__handler_table LOCKS 0
 GG EK_DIRECT_CALLS x86__interrupts__register_handler 0
 GG EK_GLOBALS x86__interrupts__register_handler local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__interrupts__table proper_output 1 x86__interrupts__table refined_proof_in 0 refined_input 1 x86__interrupts__table refined_output 1 x86__interrupts__table calls_proof 0 calls 0 calls_conditional 2 interfaces__shift_right__4 system__storage_elements__to_integer local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__interrupts__table LOCKS 0
+GG EK_DIRECT_CALLS x86__interrupts__dump_mapping 0
+GG EK_GLOBALS x86__interrupts__dump_mapping local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 4 x86__interrupts__handler_table x86__interrupts__interrupt_name x86__interrupts__table __HEAP proper_output 0 refined_proof_in 0 refined_input 4 x86__interrupts__handler_table x86__interrupts__interrupt_name x86__interrupts__table __HEAP refined_output 0 calls_proof 0 calls 0 calls_conditional 9 interfaces__shift_left__4 system__storage_elements__to_integer console__at_x console__put console__put__2 console__put_hex console__put_hex__2 console__put_line console__set_colour local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 x86__interrupts__handler_table x86__interrupts__interrupt_name LOCKS 0
+GG EK_DIRECT_CALLS x86__interrupts__get_fast_handler 0
+GG EK_GLOBALS x86__interrupts__get_fast_handler local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 x86__interrupts__table proper_output 0 refined_proof_in 0 refined_input 1 x86__interrupts__table refined_output 0 calls_proof 0 calls 0 calls_conditional 1 interfaces__shift_left__4 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 x86__interrupts__table LOCKS 0
+GG EK_DIRECT_CALLS x86__interrupts__get_default_stub 0
+GG EK_GLOBALS x86__interrupts__get_default_stub local TRUE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 system__storage_elements__to_integer local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS x86__interrupts 0
-GG EK_GLOBALS x86__interrupts local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 2 x86__interrupts__handler_table x86__interrupts__table FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS x86__interrupts local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 3 x86__interrupts__handler_table x86__interrupts__interrupt_name x86__interrupts__table FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_END_MARKER
