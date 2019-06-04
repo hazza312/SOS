@@ -29,11 +29,11 @@ U multiboot%s		multiboot.ads		f71ebf5a OO PK
 W common%s		common.ads		common.ali
 W interfaces%s		interfac.ads		interfac.ali
 
-D common.ads		20190408125500 7f16ff1c common%s
+D common.ads		20190408175552 7f16ff1c common%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
-D multiboot.ads		20190408131737 d2bd122e multiboot%s
+D multiboot.ads		20190408175552 d2bd122e multiboot%s
 D system.ads		20180525181036 d54140d3 system%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 1 common.ads
 3K9*Common 12e11 3|2w6 2r18
 5M10*Address<2|77M9> 3|14r21

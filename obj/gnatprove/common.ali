@@ -28,10 +28,10 @@ RV SPARK_05
 U common%s		common.ads		25a3ad74 OO PK
 W interfaces%s		interfac.ads		interfac.ali
 
-D common.ads		20190408125500 7f16ff1c common%s
+D common.ads		20190408175552 7f16ff1c common%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 1 common.ads
 3K9*Common 12l5 12e11
 5M10*Address<2|77M9> 6r34 7r33 9r28

@@ -48,14 +48,14 @@
   "assumptions": [
   ],
   "timings": {
-    "marking": 5.20000001415610E-04,
-    "globals (basic)": 4.45999990915880E-04,
-    "globals/properties (advanced)": 2.12699989788234E-03,
-    "flow analysis": 4.80000016978011E-05,
-    "codepeer results": 1.99999999495049E-06,
-    "init_why_sections": 1.69999999343418E-04,
-    "translation of standard": 2.66100000590086E-03,
-    "translation of compilation unit": 1.59350000321865E-02,
+    "marking": 7.82000017352402E-04,
+    "globals (basic)": 6.40999991446733E-04,
+    "globals/properties (advanced)": 3.34000005386770E-03,
+    "flow analysis": 6.80000011925586E-05,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 2.69000011030585E-04,
+    "translation of standard": 3.16200009547174E-03,
+    "translation of compilation unit": 1.41470003873110E-02,
     "proof": 1.99999999495049E-06
   }
 }

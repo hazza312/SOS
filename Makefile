@@ -67,5 +67,8 @@ bochs:	iso
 
 doc:	build
 	gnatdoc -P "$(PROJECT)"
+
+prove:	
+	gnatprove -P "$(PROJECT)" -XGPR_TOOL=gnatprove --report=statistics
 	
 	

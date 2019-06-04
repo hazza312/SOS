@@ -44,17 +44,17 @@ W x86.dev%s		x86-dev.ads		x86-dev.ali
 
 D ada.ads		20180525181036 76789da1 ada%s
 D a-unccon.ads		20180525181036 0e9b276f ada.unchecked_conversion%s
-D arch.ads		20190506094226 572c55e5 arch%s
-D common.ads		20190408125500 7f16ff1c common%s
-D consoleb.ads		20190408081854 7ae9b66d consoleb%s
+D arch.ads		20190424123934 572c55e5 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
-D x86-dev-pic_8259a.ads	20190406212707 6accb118 x86.dev.pic_8259a%s
-D x86-dev-pic_8259a.adb	20190407143435 f61376ca x86.dev.pic_8259a%b
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-pic_8259a.ads	20190407072905 6accb118 x86.dev.pic_8259a%s
+D x86-dev-pic_8259a.adb	20190408175552 f61376ca x86.dev.pic_8259a%b
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 1 ada.ads
 16K9*Ada 20e8 11|3r6 12|2r6 6r29
 X 2 a-unccon.ads

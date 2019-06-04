@@ -125,9 +125,10 @@ void test_alloc_oom()
 {
   size_t npages = memsize / PAGE_SIZE;
   size_t nsample = npages - KERN_PAGES;
+  size_t ntrackers = (npages  * sizeof(ptr_t) + PAGE_SIZE -1) / PAGE_SIZE;
 
   // Keep track of allocated pages
-  ptr_t **p = (ptr_t **)page_alloc((npages  * sizeof(ptr_t) + PAGE_SIZE -1) / PAGE_SIZE);
+  ptr_t **p = (ptr_t **)page_alloc(ntrackers);
 
   // Allocate all the pages
   int allocated = 0;
@@ -146,9 +147,6 @@ void test_alloc_oom()
   for (int i = 0; i < nsample; i++) {
     if (p[i])
       page_free(p[i]);
-
-    //if (i != 0 && (i % PAGE_SIZE == 0))
-    //  page_free((ptr_t*) &p[i]);
   }
 
 }

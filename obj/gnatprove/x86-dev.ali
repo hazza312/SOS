@@ -28,9 +28,9 @@ U x86.dev%s		x86-dev.ads		ba60a4b5 OO PK
 W x86%s			x86.ads			x86.ali
 
 D system.ads		20180525181036 d54140d3 system%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 2 x86.ads
 3K9*X86 21e8 3|1r9 4r5
 X 3 x86-dev.ads

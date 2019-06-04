@@ -59,10 +59,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Directory_Ref",
-      "docHref": "docs/x86__vm___spec.html#L29C9",
+      "docHref": "docs/x86__vm___spec.html#L32C9",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L29"
+      "srcHref": "srcs/x86-vm.ads.html#L32"
     },
     {
       "label": "External_Interrupt",
@@ -73,10 +73,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Flags_Type",
-      "docHref": "docs/x86__vm___spec.html#L27C9",
+      "docHref": "docs/x86__vm___spec.html#L30C9",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L27"
+      "srcHref": "srcs/x86-vm.ads.html#L30"
     },
     {
       "label": "Interrupt",
@@ -122,10 +122,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Page_Size",
-      "docHref": "docs/x86__vm___spec.html#L25C9",
+      "docHref": "docs/x86__vm___spec.html#L28C9",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L25"
+      "srcHref": "srcs/x86-vm.ads.html#L28"
     },
     {
       "label": "Physical_Address",
@@ -150,10 +150,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Table_Level",
-      "docHref": "docs/x86__vm___spec.html#L26C9",
+      "docHref": "docs/x86__vm___spec.html#L29C9",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L26"
+      "srcHref": "srcs/x86-vm.ads.html#L29"
     },
     {
       "label": "Time_Unit",

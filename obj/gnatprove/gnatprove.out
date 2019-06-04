@@ -6,14 +6,14 @@ SPARK Analysis results        Total        Flow   Interval   CodePeer      Prove
 ---------------------------------------------------------------------------------------------------------
 Data Dependencies                 .           .          .          .            .           .          .
 Flow Dependencies                 .           .          .          .            .           .          .
-Initialization                   59          58          .          .            .           .          1
+Initialization                   61          59          .          .            .           .          2
 Non-Aliasing                      .           .          .          .            .           .          .
 Run-time Checks                  15           .          .          .    15 (CVC4)           .          .
 Assertions                        4           .          .          .     4 (CVC4)           .          .
 Functional Contracts             17           .          .          .    11 (CVC4)           .          6
 LSP Verification                  .           .          .          .            .           .          .
 ---------------------------------------------------------------------------------------------------------
-Total                            95    58 (61%)          .          .     30 (32%)           .     7 (7%)
+Total                            97    59 (61%)          .          .     30 (31%)           .     8 (8%)
 
 
 Analyzed 17 units
@@ -100,28 +100,30 @@ in unit x86-interrupts, 0 subprograms and packages out of 3 analyzed
   X86.Interrupts.Dump_Mapping at x86-interrupts.ads:31 skipped
   X86.Interrupts.Register_Handler at x86-interrupts.ads:30 skipped
   X86.Interrupts.Slow_Handler at x86-interrupts.ads:29 skipped
-in unit x86-vm, 5 subprograms and packages out of 21 analyzed
+in unit x86-vm, 5 subprograms and packages out of 23 analyzed
   X86.Vm at x86-vm.ads:6 skipped
-  X86.Vm.Create_Mapping at x86-vm.ads:36 flow analyzed (0 errors, 0 checks and 1 warnings) and not proved, 4 checks out of 5 proved
-  X86.Vm.Dump_Pages at x86-vm.ads:51 skipped
-  X86.Vm.Dump_Rec at x86-vm.adb:262 skipped
-  X86.Vm.Flags_TypePredicate at x86-vm.ads:29 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  X86.Vm.Free_Dir_Page at x86-vm.adb:76 skipped
-  X86.Vm.Free_Mapping at x86-vm.ads:46 flow analyzed (0 errors, 1 checks and 2 warnings) and not proved, 2 checks out of 4 proved
-  X86.Vm.Get_Directory_Address at x86-vm.ads:125 skipped
-  X86.Vm.Get_Directory_Ref at x86-vm.ads:130 skipped
-  X86.Vm.Get_Frame_Address at x86-vm.ads:135 skipped
-  X86.Vm.Get_Free_Dir_Page at x86-vm.ads:98 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 8 checks out of 9 proved
-  X86.Vm.Get_Num_Entries at x86-vm.adb:41 skipped
-  X86.Vm.Has_Free_Dir_Page at x86-vm.ads:92 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  X86.Vm.Initialise at x86-vm.ads:53 skipped
-  X86.Vm.Make_Directory_Entry at x86-vm.ads:108 skipped
-  X86.Vm.Make_Frame_Entry at x86-vm.ads:117 skipped
-  X86.Vm.Offsets_To_VMA at x86-vm.adb:82 skipped
-  X86.Vm.Print_Page at x86-vm.adb:206 skipped
-  X86.Vm.VMA_To_Offsets at x86-vm.adb:93 skipped
-  X86.Vm.page_alloc at x86-vm.ads:62 skipped
-  X86.Vm.page_free at x86-vm.ads:65 skipped
+  X86.Vm.Create_Mapping at x86-vm.ads:40 flow analyzed (0 errors, 1 checks and 2 warnings) and not proved, 4 checks out of 5 proved
+  X86.Vm.Dump_Pages at x86-vm.ads:55 skipped
+  X86.Vm.Dump_Rec at x86-vm.adb:294 skipped
+  X86.Vm.Flags_TypePredicate at x86-vm.ads:30 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  X86.Vm.Free_Dir_Page at x86-vm.adb:104 skipped
+  X86.Vm.Free_Mapping at x86-vm.ads:50 flow analyzed (0 errors, 1 checks and 0 warnings) and not proved, 2 checks out of 4 proved
+  X86.Vm.Get_Count at x86-vm.adb:24 skipped
+  X86.Vm.Get_Directory_Address at x86-vm.ads:135 skipped
+  X86.Vm.Get_Directory_Ref at x86-vm.ads:140 skipped
+  X86.Vm.Get_Frame_Address at x86-vm.ads:145 skipped
+  X86.Vm.Get_Free_Dir_Page at x86-vm.ads:108 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 8 checks out of 9 proved
+  X86.Vm.Get_Num_Entries at x86-vm.adb:69 skipped
+  X86.Vm.Has_Free_Dir_Page at x86-vm.ads:102 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  X86.Vm.Initialise at x86-vm.ads:57 skipped
+  X86.Vm.Make_Directory_Entry at x86-vm.ads:118 skipped
+  X86.Vm.Make_Frame_Entry at x86-vm.ads:127 skipped
+  X86.Vm.Offsets_To_VMA at x86-vm.adb:110 skipped
+  X86.Vm.Print_Page at x86-vm.adb:238 skipped
+  X86.Vm.Set_Count at x86-vm.adb:27 skipped
+  X86.Vm.VMA_To_Offsets at x86-vm.adb:121 skipped
+  X86.Vm.page_alloc at x86-vm.ads:66 skipped
+  X86.Vm.page_free at x86-vm.ads:69 skipped
 in unit x86-vm2, 4 subprograms and packages out of 18 analyzed
   X86.Vm2 at x86-vm2.ads:5 skipped
   X86.Vm2.Create_Mapping at x86-vm2.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 4 checks out of 5 proved

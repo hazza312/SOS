@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 29
+          "line": 30
         }
       ],
       "spark": "all"
@@ -25,7 +25,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 36
+          "line": 40
         }
       ],
       "spark": "all"
@@ -35,7 +35,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 46
+          "line": 50
         }
       ],
       "spark": "all"
@@ -45,7 +45,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 51
+          "line": 55
         }
       ],
       "spark": "spec"
@@ -55,7 +55,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 53
+          "line": 57
         }
       ],
       "spark": "spec"
@@ -65,7 +65,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 62
+          "line": 66
         }
       ],
       "spark": "spec"
@@ -75,7 +75,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 65
+          "line": 69
         }
       ],
       "spark": "spec"
@@ -85,7 +85,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 92
+          "line": 102
         }
       ],
       "spark": "all"
@@ -95,7 +95,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 98
+          "line": 108
         }
       ],
       "spark": "all"
@@ -105,7 +105,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 108
+          "line": 118
         }
       ],
       "spark": "spec"
@@ -115,7 +115,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 117
+          "line": 127
         }
       ],
       "spark": "spec"
@@ -125,7 +125,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 125
+          "line": 135
         }
       ],
       "spark": "spec"
@@ -135,7 +135,7 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 130
+          "line": 140
         }
       ],
       "spark": "spec"
@@ -145,17 +145,37 @@
       "sloc": [
         {
           "file": "x86-vm.ads",
-          "line": 135
+          "line": 145
         }
       ],
       "spark": "spec"
+    },
+    {
+      "name": "X86.Vm.Get_Count",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 24
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "X86.Vm.Set_Count",
+      "sloc": [
+        {
+          "file": "x86-vm.adb",
+          "line": 27
+        }
+      ],
+      "spark": "no"
     },
     {
       "name": "X86.Vm.Get_Num_Entries",
       "sloc": [
         {
           "file": "x86-vm.adb",
-          "line": 41
+          "line": 69
         }
       ],
       "spark": "no"
@@ -165,7 +185,7 @@
       "sloc": [
         {
           "file": "x86-vm.adb",
-          "line": 76
+          "line": 104
         }
       ],
       "spark": "no"
@@ -175,7 +195,7 @@
       "sloc": [
         {
           "file": "x86-vm.adb",
-          "line": 82
+          "line": 110
         }
       ],
       "spark": "no"
@@ -185,7 +205,7 @@
       "sloc": [
         {
           "file": "x86-vm.adb",
-          "line": 93
+          "line": 121
         }
       ],
       "spark": "no"
@@ -195,7 +215,7 @@
       "sloc": [
         {
           "file": "x86-vm.adb",
-          "line": 206
+          "line": 238
         }
       ],
       "spark": "no"
@@ -205,7 +225,7 @@
       "sloc": [
         {
           "file": "x86-vm.adb",
-          "line": 262
+          "line": 294
         }
       ],
       "spark": "no"
@@ -213,71 +233,29 @@
   ],
   "flow": [
     {
-      "file": "x86-vm.ads",
-      "line": 98,
-      "col": 32,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
+      "file": "x86-vm.adb",
+      "line": 167,
+      "col": 23,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
       "entity": {
-        "name": "X86.Vm.Get_Free_Dir_Page",
+        "name": "X86.Vm.Create_Mapping",
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__23.trace",
+      "tracefile": "x86-vm__flow__113.trace",
       "msg_id": 0,
       "how_proved": "flow"
     },
     {
-      "file": "x86-vm.ads",
-      "line": 104,
-      "col": 31,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "X86.Vm.Get_Free_Dir_Page",
-        "sloc": [
-          {
-            "file": "x86-vm.ads",
-            "line": 98
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "x86-vm__flow__24.trace",
-      "msg_id": 1,
-      "how_proved": "flow"
-    },
-    {
-      "file": "x86-vm.ads",
-      "line": 105,
-      "col": 29,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "X86.Vm.Get_Free_Dir_Page",
-        "sloc": [
-          {
-            "file": "x86-vm.ads",
-            "line": 98
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "x86-vm__flow__25.trace",
-      "msg_id": 2,
-      "how_proved": "flow"
-    },
-    {
       "file": "x86-vm.adb",
-      "line": 141,
+      "line": 172,
       "col": 22,
       "rule": "INEFFECTIVE",
       "severity": "warning",
@@ -286,19 +264,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__139.trace",
-      "msg_id": 3,
+      "tracefile": "x86-vm__flow__119.trace",
+      "msg_id": 1,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.ads",
-      "line": 40,
+      "line": 44,
       "col": 31,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -307,19 +285,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__143.trace",
-      "msg_id": 4,
+      "tracefile": "x86-vm__flow__123.trace",
+      "msg_id": 2,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 120,
+      "line": 149,
       "col": 24,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -328,19 +306,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__144.trace",
-      "msg_id": 5,
+      "tracefile": "x86-vm__flow__124.trace",
+      "msg_id": 3,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 121,
+      "line": 150,
       "col": 29,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -349,19 +327,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__145.trace",
-      "msg_id": 6,
+      "tracefile": "x86-vm__flow__125.trace",
+      "msg_id": 4,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 121,
+      "line": 150,
       "col": 44,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -370,19 +348,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__146.trace",
-      "msg_id": 7,
+      "tracefile": "x86-vm__flow__126.trace",
+      "msg_id": 5,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 122,
+      "line": 151,
       "col": 14,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -391,19 +369,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__147.trace",
-      "msg_id": 8,
+      "tracefile": "x86-vm__flow__127.trace",
+      "msg_id": 6,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 125,
+      "line": 154,
       "col": 17,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -412,61 +390,61 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__148.trace",
+      "tracefile": "x86-vm__flow__128.trace",
+      "msg_id": 7,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.adb",
+      "line": 158,
+      "col": 19,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 40
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__129.trace",
+      "msg_id": 8,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.adb",
+      "line": 158,
+      "col": 19,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 40
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__130.trace",
       "msg_id": 9,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 129,
-      "col": 19,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "X86.Vm.Create_Mapping",
-        "sloc": [
-          {
-            "file": "x86-vm.ads",
-            "line": 36
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "x86-vm__flow__149.trace",
-      "msg_id": 10,
-      "how_proved": "flow"
-    },
-    {
-      "file": "x86-vm.adb",
-      "line": 129,
-      "col": 19,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "X86.Vm.Create_Mapping",
-        "sloc": [
-          {
-            "file": "x86-vm.ads",
-            "line": 36
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "x86-vm__flow__150.trace",
-      "msg_id": 11,
-      "how_proved": "flow"
-    },
-    {
-      "file": "x86-vm.adb",
-      "line": 129,
+      "line": 158,
       "col": 43,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -475,19 +453,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__151.trace",
-      "msg_id": 12,
+      "tracefile": "x86-vm__flow__131.trace",
+      "msg_id": 10,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 136,
+      "line": 165,
       "col": 50,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -496,19 +474,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__152.trace",
-      "msg_id": 13,
+      "tracefile": "x86-vm__flow__132.trace",
+      "msg_id": 11,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 136,
+      "line": 165,
       "col": 65,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -517,19 +495,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__153.trace",
-      "msg_id": 14,
+      "tracefile": "x86-vm__flow__133.trace",
+      "msg_id": 12,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 139,
+      "line": 167,
       "col": 26,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -538,19 +516,61 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__154.trace",
+      "tracefile": "x86-vm__flow__134.trace",
+      "msg_id": 13,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.adb",
+      "line": 167,
+      "col": 23,
+      "rule": "UNINITIALIZED",
+      "severity": "medium",
+      "entity": {
+        "name": "X86.Vm.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 40
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__135.trace",
+      "msg_id": 14,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.adb",
+      "line": 170,
+      "col": 26,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm.Create_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 40
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__136.trace",
       "msg_id": 15,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 139,
+      "line": 170,
       "col": 41,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -559,19 +579,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__155.trace",
+      "tracefile": "x86-vm__flow__137.trace",
       "msg_id": 16,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 139,
+      "line": 170,
       "col": 49,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -580,19 +600,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__156.trace",
+      "tracefile": "x86-vm__flow__138.trace",
       "msg_id": 17,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 140,
+      "line": 171,
       "col": 11,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -601,19 +621,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__157.trace",
+      "tracefile": "x86-vm__flow__139.trace",
       "msg_id": 18,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 141,
+      "line": 172,
       "col": 41,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -622,19 +642,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__158.trace",
+      "tracefile": "x86-vm__flow__140.trace",
       "msg_id": 19,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 143,
+      "line": 174,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -643,19 +663,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__159.trace",
+      "tracefile": "x86-vm__flow__141.trace",
       "msg_id": 20,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 143,
+      "line": 174,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -664,19 +684,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__160.trace",
+      "tracefile": "x86-vm__flow__142.trace",
       "msg_id": 21,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 143,
+      "line": 174,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -685,59 +705,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__161.trace",
+      "tracefile": "x86-vm__flow__143.trace",
       "msg_id": 22,
       "how_proved": "flow"
     },
     {
-      "file": "x86-vm.adb",
-      "line": 162,
-      "col": 7,
-      "rule": "UNUSED",
-      "severity": "warning",
-      "entity": {
-        "name": "X86.Vm.Free_Mapping",
-        "sloc": [
-          {
-            "file": "x86-vm.ads",
-            "line": 46
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "msg_id": 23,
-      "how_proved": "flow"
-    },
-    {
-      "file": "x86-vm.adb",
-      "line": 159,
-      "col": 7,
-      "rule": "UNUSED",
-      "severity": "warning",
-      "entity": {
-        "name": "X86.Vm.Free_Mapping",
-        "sloc": [
-          {
-            "file": "x86-vm.ads",
-            "line": 46
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "msg_id": 24,
-      "how_proved": "flow"
-    },
-    {
       "file": "x86-vm.ads",
-      "line": 48,
+      "line": 52,
       "col": 28,
       "rule": "UNINITIALIZED",
       "severity": "medium",
@@ -746,19 +726,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__244.trace",
-      "msg_id": 25,
+      "tracefile": "x86-vm__flow__220.trace",
+      "msg_id": 23,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.ads",
-      "line": 49,
+      "line": 53,
       "col": 28,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -767,19 +747,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__245.trace",
-      "msg_id": 26,
+      "tracefile": "x86-vm__flow__221.trace",
+      "msg_id": 24,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 164,
+      "line": 196,
       "col": 24,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -788,19 +768,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__246.trace",
-      "msg_id": 27,
+      "tracefile": "x86-vm__flow__222.trace",
+      "msg_id": 25,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 165,
+      "line": 197,
       "col": 29,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -809,19 +789,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__247.trace",
-      "msg_id": 28,
+      "tracefile": "x86-vm__flow__223.trace",
+      "msg_id": 26,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 165,
+      "line": 197,
       "col": 44,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -830,19 +810,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__248.trace",
-      "msg_id": 29,
+      "tracefile": "x86-vm__flow__224.trace",
+      "msg_id": 27,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 166,
+      "line": 198,
       "col": 14,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -851,19 +831,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__249.trace",
-      "msg_id": 30,
+      "tracefile": "x86-vm__flow__225.trace",
+      "msg_id": 28,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 171,
+      "line": 203,
       "col": 50,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -872,19 +852,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__250.trace",
-      "msg_id": 31,
+      "tracefile": "x86-vm__flow__226.trace",
+      "msg_id": 29,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 171,
+      "line": 203,
       "col": 65,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -893,19 +873,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__251.trace",
-      "msg_id": 32,
+      "tracefile": "x86-vm__flow__227.trace",
+      "msg_id": 30,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 174,
+      "line": 206,
       "col": 49,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -914,19 +894,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__252.trace",
-      "msg_id": 33,
+      "tracefile": "x86-vm__flow__228.trace",
+      "msg_id": 31,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 174,
+      "line": 206,
       "col": 26,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -935,19 +915,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__253.trace",
-      "msg_id": 34,
+      "tracefile": "x86-vm__flow__229.trace",
+      "msg_id": 32,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 174,
+      "line": 206,
       "col": 41,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -956,19 +936,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__254.trace",
-      "msg_id": 35,
+      "tracefile": "x86-vm__flow__230.trace",
+      "msg_id": 33,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 175,
+      "line": 207,
       "col": 11,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -977,19 +957,19 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__255.trace",
-      "msg_id": 36,
+      "tracefile": "x86-vm__flow__231.trace",
+      "msg_id": 34,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 176,
+      "line": 208,
       "col": 34,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -998,19 +978,61 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__256.trace",
+      "tracefile": "x86-vm__flow__232.trace",
+      "msg_id": 35,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.adb",
+      "line": 210,
+      "col": 13,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm.Free_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 50
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__233.trace",
+      "msg_id": 36,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.adb",
+      "line": 210,
+      "col": 13,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm.Free_Mapping",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 50
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__234.trace",
       "msg_id": 37,
       "how_proved": "flow"
     },
     {
       "file": "x86-vm.adb",
-      "line": 178,
+      "line": 210,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -1019,63 +1041,84 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "x86-vm__flow__257.trace",
+      "tracefile": "x86-vm__flow__235.trace",
       "msg_id": 38,
       "how_proved": "flow"
     },
     {
-      "file": "x86-vm.adb",
-      "line": 178,
-      "col": 13,
+      "file": "x86-vm.ads",
+      "line": 108,
+      "col": 32,
       "rule": "UNINITIALIZED",
       "severity": "info",
       "entity": {
-        "name": "X86.Vm.Free_Mapping",
+        "name": "X86.Vm.Get_Free_Dir_Page",
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "x86-vm__flow__258.trace",
-      "msg_id": 39,
-      "how_proved": "flow"
-    },
-    {
-      "file": "x86-vm.adb",
-      "line": 178,
-      "col": 13,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "X86.Vm.Free_Mapping",
-        "sloc": [
-          {
-            "file": "x86-vm.ads",
-            "line": 46
+            "line": 108
           }
         ]
       },
       "check_tree": {
       },
       "tracefile": "x86-vm__flow__259.trace",
+      "msg_id": 39,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.ads",
+      "line": 114,
+      "col": 31,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__260.trace",
       "msg_id": 40,
+      "how_proved": "flow"
+    },
+    {
+      "file": "x86-vm.ads",
+      "line": 115,
+      "col": 29,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "X86.Vm.Get_Free_Dir_Page",
+        "sloc": [
+          {
+            "file": "x86-vm.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "x86-vm__flow__261.trace",
+      "msg_id": 41,
       "how_proved": "flow"
     }
   ],
   "proof": [
     {
       "file": "x86-vm.adb",
-      "line": 61,
+      "line": 89,
       "col": 33,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
@@ -1084,7 +1127,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -1102,9 +1145,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 61,
+      "check_line": 89,
       "check_col": 33,
-      "msg_id": 41,
+      "msg_id": 42,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1116,7 +1159,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 61,
+      "line": 89,
       "col": 33,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "info",
@@ -1125,7 +1168,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -1143,9 +1186,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 61,
+      "check_line": 89,
       "check_col": 33,
-      "msg_id": 42,
+      "msg_id": 43,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1157,7 +1200,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 58,
+      "line": 86,
       "col": 50,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -1166,7 +1209,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -1195,9 +1238,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 58,
+      "check_line": 86,
       "check_col": 50,
-      "msg_id": 43,
+      "msg_id": 44,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1209,7 +1252,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 176,
+      "line": 208,
       "col": 16,
       "rule": "VC_PRECONDITION",
       "severity": "medium",
@@ -1218,7 +1261,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
@@ -1226,14 +1269,14 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Unknown (none)",
-              "steps": 18525,
-              "time": 0
+              "result": "Unknown (other)",
+              "steps": 18517,
+              "time": 4.90000000000000E-01
             },
             "CVC4_CE": {
               "result": "Unknown (other)",
               "steps": 18515,
-              "time": 7.50000000000000E-01
+              "time": 5.50000000000000E-01
             }
           },
           "transformations": {
@@ -1242,8 +1285,8 @@
                 "proof_attempts": {
                   "CVC4_CE": {
                     "result": "Unknown (other)",
-                    "steps": 18516,
-                    "time": 6.60000000000000E-01
+                    "steps": 18512,
+                    "time": 4.40000000000000E-01
                   }
                 },
                 "transformations": {
@@ -1272,12 +1315,12 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 176,
+      "check_line": 208,
       "check_col": 16,
-      "tracefile": "x86-vm.adb_176_16_precondition.trace",
+      "tracefile": "x86-vm.adb_208_16_precondition.trace",
       "cntexmp": {
         "x86-vm.adb": {
-          "164": [
+          "196": [
             {
               "name": "Current_Table",
               "value": "0",
@@ -1299,28 +1342,28 @@
               "kind": "variable"
             }
           ],
-          "165": [
+          "197": [
             {
               "name": "PTE",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "171": [
+          "203": [
             {
               "name": "Current_Table",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "174": [
+          "206": [
             {
               "name": "PTE",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "176": [
+          "208": [
             {
               "name": "PA",
               "value": "0",
@@ -1334,7 +1377,7 @@
           ]
         },
         "x86-vm.ads": {
-          "46": [
+          "50": [
             {
               "name": "VMA",
               "value": "0",
@@ -1343,12 +1386,12 @@
           ]
         }
       },
-      "msg_id": 44,
+      "msg_id": 45,
       "how_proved": "prover"
     },
     {
       "file": "x86-vm.adb",
-      "line": 129,
+      "line": 158,
       "col": 74,
       "rule": "VC_PREDICATE_CHECK",
       "severity": "info",
@@ -1357,7 +1400,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
@@ -1375,9 +1418,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 129,
+      "check_line": 158,
       "check_col": 74,
-      "msg_id": 45,
+      "msg_id": 46,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1389,7 +1432,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 58,
+      "line": 86,
       "col": 55,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -1398,7 +1441,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -1427,9 +1470,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 58,
+      "check_line": 86,
       "check_col": 55,
-      "msg_id": 46,
+      "msg_id": 47,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1441,7 +1484,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 178,
+      "line": 210,
       "col": 16,
       "rule": "VC_PRECONDITION",
       "severity": "medium",
@@ -1450,7 +1493,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
@@ -1458,14 +1501,14 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Unknown (none)",
-              "steps": 18514,
-              "time": 0
+              "result": "Unknown (other)",
+              "steps": 18516,
+              "time": 4.90000000000000E-01
             },
             "CVC4_CE": {
               "result": "Unknown (other)",
-              "steps": 18512,
-              "time": 5.60000000000000E-01
+              "steps": 18525,
+              "time": 4.30000000000000E-01
             }
           },
           "transformations": {
@@ -1475,7 +1518,7 @@
                   "CVC4_CE": {
                     "result": "Unknown (other)",
                     "steps": 18515,
-                    "time": 6.20000000000000E-01
+                    "time": 4.10000000000000E-01
                   }
                 },
                 "transformations": {
@@ -1515,12 +1558,12 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 178,
+      "check_line": 210,
       "check_col": 16,
-      "tracefile": "x86-vm.adb_178_16_precondition.trace",
+      "tracefile": "x86-vm.adb_210_16_precondition.trace",
       "cntexmp": {
         "x86-vm.adb": {
-          "164": [
+          "196": [
             {
               "name": "Current_Table",
               "value": "0",
@@ -1542,28 +1585,28 @@
               "kind": "variable"
             }
           ],
-          "165": [
+          "197": [
             {
               "name": "PTE",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "171": [
+          "203": [
             {
               "name": "Current_Table",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "174": [
+          "206": [
             {
               "name": "PTE",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "176": [
+          "208": [
             {
               "name": "PA",
               "value": "0",
@@ -1572,7 +1615,7 @@
           ]
         },
         "x86-vm.ads": {
-          "46": [
+          "50": [
             {
               "name": "VMA",
               "value": "0",
@@ -1581,12 +1624,12 @@
           ]
         }
       },
-      "msg_id": 47,
+      "msg_id": 48,
       "how_proved": "prover"
     },
     {
       "file": "x86-vm.ads",
-      "line": 95,
+      "line": 105,
       "col": 13,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -1595,7 +1638,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 92
+            "line": 102
           }
         ]
       },
@@ -1624,9 +1667,9 @@
         }
       ],
       "check_file": "x86-vm.ads",
-      "check_line": 95,
+      "check_line": 105,
       "check_col": 13,
-      "msg_id": 48,
+      "msg_id": 49,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1638,7 +1681,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 178,
+      "line": 210,
       "col": 36,
       "rule": "VC_PREDICATE_CHECK",
       "severity": "info",
@@ -1647,7 +1690,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
@@ -1665,9 +1708,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 178,
+      "check_line": 210,
       "check_col": 36,
-      "msg_id": 49,
+      "msg_id": 50,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1679,7 +1722,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 58,
+      "line": 86,
       "col": 50,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -1688,7 +1731,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -1717,9 +1760,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 58,
+      "check_line": 86,
       "check_col": 50,
-      "msg_id": 50,
+      "msg_id": 51,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1731,7 +1774,7 @@
     },
     {
       "file": "x86-vm.ads",
-      "line": 104,
+      "line": 114,
       "col": 36,
       "rule": "VC_DIVISION_CHECK",
       "severity": "info",
@@ -1740,7 +1783,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -1758,9 +1801,9 @@
         }
       ],
       "check_file": "x86-vm.ads",
-      "check_line": 104,
+      "check_line": 114,
       "check_col": 36,
-      "msg_id": 51,
+      "msg_id": 52,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1772,7 +1815,7 @@
     },
     {
       "file": "x86-vm.ads",
-      "line": 77,
+      "line": 81,
       "col": 9,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -1810,9 +1853,9 @@
         }
       ],
       "check_file": "x86-vm.ads",
-      "check_line": 77,
+      "check_line": 81,
       "check_col": 9,
-      "msg_id": 52,
+      "msg_id": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1824,7 +1867,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 171,
+      "line": 203,
       "col": 19,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -1833,7 +1876,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 46
+            "line": 50
           }
         ]
       },
@@ -1851,9 +1894,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 171,
+      "check_line": 203,
       "check_col": 19,
-      "msg_id": 53,
+      "msg_id": 54,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1865,7 +1908,7 @@
     },
     {
       "file": "x86-vm.ads",
-      "line": 104,
+      "line": 114,
       "col": 25,
       "rule": "VC_CONTRACT_CASE",
       "severity": "medium",
@@ -1874,7 +1917,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -1888,14 +1931,14 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Unknown (none)",
+              "result": "Unknown (other)",
               "steps": 18512,
-              "time": 0
+              "time": 2.60000000000000E-01
             },
             "CVC4_CE": {
               "result": "Unknown (other)",
               "steps": 18520,
-              "time": 2.70000000000000E-01
+              "time": 2.40000000000000E-01
             }
           },
           "transformations": {
@@ -1935,12 +1978,12 @@
         }
       ],
       "check_file": "x86-vm.ads",
-      "check_line": 104,
+      "check_line": 114,
       "check_col": 25,
-      "tracefile": "x86-vm.ads_104_25_contract_case.trace",
+      "tracefile": "x86-vm.ads_114_25_contract_case.trace",
       "cntexmp": {
         "x86-vm.adb": {
-          "55": [
+          "83": [
             {
               "name": "Dir_Pages",
               "value": "(others => False)",
@@ -1957,7 +2000,7 @@
               "kind": "variable"
             }
           ],
-          "56": [
+          "84": [
             {
               "name": "Dir_Pages",
               "value": "(others => False)",
@@ -1974,21 +2017,21 @@
               "kind": "variable"
             }
           ],
-          "57": [
+          "85": [
             {
               "name": "Dir_Pages",
               "value": "(others => False)",
               "kind": "variable"
             }
           ],
-          "58": [
+          "86": [
             {
               "name": "Page",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "64": [
+          "92": [
             {
               "name": "Page",
               "value": "0",
@@ -1997,7 +2040,7 @@
           ]
         },
         "x86-vm.ads": {
-          "104": [
+          "114": [
             {
               "name": "Dir_Pages",
               "value": "(others => False)",
@@ -2011,12 +2054,12 @@
           ]
         }
       },
-      "msg_id": 54,
+      "msg_id": 55,
       "how_proved": "prover"
     },
     {
       "file": "x86-vm.adb",
-      "line": 129,
+      "line": 158,
       "col": 22,
       "rule": "VC_PRECONDITION",
       "severity": "medium",
@@ -2025,7 +2068,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
@@ -2039,7 +2082,7 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Unknown (none)",
+              "result": "Unknown (other)",
               "steps": 521,
               "time": 0
             },
@@ -2073,12 +2116,12 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 129,
+      "check_line": 158,
       "check_col": 22,
-      "tracefile": "x86-vm.adb_129_22_precondition.trace",
+      "tracefile": "x86-vm.adb_158_22_precondition.trace",
       "cntexmp": {
         "x86-vm.adb": {
-          "120": [
+          "149": [
             {
               "name": "Current_Table",
               "value": "0",
@@ -2113,16 +2156,21 @@
               "name": "Success",
               "value": "False",
               "kind": "variable"
+            },
+            {
+              "name": "Tables",
+              "value": "(others => 0)",
+              "kind": "variable"
             }
           ],
-          "121": [
+          "150": [
             {
               "name": "PTE",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "127": [
+          "156": [
             {
               "name": "Dir_Page",
               "value": "4503599627370496",
@@ -2134,7 +2182,7 @@
               "kind": "variable"
             }
           ],
-          "129": [
+          "158": [
             {
               "name": "Dir_Page",
               "value": "4503599627370496",
@@ -2143,7 +2191,7 @@
           ]
         },
         "x86-vm.ads": {
-          "36": [
+          "40": [
             {
               "name": "VMA",
               "value": "0",
@@ -2152,12 +2200,12 @@
           ]
         }
       },
-      "msg_id": 55,
+      "msg_id": 56,
       "how_proved": "prover"
     },
     {
       "file": "x86-vm.adb",
-      "line": 61,
+      "line": 89,
       "col": 64,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -2166,7 +2214,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -2195,9 +2243,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 61,
+      "check_line": 89,
       "check_col": 64,
-      "msg_id": 56,
+      "msg_id": 57,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -2209,7 +2257,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 136,
+      "line": 165,
       "col": 19,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -2218,7 +2266,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
@@ -2236,9 +2284,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 136,
+      "check_line": 165,
       "check_col": 19,
-      "msg_id": 57,
+      "msg_id": 58,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -2250,7 +2298,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 143,
+      "line": 174,
       "col": 16,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -2259,7 +2307,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
@@ -2288,9 +2336,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 143,
+      "check_line": 174,
       "check_col": 16,
-      "msg_id": 58,
+      "msg_id": 59,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -2302,7 +2350,7 @@
     },
     {
       "file": "x86-vm.adb",
-      "line": 127,
+      "line": 156,
       "col": 16,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -2311,7 +2359,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 36
+            "line": 40
           }
         ]
       },
@@ -2329,9 +2377,9 @@
         }
       ],
       "check_file": "x86-vm.adb",
-      "check_line": 127,
+      "check_line": 156,
       "check_col": 16,
-      "msg_id": 59,
+      "msg_id": 60,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -2343,7 +2391,7 @@
     },
     {
       "file": "x86-vm.ads",
-      "line": 105,
+      "line": 115,
       "col": 25,
       "rule": "VC_CONTRACT_CASE",
       "severity": "info",
@@ -2352,7 +2400,7 @@
         "sloc": [
           {
             "file": "x86-vm.ads",
-            "line": 98
+            "line": 108
           }
         ]
       },
@@ -2381,9 +2429,9 @@
         }
       ],
       "check_file": "x86-vm.ads",
-      "check_line": 105,
+      "check_line": 115,
       "check_col": 25,
-      "msg_id": 60,
+      "msg_id": 61,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -2399,157 +2447,13 @@
       "assumptions": [
       ],
       "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "X86.Vm.Initialise",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 53
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "X86.Vm.Has_Free_Dir_Page",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 92
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "X86.Vm.Has_Free_Dir_Page",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 92
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "X86.Vm.Has_Free_Dir_Page",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 92
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "X86.Vm.page_free",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 65
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "X86.Vm.Get_Directory_Address",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 125
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "X86.Vm.Make_Directory_Entry",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 108
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "X86.Vm.Get_Directory_Ref",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 130
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "X86.Vm.Make_Directory_Entry",
-          "sloc": [
-            {
-              "file": "x86-vm.ads",
-              "line": 108
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
           "name": "X86.Vm.Flags_TypePredicate",
           "sloc": [
             {
               "file": "x86-vm.ads",
-              "line": 29
+              "line": 30
             }
           ]
         }
@@ -2565,7 +2469,7 @@
           "sloc": [
             {
               "file": "x86-vm.ads",
-              "line": 29
+              "line": 30
             }
           ]
         }
@@ -2581,7 +2485,7 @@
           "sloc": [
             {
               "file": "x86-vm.ads",
-              "line": 51
+              "line": 55
             }
           ]
         }
@@ -2613,7 +2517,7 @@
           "sloc": [
             {
               "file": "x86-vm.ads",
-              "line": 62
+              "line": 66
             }
           ]
         }
@@ -2629,7 +2533,7 @@
           "sloc": [
             {
               "file": "x86-vm.ads",
-              "line": 117
+              "line": 127
             }
           ]
         }
@@ -2645,7 +2549,151 @@
           "sloc": [
             {
               "file": "x86-vm.ads",
+              "line": 145
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm.Initialise",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 57
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "X86.Vm.Has_Free_Dir_Page",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 102
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "X86.Vm.Has_Free_Dir_Page",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 102
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm.Has_Free_Dir_Page",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 102
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm.page_free",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 69
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm.Get_Directory_Address",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
               "line": 135
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "X86.Vm.Make_Directory_Entry",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 118
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm.Get_Directory_Ref",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 140
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "X86.Vm.Make_Directory_Entry",
+          "sloc": [
+            {
+              "file": "x86-vm.ads",
+              "line": 118
             }
           ]
         }
@@ -2653,14 +2701,14 @@
     }
   ],
   "timings": {
-    "marking": 1.27300003077835E-03,
-    "globals (basic)": 5.46000024769455E-04,
-    "globals/properties (advanced)": 5.74100017547607E-03,
-    "flow analysis": 1.21480002999306E-02,
-    "codepeer results": 3.40000005962793E-05,
-    "init_why_sections": 3.76000010874122E-04,
-    "translation of standard": 3.71999992057681E-03,
-    "translation of compilation unit": 6.75429999828339E-02,
-    "proof": 6.08236217498779E+00
+    "marking": 2.00299988500774E-03,
+    "globals (basic)": 8.11000005342066E-04,
+    "globals/properties (advanced)": 5.34000014886260E-03,
+    "flow analysis": 1.10179996117949E-02,
+    "codepeer results": 2.49999993684469E-05,
+    "init_why_sections": 3.45999986166134E-04,
+    "translation of standard": 4.22099977731705E-03,
+    "translation of compilation unit": 5.41369989514351E-02,
+    "proof": 6.65119123458862E+00
   }
 }

@@ -59,10 +59,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Create_Mapping",
-      "docHref": "docs/x86__vm___spec.html#L34C14",
+      "docHref": "docs/x86__vm___spec.html#L40C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L34"
+      "srcHref": "srcs/x86-vm.ads.html#L40"
     },
     {
       "label": "Disable_Cursor",
@@ -80,10 +80,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Dump_Pages",
-      "docHref": "docs/x86__vm___spec.html#L44C14",
+      "docHref": "docs/x86__vm___spec.html#L55C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L44"
+      "srcHref": "srcs/x86-vm.ads.html#L55"
     },
     {
       "label": "Enable_Cursor",
@@ -114,6 +114,13 @@ GNATdoc.EntitiesCategory = {
       "srcHref": "srcs/mmap.ads.html#L16"
     },
     {
+      "label": "Free_Mapping",
+      "docHref": "docs/x86__vm___spec.html#L50C14",
+      "declared": "X86.Vm",
+      "declared_qualifier": "",
+      "srcHref": "srcs/x86-vm.ads.html#L50"
+    },
+    {
       "label": "Get_Base",
       "docHref": "docs/mmap___spec.html#L24C13",
       "declared": "MMap",
@@ -133,6 +140,13 @@ GNATdoc.EntitiesCategory = {
       "declared": "X86.Dev.Keyboard",
       "declared_qualifier": "",
       "srcHref": "srcs/x86-dev-keyboard.ads.html#L20"
+    },
+    {
+      "label": "Get_Free_Space",
+      "docHref": "docs/mmap___spec.html#L26C13",
+      "declared": "MMap",
+      "declared_qualifier": "",
+      "srcHref": "srcs/mmap.ads.html#L26"
     },
     {
       "label": "Get_Length",
@@ -234,10 +248,10 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "Initialise",
-      "docHref": "docs/x86__vm___spec.html#L46C14",
+      "docHref": "docs/x86__vm___spec.html#L57C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L46"
+      "srcHref": "srcs/x86-vm.ads.html#L57"
     },
     {
       "label": "Initialise",
@@ -276,17 +290,17 @@ GNATdoc.EntitiesCategory = {
     },
     {
       "label": "page_alloc",
-      "docHref": "docs/x86__vm___spec.html#L55C13",
+      "docHref": "docs/x86__vm___spec.html#L66C13",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L55"
+      "srcHref": "srcs/x86-vm.ads.html#L66"
     },
     {
       "label": "page_free",
-      "docHref": "docs/x86__vm___spec.html#L58C14",
+      "docHref": "docs/x86__vm___spec.html#L69C14",
       "declared": "X86.Vm",
       "declared_qualifier": "",
-      "srcHref": "srcs/x86-vm.ads.html#L58"
+      "srcHref": "srcs/x86-vm.ads.html#L69"
     },
     {
       "label": "Panic",

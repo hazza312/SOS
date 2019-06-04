@@ -29,7 +29,7 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U kernelinteract%b	kernelinteract.adb	3098bede OO SU
+U kernelinteract%b	kernelinteract.adb	6f0d0ee4 OO SU
 W arch%s		arch.adb		arch.ali
 W common%s		common.ads		common.ali
 W console%s		console.adb		console.ali
@@ -47,26 +47,26 @@ W x86.dev.rtc%s		x86-dev-rtc.adb		x86-dev-rtc.ali
 W x86.interrupts%s	x86-interrupts.adb	x86-interrupts.ali
 W x86.vm%s		x86-vm.adb		x86-vm.ali
 
-D arch.ads		20190506094226 572c55e5 arch%s
-D common.ads		20190408125500 7f16ff1c common%s
-D console.ads		20190506094226 25451bf4 console%s
-D consoleb.ads		20190408081854 7ae9b66d consoleb%s
-D input.ads		20190408162646 2aabff2f input%s
+D arch.ads		20190424123934 572c55e5 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190425154620 25451bf4 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D input.ads		20190408175552 2aabff2f input%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D i-c.ads		20180525181036 ef84921c interfaces.c%s
-D kernelinteract.adb	20190506094226 82cbea99 kernelinteract%b
-D mmap.ads		20190506094226 4b88fbea mmap%s
+D kernelinteract.adb	20190508073342 dd5e5aa3 kernelinteract%b
+D mmap.ads		20190426095316 4b88fbea mmap%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
 D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
-D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
-D x86-dev-pit_8253.ads	20190407133943 a4eb0daf x86.dev.pit_8253%s
-D x86-dev-rtc.ads	20190407193342 dc494b72 x86.dev.rtc%s
-D x86-interrupts.ads	20190506094226 503637e8 x86.interrupts%s
-D x86-vm.ads		20190506094226 7da7624e x86.vm%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D x86-dev-pit_8253.ads	20190407110310 a4eb0daf x86.dev.pit_8253%s
+D x86-dev-rtc.ads	20190408175552 dc494b72 x86.dev.rtc%s
+D x86-interrupts.ads	20190424114018 503637e8 x86.interrupts%s
+D x86-vm.ads		20190508075043 7da7624e x86.vm%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 1 arch.ads
 12K9*Arch 41e9 8|8w6 97r10
 18U15*Scout_Memory 8|97s15
@@ -151,8 +151,8 @@ X 18 x86-interrupts.ads
 5K13*Interrupts 8|11w10 101r14 18|129e19
 31U15*Dump_Mapping 8|101s25
 X 19 x86-vm.ads
-6K13*Vm 8|5w10 89r14 19|140e11
-51U14*Dump_Pages 8|89s17
+6K13*Vm 8|5w10 89r14 19|150e11
+55U14*Dump_Pages 8|89s17
 
 QQ SPARKVERSION 2018 (20180524)
 GG EK_DIRECT_CALLS kernelinteract__debug 0

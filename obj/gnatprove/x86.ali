@@ -27,8 +27,8 @@ RV NO_ELABORATION_CODE
 U x86%s			x86.ads			0d323ee7 OO PK
 
 D system.ads		20180525181036 d54140d3 system%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 2 x86.ads
 3K9*X86 21l5 21e8
 5N5*CODE_SELECTOR

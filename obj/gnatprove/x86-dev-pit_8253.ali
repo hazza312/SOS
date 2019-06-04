@@ -36,16 +36,16 @@ U x86.dev.pit_8253%s	x86-dev-pit_8253.ads	490cc595 OO PK
 W interfaces%s		interfac.ads		interfac.ali
 W x86.dev%s		x86-dev.ads		x86-dev.ali
 
-D common.ads		20190408125500 7f16ff1c common%s
-D console.ads		20190506094226 25451bf4 console%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190425154620 25451bf4 console%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
-D x86-dev-pit_8253.ads	20190407133943 a4eb0daf x86.dev.pit_8253%s
-D x86-dev-pit_8253.adb	20190407212415 38b99e4a x86.dev.pit_8253%b
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-pit_8253.ads	20190407110310 a4eb0daf x86.dev.pit_8253%s
+D x86-dev-pit_8253.adb	20190408175552 38b99e4a x86.dev.pit_8253%b
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 2 console.ads
 5K9*Console 51e12 9|1w6 1r19
 X 3 interfac.ads

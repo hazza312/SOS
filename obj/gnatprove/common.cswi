@@ -1,4 +1,4 @@
-20190506095545
+20190508075045
 -c
 -x
 ada
@@ -8,4 +8,4 @@ ada
 -gnat12
 -mno-red-zone
 -gnatc
--gnates=/home/harry/Desktop/SOS/SOS/obj/gnatprove/334aff1c.tmp
+-gnates=/home/harry/Desktop/SOS/obj/gnatprove/e1fc77ce.tmp

@@ -53,7 +53,7 @@ procedure KernelInteract is
 
 begin
    -- Asm("sti");
-   Put_Line("Entered Week 2 Console, type [help] for commands");
+   Put_Line("Entered Week 4 Console, type [help] for commands");
 
    loop 
       Set_Colour;

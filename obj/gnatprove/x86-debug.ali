@@ -35,15 +35,15 @@ U x86.debug%s		x86-debug.ads		65b98d51 OO PK
 W multiboot%s		multiboot.ads		multiboot.ali
 W x86%s			x86.ads			x86.ali
 
-D common.ads		20190408125500 7f16ff1c common%s
-D console.ads		20190506094226 25451bf4 console%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190425154620 25451bf4 console%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
-D multiboot.ads		20190408131737 d2bd122e multiboot%s
+D multiboot.ads		20190408175552 d2bd122e multiboot%s
 D system.ads		20180525181036 d54140d3 system%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-debug.ads		20190406212947 ba36a198 x86.debug%s
-D x86-debug.adb		20190408134033 a6622918 x86.debug%b
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-debug.ads		20190407072905 ba36a198 x86.debug%s
+D x86-debug.adb		20190408175552 a6622918 x86.debug%b
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 1 common.ads
 5M10*Address<3|77M9>
 X 2 console.ads

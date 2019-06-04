@@ -56,7 +56,7 @@ package body Arch is
         Put("-> testing PIT 8253A ");
         X86.Dev.Pit_8253.Reset;
         for I in 0..51 loop 
-            while I >= Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
+        --    while I >= Integer(X86.Dev.Pit_8253.Get_Ticks) loop null; end loop;
             Put('.');
         end loop;
         Put_Line(" done");
@@ -76,7 +76,7 @@ package body Arch is
 
         Put("-> testing RTC ........");
         for I in 0..4 loop 
-            while I >= Integer(X86.Dev.RTC.Get_Ticks) loop null; end loop;
+        --    while I >= Integer(X86.Dev.RTC.Get_Ticks) loop null; end loop;
             Put("..........");
         end loop;
         Put_Line(" done");        
@@ -109,26 +109,48 @@ package body Arch is
     end Parse_Memory_Entries;
 
 
-    procedure Scout_Memory(Base: in out Address; Size: in out Unsigned_64; Debug: Boolean) is
-        Tag: Multiboot.Base_Tag with Address => System'To_Address(Multiboot.Boot_Info);
-        Byte_Count: Unsigned_32 := 8;
-    begin
-        while Byte_Count < Tag.Tag_Type loop
-            declare 
-                Tag_S : Multiboot.Base_Tag with Address => System'To_Address(Multiboot.Boot_Info + Byte_Count);
-            begin
-                if Tag_S.Tag_Type = 6 then
-                    Parse_Memory_Entries(Base, Size, Tag_S'Address, Positive(Tag_S.Tag_Size-24)/24, Debug);
-                    exit;
-                end if;
+   procedure Parse_Module_Entries(  Base: in System.Address;
+                                    FS_Base: out Unsigned_32;
+                                    FS_Size: out Unsigned_32)
+   is 
+      Module : Module_Entry with Address => Base;
+   begin 
+      FS_Base := Module.Module_Start;
+      FS_Size := Module.Module_End-Module.Module_Start;
 
-                Byte_Count := @ + Tag_S.Tag_Size;
-                if Byte_Count mod 8 /= 0 then 
-                    Byte_Count := @ + (8 - (@ mod 8));
-                end if;
-            end;     
-        end loop;       
-    end Scout_Memory;
+      null;
+   end Parse_Module_Entries;
+
+
+   procedure Scout_Memory(    Base: in out Address; 
+                              Size: in out Unsigned_64; 
+                              Debug: Boolean) is
+                              
+      Tag: Multiboot.Base_Tag with Address => System'To_Address(Multiboot.Boot_Info);
+      Byte_Count: Unsigned_32 := 8;
+      FS_Base : Unsigned_32 := 0;
+      FS_Size : Unsigned_32 := 0;
+   begin
+      while Byte_Count < Tag.Tag_Type loop
+         declare 
+               Tag_S : Multiboot.Base_Tag with Address => System'To_Address(Multiboot.Boot_Info + Byte_Count);
+         begin
+               if Tag_S.Tag_Type = MEMORY_TAG then
+                  Parse_Memory_Entries(Base, Size, Tag_S'Address, Positive(Tag_S.Tag_Size-24)/24, Debug);
+               elsif Tag_S.Tag_Type = MODULE_TAG then 
+                  Parse_Module_Entries(Tag_S'Address, FS_Base, FS_Size);
+                  BANNER("FOUND MODULE!! ");
+                  Put_Hex(Unsigned_64(FS_Base)); Put(':');
+                  Put_Size(Unsigned_64(FS_Size)); Put(LF);
+               end if;
+
+               Byte_Count := @ + Tag_S.Tag_Size;
+               if Byte_Count mod 8 /= 0 then 
+                  Byte_Count := @ + (8 - (@ mod 8));
+               end if;
+         end;     
+      end loop;       
+   end Scout_Memory;
 
 
    procedure Reload_CR3(Address: Physical_Address) is 

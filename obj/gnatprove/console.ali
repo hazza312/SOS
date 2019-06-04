@@ -39,15 +39,15 @@ W common%s		common.ads		common.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 
-D arch.ads		20190506094226 572c55e5 arch%s
-D common.ads		20190408125500 7f16ff1c common%s
-D console.ads		20190506094226 25451bf4 console%s
-D console.adb		20190506094226 434eb6dc console%b
-D consoleb.ads		20190408081854 7ae9b66d consoleb%s
+D arch.ads		20190424123934 572c55e5 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190425154620 25451bf4 console%s
+D console.adb		20190425180310 434eb6dc console%b
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 1 arch.ads
 12K9*Arch 41e9 4|3w6 3r16
 22U15*IO_Outb 4|54s7 55s7 57s7 58s7

@@ -28,7 +28,7 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U arch%b		arch.adb		4dde7479 OO PK
+U arch%b		arch.adb		3775ee38 OO PK
 W common%s		common.ads		common.ali
 W console%s		console.adb		console.ali
 W multiboot%s		multiboot.ads		multiboot.ali
@@ -53,27 +53,27 @@ W system%s		system.ads		system.ali
 
 D ada.ads		20180525181036 76789da1 ada%s
 D a-unccon.ads		20180525181036 0e9b276f ada.unchecked_conversion%s
-D arch.ads		20190506094226 572c55e5 arch%s
-D arch.adb		20190506094226 20727cca arch%b
-D common.ads		20190408125500 7f16ff1c common%s
-D console.ads		20190506094226 25451bf4 console%s
-D consoleb.ads		20190408081854 7ae9b66d consoleb%s
+D arch.ads		20190424123934 572c55e5 arch%s
+D arch.adb		20190508073312 5ad9e68b arch%b
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190425154620 25451bf4 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
-D multiboot.ads		20190408131737 d2bd122e multiboot%s
+D multiboot.ads		20190408175552 d2bd122e multiboot%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-debug.ads		20190406212947 ba36a198 x86.debug%s
-D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
-D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
-D x86-dev-pic_8259a.ads	20190406212707 6accb118 x86.dev.pic_8259a%s
-D x86-dev-pit_8253.ads	20190407133943 a4eb0daf x86.dev.pit_8253%s
-D x86-dev-rtc.ads	20190407193342 dc494b72 x86.dev.rtc%s
-D x86-dev-vga_console.ads  20190408081552 81bdcc95 x86.dev.vga_console%s
-D x86-interrupts.ads	20190506094226 503637e8 x86.interrupts%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-debug.ads		20190407072905 ba36a198 x86.debug%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D x86-dev-pic_8259a.ads	20190407072905 6accb118 x86.dev.pic_8259a%s
+D x86-dev-pit_8253.ads	20190407110310 a4eb0daf x86.dev.pit_8253%s
+D x86-dev-rtc.ads	20190408175552 dc494b72 x86.dev.rtc%s
+D x86-dev-vga_console.ads  20190408175552 81bdcc95 x86.dev.vga_console%s
+D x86-interrupts.ads	20190424114018 503637e8 x86.interrupts%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 3 arch.ads
 12K9*Arch 41l5 41e9 4|12b14 145l5 145t9
 14N5*MAX_ADDRESS_BITS
@@ -98,6 +98,8 @@ X 4 arch.adb
 43m9*Native_A{8|77M9} 53m46 53r46
 44m9*Native_B{8|77M9}
 45m9*Native_C{8|77M9} 74m46 74r46
+58i13 I{integer} 59r19
+78i13 I{integer} 79r19
 87U15 Parse_Memory_Entries 109l9 109t29 121s21
 88m9 Biggest_Base{5|5M10} 96m9 105m17
 89m9 Biggest_Size{8|77M9} 95m9 103r44 106m17
@@ -116,9 +118,10 @@ X 5 common.ads
 X 6 console.ads
 5K9*Console 4|4w6 5r6 6|51e12
 10e4*LF{character} 4|52r17 67r17 73r17 136r29
-35U15*Put 4|52s13 67s13 73s13
-36U15*Put 4|50s9 65s9 71s9
+35U15*Put 4|52s13 60s13 67s13 73s13
+36U15*Put 4|50s9 56s9 65s9 71s9 77s9 80s13
 40U15*Put_Hex 4|51s13 66s13 72s13
+43U15*Put_Line 4|62s9 82s9
 X 7 consoleb.ads
 7k9*Consoleb 3|3w6 7|19e13
 X 8 interfac.ads
@@ -149,13 +152,13 @@ X 12 s-stoele.ads
 42K16*Storage_Elements 4|1w21 2r13 12|117e28
 76V14*"+"{10|90M9} 4|93s73
 X 14 x86.ads
-3K9*X86 4|7r6 7r25 7r43 8r9 8r30 8r43 8r59 10r5 47r9 53r9 68r9 68r47 74r9
-. 75r9 99r13 14|21e8
+3K9*X86 4|7r6 7r25 7r43 8r9 8r30 8r43 8r59 10r5 47r9 53r9 57r9 59r32 68r9
+. 68r47 74r9 75r9 79r32 99r13 14|21e8
 X 15 x86-debug.ads
 2K13*Debug 4|8w63 99r17 15|4e14
 3U15*Print_Multiboot_Map 4|99s23
 X 16 x86-dev.ads
-1K13*Dev 4|7r10 7r29 7r47 8r13 8r34 47r13 68r51 75r13 16|4e12
+1K13*Dev 4|7r10 7r29 7r47 8r13 8r34 47r13 57r13 59r36 68r51 75r13 79r36 16|4e12
 X 17 x86-dev-keyboard.ads
 5K17*Keyboard 4|7w51 68r55 17|31e21
 18U15*Handler 4|68r64
@@ -163,10 +166,13 @@ X 18 x86-dev-pic_8259a.ads
 5K17*PIC_8259A 4|7w14 47r17 18|71e22
 67U15*Initialise 4|47s27
 X 19 x86-dev-pit_8253.ads
-4K17*PIT_8253 4|7w33 19|12e21
+4K17*PIT_8253 4|7w33 57r17 59r40 19|12e21
+8V14*Get_Ticks{8|77M9} 4|59s49
+10U15*Reset 4|57s26
 X 20 x86-dev-rtc.ads
-4K17*RTC 4|8w38 75r17 20|29e16
+4K17*RTC 4|8w38 75r17 79r40 20|29e16
 26U15*Initialise 4|75s21
+27V14*Get_Ticks{8|77M9} 4|79s44
 X 21 x86-dev-vga_console.ads
 4K17*VGA_Console 4|8w17 21|31e24
 X 22 x86-interrupts.ads
@@ -182,7 +188,7 @@ QQ SPARKVERSION 2018 (20180524)
 GG EK_DIRECT_CALLS arch__scout_memory 0
 GG EK_GLOBALS arch__scout_memory local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 multiboot__boot_info proper_output 0 refined_proof_in 0 refined_input 1 multiboot__boot_info refined_output 0 calls_proof 0 calls 0 calls_conditional 2 system__storage_elements__Oadd x86__debug__print_multiboot_map local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 multiboot__boot_info LOCKS 0
 GG EK_DIRECT_CALLS arch__initialise_interrupts 0
-GG EK_GLOBALS arch__initialise_interrupts local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 8 system__machine_code__asm__4 console__put console__put__2 console__put_hex x86__dev__pic_8259a__initialise x86__dev__rtc__initialise x86__interrupts__slow_handler x86__interrupts__register_handler local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS arch__initialise_interrupts local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 12 system__machine_code__asm__4 console__put console__put__2 console__put_hex console__put_line x86__dev__pic_8259a__initialise x86__dev__pit_8253__get_ticks x86__dev__pit_8253__reset x86__dev__rtc__initialise x86__dev__rtc__get_ticks x86__interrupts__slow_handler x86__interrupts__register_handler local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS arch__io_inb 0
 GG EK_GLOBALS arch__io_inb local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 system__machine_code__asm__4 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS arch__io_outb 0

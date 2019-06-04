@@ -27,7 +27,7 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U kernel%b		kernel.adb		63512244 OO SU
+U kernel%b		kernel.adb		3cc4927e OO SU
 W arch%s		arch.adb		arch.ali
 W common%s		common.ads		common.ali
 W console%s		console.adb		console.ali
@@ -42,76 +42,76 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W x86%s			x86.ads			x86.ali
 W x86.vm%s		x86-vm.adb		x86-vm.ali
 
-D arch.ads		20190506094226 572c55e5 arch%s
-D common.ads		20190408125500 7f16ff1c common%s
-D console.ads		20190506094226 25451bf4 console%s
-D consoleb.ads		20190408081854 7ae9b66d consoleb%s
-D error.ads		20190506094226 9f517203 error%s
-D input.ads		20190408162646 2aabff2f input%s
+D arch.ads		20190424123934 572c55e5 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190425154620 25451bf4 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
+D error.ads		20190424084045 9f517203 error%s
+D input.ads		20190408175552 2aabff2f input%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D i-c.ads		20180525181036 ef84921c interfaces.c%s
-D kernel.adb		20190506094226 1ef41d5b kernel%b
-D kernelinteract.adb	20190506094226 82cbea99 kernelinteract%b
-D mmap.ads		20190506094226 4b88fbea mmap%s
-D syscall.ads		20190506094226 94307092 syscall%s
+D kernel.adb		20190508073312 1ef41d5b kernel%b
+D kernelinteract.adb	20190508073342 dd5e5aa3 kernelinteract%b
+D mmap.ads		20190426095316 4b88fbea mmap%s
+D syscall.ads		20190425125201 94307092 syscall%s
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
 D s-stoele.ads		20180525181036 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20180525181036 34867c83 system.unsigned_types%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
-D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
-D x86-dev-pit_8253.ads	20190407133943 a4eb0daf x86.dev.pit_8253%s
-D x86-dev-rtc.ads	20190407193342 dc494b72 x86.dev.rtc%s
-D x86-interrupts.ads	20190506094226 503637e8 x86.interrupts%s
-D x86-vm.ads		20190506094226 7da7624e x86.vm%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D x86-dev-pit_8253.ads	20190407110310 a4eb0daf x86.dev.pit_8253%s
+D x86-dev-rtc.ads	20190408175552 dc494b72 x86.dev.rtc%s
+D x86-interrupts.ads	20190424114018 503637e8 x86.interrupts%s
+D x86-vm.ads		20190508075043 7da7624e x86.vm%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 1 arch.ads
-12K9*Arch 41e9 9|6w6 41r4 58r4 69r4
-18U15*Scout_Memory 9|41s9
-19U15*Initialise_Interrupts 9|58s9
-25U15*Reload_CR3 9|69s9
+12K9*Arch 41e9 9|6w6 44r4 61r4 72r4
+18U15*Scout_Memory 9|44s9
+19U15*Initialise_Interrupts 9|61s9
+25U15*Reload_CR3 9|72s9
 X 2 common.ads
-3K9*Common 12e11 9|4w15 5r14 53r52
-5M10*Address<7|77M9> 9|24r18 27r18 50r17
-6M10*Physical_Address<5M10> 9|33r21 33r41
-7M10*Virtual_Address<5M10> 9|34r21
-9m4*NULL_ADDRESS{5M10} 9|24r29 27r29
-10N4*PAGE_SIZE 9|53r59
+3K9*Common 12e11 9|4w15 5r14 56r52
+5M10*Address<7|77M9> 9|27r18 30r18 53r17
+6M10*Physical_Address<5M10> 9|36r21 36r41
+7M10*Virtual_Address<5M10> 9|37r21
+9m4*NULL_ADDRESS{5M10} 9|27r29 30r29
+10N4*PAGE_SIZE 9|56r59
 X 3 console.ads
 5K9*Console 51e12 9|4w6 5r5
-10e4*LF{character} 9|45r34 94r8
-13n27*Cyan{12E9} 9|37r42
-16n41*White{12E9} 9|37r31
-35U15*Put 9|45s30 94s4
-36U15*Put 9|44s4 44s60
-41U15*Put_Hex 9|45s7
-42U15*Put_Size 9|44s36
-43U15*Put_Line 9|38s4 49s4 57s4
-44U15*Banner 9|37s4
+10e4*LF{character} 9|48r34 97r8
+13n27*Cyan{12E9} 9|40r42
+16n41*White{12E9} 9|40r31
+35U15*Put 9|48s30 97s4
+36U15*Put 9|47s4 47s60
+41U15*Put_Hex 9|48s7
+42U15*Put_Size 9|47s36
+43U15*Put_Line 9|41s4 52s4 60s4
+44U15*Banner 9|40s4
 X 5 error.ads
 5K9*Error 24e10 9|7w6 7r17
-7U15*Panic_If 9|42s4 68s4
+7U15*Panic_If 9|45s4 71s4
 X 7 interfac.ads
 38K9*Interfaces 184e15 9|1w6 2r5
-77M9*Unsigned_64 9|25r18 28r18 51r32
+77M9*Unsigned_64 9|28r18 31r18 54r32
 X 9 kernel.adb
-16U11*Kernel 16b11 97l5 97t11
-18m4 KERNEL_PAGE{23|29M9} 21r46 65r28
-21m4 USER_PAGE{23|29M9} 89r28
-24m4 Biggest_Base{2|5M10} 41m22 41r22 45r15 50r50 51r56
-25m4 Biggest_Size{7|77M9} 41m36 41r36 42r13 44r45 51r17
-27m4 MMap_Base{2|5M10} 50m4 51r44 53r20
-28m4 MMap_Size{7|77M9} 51m4 53r31
-30b4 Success{boolean} 67m28 68r17 91m28
-32p4*Userland_Entry 33m69 33r69
-33m4 Userland_PA{2|6M10} 88r28
-34m4 Userland_VMA{2|7M10} 87r28
+16U11*Kernel 16b11 100l5 100t11
+21m4 KERNEL_PAGE{23|30M9} 24r46 68r28
+24m4 USER_PAGE{23|30M9} 92r28
+27m4 Biggest_Base{2|5M10} 44m22 44r22 48r15 53r50 54r56
+28m4 Biggest_Size{7|77M9} 44m36 44r36 45r13 47r45 54r17
+30m4 MMap_Base{2|5M10} 53m4 54r44 56r20
+31m4 MMap_Size{7|77M9} 54m4 56r31
+33b4 Success{boolean} 70m28 71r17 94m28
+35p4*Userland_Entry 36m69 36r69
+36m4 Userland_PA{2|6M10} 91r28
+37m4 Userland_VMA{2|7M10} 90r28
 X 10 kernelinteract.adb
-14U11*KernelInteract 9|11w6 95s4
+14U11*KernelInteract 9|11w6 98s4
 X 11 mmap.ads
-8K9*MMap 9|6w12 53r4 11|41e9
-17U14*Initialise 9|53s9
+8K9*MMap 9|6w12 56r4 11|41e9
+17U14*Initialise 9|56s9
 X 12 syscall.ads
 1K9*Syscall 9|11w22 12|11e12
 X 13 system.ads
@@ -121,25 +121,25 @@ X 14 s-maccod.ads
 X 15 s-stoele.ads
 42K16*Storage_Elements 9|14w13 14r42 15|117e28
 105M9*Integer_Address
-112V13*To_Integer{105M9} 9|33s58
+112V13*To_Integer{105M9} 9|36s58
 X 17 x86.ads
-3K9*X86 9|9r6 9r18 18r27 19r25 19r43 19r61 21r25 21r61 50r29 62r4 63r4 63r28
-. 64r28 66r28 69r20 87r4 90r28 17|21e8
-10N5*KERNEL_PHYS_BASE 9|63r32 64r32
-13N5*PD_POOL_BASE 9|69r24
-16N5*UNRESERVED_BASE 9|50r33
+3K9*X86 9|9r6 9r18 21r27 22r25 22r43 22r61 24r25 24r61 53r29 65r4 66r4 66r28
+. 67r28 69r28 72r20 90r4 93r28 17|21e8
+10N5*KERNEL_PHYS_BASE 9|66r32 67r32
+13N5*PD_POOL_BASE 9|72r24
+16N5*UNRESERVED_BASE 9|53r33
 X 23 x86-vm.ads
-6K13*Vm 9|9w10 9r22 18r31 19r29 19r47 19r65 21r29 21r65 62r8 63r8 66r32 87r8
-. 90r32 23|140e11
-13N4*PRESENT 9|19r50
-14N4*WRITEABLE 9|19r68
-15N4*USER 9|21r68
-20N4*IS_PAGE 9|19r32
-27n23*Page_4K{27E9} 9|90r35
-27n32*Page_2M{27E9} 9|66r35
-29M9*Flags_Type<7|77M9> 9|18r34 21r32
-36U14*Create_Mapping 9|63s11 87s11
-53U14*Initialise 9|62s11
+6K13*Vm 9|9w10 9r22 21r31 22r29 22r47 22r65 24r29 24r65 65r8 66r8 69r32 90r8
+. 93r32 23|150e11
+13N4*PRESENT 9|22r50
+14N4*WRITEABLE 9|22r68
+15N4*USER 9|24r68
+20N4*IS_PAGE 9|22r32
+28n23*Page_4K{28E9} 9|93r35
+28n32*Page_2M{28E9} 9|69r35
+30M9*Flags_Type<7|77M9> 9|21r34 24r32
+40U14*Create_Mapping 9|66s11 90s11
+57U14*Initialise 9|65s11
 
 QQ SPARKVERSION 2018 (20180524)
 GG EK_DIRECT_CALLS kernel 0

@@ -169,7 +169,7 @@ package body X86.VM is
 
       PTE := Directories(Current_Table)(Offsets(Target_Level));
       if (PTE and PRESENT) = 0 then
-         Num_Entries := Get_Num_Entries(PTE);
+         --Num_Entries := Get_Num_Entries(PTE);
          Directories(Current_Table)(Offsets(Target_Level)) 
             := Make_Frame_Entry(PA, Flags);
 

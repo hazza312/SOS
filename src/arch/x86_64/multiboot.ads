@@ -6,9 +6,23 @@ package Multiboot is
     Boot_Info: Unsigned_32;
     pragma Import(C, Boot_Info, "bootinfo");
 
+
+   MODULE_TAG : constant := 3;
+   MEMORY_TAG: constant := 6;
+
+
+
     type Memory_Type is (Free_Ram, ACPI, Hibernation, Defective_Ram);
     for Memory_Type use (Free_Ram => 1, ACPI => 3, Hibernation => 4, Defective_Ram => 5);
     for Memory_Type'Size use 32;
+
+
+    type Module_Entry is record
+      Tag: Unsigned_32;
+      Size: Unsigned_32;
+      Module_Start: Unsigned_32;
+      Module_End: Unsigned_32;
+    end record ;
 
     type Memory_Entry is record 
       Base_Address: Address;

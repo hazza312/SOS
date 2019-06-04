@@ -64,13 +64,14 @@
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
   <goal name="WP_parameter def.1" expl="precondition">
-  <proof prover="0"><result status="unknown" steps="18525"/></proof>
+  <proof prover="0"><result status="unknown" steps="18517"/></proof>
   <proof prover="1"><result status="unknown" steps="18515"/></proof>
   <transf name="split_disj" >
    <goal name="WP_parameter def.1.0" expl="precondition">
-   <proof prover="1"><result status="unknown" steps="18516"/></proof>
+   <proof prover="1"><result status="unknown" steps="18512"/></proof>
    </goal>
    <goal name="WP_parameter def.1.1" expl="precondition">
+   <proof prover="1" obsolete="true"><result status="unknown" steps="18516"/></proof>
    </goal>
    <goal name="WP_parameter def.1.2" expl="precondition">
    </goal>
@@ -85,8 +86,8 @@
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
   <goal name="WP_parameter def.4" expl="precondition">
-  <proof prover="0"><result status="unknown" steps="18514"/></proof>
-  <proof prover="1"><result status="unknown" steps="18512"/></proof>
+  <proof prover="0"><result status="unknown" steps="18516"/></proof>
+  <proof prover="1"><result status="unknown" steps="18525"/></proof>
   <transf name="split_disj" >
    <goal name="WP_parameter def.4.0" expl="precondition">
    <proof prover="1"><result status="unknown" steps="18515"/></proof>
@@ -94,6 +95,7 @@
    <goal name="WP_parameter def.4.1" expl="precondition">
    </goal>
    <goal name="WP_parameter def.4.2" expl="precondition">
+   <proof prover="1" obsolete="true"><result status="unknown" steps="18515"/></proof>
    </goal>
    <goal name="WP_parameter def.4.3" expl="precondition">
    </goal>

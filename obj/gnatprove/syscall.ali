@@ -41,20 +41,20 @@ W x86.dev.keyboard%s	x86-dev-keyboard.adb	x86-dev-keyboard.ali
 
 U syscall%s		syscall.ads		94307092 OO PK
 
-D arch.ads		20190506094226 572c55e5 arch%s
-D common.ads		20190408125500 7f16ff1c common%s
-D console.ads		20190506094226 25451bf4 console%s
-D consoleb.ads		20190408081854 7ae9b66d consoleb%s
+D arch.ads		20190424123934 572c55e5 arch%s
+D common.ads		20190408175552 7f16ff1c common%s
+D console.ads		20190425154620 25451bf4 console%s
+D consoleb.ads		20190408175552 7ae9b66d consoleb%s
 D interfac.ads		20180525181036 5ab55268 interfaces%s
 D i-c.ads		20180525181036 ef84921c interfaces.c%s
-D syscall.ads		20190506094226 94307092 syscall%s
-D syscall.adb		20190506094226 27874f46 syscall%b
+D syscall.ads		20190425125201 94307092 syscall%s
+D syscall.adb		20190425170235 27874f46 syscall%b
 D system.ads		20180525181036 d54140d3 system%s
 D s-maccod.ads		20180525181036 6d68a701 system.machine_code%s
-D x86.ads		20190506094226 0d323ee7 x86%s
-D x86-dev.ads		20190406230336 b7529a52 x86.dev%s
-D x86-dev-keyboard.ads	20190408162729 5e57ab66 x86.dev.keyboard%s
-D /home/harry/Desktop/SOS/SOS/pragmas.adc  20190425113712 00000000
+D x86.ads		20190424083055 0d323ee7 x86%s
+D x86-dev.ads		20190407072905 b7529a52 x86.dev%s
+D x86-dev-keyboard.ads	20190408175552 5e57ab66 x86.dev.keyboard%s
+D /home/harry/Desktop/SOS/pragmas.adc  20190417085902 00000000
 X 3 console.ads
 5K9*Console 51e12 8|1w14 2r5
 15n30*Light_Green{12E9} 8|15r29

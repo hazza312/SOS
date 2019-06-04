@@ -94,10 +94,10 @@ private
 ---helpers----------------------------------------------------------------------
 
    -- return true if Table empty.
-   function Decrement_Entry_Count(T: in out Table; I: Table_Index) return Boolean with Inline;
+   --function Decrement_Entry_Count(T: in out Table; I: Table_Index) return Boolean with Inline;
 
    -- return True if Table full
-   function Increment_Entry_Count(T: in out Table; I: Table_Index) return Boolean with Inline;
+  --function Increment_Entry_Count(T: in out Table; I: Table_Index) return Boolean with Inline;
 
    function Has_Free_Dir_Page return Boolean
    with SPARK_Mode,

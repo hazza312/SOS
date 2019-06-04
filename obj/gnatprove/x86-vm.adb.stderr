@@ -1,63 +1,62 @@
-x86-vm.adb:58:50: info: overflow check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:58:50: info: range check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:58:55: info: overflow check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:61:33: info: loop invariant preservation proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:61:33: info: loop invariant initialization proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:61:64: info: index check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:120:24: info: initialization of "Target_Level" proved
-x86-vm.adb:121:29: info: initialization of "Current_Table" proved
-x86-vm.adb:121:44: info: initialization of "Offsets" proved
-x86-vm.adb:122:14: info: initialization of "PTE" proved
-x86-vm.adb:125:17: info: initialization of "PTE" proved
-x86-vm.adb:127:16: info: precondition proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:129:19: info: initialization of "Current_Table" proved
-x86-vm.adb:129:19: info: initialization of "Offsets" proved
-x86-vm.adb:129:22: medium: precondition might fail (e.g. when Dir_Page = 4503599627370496)
-x86-vm.adb:129:43: info: initialization of "Dir_Page" proved
-x86-vm.adb:129:74: info: predicate check proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:136:19: info: precondition proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:136:50: info: initialization of "Current_Table" proved
-x86-vm.adb:136:65: info: initialization of "Offsets" proved
-x86-vm.adb:139:26: info: initialization of "Current_Table" proved
-x86-vm.adb:139:41: info: initialization of "Offsets" proved
-x86-vm.adb:139:49: info: initialization of "Target_Level" proved
-x86-vm.adb:140:11: info: initialization of "PTE" proved
-x86-vm.adb:141:22: warning: unused assignment
-x86-vm.adb:141:41: info: initialization of "PTE" proved
-x86-vm.adb:143:13: info: initialization of "Current_Table" proved
-x86-vm.adb:143:13: info: initialization of "Offsets" proved
-x86-vm.adb:143:13: info: initialization of "Target_Level" proved
-x86-vm.adb:143:16: info: precondition proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:159:07: warning: variable "Dir_Page" is never read and never assigned
-x86-vm.adb:159:07: warning: unused variable "Dir_Page"
-x86-vm.adb:162:07: warning: variable "Num_Entries" is never read and never assigned
-x86-vm.adb:162:07: warning: unused variable "Num_Entries"
-x86-vm.adb:164:24: info: initialization of "Target_Level" proved
-x86-vm.adb:165:29: info: initialization of "Current_Table" proved
-x86-vm.adb:165:44: info: initialization of "Offsets" proved
-x86-vm.adb:166:14: info: initialization of "PTE" proved
-x86-vm.adb:171:19: info: precondition proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.adb:171:50: info: initialization of "Current_Table" proved
-x86-vm.adb:171:65: info: initialization of "Offsets" proved
-x86-vm.adb:174:26: info: initialization of "Current_Table" proved
-x86-vm.adb:174:41: info: initialization of "Offsets" proved
-x86-vm.adb:174:49: info: initialization of "Target_Level" proved
-x86-vm.adb:175:11: info: initialization of "PTE" proved
-x86-vm.adb:176:16: medium: precondition might fail (e.g. when PA = 0 and PTE = 0)
-x86-vm.adb:176:34: info: initialization of "PTE" proved
-x86-vm.adb:178:13: info: initialization of "Target_Level" proved
-x86-vm.adb:178:13: info: initialization of "Current_Table" proved
-x86-vm.adb:178:13: info: initialization of "Offsets" proved
-x86-vm.adb:178:16: medium: precondition might fail
-x86-vm.adb:178:36: info: predicate check proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.ads:40:31: info: initialization of "Success" proved
-x86-vm.ads:48:28: medium: "PA" might not be initialized in "Free_Mapping"
-x86-vm.ads:49:28: info: initialization of "Success" proved
-x86-vm.ads:77:09: info: range check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.ads:95:13: info: postcondition proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.ads:98:32: info: initialization of "Page" proved
-x86-vm.ads:104:25: medium: contract case might fail (e.g. when Dir_Pages = (others => False) and Page = 0)
-x86-vm.ads:104:31: info: initialization of "Page" proved
-x86-vm.ads:104:36: info: division check proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
-x86-vm.ads:105:25: info: contract case proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
-x86-vm.ads:105:29: info: initialization of "Page" proved
+x86-vm.adb:86:50: info: overflow check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:86:50: info: range check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:86:55: info: overflow check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:89:33: info: loop invariant preservation proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:89:33: info: loop invariant initialization proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:89:64: info: index check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:149:24: info: initialization of "Target_Level" proved
+x86-vm.adb:150:29: info: initialization of "Current_Table" proved
+x86-vm.adb:150:44: info: initialization of "Offsets" proved
+x86-vm.adb:151:14: info: initialization of "PTE" proved
+x86-vm.adb:154:17: info: initialization of "PTE" proved
+x86-vm.adb:156:16: info: precondition proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:158:19: info: initialization of "Current_Table" proved
+x86-vm.adb:158:19: info: initialization of "Offsets" proved
+x86-vm.adb:158:22: medium: precondition might fail (e.g. when Dir_Page = 4503599627370496)
+x86-vm.adb:158:43: info: initialization of "Dir_Page" proved
+x86-vm.adb:158:74: info: predicate check proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:165:19: info: precondition proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:165:50: info: initialization of "Current_Table" proved
+x86-vm.adb:165:65: info: initialization of "Offsets" proved
+x86-vm.adb:167:23: warning: unused assignment
+x86-vm.adb:167:23: medium: "Tables" might not be initialized
+x86-vm.adb:167:26: info: initialization of "Current_Table" proved
+x86-vm.adb:170:26: info: initialization of "Current_Table" proved
+x86-vm.adb:170:41: info: initialization of "Offsets" proved
+x86-vm.adb:170:49: info: initialization of "Target_Level" proved
+x86-vm.adb:171:11: info: initialization of "PTE" proved
+x86-vm.adb:172:22: warning: unused assignment
+x86-vm.adb:172:41: info: initialization of "PTE" proved
+x86-vm.adb:174:13: info: initialization of "Current_Table" proved
+x86-vm.adb:174:13: info: initialization of "Offsets" proved
+x86-vm.adb:174:13: info: initialization of "Target_Level" proved
+x86-vm.adb:174:16: info: precondition proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:196:24: info: initialization of "Target_Level" proved
+x86-vm.adb:197:29: info: initialization of "Current_Table" proved
+x86-vm.adb:197:44: info: initialization of "Offsets" proved
+x86-vm.adb:198:14: info: initialization of "PTE" proved
+x86-vm.adb:203:19: info: precondition proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.adb:203:50: info: initialization of "Current_Table" proved
+x86-vm.adb:203:65: info: initialization of "Offsets" proved
+x86-vm.adb:206:26: info: initialization of "Current_Table" proved
+x86-vm.adb:206:41: info: initialization of "Offsets" proved
+x86-vm.adb:206:49: info: initialization of "Target_Level" proved
+x86-vm.adb:207:11: info: initialization of "PTE" proved
+x86-vm.adb:208:16: medium: precondition might fail (e.g. when PA = 0 and PTE = 0)
+x86-vm.adb:208:34: info: initialization of "PTE" proved
+x86-vm.adb:210:13: info: initialization of "Target_Level" proved
+x86-vm.adb:210:13: info: initialization of "Current_Table" proved
+x86-vm.adb:210:13: info: initialization of "Offsets" proved
+x86-vm.adb:210:16: medium: precondition might fail
+x86-vm.adb:210:36: info: predicate check proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.ads:44:31: info: initialization of "Success" proved
+x86-vm.ads:52:28: medium: "PA" might not be initialized in "Free_Mapping"
+x86-vm.ads:53:28: info: initialization of "Success" proved
+x86-vm.ads:81:09: info: range check proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.ads:105:13: info: postcondition proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.ads:108:32: info: initialization of "Page" proved
+x86-vm.ads:114:25: medium: contract case might fail (e.g. when Dir_Pages = (others => False) and Page = 0)
+x86-vm.ads:114:31: info: initialization of "Page" proved
+x86-vm.ads:114:36: info: division check proved (CVC4: 1 VC in max 0.0 seconds and 1 step)
+x86-vm.ads:115:25: info: contract case proved (CVC4: 2 VC in max 0.0 seconds and 1 step)
+x86-vm.ads:115:29: info: initialization of "Page" proved
